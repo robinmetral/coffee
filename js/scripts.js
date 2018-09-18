@@ -1,5 +1,5 @@
 // Set the map variable
-var mymap = L.map('mapid').setView([18.7884781, 98.9813945], 14);
+var myMap = L.map('mapid').setView([18.7884781, 98.9813945], 14);
 
 // Load the basemap
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -7,4 +7,27 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
     maxZoom: 18,
     id: 'mapbox.light',
     accessToken: 'pk.eyJ1Ijoicm9iaW5tZXRyYWwiLCJhIjoiY2pkMTI0bWVnMmV6dzM0bnNhZHBvMDBqeiJ9.Z0gZrvkth24hNkLkvRxg-g'
-}).addTo(mymap);
+}).addTo(myMap);
+
+// Make an XMLHttpRequest to the JSON data
+const request = new XMLHttpRequest();
+request.open('GET', 'data.json', true);
+
+request.onload = function() {
+    // Begin accessing JSON data here
+    const data = JSON.parse(this.response);
+
+    // Print cafe markers
+    const cafes = data.cafes.map(cafe => {
+        L.marker([cafe.lat, cafe.lon]).bindPopup(`
+            <ul>
+                <li>${cafe.name}</li>
+                <li><strong>Ambiance:</strong> ${cafe.ambiance}</li>
+                <li><strong>Flavor:</strong> ${cafe.flavor}</li>
+                <li><strong>Comments:</strong> ${cafe.comments}</li>
+            </ul>
+        `).openPopup().addTo(myMap);
+    });
+}  
+
+request.send();
