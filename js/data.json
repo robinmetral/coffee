@@ -1,0 +1,18 @@
+{
+    "cafes": [{
+        "name": "ABCD",
+        "lat": 18.7963487,
+        "lon": 98.9747027,
+        "ambiance": "4/5",
+        "flavor": "4/5",
+        "comments": "A Better Cup and Design - Art, Brunch, Cappuccino and Dessert."
+    },
+    {
+        "name": "Akha Ama",
+        "lat": 18.8032513,
+        "lon": 98.9778686,
+        "ambiance": "2/5",
+        "flavor": "4/5",
+        "comments": "Currently renovating"
+    }]
+}
