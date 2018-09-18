@@ -4,7 +4,7 @@ const myMap = L.map("mapid");
 // Load the basemap
 const myBasemap = L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     maxZoom: 19,
-    attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    attribution: '© <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 
 // Add basemap to map id
