@@ -7,3 +7,13 @@ body {
     width: 100%;
     height: 100vh;
 }
+
+h1 {
+    color: #6F4E37; /* This is the official coffee color! */
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
