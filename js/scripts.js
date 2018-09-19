@@ -36,9 +36,10 @@ request.onload = function() {
             .bindPopup(`
             <h1>${cafe.name}</h1>
             <ul>
-                <li><strong>Ambiance:</strong> ${cafe.ambiance}</li>
-                <li><strong>Flavor:</strong> ${cafe.flavor}</li>
-                <li><strong>Comments:</strong> ${cafe.comments}</li>
+                <li><strong>Espresso:</strong> ${cafe.espresso}</li>
+                <li><strong>Filter:</strong> ${cafe.filter}</li>
+                <li><strong>Good for working:</strong> ${cafe.working}</li>
+                <li><strong>Price range:</strong> ${cafe.price}</li>
             </ul>
             `)
             .openPopup();
