@@ -34,13 +34,14 @@ request.onload = function() {
         console.log(cafe.name);
         L.marker([cafe.lat, cafe.lon], {icon: coffeeIcon}).addTo(myMap)
             .bindPopup(`
-            <h1>${cafe.name}</h1>
+            <header><h1>${cafe.name}</h1></header>
             <ul>
                 <li><strong>Espresso:</strong> ${cafe.espresso}</li>
                 <li><strong>Filter:</strong> ${cafe.filter}</li>
                 <li><strong>Good for working:</strong> ${cafe.working}</li>
                 <li><strong>Price range:</strong> ${cafe.price}</li>
             </ul>
+            <footer><a href="${cafe.url}">Website</a> · <a href="${cafe.osm}">OpenStreetMap</a></footer>
             `)
             .openPopup();
     });
