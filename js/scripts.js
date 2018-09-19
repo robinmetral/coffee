@@ -22,8 +22,8 @@ request.onload = function() {
         console.log(cafe.name);
         L.marker([cafe.lat, cafe.lon]).addTo(myMap)
             .bindPopup(`
+            <h1>${cafe.name}</h1>
             <ul>
-                <li>${cafe.name}</li>
                 <li><strong>Ambiance:</strong> ${cafe.ambiance}</li>
                 <li><strong>Flavor:</strong> ${cafe.flavor}</li>
                 <li><strong>Comments:</strong> ${cafe.comments}</li>
