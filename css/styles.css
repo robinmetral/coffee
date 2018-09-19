@@ -19,10 +19,14 @@ ul {
 }
 
 a {
-    color: #6F4E37;
+    color: #6F4E37 !important; /* Override leaflet styles */
     text-decoration: none;
 }
 
 a:hover {
     text-decoration: underline;
+}
+
+footer {
+    margin-top: 0.67em; /* Same spacing as below h1 by default */
 }
