@@ -41,7 +41,7 @@ request.onload = function() {
                 <li><strong>Good for working:</strong> ${cafe.working}</li>
                 <li><strong>Price range:</strong> ${cafe.price}</li>
             </ul>
-            <footer><a href="${cafe.url}">Website</a> · <a href="${cafe.osm}">OpenStreetMap</a></footer>
+            <footer><a href="${cafe.url}" target="_blank">Website</a> · <a href="${cafe.osm}" target="_blank">OpenStreetMap</a></footer>
             `)
             .openPopup();
     });
