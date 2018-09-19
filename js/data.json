@@ -3,9 +3,10 @@
         "name": "A.B.C.D.",
         "lat": 18.7963749,
         "lon": 98.9768205,
-        "ambiance": "4/5",
-        "flavor": "4/5",
-        "comments": "A Better Cup and Design: art, brunch, cappuccinos and desserts!",
+        "espresso": "yes",
+        "filter": "no",
+        "working": "yes",
+        "price": "$$",
         "osm": "https://www.openstreetmap.org/node/5915461228",
         "url": "https://www.facebook.com/ABCD.CNX/"
     },
@@ -13,10 +14,22 @@
         "name": "Akha Ama",
         "lat": 18.8032255,
         "lon": 98.9800245,
-        "ambiance": "2/5",
-        "flavor": "4/5",
-        "comments": "Currently renovating",
+        "espresso": "yes",
+        "filter": "yes",
+        "working": "yes",
+        "price": "$$",
         "osm": "https://www.openstreetmap.org/node/2527662833",
         "url": "http://www.akhaama.com/"
+    },
+    {
+        "name": "Cottontree",
+        "lat": 18.8042812,
+        "lon": 98.9678609,
+        "espresso": "yes",
+        "filter": "yes",
+        "working": "yes",
+        "price": "$$$",
+        "osm": "https://www.openstreetmap.org/node/4265515989",
+        "url": "https://www.facebook.com/cottontreecnx/"
     }]
 }
