@@ -19,14 +19,16 @@ request.onload = function() {
 
     // Print cafe markers
     const cafes = data.cafes.map(cafe => {
-        L.marker([cafe.lat, cafe.lon]).bindPopup(`
+        L.marker([cafe.lat, cafe.lon]).addTo(myMap)
+            .bindPopup(`
             <ul>
                 <li>${cafe.name}</li>
                 <li><strong>Ambiance:</strong> ${cafe.ambiance}</li>
                 <li><strong>Flavor:</strong> ${cafe.flavor}</li>
                 <li><strong>Comments:</strong> ${cafe.comments}</li>
             </ul>
-        `).openPopup().addTo(myMap);
+            `)
+            .openPopup();
     });
 }  
 
