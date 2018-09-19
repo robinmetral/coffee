@@ -11,7 +11,7 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 // Make an XMLHttpRequest to the JSON data
 const request = new XMLHttpRequest();
-request.open('GET', 'data.json', true);
+request.open('GET', 'https://robinmetral.github.io/coffee/js/data.json', true);
 
 request.onload = function() {
     // Begin accessing JSON data here
@@ -19,6 +19,7 @@ request.onload = function() {
 
     // Print cafe markers
     const cafes = data.cafes.map(cafe => {
+        console.log(cafe.name);
         L.marker([cafe.lat, cafe.lon]).addTo(myMap)
             .bindPopup(`
             <ul>
@@ -30,6 +31,6 @@ request.onload = function() {
             `)
             .openPopup();
     });
-}  
+}
 
 request.send();
