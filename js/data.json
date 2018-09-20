@@ -1,5 +1,17 @@
 {
     "cafes": [{
+        "name": "POSREST",
+        "lat": 18.7947770,
+        "lon": 98.9649403,
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$$$",
+        "osm": "https://www.openstreetmap.org/node/5915461228",
+        "addedtoosm": true,
+        "url": "https://www.facebook.com/posrestpremiumhandcraft/"
+    },
+    {
         "name": "A.B.C.D.",
         "lat": 18.7963749,
         "lon": 98.9768205,
@@ -13,8 +25,8 @@
     },
     {
         "name": "Taste",
-        "lat": 18.7950639,
-        "lon": 98.9634490,
+        "lat": 18.7951655,
+        "lon": 98.9630869,
         "espresso": true,
         "filter": true,
         "working": true,
