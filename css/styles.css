@@ -42,15 +42,11 @@ footer {
     border-radius: 2px;
     border: 2px solid rgba(0,0,0,0.2);
     background-color: rgb(255, 255, 255);
+    outline: none; /* Remove post-click dotted outline */
 }
 
 #locate-me:hover {
     background-color: rgb(244, 244, 244);
-}
-
-/* Remove dotted outline after clicking */
-#locate-me:active {
-    outline: none;
 }
 
 #locate-me img {
