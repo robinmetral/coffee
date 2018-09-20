@@ -12,6 +12,18 @@
         "url": "https://www.facebook.com/ABCD.CNX/"
     },
     {
+        "name": "Taste",
+        "lat": 18.7950639,
+        "lon": 98.9634490,
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$$",
+        "osm": "https://www.openstreetmap.org/node/5202076922",
+        "addedtoosm": false,
+        "url": "https://www.facebook.com/Taste.Cafe.chiangmai/"
+    },
+    {
         "name": "Akha Ama",
         "lat": 18.8032255,
         "lon": 98.9800245,
