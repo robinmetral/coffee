@@ -4,7 +4,7 @@ var myMap = L.map('mapid').setView([18.7884781, 98.9813945], 14);
 function locateMe() {
     // Location icon
     var locationIcon = L.icon({
-        iconUrl: "https://robinmetral.github.io/coffee/img/locationicon.png",
+        iconUrl: "https://robinmetral.github.io/coffee/img/icon-location.png",
         iconSize: [16, 16],
         iconAnchor: [8, 8]
     })
@@ -41,8 +41,8 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 
 // Create custom icon
 var coffeeIcon = L.icon({
-    iconUrl: "https://robinmetral.github.io/coffee/img/noun_Coffee Bean_1886493-colored.png",
-    shadowUrl: "https://robinmetral.github.io/coffee/img/noun_Coffee Bean_1886493-shadow.png",
+    iconUrl: "https://robinmetral.github.io/coffee/img/icon-coffee-bean.png",
+    shadowUrl: "https://robinmetral.github.io/coffee/img/icon-coffee-bean-shadow.png",
     iconSize:     [32, 32], // size of the icon
     shadowSize:   [32, 32], // size of the shadow
     iconAnchor:   [16, 16], // point of the icon which will correspond to marker's location
