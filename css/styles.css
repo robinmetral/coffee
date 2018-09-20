@@ -44,6 +44,15 @@ footer {
     background-color: rgb(255, 255, 255);
 }
 
+#locate-me:hover {
+    background-color: rgb(244, 244, 244);
+}
+
+/* Remove dotted outline after clicking */
+#locate-me:active {
+    outline: none;
+}
+
 #locate-me img {
     padding: 7px; /* The icon is 16x16 and the container is 30x30 */
 }
