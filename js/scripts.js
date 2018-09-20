@@ -1,34 +1,35 @@
-// Set the map variable
-// var myMap = L.map('mapid').setView([18.7884781, 98.9813945], 14);
-var myMap = L.map('mapid').fitWorld();
+// Set the map view
+var myMap = L.map('mapid').setView([18.7884781, 98.9813945], 14);
 
-// On mobile zoom on location
+function locateMe() {
+    // Location icon
+    var locationIcon = L.icon({
+        iconUrl: "https://robinmetral.github.io/coffee/img/locationicon.png",
+        iconSize: [16, 16],
+        iconAnchor: [8, 8]
+    })
 
-// Location icon
-var locationIcon = L.icon({
-    iconUrl: "https://robinmetral.github.io/coffee/img/locationicon.png",
-    iconSize: [16, 16],
-    iconAnchor: [8, 8]
-})
+    // Location found
+    function onLocationFound(e) {
+        var radius = e.accuracy / 2;
+        L.marker(e.latlng, {icon: locationIcon}).addTo(myMap);
+        L.circle(e.latlng, radius, {
+            stroke: false,
+            fillColor: "#5f7889",
+            fillOpacity: 0.2
+        }).addTo(myMap);
+    }
 
-function onLocationFound(e) {
-    var radius = e.accuracy / 2;
-    L.marker(e.latlng, {icon: locationIcon}).addTo(myMap);
-    L.circle(e.latlng, radius, {
-        stroke: false,
-        fillColor: "#5f7889",
-        fillOpacity: 0.2
-    }).addTo(myMap);
+    // Location not found
+    function onLocationError(e) {
+        alert(e.message);
+    }
+
+    // Locate!
+    myMap.on('locationfound', onLocationFound);
+    myMap.on('locationerror', onLocationError);
+    myMap.locate({setView: true, maxZoom: 16});
 }
-
-function onLocationError(e) {
-    alert(e.message);
-}
-
-myMap.on('locationfound', onLocationFound);
-myMap.on('locationerror', onLocationError);
-
-myMap.locate({setView: true, maxZoom: 16});
 
 // Load the basemap
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
