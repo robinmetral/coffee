@@ -3,9 +3,9 @@ body {
     margin: 0;
 }
 
-#mapid {
-    width: 100%;
-    height: 100vh;
+html, body, #mapid {
+    width: 100vw;
+    height: 100%; /* No vh because of mobile Chrome bug */
 }
 
 h1 {
