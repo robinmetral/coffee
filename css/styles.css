@@ -18,12 +18,12 @@ ul {
     padding: 0;
 }
 
-a {
-    color: #6F4E37 !important; /* Override leaflet styles */
+.leaflet-popup-content a, .leaflet-control-attribution a {
+    color: #6F4E37 !important; /* Override Leaflet styles */
     text-decoration: none;
 }
 
-a:hover {
+.leaflet-popup-content a:hover, .leaflet.control-attribution a:hover {
     text-decoration: underline;
 }
 
