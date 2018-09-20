@@ -6,3 +6,5 @@ This is my coffee map, powered by [@Leaflet](https://github.com/Leaflet/Leaflet)
 
 - [ ] Use OpenStreetMap data instead of manually writing coordinates, opening hours, etc.
 - [ ] Add coffee shops!
+- [ ] Coffee shop count feature (by country and in total?)
+- [ ] Filter coffee shops with their JSON data (does it have filter, low price range, etc)
