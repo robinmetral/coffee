@@ -1,5 +1,34 @@
 // Set the map variable
-var myMap = L.map('mapid').setView([18.7884781, 98.9813945], 14);
+// var myMap = L.map('mapid').setView([18.7884781, 98.9813945], 14);
+var myMap = L.map('mapid').fitWorld();
+
+// On mobile zoom on location
+
+// Location icon
+var locationIcon = L.icon({
+    iconUrl: "https://robinmetral.github.io/coffee/img/locationicon.png",
+    iconSize: [16, 16],
+    iconAnchor: [8, 8]
+})
+
+function onLocationFound(e) {
+    var radius = e.accuracy / 2;
+    L.marker(e.latlng, {icon: locationIcon}).addTo(myMap);
+    L.circle(e.latlng, radius, {
+        stroke: false,
+        fillColor: "#5f7889",
+        fillOpacity: 0.3
+    }).addTo(myMap);
+}
+
+function onLocationError(e) {
+    alert(e.message);
+}
+
+myMap.on('locationfound', onLocationFound);
+myMap.on('locationerror', onLocationError);
+
+myMap.locate({setView: true, maxZoom: 16});
 
 // Load the basemap
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
@@ -13,13 +42,14 @@ L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={
 var coffeeIcon = L.icon({
     iconUrl: "https://robinmetral.github.io/coffee/img/noun_Coffee Bean_1886493-colored.png",
     shadowUrl: "https://robinmetral.github.io/coffee/img/noun_Coffee Bean_1886493-shadow.png",
-
     iconSize:     [32, 32], // size of the icon
     shadowSize:   [32, 32], // size of the shadow
     iconAnchor:   [16, 16], // point of the icon which will correspond to marker's location
     shadowAnchor: [16, 16],  // the same for the shadow
     popupAnchor:  [0, -16] // point from which the popup should open relative to the iconAnchor
 });
+
+// Add location icon
 
 // Make an XMLHttpRequest to the JSON data
 const request = new XMLHttpRequest();
