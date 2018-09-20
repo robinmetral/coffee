@@ -17,7 +17,7 @@ function onLocationFound(e) {
     L.circle(e.latlng, radius, {
         stroke: false,
         fillColor: "#5f7889",
-        fillOpacity: 0.3
+        fillOpacity: 0.2
     }).addTo(myMap);
 }
 
