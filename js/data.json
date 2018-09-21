@@ -1,5 +1,17 @@
 {
     "cafes": [{
+        "name": "Omnia",
+        "lat": 18,8136656,
+        "lon": 98,9737922,
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$$",
+        "osm": "https://www.openstreetmap.org/node/4265502391",
+        "addedtoosm": true,
+        "url": "https://www.facebook.com/OmniaCafeChiangmai/"
+    },
+    {
         "name": "Brewman",
         "lat": 16.0643013,
         "lon": 108.2229858,
