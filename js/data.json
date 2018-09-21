@@ -1,5 +1,17 @@
 {
     "cafes": [{
+        "name": "ZMOY CAFE",
+        "lat": 18.7934646,
+        "lon": 98.9904108,
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$",
+        "osm": "https://www.openstreetmap.org/node/5919670289",
+        "addedtoosm": true,
+        "url": "https://www.facebook.com/zmoycafe"
+    },
+    {
         "name": "POSREST",
         "lat": 18.7947770,
         "lon": 98.9649403,
