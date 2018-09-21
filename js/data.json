@@ -1,8 +1,8 @@
 {
     "cafes": [{
         "name": "Omnia",
-        "lat": 18,8136656,
-        "lon": 98,9737922,
+        "lat": 18.8136656,
+        "lon": 98.9737922,
         "espresso": true,
         "filter": true,
         "working": true,
