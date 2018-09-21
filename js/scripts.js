@@ -87,4 +87,4 @@ requestCoffeeShops.onload = function() {
     });
 }
 
-request.send();
+requestCoffeeShops.send();
