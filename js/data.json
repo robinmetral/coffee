@@ -1,5 +1,17 @@
 {
     "cafes": [{
+        "name": "Cong Kopi",
+        "lat": 16.0657749,
+        "lon": 108.2211071,
+        "espresso": true,
+        "filter": true,
+        "working": false,
+        "price": "$$",
+        "osm": "https://www.openstreetmap.org/node/5920056999",
+        "addedtoosm": true,
+        "url": "https://www.facebook.com/congkopi"
+    },
+    {
         "name": "Gold Star",
         "lat": 16.0466175,
         "lon": 108.2418665,
