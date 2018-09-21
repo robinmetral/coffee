@@ -1,5 +1,17 @@
 {
     "cafes": [{
+        "name": "Six On Six",
+        "lat": 16.0428676,
+        "lon": 108.2447261,
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$$",
+        "osm": "https://www.openstreetmap.org/node/5432960921",
+        "addedtoosm": false,
+        "url": "http://www.sixonsix.net/"
+    },
+    {
         "name": "Thor Phan",
         "lat": 18.7886898,
         "lon": 98.9802287,
