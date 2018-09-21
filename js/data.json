@@ -1,12 +1,24 @@
 {
     "cafes": [{
+        "name": "Gold Star",
+        "lat": 16.0466175,
+        "lon": 108.2418665,
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$$",
+        "osm": "https://www.openstreetmap.org/node/5920045519",
+        "addedtoosm": true,
+        "url": "https://www.facebook.com/goldstarcoffeeroastery"
+    },
+    {
         "name": "Six On Six",
         "lat": 16.0428676,
         "lon": 108.2447261,
         "espresso": true,
         "filter": true,
         "working": true,
-        "price": "$$",
+        "price": "$$$",
         "osm": "https://www.openstreetmap.org/node/5432960921",
         "addedtoosm": false,
         "url": "http://www.sixonsix.net/"
