@@ -68,7 +68,7 @@ requestCoffeeShops.onload = function() {
         const requestLatLon = new XMLHttpRequest();
         requestLatLon.open('GET', 'https://www.openstreetmap.org/api/0.6/node/${cafe.osm}', true);
         const osmData = requestLatLon.responseXML;
-        const osmNode = requestLatLon.getElementByTagName("node");
+        const osmNode = requestLatLon.getElementsByTagName("node")[0];
         const osmLat = osmNode.getAttribute("lat");
         const osmLon = osmNode.getAttribute("lon");
 
