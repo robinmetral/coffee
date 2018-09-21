@@ -66,12 +66,12 @@ requestCoffeeShops.onload = function() {
 
         // Make a XMLHttpRequest to the OSM API
         const requestLatLon = new XMLHttpRequest();
-        requestLatLon.open('GET', 'https://www.openstreetmap.org/api/0.6/node/${cafes.osm}', true);
+        requestLatLon.open('GET', 'https://www.openstreetmap.org/api/0.6/node/${cafe.osm}', true);
         const osmNode = requestLatLon.getElementByTagName("node");
         const osmLat = osmNode.getAttribute("lat");
         const osmLon = osmNode.getAttribute("lon");
 
-        L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
+        L.marker([osmLat, osmLon], {icon: coffeeIcon}).addTo(myMap)
             .bindPopup(`
             <header><h1>${cafe.name}</h1></header>
             <ul>
