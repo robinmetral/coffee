@@ -1,5 +1,17 @@
 {
     "cafes": [{
+        "name": "Thor Phan",
+        "lat": 18.7886898,
+        "lon": 98.9802287,
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$$",
+        "osm": "https://www.openstreetmap.org/node/3388701190",
+        "addedtoosm": false,
+        "url": "https://www.facebook.com/ThorphanCoffee"
+    },
+    {
         "name": "ZMOY CAFE",
         "lat": 18.7934646,
         "lon": 98.9904108,
