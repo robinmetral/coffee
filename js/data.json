@@ -1,5 +1,29 @@
 {
     "cafes": [{
+        "name": "Brewman",
+        "lat": 16.0643013,
+        "lon": 108.2229858,
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$$",
+        "osm": "https://www.openstreetmap.org/node/5920089202",
+        "addedtoosm": true,
+        "url": "https://www.facebook.com/BrewmanCoffeeConcept/"
+    },
+    {
+        "name": "Why",
+        "lat": 16.0513778,
+        "lon": 108.2406334,
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$$",
+        "osm": "https://www.openstreetmap.org/node/5920067081",
+        "addedtoosm": true,
+        "url": "https://www.facebook.com/WhyRoastery/"
+    },
+    {
         "name": "Cong Kopi",
         "lat": 16.0657749,
         "lon": 108.2211071,
@@ -9,7 +33,7 @@
         "price": "$$",
         "osm": "https://www.openstreetmap.org/node/5920056999",
         "addedtoosm": true,
-        "url": "https://www.facebook.com/congkopi"
+        "url": "https://www.facebook.com/congkopi/"
     },
     {
         "name": "Gold Star",
@@ -21,7 +45,7 @@
         "price": "$$",
         "osm": "https://www.openstreetmap.org/node/5920045519",
         "addedtoosm": true,
-        "url": "https://www.facebook.com/goldstarcoffeeroastery"
+        "url": "https://www.facebook.com/goldstarcoffeeroastery/"
     },
     {
         "name": "Six On Six",
@@ -45,7 +69,7 @@
         "price": "$$",
         "osm": "https://www.openstreetmap.org/node/3388701190",
         "addedtoosm": false,
-        "url": "https://www.facebook.com/ThorphanCoffee"
+        "url": "https://www.facebook.com/ThorphanCoffee/"
     },
     {
         "name": "ZMOY",
@@ -57,7 +81,7 @@
         "price": "$",
         "osm": "https://www.openstreetmap.org/node/5919670289",
         "addedtoosm": true,
-        "url": "https://www.facebook.com/zmoycafe"
+        "url": "https://www.facebook.com/zmoycafe/"
     },
     {
         "name": "POSREST",
