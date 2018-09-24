@@ -69,9 +69,9 @@ request.onload = function() {
                 return reponse.json();
             })
             .then(function(jsonResponse) {
-                var lat = jsonData.elements[0].lat;
+                var lat = jsonResponse.elements[0].lat;
                 console.log(lat);
-                var lon = jsonData.elements[0].lon;
+                var lon = jsonResponse.elements[0].lon;
                 console.log(lon);
                 
                 // Print markers
