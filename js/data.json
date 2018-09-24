@@ -59,7 +59,7 @@
         "filter": true,
         "working": true,
         "price": "$$",
-        "osm": "https://www.openstreetmap.org/node/5920089202",
+        "osm": "5920089202",
         "addedtoosm": true,
         "url": "https://www.facebook.com/BrewmanCoffeeConcept/",
         "date": "2018-09-24T10:08:05+0700"
@@ -72,7 +72,7 @@
         "filter": true,
         "working": true,
         "price": "$$",
-        "osm": "https://www.openstreetmap.org/node/5920067081",
+        "osm": "5920067081",
         "addedtoosm": true,
         "url": "https://www.facebook.com/WhyRoastery/",
         "date": "2018-09-24T10:08:05+0700"
@@ -85,7 +85,7 @@
         "filter": true,
         "working": false,
         "price": "$$",
-        "osm": "https://www.openstreetmap.org/node/5920056999",
+        "osm": "5920056999",
         "addedtoosm": true,
         "url": "https://www.facebook.com/congkopi/",
         "date": "2018-09-24T10:08:05+0700"
@@ -98,7 +98,7 @@
         "filter": true,
         "working": true,
         "price": "$$",
-        "osm": "https://www.openstreetmap.org/node/5920045519",
+        "osm": "5920045519",
         "addedtoosm": true,
         "url": "https://www.facebook.com/goldstarcoffeeroastery/",
         "date": "2018-09-24T10:08:05+0700"
@@ -111,7 +111,7 @@
         "filter": true,
         "working": true,
         "price": "$$$",
-        "osm": "https://www.openstreetmap.org/node/5432960921",
+        "osm": "5432960921",
         "addedtoosm": false,
         "url": "http://www.sixonsix.net/",
         "date": "2018-09-24T10:08:05+0700"
@@ -124,7 +124,7 @@
         "filter": true,
         "working": true,
         "price": "$$",
-        "osm": "https://www.openstreetmap.org/node/3388701190",
+        "osm": "3388701190",
         "addedtoosm": false,
         "url": "https://www.facebook.com/ThorphanCoffee/",
         "date": "2018-09-24T10:08:05+0700"
@@ -137,7 +137,7 @@
         "filter": true,
         "working": true,
         "price": "$",
-        "osm": "https://www.openstreetmap.org/node/5919670289",
+        "osm": "5919670289",
         "addedtoosm": true,
         "url": "https://www.facebook.com/zmoycafe/",
         "date": "2018-09-24T10:08:05+0700"
@@ -150,7 +150,7 @@
         "filter": true,
         "working": true,
         "price": "$$$",
-        "osm": "https://www.openstreetmap.org/node/5917955982",
+        "osm": "5917955982",
         "addedtoosm": true,
         "url": "https://www.facebook.com/posrestpremiumhandcraft/",
         "date": "2018-09-24T10:08:05+0700"
@@ -163,7 +163,7 @@
         "filter": false,
         "working": true,
         "price": "$$",
-        "osm": "https://www.openstreetmap.org/node/5915461228",
+        "osm": "5915461228",
         "addedtoosm": true,
         "url": "https://www.facebook.com/ABCD.CNX/",
         "date": "2018-09-24T10:08:05+0700"
@@ -176,7 +176,7 @@
         "filter": true,
         "working": true,
         "price": "$$",
-        "osm": "https://www.openstreetmap.org/node/5202076922",
+        "osm": "5202076922",
         "addedtoosm": false,
         "url": "https://www.facebook.com/Taste.Cafe.chiangmai/",
         "date": "2018-09-24T10:08:05+0700"
@@ -189,7 +189,7 @@
         "filter": true,
         "working": true,
         "price": "$$",
-        "osm": "https://www.openstreetmap.org/node/2527662833",
+        "osm": "2527662833",
         "addedtoosm": false,
         "url": "http://www.akhaama.com/",
         "date": "2018-09-24T10:08:05+0700"
@@ -202,7 +202,7 @@
         "filter": true,
         "working": true,
         "price": "$$$",
-        "osm": "https://www.openstreetmap.org/node/4265515989",
+        "osm": "4265515989",
         "addedtoosm": false,
         "url": "https://www.facebook.com/cottontreecnx/",
         "date": "2018-09-24T10:08:05+0700"
