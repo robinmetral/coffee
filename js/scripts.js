@@ -88,8 +88,6 @@ request.onload = function() {
                         </footer>
                     `)
                     .openPopup();
-        }
-        requestOsm.send();
    });
 }
 
