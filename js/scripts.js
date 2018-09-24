@@ -71,7 +71,7 @@ request.onload = function() {
             const osmData = JSON.parse(this.response);
 
             // Print markers
-            L.marker([{osmData.elements.0.lat}, {osmData.elements.0.lon}], {icon: coffeeIcon}).addTo(myMap)
+            L.marker([${osmData.elements.0.lat}, ${osmData.elements.0.lon}], {icon: coffeeIcon}).addTo(myMap)
                 .bindPopup(
                     `<header><h1>${cafe.name}</h1></header>
                     <ul>
