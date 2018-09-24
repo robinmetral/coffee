@@ -66,6 +66,7 @@ request.onload = function() {
         fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node({cafe.osm});out;')
             .then(function(response) {
                 return reponse.json();
+                console.log(response);
             })
             .then(function(jsonResponse) {
                 console.log(jsonResponse);
