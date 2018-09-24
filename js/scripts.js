@@ -65,14 +65,14 @@ request.onload = function() {
         // fetch() OSM data through the Overpass API
         fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node({cafe.osm});out;')
             .then(function(response) {
-                return reponse.json();
                 console.log(response);
+                return reponse.json();
             })
             .then(function(jsonResponse) {
-                console.log(jsonResponse);
-                var lat = jsonResponse.elements[0].lat;
+                jsonData = JSON.parse(jsonResponse);
+                var lat = jsonData.elements[0].lat;
                 console.log(lat);
-                var lon = jsonResponse.elements[0].lon;
+                var lon = jsonData.elements[0].lon;
                 console.log(lon);
                 
                 // Print markers
