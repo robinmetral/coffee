@@ -68,8 +68,8 @@ request.onload = function() {
                 return reponse.json();
             })
             .then(function(jsonResponse) {
-                const lat = jsonResponse.elements[0].lat;
-                const lon = jsonResponse.elements[0].lon;
+                var lat = jsonResponse.elements[0].lat;
+                var lon = jsonResponse.elements[0].lon;
             }
 
         // Print markers
