@@ -61,17 +61,14 @@ request.onload = function() {
     // Loop through JSON cafe data
     const cafes = data.cafes.map(cafe => {
         console.log(cafe.name);
-        const nodeId = cafe.osm;
-        console.log(cafe.osm);
 
         // fetch() OSM data through the Overpass API
-        fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(' + nodeId + ');out;')
+        fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(' + cafe.osm + ');out;')
             .then(function(response) {
                 console.log(response);
                 return reponse.json();
             })
             .then(function(jsonResponse) {
-                jsonData = JSON.parse(jsonResponse);
                 var lat = jsonData.elements[0].lat;
                 console.log(lat);
                 var lon = jsonData.elements[0].lon;
