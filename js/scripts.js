@@ -68,6 +68,7 @@ request.onload = function() {
                 return reponse.json();
             })
             .then(function(jsonResponse) {
+                console.log(jsonResponse);
                 var lat = jsonResponse.elements[0].lat;
                 console.log(lat);
                 var lon = jsonResponse.elements[0].lon;
