@@ -61,9 +61,11 @@ request.onload = function() {
     // Loop through JSON cafe data
     const cafes = data.cafes.map(cafe => {
         console.log(cafe.name);
+        const nodeId = cafe.osm;
+        console.log(cafe.osm);
 
         // fetch() OSM data through the Overpass API
-        fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node({cafe.osm});out;')
+        fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(nodeId);out;')
             .then(function(response) {
                 console.log(response);
                 return reponse.json();
