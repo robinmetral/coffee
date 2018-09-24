@@ -65,7 +65,7 @@ request.onload = function() {
         console.log(cafe.osm);
 
         // fetch() OSM data through the Overpass API
-        fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(nodeId);out;')
+        fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(' + nodeId + ');out;')
             .then(function(response) {
                 console.log(response);
                 return reponse.json();
