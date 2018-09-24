@@ -67,7 +67,7 @@ request.onload = function() {
         requestOsm.open('GET', 'https://www.overpass-api.de/api/interpreter?data=[out:json];node({cafe.osm});out;', true);
         requestOsm.onload = function () {
 
-            const osmData = JSON.parse(requestOsm);
+            const osmData = JSON.parse(this.response);
 
             // Print markers
             L.marker([osmData.elements.lat, osmData.elements.lon], {icon: coffeeIcon}).addTo(myMap)
