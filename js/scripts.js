@@ -70,21 +70,25 @@ request.onload = function() {
 
             const osmData = JSON.parse(this.response);
 
-            // Print markers
-            L.marker([${osmData.elements.0.lat}, ${osmData.elements.0.lon}], {icon: coffeeIcon}).addTo(myMap)
-                .bindPopup(
-                    `<header><h1>${cafe.name}</h1></header>
-                    <ul>
-                        <li><strong>Espresso:</strong> ${cafe.espresso}</li>
-                        <li><strong>Filter:</strong> ${cafe.filter}</li>
-                        <li><strong>Good for working:</strong> ${cafe.working}</li>
-                        <li><strong>Price range:</strong> ${cafe.price}</li>
-                    </ul>
-                    <footer>
-                        <a href="${cafe.url}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafe.osm}" target="_blank">OpenStreetMap</a>
-                    </footer>
-                `)
-                .openPopup();
+            const osmElements = osmData.elements.map(element => {
+                console.log(element.lat);
+                
+                // Print markers
+                L.marker([elements.lat, element.lon], {icon: coffeeIcon}).addTo(myMap)
+                    .bindPopup(`
+                        <header><h1>${cafe.name}</h1></header>
+                        <ul>
+                            <li><strong>Espresso:</strong> ${cafe.espresso}</li>
+                            <li><strong>Filter:</strong> ${cafe.filter}</li>
+                            <li><strong>Good for working:</strong> ${cafe.working}</li>
+                            <li><strong>Price range:</strong> ${cafe.price}</li>
+                        </ul>
+                        <footer>
+                            <a href="${cafe.url}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafe.osm}" target="_blank">OpenStreetMap</a>
+                        </footer>
+                    `)
+                    .openPopup();
+            });
         }
         requestOsm.send();
    });
