@@ -71,9 +71,8 @@ request.onload = function() {
                 console.log(JSON.stringify(jsonResponse)); // debug
                 var lat = jsonResponse.elements[0].lat;
                 var lon = jsonResponse.elements[0].lon;
-            });
-
-        // Print markers
+                
+                // Print markers
                 L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
                     .bindPopup(`
                         <header><h1>${cafe.name}</h1></header>
@@ -88,6 +87,7 @@ request.onload = function() {
                         </footer>
                     `)
                     .openPopup();
+            });
    });
 }
 
