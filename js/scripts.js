@@ -50,8 +50,6 @@ var coffeeIcon = L.icon({
     popupAnchor:  [0, -16] // point from which the popup should open relative to the iconAnchor
 });
 
-// Add location icon
-
 // Make an XMLHttpRequest to the JSON data
 const requestCoffeeShops = new XMLHttpRequest();
 requestCoffeeShops.open('GET', 'https://robinmetral.github.io/coffee/js/data.json', true);
