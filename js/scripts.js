@@ -51,10 +51,10 @@ var coffeeIcon = L.icon({
 });
 
 // Make an XMLHttpRequest to the JSON data
-const requestCoffeeShops = new XMLHttpRequest();
-requestCoffeeShops.open('GET', 'https://robinmetral.github.io/coffee/js/data.json', true);
+const request = new XMLHttpRequest();
+request.open('GET', 'https://robinmetral.github.io/coffee/js/data.json', true);
 
-requestCoffeeShops.onload = function() {
+request.onload = function() {
     // Begin accessing JSON data here
     const data = JSON.parse(this.response);
 
@@ -63,26 +63,32 @@ requestCoffeeShops.onload = function() {
         console.log(cafe.name);
 
         // Make a XMLHttpRequest to the OSM API
-        const requestLatLon = new XMLHttpRequest();
-        requestLatLon.open('GET', 'https://www.openstreetmap.org/api/0.6/node/${cafe.osm}', true);
-        const osmData = requestLatLon.responseXML;
-        const osmNode = osmData.getElementsByTagName("node")[0];
-        const osmLat = osmNode.getAttribute("lat");
-        const osmLon = osmNode.getAttribute("lon");
-
-        L.marker([osmLat, osmLon], {icon: coffeeIcon}).addTo(myMap)
-            .bindPopup(`
-            <header><h1>${cafe.name}</h1></header>
-            <ul>
-                <li><strong>Espresso:</strong> ${cafe.espresso}</li>
-                <li><strong>Filter:</strong> ${cafe.filter}</li>
-                <li><strong>Good for working:</strong> ${cafe.working}</li>
-                <li><strong>Price range:</strong> ${cafe.price}</li>
-            </ul>
-            <footer><a href="${cafe.url}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafe.osm}" target="_blank">OpenStreetMap</a></footer>
-            `)
-            .openPopup();
-    });
+        const requestOsm = new XMLHttpRequest();
+        requestOsm.open('GET', 'https://www.openstreetmap.org/api/0.6/node/${cafe.osm}', true);
+        requestOsm.overrideMimeType('text/xml');
+        requestOsm.onload = function () {
+            const osmData = requestOsm.responseXML;
+            const osmNode = osmData.getElementsByTagName("node")[0];
+            const osmLat = osmNode.getAttribute("lat");
+            const osmLon = osmNode.getAttribute("lon");
+            
+            L.marker([osmLat, osmLon], {icon: coffeeIcon}).addTo(myMap)
+                .bindPopup(
+                    `<header><h1>${cafe.name}</h1></header>
+                    <ul>
+                        <li><strong>Espresso:</strong> ${cafe.espresso}</li>
+                        <li><strong>Filter:</strong> ${cafe.filter}</li>
+                        <li><strong>Good for working:</strong> ${cafe.working}</li>
+                        <li><strong>Price range:</strong> ${cafe.price}</li>
+                    </ul>
+                    <footer>
+                        <a href="${cafe.url}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafe.osm}" target="_blank">OpenStreetMap</a>
+                    </footer>
+                `)
+                .openPopup();
+        }
+        requestOsm.send(null);
+   });
 }
 
-requestCoffeeShops.send();
+request.send();
