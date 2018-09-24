@@ -68,9 +68,10 @@ request.onload = function() {
                 return reponse.json();
             })
             .then(function(jsonResponse) {
-                console.log(JSON.stringify(jsonResponse)); // debug
                 var lat = jsonResponse.elements[0].lat;
+                console.log(lat);
                 var lon = jsonResponse.elements[0].lon;
+                console.log(lon);
                 
                 // Print markers
                 L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
