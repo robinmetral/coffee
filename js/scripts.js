@@ -58,21 +58,18 @@ request.onload = function() {
     // Begin accessing JSON data here
     const data = JSON.parse(this.response);
 
-    // Print cafe markers
+    // Loop through JSON cafe data
     const cafes = data.cafes.map(cafe => {
         console.log(cafe.name);
 
         // Make a XMLHttpRequest to the OSM API
         const requestOsm = new XMLHttpRequest();
-        requestOsm.open('GET', 'https://www.openstreetmap.org/api/0.6/node/${cafe.osm}', true);
-        requestOsm.overrideMimeType('text/xml');
+        requestOsm.open('GET', 'https://www.overpass-api.de/api/interpreter?data=[out:json];node({cafe.osm});out;', true);
         requestOsm.onload = function () {
-            const osmData = requestOsm.responseXML;
-            const osmNode = osmData.getElementsByTagName("node")[0];
-            const osmLat = osmNode.getAttribute("lat");
-            const osmLon = osmNode.getAttribute("lon");
-            
-            L.marker([osmLat, osmLon], {icon: coffeeIcon}).addTo(myMap)
+            const osmData = JSON.parse(this.response);
+
+            // Print markers
+            L.marker([osmData.elements.lat, osmData.elements.lon], {icon: coffeeIcon}).addTo(myMap)
                 .bindPopup(
                     `<header><h1>${cafe.name}</h1></header>
                     <ul>
@@ -87,7 +84,7 @@ request.onload = function() {
                 `)
                 .openPopup();
         }
-        requestOsm.send(null);
+        requestOsm.send();
    });
 }
 
