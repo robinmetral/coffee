@@ -62,19 +62,18 @@ request.onload = function() {
     const cafes = data.cafes.map(cafe => {
         console.log(cafe.name);
 
-        // Make a XMLHttpRequest to the OSM API
-        const requestOsm = new XMLHttpRequest();
-        requestOsm.overrideMimeType("application/json");
-        requestOsm.open('GET', 'https://www.overpass-api.de/api/interpreter?data=[out:json];node({cafe.osm});out;', true);
-        requestOsm.onload = function () {
+        // fetch() OSM data through the Overpass API
+        fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node({cafe.osm});out;')
+            .then(function(response) {
+                return reponse.json();
+            })
+            .then(function(jsonResponse) {
+                const lat = jsonResponse.elements[0].lat;
+                const lon = jsonResponse.elements[0].lon;
+            }
 
-            const osmData = JSON.parse(this.response);
-
-            const osmElements = osmData.elements.map(element => {
-                console.log(element.lat);
-                
-                // Print markers
-                L.marker([elements.lat, element.lon], {icon: coffeeIcon}).addTo(myMap)
+        // Print markers
+                L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
                     .bindPopup(`
                         <header><h1>${cafe.name}</h1></header>
                         <ul>
@@ -88,7 +87,6 @@ request.onload = function() {
                         </footer>
                     `)
                     .openPopup();
-            });
         }
         requestOsm.send();
    });
