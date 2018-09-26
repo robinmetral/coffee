@@ -68,36 +68,25 @@ request.onload = function() {
     fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
         .then(function(response) { return reponse.json(); })
         .then(function(jsonResponse) {
-            // Test print marker to map
-            const lat = jsonResponse.elements[0].lat;
-            const lon = jsonResponse.elements[0].lon;
-            L.marker([lat, lon]).addTo(myMap);
+            for (var j = 0; j < jsonResponse.elements.length; j++) {
+                var lat = jsonResponse.elements[j].lat;
+                var lon = jsonResponse.elements[j].lon;
+                L.marker([lat, lon]).addTo(myMap)
+                    .bindPopup(`
+                        <header><h1>${data.cafes[j].name}</h1></header>
+                        <ul>
+                            <li><strong>Espresso:</strong> ${data.cafes[j].espresso}</li>
+                            <li><strong>Filter:</strong> ${data.cafes[j].filter}</li>
+                            <li><strong>Good for working:</strong> ${data.cafes[j].working}</li>
+                            <li><strong>Price range:</strong> ${data.cafes[j].price}</li>
+                        </ul>
+                        <footer>
+                            <a href="${data.cafes[j].url}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${data.cafes[j].osm}" target="_blank">OpenStreetMap</a>
+                        </footer>
+                    `)
+                    .openPopup();
+            }
         })
-
-    // Loop through cafes and print markers
-    for (var j = 0; j < data.cafes.length; j++) {
-        console.log(data.cafes[j].name);
-    }
-                
-    // Loop through JSON cafe data
-    // const cafes = data.cafes.map(cafe => {
-    // console.log(cafe.name);
-
-    // L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
-    // .bindPopup(`
-    // <header><h1>${cafe.name}</h1></header>
-    // <ul>
-    // <li><strong>Espresso:</strong> ${cafe.espresso}</li>
-    // <li><strong>Filter:</strong> ${cafe.filter}</li>
-    // <li><strong>Good for working:</strong> ${cafe.working}</li>
-    // <li><strong>Price range:</strong> ${cafe.price}</li>
-    // </ul>
-    // <footer>
-    // <a href="${cafe.url}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafe.osm}" target="_blank">OpenStreetMap</a>
-    // </footer>
-    // `)
-    // .openPopup();
-    // });
 }
 
 request.send();
