@@ -63,8 +63,8 @@ request.onload = function() {
     for (var i = 0; i < data.cafes.length; i++) {
         osmIds.push(data.cafes[i].osm);
     }
-    console.log(osmIds);
 
+    // sort() cafes array in OSM node id ascending order to fit Overpass
     const cafes = data.cafes.sort(function(a, b){return a.osm - b.osm});
 
     // fetch() OSM data through the Overpass API
@@ -72,7 +72,6 @@ request.onload = function() {
         .then(function(response) { return response.json(); })
         .then(function(jsonResponse) {
             for (var j = 0; j < jsonResponse.elements.length; j++) {
-                console.log(jsonResponse.elements[j].id);
                 var lat = jsonResponse.elements[j].lat;
                 var lon = jsonResponse.elements[j].lon;
                 L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
