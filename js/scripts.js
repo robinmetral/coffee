@@ -61,8 +61,9 @@ request.onload = function() {
     // Initialize and create OSM IDs array
     const osmIds = [];
     for (var i = 0; i < data.cafes.length; i++) {
-        osmIds.unshift(data.cafes[i].osm);
+        osmIds.push(data.cafes[i].osm);
     }
+    osmIds.reverse();
 
     // fetch() OSM data through the Overpass API
     fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
