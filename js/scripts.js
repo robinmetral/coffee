@@ -61,7 +61,7 @@ request.onload = function() {
     // Initialize and create OSM IDs array
     const osmIds = [];
     for (var i = 0; i < data.cafes.length; i++) {
-        osmIds.push(data.cafes.osm);
+        osmIds.push(data.cafes[i].osm);
     }
     console.log(osmIds);
 
