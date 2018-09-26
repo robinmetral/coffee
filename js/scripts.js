@@ -63,12 +63,13 @@ request.onload = function() {
     for (var i = 0; i < data.cafes.length; i++) {
         osmIds.push(data.cafes[i].osm);
     }
-    osmIds.reverse();
+    console.log(osmIds);
 
     // fetch() OSM data through the Overpass API
     fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
         .then(function(response) { return response.json(); })
         .then(function(jsonResponse) {
+            jsonResponse.elements.reverse(); // Reverse Overpass array response
             for (var j = 0; j < jsonResponse.elements.length; j++) {
                 var lat = jsonResponse.elements[j].lat;
                 var lon = jsonResponse.elements[j].lon;
