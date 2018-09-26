@@ -61,11 +61,8 @@ request.onload = function() {
     // Initialize and create OSM IDs array
     const osmIds = [];
     for (var i = 0; i < data.cafes.length; i++) {
-        osmIds.push(data.cafes[i].osm);
+        osmIds.unshift(data.cafes[i].osm);
     }
-
-    // Reverse data order to fit Overpass order
-    const cafes = data.cafes.reverse();
 
     // fetch() OSM data through the Overpass API
     fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
@@ -76,7 +73,7 @@ request.onload = function() {
                 var lon = jsonResponse.elements[j].lon;
                 L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
                     .bindPopup(`
-                        <header><h1>${cafes[j].name}</h1></header>
+                        <header><h1>${data.cafes[j].name}</h1></header>
                         <ul>
                             <li><strong>Espresso:</strong> ${cafes[j].espresso}</li>
                             <li><strong>Filter:</strong> ${cafes[j].filter}</li>
