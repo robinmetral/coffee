@@ -66,13 +66,9 @@ request.onload = function() {
 
     // fetch() OSM data through the Overpass API
     fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
-        .then(function(response) {
-            return reponse.json();
-        })
+        .then(function(response) { return reponse.json(); })
         .then(function(jsonResponse) {
-            const osmData = jsonResponse;
-            console.log(osmData);
-            return osmData;
+            console.log(jsonResponse.elements[0].lat;
         })
 
     // Loop through cafes and print markers
