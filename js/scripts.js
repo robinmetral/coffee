@@ -58,12 +58,18 @@ request.onload = function() {
     // Begin accessing JSON data here
     const data = JSON.parse(this.response);
 
+    // Initialize and create OSM IDs array
+    const osmIds = [];
+    for (var i = 0; i < data.cafe.length; i++) {
+        osmIds.push(data.cafe.osm);
+    }
+
     // Loop through JSON cafe data
     const cafes = data.cafes.map(cafe => {
         console.log(cafe.name);
 
         // fetch() OSM data through the Overpass API
-        fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(' + cafe.osm + ');out;')
+        fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(' + osmIds + ');out;')
             .then(function(response) {
                 console.log(response);
                 return reponse.json();
