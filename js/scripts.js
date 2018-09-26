@@ -69,8 +69,8 @@ request.onload = function() {
     fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
         .then(function(response) { return response.json(); })
         .then(function(jsonResponse) {
-            jsonResponse.elements.reverse(); // Reverse Overpass array response
             for (var j = 0; j < jsonResponse.elements.length; j++) {
+                console.log(jsonResponse.elements[j].id);
                 var lat = jsonResponse.elements[j].lat;
                 var lon = jsonResponse.elements[j].lon;
                 L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
