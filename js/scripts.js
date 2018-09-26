@@ -63,42 +63,41 @@ request.onload = function() {
     for (var i = 0; i < data.cafes.length; i++) {
         osmIds.push(data.cafes[i].osm);
     }
-    console.log(osmIds);
 
-    // Loop through JSON cafe data
-    const cafes = data.cafes.map(cafe => {
-        console.log(cafe.name);
+    // fetch() OSM data through the Overpass API
+    fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
+        .then(function(response) {
+            return reponse.json();
+        })
+        .then(function(jsonResponse) {
+            const osmData = jsonResponse;
+            return osmData;
+        })
 
-        // fetch() OSM data through the Overpass API
-        fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
-            .then(function(response) {
-                console.log(response);
-                return reponse.json();
-            })
-            .then(function(jsonResponse) {
-                console.log(jsonResponse);
-                var lat = jsonResponse.elements[0].lat;
-                console.log(lat);
-                var lon = jsonResponse.elements[0].lon;
-                console.log(lon);
+    // Loop through cafes and print markers
+    for (var j = 0; j < data.cafes.length; j++) {
+        console.log(data.cafes[j].name);
+    }
                 
-                // Print markers
-                L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
-                    .bindPopup(`
-                        <header><h1>${cafe.name}</h1></header>
-                        <ul>
-                            <li><strong>Espresso:</strong> ${cafe.espresso}</li>
-                            <li><strong>Filter:</strong> ${cafe.filter}</li>
-                            <li><strong>Good for working:</strong> ${cafe.working}</li>
-                            <li><strong>Price range:</strong> ${cafe.price}</li>
-                        </ul>
-                        <footer>
-                            <a href="${cafe.url}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafe.osm}" target="_blank">OpenStreetMap</a>
-                        </footer>
-                    `)
-                    .openPopup();
-            });
-   });
+    // Loop through JSON cafe data
+    // const cafes = data.cafes.map(cafe => {
+    // console.log(cafe.name);
+
+    // L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
+    // .bindPopup(`
+    // <header><h1>${cafe.name}</h1></header>
+    // <ul>
+    // <li><strong>Espresso:</strong> ${cafe.espresso}</li>
+    // <li><strong>Filter:</strong> ${cafe.filter}</li>
+    // <li><strong>Good for working:</strong> ${cafe.working}</li>
+    // <li><strong>Price range:</strong> ${cafe.price}</li>
+    // </ul>
+    // <footer>
+    // <a href="${cafe.url}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafe.osm}" target="_blank">OpenStreetMap</a>
+    // </footer>
+    // `)
+    // .openPopup();
+    // });
 }
 
 request.send();
