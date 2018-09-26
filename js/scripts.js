@@ -60,9 +60,10 @@ request.onload = function() {
 
     // Initialize and create OSM IDs array
     const osmIds = [];
-    for (var i = 0; i < data.cafe.length; i++) {
-        osmIds.push(data.cafe.osm);
+    for (var i = 0; i < data.cafes.length; i++) {
+        osmIds.push(data.cafes.osm);
     }
+    console.log(osmIds);
 
     // Loop through JSON cafe data
     const cafes = data.cafes.map(cafe => {
