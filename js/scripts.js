@@ -71,6 +71,7 @@ request.onload = function() {
         })
         .then(function(jsonResponse) {
             const osmData = jsonResponse;
+            console.log(osmData);
             return osmData;
         })
 
