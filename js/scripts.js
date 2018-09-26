@@ -66,7 +66,7 @@ request.onload = function() {
 
     // fetch() OSM data through the Overpass API
     fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
-        .then(function(response) { return reponse.json(); })
+        .then(function(response) { return response.json(); })
         .then(function(jsonResponse) {
             for (var j = 0; j < jsonResponse.elements.length; j++) {
                 var lat = jsonResponse.elements[j].lat;
