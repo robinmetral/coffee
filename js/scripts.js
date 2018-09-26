@@ -75,13 +75,13 @@ request.onload = function() {
                     .bindPopup(`
                         <header><h1>${data.cafes[j].name}</h1></header>
                         <ul>
-                            <li><strong>Espresso:</strong> ${cafes[j].espresso}</li>
-                            <li><strong>Filter:</strong> ${cafes[j].filter}</li>
-                            <li><strong>Good for working:</strong> ${cafes[j].working}</li>
-                            <li><strong>Price range:</strong> ${cafes[j].price}</li>
+                            <li><strong>Espresso:</strong> ${data.cafes[j].espresso}</li>
+                            <li><strong>Filter:</strong> ${data.cafes[j].filter}</li>
+                            <li><strong>Good for working:</strong> ${data.cafes[j].working}</li>
+                            <li><strong>Price range:</strong> ${data.cafes[j].price}</li>
                         </ul>
                         <footer>
-                            <a href="${cafes[j].url}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafes[j].osm}" target="_blank">OpenStreetMap</a>
+                            <a href="${data.cafes[j].url}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${data.cafes[j].osm}" target="_blank">OpenStreetMap</a>
                         </footer>
                     `)
                     .openPopup();
