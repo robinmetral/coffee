@@ -68,7 +68,10 @@ request.onload = function() {
     fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
         .then(function(response) { return reponse.json(); })
         .then(function(jsonResponse) {
-            console.log(jsonResponse.elements[0].lat);
+            // Test print marker to map
+            const lat = jsonResponse.elements[0].lat;
+            const lon = jsonResponse.elements[0].lon;
+            L.marker([lat, lon]).addTo(myMap);
         })
 
     // Loop through cafes and print markers
