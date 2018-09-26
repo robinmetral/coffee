@@ -70,7 +70,7 @@ request.onload = function() {
         console.log(cafe.name);
 
         // fetch() OSM data through the Overpass API
-        fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(' + osmIds + ');out;')
+        fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
             .then(function(response) {
                 console.log(response);
                 return reponse.json();
