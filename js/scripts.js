@@ -71,7 +71,7 @@ request.onload = function() {
             for (var j = 0; j < jsonResponse.elements.length; j++) {
                 var lat = jsonResponse.elements[j].lat;
                 var lon = jsonResponse.elements[j].lon;
-                L.marker([lat, lon]).addTo(myMap)
+                L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
                     .bindPopup(`
                         <header><h1>${data.cafes[j].name}</h1></header>
                         <ul>
