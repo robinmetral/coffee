@@ -1,8 +1,6 @@
 {
     "cafes": [{
         "name": "Asama",
-        "lat": 18.7650241,
-        "lon": 98.9531222,
         "espresso": true,
         "filter": false,
         "working": false,
@@ -14,8 +12,6 @@
     },
     {
         "name": "The Mellow",
-        "lat": 18.4129973,
-        "lon": 98.7043439,
         "espresso": true,
         "filter": false,
         "working": true,
@@ -27,8 +23,6 @@
     },
     {
         "name": "Youngfolk",
-        "lat": 18.4149569,
-        "lon": 98.6815692,
         "espresso": true,
         "filter": false,
         "working": true,
@@ -40,8 +34,6 @@
     },
     {
         "name": "Omnia",
-        "lat": 18.8136656,
-        "lon": 98.9737922,
         "espresso": true,
         "filter": true,
         "working": true,
@@ -53,8 +45,6 @@
     },
     {
         "name": "Brewman",
-        "lat": 16.0643013,
-        "lon": 108.2229858,
         "espresso": true,
         "filter": true,
         "working": true,
@@ -66,8 +56,6 @@
     },
     {
         "name": "Why",
-        "lat": 16.0513778,
-        "lon": 108.2406334,
         "espresso": true,
         "filter": true,
         "working": true,
@@ -79,8 +67,6 @@
     },
     {
         "name": "Cong Kopi",
-        "lat": 16.0657749,
-        "lon": 108.2211071,
         "espresso": true,
         "filter": true,
         "working": false,
@@ -92,8 +78,6 @@
     },
     {
         "name": "Gold Star",
-        "lat": 16.0466175,
-        "lon": 108.2418665,
         "espresso": true,
         "filter": true,
         "working": true,
@@ -105,8 +89,6 @@
     },
     {
         "name": "Six On Six",
-        "lat": 16.0428676,
-        "lon": 108.2447261,
         "espresso": true,
         "filter": true,
         "working": true,
@@ -118,8 +100,6 @@
     },
     {
         "name": "Thor Phan",
-        "lat": 18.7886898,
-        "lon": 98.9802287,
         "espresso": true,
         "filter": true,
         "working": true,
@@ -131,8 +111,6 @@
     },
     {
         "name": "ZMOY",
-        "lat": 18.7934646,
-        "lon": 98.9904108,
         "espresso": true,
         "filter": true,
         "working": true,
@@ -144,8 +122,6 @@
     },
     {
         "name": "POSREST",
-        "lat": 18.7947770,
-        "lon": 98.9649403,
         "espresso": true,
         "filter": true,
         "working": true,
@@ -157,8 +133,6 @@
     },
     {
         "name": "A.B.C.D.",
-        "lat": 18.7963749,
-        "lon": 98.9768205,
         "espresso": true,
         "filter": false,
         "working": true,
@@ -170,8 +144,6 @@
     },
     {
         "name": "Taste",
-        "lat": 18.7951655,
-        "lon": 98.9630869,
         "espresso": true,
         "filter": true,
         "working": true,
@@ -183,8 +155,6 @@
     },
     {
         "name": "Akha Ama",
-        "lat": 18.8032255,
-        "lon": 98.9800245,
         "espresso": true,
         "filter": true,
         "working": true,
@@ -196,8 +166,6 @@
     },
     {
         "name": "Cottontree",
-        "lat": 18.8042812,
-        "lon": 98.9678609,
         "espresso": true,
         "filter": true,
         "working": true,
