@@ -59,7 +59,7 @@ request.onload = function() {
     const data = JSON.parse(this.response);
 
     // Reverse data order to fit Overpass order
-    data.cafes.reverse();
+    data = data.cafes.reverse();
 
     // Initialize and create OSM IDs array
     const osmIds = [];
