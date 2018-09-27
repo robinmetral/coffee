@@ -1,5 +1,16 @@
 {
     "cafes": [{
+        "name": "Rakuda",
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$$",
+        "osm": "4655307491",
+        "addedtoosm": false,
+        "url": "https://www.facebook.com/rakudaphotoartisans/",
+        "date": "2018-09-27"
+    },
+    {
         "name": "Brewing Room",
         "espresso": true,
         "filter": false,
@@ -8,7 +19,7 @@
         "osm": "5933370536",
         "addedtoosm": true,
         "url": "https://www.facebook.com/brewingroom2558",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Marocchino",
@@ -19,7 +30,7 @@
         "osm": "5933370535",
         "addedtoosm": true,
         "url": "https://www.facebook.com/marocchinocm/",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Khagee",
@@ -30,7 +41,7 @@
         "osm": "3395080851",
         "addedtoosm": false,
         "url": "https://www.facebook.com/khageecafe",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "CoolMuang",
@@ -41,7 +52,7 @@
         "osm": "5758046621",
         "addedtoosm": false,
         "url": "https://www.facebook.com/CoolMuang-Coffee-144066229705668/",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Gateway",
@@ -52,7 +63,7 @@
         "osm": "5933370534",
         "addedtoosm": true,
         "url": "https://www.facebook.com/gatewaycoffeeroasters",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Ponganes",
@@ -63,7 +74,7 @@
         "osm": "3305560828",
         "addedtoosm": false,
         "url": "http://ponganes.com/",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Nowhere",
@@ -74,7 +85,7 @@
         "osm": "5933370531",
         "addedtoosm": true,
         "url": "https://www.facebook.com/Nowherehandroaster/",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Graph",
@@ -85,7 +96,7 @@
         "osm": "4848162223",
         "addedtoosm": false,
         "url": "www.graphdream.com",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Artisan",
@@ -96,7 +107,7 @@
         "osm": "5933370533",
         "addedtoosm": true,
         "url": "https://www.facebook.com/Artisan-cafe-320893348061927/",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "ma-chill",
@@ -107,7 +118,7 @@
         "osm": "4586796889",
         "addedtoosm": false,
         "url": "https://machillespressochiangmaithailand.wordpress.com/",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Happy Espresso",
@@ -118,7 +129,7 @@
         "osm": "3384152432",
         "addedtoosm": false,
         "url": "https://happyespresso.net/",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Tenten",
@@ -129,7 +140,7 @@
         "osm": "5593553723",
         "addedtoosm": false,
         "url": "https://www.facebook.com/tentencnx",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Akha Ama La Fattoria",
@@ -140,7 +151,7 @@
         "osm": "2404044286",
         "addedtoosm": false,
         "url": "http://www.akhaama.com/",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Maled",
@@ -151,7 +162,7 @@
         "osm": "5933370532",
         "addedtoosm": true,
         "url": "https://www.facebook.com/Maledcoffeeroasters/",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Yellow Crafts",
@@ -162,7 +173,7 @@
         "osm": "4893144721",
         "addedtoosm": false,
         "url": "https://www.facebook.com/YellowCraftsHomeBrewing/",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Ristr8to",
@@ -173,7 +184,7 @@
         "osm": "2105726947",
         "addedtoosm": false,
         "url": "http://www.ristr8to.com/",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Ristr8to Lab",
@@ -184,7 +195,7 @@
         "osm": "4438545289",
         "addedtoosm": false,
         "url": "http://www.ristr8to.com/",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Barisotel",
@@ -195,7 +206,7 @@
         "osm": "5933370530",
         "addedtoosm": true,
         "url": "https://www.facebook.com/thebarisotelbythebaristro/",
-        "date": "2018-09-27T10:46:11+0700"
+        "date": "2018-09-27"
     },
     {
         "name": "Asama",
@@ -206,7 +217,7 @@
         "osm": "4555359051",
         "addedtoosm": false,
         "url": "https://www.facebook.com/AsamaCafe",
-        "date": "2018-09-24T10:04:01+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "The Mellow",
@@ -217,7 +228,7 @@
         "osm": "5925629982",
         "addedtoosm": true,
         "url": "https://www.facebook.com/themellowcnx/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "Youngfolk",
@@ -228,7 +239,7 @@
         "osm": "5925629983",
         "addedtoosm": true,
         "url": "https://www.facebook.com/YoungfolkcafeChiangmai",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "Omnia",
@@ -239,7 +250,7 @@
         "osm": "4265502391",
         "addedtoosm": false,
         "url": "https://www.facebook.com/OmniaCafeChiangmai/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "Brewman",
@@ -250,7 +261,7 @@
         "osm": "5920089202",
         "addedtoosm": true,
         "url": "https://www.facebook.com/BrewmanCoffeeConcept/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "Why",
@@ -261,7 +272,7 @@
         "osm": "5920067081",
         "addedtoosm": true,
         "url": "https://www.facebook.com/WhyRoastery/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "Cong Kopi",
@@ -272,7 +283,7 @@
         "osm": "5920056999",
         "addedtoosm": true,
         "url": "https://www.facebook.com/congkopi/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "Gold Star",
@@ -283,7 +294,7 @@
         "osm": "5920045519",
         "addedtoosm": true,
         "url": "https://www.facebook.com/goldstarcoffeeroastery/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "Six On Six",
@@ -294,7 +305,7 @@
         "osm": "5432960921",
         "addedtoosm": false,
         "url": "http://www.sixonsix.net/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "Thor Phan",
@@ -305,7 +316,7 @@
         "osm": "3388701190",
         "addedtoosm": false,
         "url": "https://www.facebook.com/ThorphanCoffee/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "ZMOY",
@@ -316,7 +327,7 @@
         "osm": "5919670289",
         "addedtoosm": true,
         "url": "https://www.facebook.com/zmoycafe/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "POSREST",
@@ -327,7 +338,7 @@
         "osm": "5917955982",
         "addedtoosm": true,
         "url": "https://www.facebook.com/posrestpremiumhandcraft/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "A.B.C.D.",
@@ -338,7 +349,7 @@
         "osm": "5915461228",
         "addedtoosm": true,
         "url": "https://www.facebook.com/ABCD.CNX/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "Taste",
@@ -349,7 +360,7 @@
         "osm": "5202076922",
         "addedtoosm": false,
         "url": "https://www.facebook.com/Taste.Cafe.chiangmai/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "Akha Ama",
@@ -360,7 +371,7 @@
         "osm": "2527662833",
         "addedtoosm": false,
         "url": "http://www.akhaama.com/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     },
     {
         "name": "Cottontree",
@@ -371,6 +382,6 @@
         "osm": "4265515989",
         "addedtoosm": false,
         "url": "https://www.facebook.com/cottontreecnx/",
-        "date": "2018-09-24T10:08:05+0700"
+        "date": "2018-09-24"
     }]
 }
