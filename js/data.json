@@ -27,7 +27,7 @@
         "filter": false,
         "working": true,
         "price": "$$",
-        "way": "582865691",
+        "osm": "3395080851",
         "addedtoosm": false,
         "url": "https://www.facebook.com/khageecafe",
         "date": "2018-09-27T10:46:11+0700"
@@ -82,7 +82,7 @@
         "filter": true,
         "working": false,
         "price": "$$$",
-        "way": "492846792",
+        "osm": "4848162223",
         "addedtoosm": false,
         "url": "www.graphdream.com",
         "date": "2018-09-27T10:46:11+0700"
