@@ -1,5 +1,38 @@
 {
     "cafes": [{
+        "name": "Hana Zono",
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$$",
+        "osm": "4539213080",
+        "addedtoosm": false,
+        "url": "https://www.facebook.com/hana.zono.cafe.chiangmai.thailand",
+        "date": "2018-10-01"
+    },
+    {
+        "name": "The Localist",
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$$",
+        "osm": "5941619770",
+        "addedtoosm": true,
+        "url": "https://www.facebook.com/thelocalistcm/",
+        "date": "2018-10-01"
+    },
+    {
+        "name": "Mix Kaffee",
+        "espresso": true,
+        "filter": true,
+        "working": false,
+        "price": "$$",
+        "osm": "4514610993",
+        "addedtoosm": false,
+        "url": "https://www.facebook.com/Mixkaffee",
+        "date": "2018-10-01"
+    },
+    {
         "name": "Rakuda",
         "espresso": true,
         "filter": true,
