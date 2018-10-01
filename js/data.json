@@ -1,5 +1,16 @@
 {
     "cafes": [{
+        "name": "A Day In Chiang Mai",
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$$",
+        "osm": "5941633292",
+        "addedtoosm": true,
+        "url": "https://www.facebook.com/adayinchiangmaicoffee",
+        "date": "2018-10-01"
+    },
+    {
         "name": "Hana Zono",
         "espresso": true,
         "filter": true,
