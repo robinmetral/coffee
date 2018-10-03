@@ -1,5 +1,16 @@
 {
     "cafes": [{
+        "name": "Johoney",
+        "espresso": true,
+        "filter": false,
+        "working": true,
+        "price": "$$",
+        "osm": "5950919672",
+        "addedtoosm": true,
+        "url": "https://www.facebook.com/johoneyicecream",
+        "date": "2018-10-02"
+    },
+    {
         "name": "A Day In Chiang Mai",
         "espresso": true,
         "filter": true,
