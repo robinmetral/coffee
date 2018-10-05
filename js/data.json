@@ -1,5 +1,16 @@
 {
     "cafes": [{
+        "name": "Roastwood",
+        "espresso": true,
+        "filter": false,
+        "working": true,
+        "price": "$$",
+        "osm": "5956250105",
+        "addedtoosm": true,
+        "url": "https://www.facebook.com/Roastwoodcnx/",
+        "date": "2018-10-05"
+    },
+    {
         "name": "Johoney",
         "espresso": true,
         "filter": false,
