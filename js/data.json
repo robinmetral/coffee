@@ -1,5 +1,27 @@
 {
     "cafes": [{
+        "name": "The Baristro",
+        "espresso": true,
+        "filter": false,
+        "working": true,
+        "price": "$$$",
+        "osm": "3195504333",
+        "addedtoosm": false,
+        "url": "https://www.facebook.com/thebaristro/",
+        "date": "2018-10-08"
+    },
+    {
+        "name": "Di Bosco",
+        "espresso": true,
+        "filter": true,
+        "working": true,
+        "price": "$$",
+        "osm": "4871575722",
+        "addedtoosm": false,
+        "url": "https://www.facebook.com/diboscoroasterlab/",
+        "date": "2018-10-08"
+    },
+    {
         "name": "Roastwood",
         "espresso": true,
         "filter": false,
