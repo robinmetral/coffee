@@ -72,19 +72,46 @@ request.onload = function() {
         .then(function(response) { return response.json(); })
         .then(function(jsonResponse) {
             for (let j = 0; j < jsonResponse.elements.length; j++) {
-                let lat = jsonResponse.elements[j].lat;
-                let lon = jsonResponse.elements[j].lon;
-                L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
+                let cafeLat = jsonResponse.elements[j].lat;
+                let cafeLon = jsonResponse.elements[j].lon;
+                // let cafeUrl = jsonResponse.elements[j].????;
+
+                // Filter variable
+                let cafeFilter = "prix inconnu";
+                if(cafes[j].filter === false) {
+                    cafeFilter = "non";
+                }
+                else {
+                    cafeFilter = cafes[j].filter;
+                }
+
+                // Latte variable
+                let cafeLatte = "prix inconnu";
+                if(cafes[j].latte === false) {
+                    cafeLatte = "non";
+                }
+                else {
+                    cafeLatte = cafes[j].latte;
+                }
+
+                // Laptop variable
+                let cafeLaptop = "non";
+                if(cafes[j].laptop) {
+                    cafeLaptop = "oui";
+                }
+
+                // Print marker
+                L.marker([cafeLat, cafeLon], {icon: coffeeIcon}).addTo(myMap)
                     .bindPopup(`
-                        <header><h1>${cafes[j].name}</h1></header>
+                        <header><h1>${cafes[j].name} (${cafes[j].rating}/5)</h1></header>
+                        <p>${cafes[j].comment}</p>
                         <ul>
-                            <li><strong>Espresso:</strong> ${cafes[j].espresso}</li>
-                            <li><strong>Filter:</strong> ${cafes[j].filter}</li>
-                            <li><strong>Good for working:</strong> ${cafes[j].working}</li>
-                            <li><strong>Price range:</strong> ${cafes[j].price}</li>
+                            <li><strong>Filtre :</strong> ${cafeFilter}</li>
+                            <li><strong>Latte :</strong> ${cafeLatte}</li>
+                            <li><strong>Laptop :</strong> ${cafeLaptop}</li>
                         </ul>
                         <footer>
-                            <a href="${cafes[j].url}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafes[j].osm}" target="_blank">OpenStreetMap</a>
+                            <a href="${cafeUrl}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafes[j].osm}" target="_blank">OpenStreetMap</a> · Mis à jour le ${cafes[j].date}
                         </footer>
                     `)
                     .openPopup();
