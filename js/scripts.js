@@ -71,9 +71,9 @@ request.onload = function() {
     fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
         .then(function(response) { return response.json(); })
         .then(function(jsonResponse) {
-            for (var j = 0; j < jsonResponse.elements.length; j++) {
-                var lat = jsonResponse.elements[j].lat;
-                var lon = jsonResponse.elements[j].lon;
+            for (let j = 0; j < jsonResponse.elements.length; j++) {
+                let lat = jsonResponse.elements[j].lat;
+                let lon = jsonResponse.elements[j].lon;
                 L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
                     .bindPopup(`
                         <header><h1>${cafes[j].name}</h1></header>
