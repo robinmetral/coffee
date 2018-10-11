@@ -63,9 +63,10 @@ request.onload = function() {
     for (var i = 0; i < data.cafes.length; i++) {
         osmIds.push(data.cafes[i].osm[0]);
     }
+    console.log(osmIds);
 
     // sort() cafes array in OSM node id ascending order to fit Overpass
-    const cafes = data.cafes.sort(function(a, b){return a.osm - b.osm});
+    const cafes = data.cafes.sort(function(a, b){return a.osm[0] - b.osm[0]});
 
     // fetch() OSM data through the Overpass API
     fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
@@ -74,31 +75,10 @@ request.onload = function() {
             for (let j = 0; j < jsonResponse.elements.length; j++) {
                 let cafeLat = jsonResponse.elements[j].lat;
                 let cafeLon = jsonResponse.elements[j].lon;
-                // let cafeUrl = jsonResponse.elements[j].????;
-
-                // Filter variable
-                let cafeFilter = "prix inconnu";
-                if(cafes[j].filter === false) {
-                    cafeFilter = "non";
-                }
-                else {
-                    cafeFilter = cafes[j].filter;
-                }
-
-                // Latte variable
-                let cafeLatte = "prix inconnu";
-                if(cafes[j].latte === false) {
-                    cafeLatte = "non";
-                }
-                else {
-                    cafeLatte = cafes[j].latte;
-                }
-
-                // Laptop variable
-                let cafeLaptop = "non";
-                if(cafes[j].laptop) {
-                    cafeLaptop = "oui";
-                }
+                let cafeUrl = (jsonResponse.elements[j].tags.hasOwnProperty('website')) ? jsonResponse.elements[j].tags.website : jsonResponse.elements[j].tags.facebook;
+                let cafeFilter = (cafes[j].filter = false) ? "non" : (cafes[j].filter = "") ? "oui" : cafes[j].filter;
+                let cafeLatte = (cafes[j].latte = false) ? "non" : (cafes[j].latte = "") ? "oui" : cafes[j].latte;
+                let cafeLaptop = (cafe[j].laptop) ? "oui" : "non";
 
                 // Print marker
                 L.marker([cafeLat, cafeLon], {icon: coffeeIcon}).addTo(myMap)
@@ -111,10 +91,9 @@ request.onload = function() {
                             <li><strong>Laptop :</strong> ${cafeLaptop}</li>
                         </ul>
                         <footer>
-                            <a href="${cafeUrl}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafes[j].osm}" target="_blank">OpenStreetMap</a> · Mis à jour le ${cafes[j].date}
+                            <a href="${cafeUrl}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafes[j].osm[0]}" target="_blank">OpenStreetMap</a> · Mis à jour le ${cafes[j].date}
                         </footer>
-                    `)
-                    .openPopup();
+                    `);
             }
         })
 }
