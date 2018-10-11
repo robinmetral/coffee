@@ -1,5 +1,15 @@
 {
     "cafes": [{
+        "name": "Just Coffee",
+        "latte": [55],
+        "filter": [80],
+        "laptop": true,
+        "osm": [5974404529, true],
+        "rating": 2,
+        "comment": "Petit café au bord de la ring road. Service sympa, mais route assez bruyante et café filtre surtorréfié.",
+        "date": "2018-10-11"
+    },
+    {
         "name": "The Baristro",
         "latte": "",
         "filter": false,
