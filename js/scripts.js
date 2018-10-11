@@ -79,7 +79,7 @@ request.onload = function() {
                 console.log("Coordinates: " + cafeLon + "/" + cafeLat);
                 const cafeUrl = (jsonResponse.elements[j].tags.hasOwnProperty("website")) ? jsonResponse.elements[j].tags.website : jsonResponse.elements[j].tags.facebook;
                 console.log(cafeUrl);
-                const cafeFilter = (cafes[j].filter = false) ? "non" : (cafes[j].filter = "") ? "oui" : cafes[j].filter;
+                const cafeFilter = (cafes[j].filter = "") ? "oui" : (cafes[j].filter) ? cafes[j].filter : "non";
                 console.log(cafeFilter);
                 const cafeLatte = (cafes[j].latte = false) ? "non" : (cafes[j].latte = "") ? "oui" : cafes[j].latte;
                 const cafeLaptop = (cafe[j].laptop) ? "oui" : "non";
