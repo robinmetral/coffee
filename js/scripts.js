@@ -76,13 +76,14 @@ request.onload = function() {
             for (let j = 0; j < jsonResponse.elements.length; j++) {
                 const cafeLat = jsonResponse.elements[j].lat;
                 const cafeLon = jsonResponse.elements[j].lon;
+                console.log(cafes[j].name);
                 console.log("Coordinates: " + cafeLon + "/" + cafeLat);
                 const cafeUrl = (jsonResponse.elements[j].tags.hasOwnProperty("website")) ? jsonResponse.elements[j].tags.website : jsonResponse.elements[j].tags.facebook;
                 const cafeFilter = (cafes[j].filter = "") ? "oui" : (cafes[j].filter) ? cafes[j].filter : "non";
                 console.log(cafeFilter);
                 const cafeLatte = (cafes[j].latte = "") ? "oui" : (cafes[j].latte) ? cafes[j].latte : "non";
                 console.log(cafeLatte);
-                const cafeLaptop = (cafe[j].laptop) ? "oui" : "non";
+                const cafeLaptop = (cafes[j].laptop) ? "oui" : "non";
                 console.log(cafeLaptop);
                 console.log("URL: " + cafeUrl + ", filter: " + cafeFilter + ", latte: " + cafeLatte + ", laptop: " + cafeLaptop);
 
