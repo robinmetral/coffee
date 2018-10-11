@@ -61,7 +61,7 @@ request.onload = function() {
     // Initialize and create OSM IDs array
     const osmIds = [];
     for (var i = 0; i < data.cafes.length; i++) {
-        osmIds.push(data.cafes[i].osm);
+        osmIds.push(data.cafes[i].osm[0]);
     }
 
     // sort() cafes array in OSM node id ascending order to fit Overpass
