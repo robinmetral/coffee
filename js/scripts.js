@@ -60,25 +60,28 @@ request.onload = function() {
 
     // Initialize and create OSM IDs array
     const osmIds = [];
-    for (var i = 0; i < data.cafes.length; i++) {
+    for (let i = 0; i < data.cafes.length; i++) {
         osmIds.push(data.cafes[i].osm[0]);
     }
     console.log(osmIds);
 
     // sort() cafes array in OSM node id ascending order to fit Overpass
     const cafes = data.cafes.sort(function(a, b){return a.osm[0] - b.osm[0]});
+    console.log(cafes);
 
     // fetch() OSM data through the Overpass API
     fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
         .then(function(response) { return response.json(); })
         .then(function(jsonResponse) {
             for (let j = 0; j < jsonResponse.elements.length; j++) {
-                let cafeLat = jsonResponse.elements[j].lat;
-                let cafeLon = jsonResponse.elements[j].lon;
-                let cafeUrl = (jsonResponse.elements[j].tags.hasOwnProperty('website')) ? jsonResponse.elements[j].tags.website : jsonResponse.elements[j].tags.facebook;
-                let cafeFilter = (cafes[j].filter = false) ? "non" : (cafes[j].filter = "") ? "oui" : cafes[j].filter;
-                let cafeLatte = (cafes[j].latte = false) ? "non" : (cafes[j].latte = "") ? "oui" : cafes[j].latte;
-                let cafeLaptop = (cafe[j].laptop) ? "oui" : "non";
+                const cafeLat = jsonResponse.elements[j].lat;
+                console.log(cafeLat);
+                const cafeLon = jsonResponse.elements[j].lon;
+                const cafeUrl = (jsonResponse.elements[j].tags.hasOwnProperty('website')) ? jsonResponse.elements[j].tags.website : jsonResponse.elements[j].tags.facebook;
+                const cafeFilter = (cafes[j].filter = false) ? "non" : (cafes[j].filter = "") ? "oui" : cafes[j].filter;
+                console.log(cafeFilter);
+                const cafeLatte = (cafes[j].latte = false) ? "non" : (cafes[j].latte = "") ? "oui" : cafes[j].latte;
+                const cafeLaptop = (cafe[j].laptop) ? "oui" : "non";
 
                 // Print marker
                 L.marker([cafeLat, cafeLon], {icon: coffeeIcon}).addTo(myMap)
