@@ -79,9 +79,9 @@ request.onload = function() {
                 console.log(cafes[j].name);
                 console.log("Coordinates: " + cafeLon + "/" + cafeLat);
                 const cafeUrl = (jsonResponse.elements[j].tags.hasOwnProperty("website")) ? jsonResponse.elements[j].tags.website : jsonResponse.elements[j].tags.facebook;
-                const cafeFilter = (cafes[j].filter.constructor === Array) ? cafes[j].filter : (cafes[j].filter === false) ? "non" : "oui";
+                const cafeFilter = (Array.isArray(cafes[j].filter)) ? cafes[j].filter : (cafes[j].filter === false) ? "non" : "oui";
                 console.log(cafeFilter);
-                const cafeLatte = (cafes[j].latte = "") ? "oui" : (cafes[j].latte) ? cafes[j].latte : "non";
+                const cafeLatte = (Array.isArray(cafes[j].latte)) ? cafes[j].latte : (cafes[j].latte === false) ? "non" : "oui";
                 console.log(cafeLatte);
                 const cafeLaptop = (cafes[j].laptop) ? "oui" : "non";
                 console.log(cafeLaptop);
