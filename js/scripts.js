@@ -78,10 +78,8 @@ request.onload = function() {
                 const cafeLon = jsonResponse.elements[j].lon;
                 console.log("Coordinates: " + cafeLon + "/" + cafeLat);
                 const cafeUrl = (jsonResponse.elements[j].tags.hasOwnProperty("website")) ? jsonResponse.elements[j].tags.website : jsonResponse.elements[j].tags.facebook;
-                console.log(cafeUrl);
                 const cafeFilter = (cafes[j].filter = "") ? "oui" : (cafes[j].filter) ? cafes[j].filter : "non";
-                console.log(cafeFilter);
-                const cafeLatte = (cafes[j].latte = false) ? "non" : (cafes[j].latte = "") ? "oui" : cafes[j].latte;
+                const cafeLatte = (cafes[j].latte = "") ? "oui" : (cafes[j].latte) ? cafes[j].latte : "non";
                 const cafeLaptop = (cafe[j].laptop) ? "oui" : "non";
                 console.log("URL: " + cafeUrl + ", filter: " + cafeFilter + ", latte: " + cafeLatte + ", laptop: " + cafeLaptop);
 
