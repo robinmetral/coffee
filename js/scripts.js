@@ -55,7 +55,7 @@ const request = new XMLHttpRequest();
 request.open('GET', 'https://robinmetral.github.io/coffee/js/data.json', true);
 
 request.onload = function() {
-    // Begin accessing JSON data here
+    // Begin accessing JSON data
     const data = JSON.parse(this.response);
 
     // Initialize and create OSM IDs array
@@ -75,13 +75,13 @@ request.onload = function() {
         .then(function(jsonResponse) {
             for (let j = 0; j < jsonResponse.elements.length; j++) {
                 const cafeLat = jsonResponse.elements[j].lat;
-                console.log(cafeLat);
                 const cafeLon = jsonResponse.elements[j].lon;
+                console.log("Coordinates: " + cafeLon + "/" + cafeLat);
                 const cafeUrl = (jsonResponse.elements[j].tags.hasOwnProperty('website')) ? jsonResponse.elements[j].tags.website : jsonResponse.elements[j].tags.facebook;
                 const cafeFilter = (cafes[j].filter = false) ? "non" : (cafes[j].filter = "") ? "oui" : cafes[j].filter;
-                console.log(cafeFilter);
                 const cafeLatte = (cafes[j].latte = false) ? "non" : (cafes[j].latte = "") ? "oui" : cafes[j].latte;
                 const cafeLaptop = (cafe[j].laptop) ? "oui" : "non";
+                console.log("URL: " + cafeUrl + ", filter: " + cafeFilter + ", latte: " + cafeLatte + ", laptop: " + cafeLaptop);
 
                 // Print marker
                 L.marker([cafeLat, cafeLon], {icon: coffeeIcon}).addTo(myMap)
