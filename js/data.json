@@ -391,7 +391,7 @@
     },
     {
         "name": "A.B.C.D.",
-        "latte": "",
+        "latte": [60],
         "filter": false,
         "laptop": true,
         "osm": [5915461228, true],
@@ -401,12 +401,12 @@
     },
     {
         "name": "Taste",
-        "latte": "",
-        "filter": "",
+        "latte": [55],
+        "filter": [85],
         "laptop": true,
         "osm": [5202076922, false],
-        "rating": "",
-        "comment": "",
+        "rating": 5,
+        "comment": "Un des (le ?) premiers cafés découverts à Chiang Mai ! Taste est génial pour travailler et moins couru que d'autres cafés plus proches du centre de Nimman. Les prix sont raisonnables pour un excellent café d'origine locale torréfié maison par S.O.S.",
         "date": "2018-09-24"
     },
     {
