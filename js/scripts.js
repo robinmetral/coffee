@@ -64,6 +64,25 @@ request.onload = function() {
         osmIds.push(data.cafes[i].osm[0]);
     }
 
+    // request v1 user through OpenStreetMap API 0.6
+    const requestUser = new XMLHttpRequest();
+    const nodesV1 = [];
+    for (let i = 0; i < osmIds.length; i++) {
+        nodesV1.push(osmIds[i] + "v1");
+    }
+    console.log(nodesV1);
+    requestUser.open("GET", "https://www.openstreetmap.org/api/0.6/nodes?nodes=" + nodesV1, false); // get v1 of all nodes
+	requestUser.send();
+    const requestUserXml = requestUser.responseXML;
+    const cafesAdded = 0;
+    for (let i = 0; i < osmIds.length; i++) {
+        if (requestUserXml.getElementById(osmIds[i]).getAttribute("user") === "robinmetral") {
+            cafesAdded++;
+        }
+    }
+	console.log(cafesAdded);
+
+
     // sort() cafes array in OSM node id ascending order to fit Overpass
     const cafes = data.cafes.sort(function(a, b){return a.osm[0] - b.osm[0]});
 
@@ -78,14 +97,6 @@ request.onload = function() {
                 const cafeFilter = (Array.isArray(cafes[j].filter)) ? cafes[j].filter : (cafes[j].filter === false) ? "non" : "oui";
                 const cafeLatte = (Array.isArray(cafes[j].latte)) ? cafes[j].latte : (cafes[j].latte === false) ? "non" : "oui";
                 const cafeLaptop = (cafes[j].laptop) ? "oui" : "non";
-
-                // request v1 user through OpenStreetMap API 0.6
-                const requestUser = new XMLHttpRequest();
-                requestUser.open("GET", "https://www.openstreetmap.org/api/0.6/node/" + cafes[j].osm[0] + "/1", true); // get v1 of the node
-				requestUser.send();
-                const requestUserXml = requestUser.responseXML;
-                const cafeAdded = (requestUserXml.getElementById(cafes[j].osm[0]).getAttribute("user") === "robinmetral") ? "oui" : "non";
-				console.log(cafeAdded);
 
                 // Print marker
                 L.marker([cafeLat, cafeLon], {icon: coffeeIcon}).addTo(myMap)
