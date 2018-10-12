@@ -70,7 +70,6 @@ request.onload = function() {
     for (let i = 0; i < osmIds.length; i++) {
         nodesV1.push(osmIds[i] + "v1");
     }
-    console.log(nodesV1);
     requestUser.open("GET", "https://www.openstreetmap.org/api/0.6/nodes?nodes=" + nodesV1, true); // get v1 of all nodes asynchronously
     requestUser.onload = function (e) {
         if (requestUser.readyState === 4) {
