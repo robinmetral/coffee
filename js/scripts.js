@@ -61,7 +61,7 @@ request.onload = function() {
     // Initialize and create OSM IDs array
     const osmIds = [];
     for (let i = 0; i < data.cafes.length; i++) {
-        osmIds.push(data.cafes[i].osm[0]);
+        osmIds.push(data.cafes[i].osm);
     }
 
     // request v1 user through OpenStreetMap API 0.6
@@ -93,7 +93,7 @@ request.onload = function() {
     requestUser.send(null);
     
     // sort() cafes array in OSM node id ascending order to fit Overpass
-    const cafes = data.cafes.sort(function(a, b){return a.osm[0] - b.osm[0]});
+    const cafes = data.cafes.sort(function(a, b){return a.osm - b.osm});
 
     // fetch() OSM data through the Overpass API
     fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
@@ -118,7 +118,7 @@ request.onload = function() {
                             <li><strong>Laptop :</strong> ${cafeLaptop}</li>
                         </ul>
                         <footer>
-                            <a href="${cafeUrl}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafes[j].osm[0]}" target="_blank">OpenStreetMap</a> · Mis à jour le ${cafes[j].date}
+                            <a href="${cafeUrl}" target="_blank">Website</a> · <a href="https://www.openstreetmap.org/node/${cafes[j].osm}" target="_blank">OpenStreetMap</a> · Mis à jour le ${cafes[j].date}
                         </footer>
                     `);
             }
