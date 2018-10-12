@@ -81,7 +81,7 @@ request.onload = function() {
 
                 // request v1 user through OpenStreetMap API 0.6
                 const requestUser = new XMLHttpRequest();
-                requestUser.open("GET", "https://www.openstreetmap.org/api/0.6/node/" + cafes[j].osm[0] + "/1"); // get v1 of the node
+                requestUser.open("GET", "https://www.openstreetmap.org/api/0.6/node/" + cafes[j].osm[0] + "/1", true); // get v1 of the node
 				requestUser.send();
                 const requestUserXml = requestUser.responseXML;
                 const cafeAdded = (requestUserXml.getElementById(cafes[j].osm[0]).getAttribute("user") === "robinmetral") ? "oui" : "non";
