@@ -1,22 +1,13 @@
 {
-    "cafes": [{
-        "name": "Just Coffee",
-        "latte": [55],
-        "filter": [80],
-        "laptop": true,
-        "osm": 5974404529,
-        "rating": 2,
-        "comment": "Petit café au bord de la ring road. Service sympa, mais route assez bruyante et café filtre surtorréfié.",
-        "date": "2018-10-11"
-    },
+    "cafes": [
     {
         "name": "The Baristro",
         "latte": "",
         "filter": false,
         "laptop": true,
         "osm": 3195504333,
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Une branche du Baristro plus calme car moins bien située que celle de Nimman. Déco moins blanche et immaculée, donc pour moi un endroit plus relaxant pour travailler. Mêmes boissons, pas de filtre mais du cold brew (servi avec une tranche d'orange, un bâton de cannelle et une tige de romarin).",
         "date": "2018-10-08"
     },
     {
@@ -25,8 +16,8 @@
         "filter": "",
         "laptop": true,
         "osm": 4871575722,
-        "rating": "",
-        "comment": "",
+        "rating": 5,
+        "comment": "Découverte incroyable de ce café perdu dans les montagnes à 45min de la ville ! Staff ultra attentionné et café plus que délicieux. C'est aussi une académie de baristas. Une halte parfaite lors d'un tour à Mon Chaem !",
         "date": "2018-10-08"
     },
     {
@@ -35,8 +26,8 @@
         "filter": false,
         "laptop": true,
         "osm": 5956250105,
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Tout nouveau café ouvert au début de l'été 2018 un peu en retrait de la canal road. Équipe super sympa ! Un peu petit par contre, et peut devenir très bruyant (ça résonne).",
         "date": "2018-10-05"
     },
     {
@@ -45,8 +36,8 @@
         "filter": false,
         "laptop": true,
         "osm": 5950919672,
-        "rating": "",
-        "comment": "",
+        "rating": 3,
+        "comment": "Les meilleures glaces de la ville, et en bonus du café. Le cold brew est moyen, et attention de demander sans jelly ni sucre ! Pas testé le latte. Espace étonamment agréable pour se poser et travailler, calme et lumineux avec des grandes tables.",
         "date": "2018-10-02"
     },
     {
@@ -55,8 +46,8 @@
         "filter": "",
         "laptop": true,
         "osm": 5941633292,
-        "rating": "",
-        "comment": "",
+        "rating": 3,
+        "comment": "Espace et tables assez petites donc pas optimal pour travailler, mais très bon café filtre et latte, et ils vendent des films photo !",
         "date": "2018-10-01"
     },
     {
@@ -75,8 +66,8 @@
         "filter": "",
         "laptop": true,
         "osm": 5941619770,
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Très bon café dans un espace lié à un magasin d'artisanat. Beaucoup de place, à l'étage aussi. Pas encore essayé d'y travailler, mais ça paraît prometteur ! Attention c'est ouvert, pas de climatisation mais ventilateurs. Il faisait frais le jour où on y était.",
         "date": "2018-10-01"
     },
     {
@@ -85,8 +76,8 @@
         "filter": "",
         "laptop": false,
         "osm": 4514610993,
-        "rating": "",
-        "comment": "",
+        "rating": 5,
+        "comment": "Un minuscule café dont le patron et barista se spécialise en cafetière italienne, qu'il prépare selon les recettes de la grand-mère de sa femme japonaise. Préparée avec des grains torréfiés pour le filtre, c'est doux et délicieux ! Et il fait aussi des boissons style espresso avec un café plus fort et du lait. Il s'essaie aussi au cold drip qu'on a pu goûter - super bon ! À essayer absolument pour boire un café différent.",
         "date": "2018-10-01"
     },
     {
@@ -95,28 +86,8 @@
         "filter": "",
         "laptop": true,
         "osm": 4655307491,
-        "rating": "",
-        "comment": "",
-        "date": "2018-09-27"
-    },
-    {
-        "name": "Brewing Room",
-        "latte": "",
-        "filter": false,
-        "laptop": true,
-        "osm": 5933370536,
-        "rating": "",
-        "comment": "",
-        "date": "2018-09-27"
-    },
-    {
-        "name": "Marocchino",
-        "latte": "",
-        "filter": false,
-        "laptop": true,
-        "osm": 5933370535,
-        "rating": "",
-        "comment": "",
+        "rating": 3,
+        "comment": "Espace ouvert et quelques tables sympa pour travailler (celles qui reçoivent beaucoup de lumière près des fenêtres). Les tables du fond sont dans la pénombre : ce café développe aussi des films photo et peut même faire des tirages (mais, pour en avoir commandé, je recommande de s'en tenir au développement).",
         "date": "2018-09-27"
     },
     {
@@ -135,8 +106,8 @@
         "filter": "",
         "laptop": true,
         "osm": 5758046621,
-        "rating": "",
-        "comment": "",
+        "rating": 3,
+        "comment": "Ouvert et assez touristique car très en vue tout près de pratuu Thapae. Pourtant, bon café et ok pour travailler - mais les tables sont petites, et le passage important peut déranger.",
         "date": "2018-09-27"
     },
     {
@@ -145,8 +116,8 @@
         "filter": "",
         "laptop": true,
         "osm": 5933370534,
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Délicieuse odeur de café vert (!) en montant à ce café au premier étage, au-dessus d'un magasin d'habits, facile à rater depuis la route. Plusieurs types de grains torréfiés maison, malheureusement mon filtre n'avait pas super bon goût - je sais pas si c'est la faute de la torréfaction ou de la préparation. Très spacieux et lumineux, et agréable pour travailler malgré l'absence de climatisation.",
         "date": "2018-09-27"
     },
     {
@@ -155,8 +126,8 @@
         "filter": "",
         "laptop": false,
         "osm": 3305560828,
-        "rating": "",
-        "comment": "",
+        "rating": 3,
+        "comment": "Très bon café filtre torréfié maison, mais un peu cher et l'espace n'est pas du tout designé pour s'y mettre à l'aise. Minuscules tables quand il y en a, contre le mur ou serrées les unes contre les autres sur la terrasse. Bébé-chaises.",
         "date": "2018-09-27"
     },
     {
@@ -165,8 +136,8 @@
         "filter": "",
         "laptop": false,
         "osm": 5933370531,
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Petit café plutôt pour emporter, avec une unique table sur un petit rooftop à l'étage. Barista passionné et super sympa qui prépare son espresso avec une AeroPress et un filtre Prismo - qu'on a ensuite commandé pour faire des lattes à la maison !",
         "date": "2018-09-27"
     },
     {
@@ -175,8 +146,8 @@
         "filter": "",
         "laptop": false,
         "osm": 4848162223,
-        "rating": "",
-        "comment": "",
+        "rating": 3,
+        "comment": "Café délicieux et grains locaux mais chers, et espace minuscule et toujours bondé - trop touristique et connu. Une autre branche à One Nimman connaît le même sort. Pas génial pour autre chose que déguster.",
         "date": "2018-09-27"
     },
     {
@@ -185,8 +156,8 @@
         "filter": false,
         "laptop": true,
         "osm": 5933370533,
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Café spacieux et très agréable pour travailler, lié à l'auberge Oxotel. Pas de filtre par contre, mais cold brew dans le style du Baristro.",
         "date": "2018-09-27"
     },
     {
@@ -195,18 +166,8 @@
         "filter": "",
         "laptop": true,
         "osm": 4586796889,
-        "rating": "",
-        "comment": "",
-        "date": "2018-09-27"
-    },
-    {
-        "name": "Happy Espresso",
-        "latte": "",
-        "filter": false,
-        "laptop": false,
-        "osm": 3384152432,
-        "rating": "",
-        "comment": "",
+        "rating": 5,
+        "comment": "Pour moi un des meilleurs cafés de la ville, sur le podium avec Thor Phan. Tenu il me semble par un couple passionné de café - ça se sent ! Espace sympa mais un peu sombre quand on s'éloigne de la vitrine.",
         "date": "2018-09-27"
     },
     {
@@ -215,8 +176,8 @@
         "filter": false,
         "laptop": true,
         "osm": 5593553723,
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Pas de filtre ici, mais un choix de différents grains pour l'espresso. On sent bien la différence entre nos deux lattes ! Espace calme et bien illuminé, recommandé pour y travailler.",
         "date": "2018-09-27"
     },
     {
@@ -225,8 +186,8 @@
         "filter": "",
         "laptop": false,
         "osm": 2404044286,
-        "rating": "",
-        "comment": "",
+        "rating": 2,
+        "comment": "Café varié et de qualité, comme à l'autre branche de Akha Ama à Santitham, mais celle-ci est petite, sombre, touristique, et les tables n'y sont pas faites pour travailler (une sorte de tonneau par exemple).",
         "date": "2018-09-27"
     },
     {
@@ -235,8 +196,8 @@
         "filter": "",
         "laptop": true,
         "osm": 5933370532,
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Petit café torréfacteur découvert près de CMU. Très bon café, endroit local et jeune, ça change des cafés de Nimman ! Par contre pas super pour travailler, assez peu de tables. Poufs à l'étage mais en simili-cuir.",
         "date": "2018-09-27"
     },
     {
@@ -245,8 +206,8 @@
         "filter": "",
         "laptop": true,
         "osm": 4893144721,
-        "rating": "",
-        "comment": "",
+        "rating": 2,
+        "comment": "Bon cold brew et délicieux lait de soja maison, utilisé dans plein de boissons originales avec ou sans café. Par contre, c'est beaucoup trop instagrammable, à un point où ça en devient dérangeant. Dommage.",
         "date": "2018-09-27"
     },
     {
@@ -255,8 +216,8 @@
         "filter": false,
         "laptop": false,
         "osm": 2105726947,
-        "rating": "",
-        "comment": "",
+        "rating": 2,
+        "comment": "Une institution à Chiang Mai, probablement l'un des tout premiers cafés de spécialité de la ville. Pas de filtre mais des lattes de compétition, vainqueurs à plusieurs reprises de championnats de latte art ! Cette branche, l'originale je pense, est ouverte, petite et pas faite pour travailler où s'installer pour plus qu'un café. Préférer Ristr8to Lab sur la rue parallèle !",
         "date": "2018-09-27"
     },
     {
@@ -265,8 +226,8 @@
         "filter": "",
         "laptop": true,
         "osm": 4438545289,
-        "rating": "",
-        "comment": "",
+        "rating": 3,
+        "comment": "Même qualité de café qu'à Ristr8to, avec en bonus du café filtre (mais pas incroyable, pas recommandé) et un espace plus spacieux. Ce serait très bien pour travailler si ce n'était pas aussi touristique - trop de passage - et moins serré à l'intérieur.",
         "date": "2018-09-27"
     },
     {
@@ -275,8 +236,8 @@
         "filter": false,
         "laptop": true,
         "osm": 5933370530,
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Pas de filtre et cold brew servi avec une tranche d'orange, un bâton de cannelle et une tige de romarin dans le verre (aïe), mais bon quand-même. Espace calme et agréable pour travailler. Très instagrammable mais les shootings se font aux tables, pas partout dans l'espace. Un peu trop blanc à mon goût.",
         "date": "2018-09-27"
     },
     {
@@ -285,8 +246,8 @@
         "filter": false,
         "laptop": false,
         "osm": 4555359051,
-        "rating": "",
-        "comment": "",
+        "rating": 3,
+        "comment": "Magnifique espace en terrasse au bord d'un petit lac artificiel, dans ce qui semble être un village de résidences de luxe. Pas de filtre mais bons latte et flat white, et très relaxant. Possible d'y travailler je pense, mais il doit y faire chaud dans la journée, et je n'y resterais pas des heures.",
         "date": "2018-09-24"
     },
     {
@@ -295,8 +256,8 @@
         "filter": false,
         "laptop": true,
         "osm": 5925629982,
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Petit café sympa juste au bord de la rivière Ping, quelques dizaines de kilomètres après son passage à Chiang Mai. Tranquille, vert, barista très sympa. Ils servent aussi des pizzas qu'on n'a pas essayées. On n'y a pas travaillé non plus, mais l'espace s'y prêterait bien, quelques grandes tables et moins de passage qu'à Youngfolk.",
         "date": "2018-09-24"
     },
     {
@@ -305,8 +266,8 @@
         "filter": false,
         "laptop": true,
         "osm": 5925629983,
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Super café avec des très bonnes boissons à base d'espresso ! Dans une maison très spacieuse, avec des places non seulement au bar mais aussi à l'extérieur et même à l'étage. Très vert, un peu instagrammable. Pas essayé d'y travailler mais d'autres le faisaient. Le café trendy de la ville.",
         "date": "2018-09-24"
     },
     {
@@ -325,8 +286,8 @@
         "filter": "",
         "laptop": true,
         "osm": 5920089202,
-        "rating": "",
-        "comment": "",
+        "rating": 5,
+        "comment": "Le dernier café qu'on a découvert pendant nos quelques mois à Da Nang ! Barista super sympa et passionné de café, qui me fait goûter différentes méthodes avec différents grains. Lumineux et agréable pour travailler, mais souvent assez plein.",
         "date": "2018-09-24"
     },
     {
@@ -335,8 +296,8 @@
         "filter": "",
         "laptop": true,
         "osm": 5920067081,
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Spacieux, lumineux et bien bossable, staff sympa, très bon café. Assez peu de caractère mais c'est bien pour se concentrer.",
         "date": "2018-09-24"
     },
     {
@@ -345,8 +306,8 @@
         "filter": "",
         "laptop": false,
         "osm": 5920056999,
-        "rating": "",
-        "comment": "",
+        "rating": 5,
+        "comment": "Énorme coup de coeur à Da Nang, je suis pas sûr qu'on aurait découvert Cong Kopi si c'était pas aussi notre Airbnb lors de notre premier passage dans la ville en 2017. Kit et Melda sont adorables et passionnées de café, et adorent partager leurs expériences ! Super de faire du cupping avec elles avec du café ramené du Laos, et que Melda y découvre une acidité d'ananas. Kit est fan de la Kalita Wave depuis qu'elle l'a reçue du Japon. Au fil des mois, on a vu Sid la petite chienne grandir mais rester toujours surexcitée.",
         "date": "2018-09-24"
     },
     {
@@ -355,8 +316,8 @@
         "filter": "",
         "laptop": true,
         "osm": 5920045519,
-        "rating": "",
-        "comment": "",
+        "rating": 3,
+        "comment": "Premier café de spécialité découvert à Da Nang lors de notre premier passage à l'automne 2017 ! Staff très sympa et bon café de différentes origines, torréfié maison. Ouvert, peut être un peu bruyant selon le passage ou les travaux sur la route.",
         "date": "2018-09-24"
     },
     {
@@ -365,8 +326,8 @@
         "filter": "",
         "laptop": true,
         "osm": 5432960921,
-        "rating": "",
-        "comment": "",
+        "rating": 5,
+        "comment": "Espace super accueillant et bien designé, comme entrer dans le salon d'un ami qui a très bon goût ! Les places alternent entre canapés, une grande table communale, un bar ou encore des places en terrasse. Lien et Brenn, la patronne et son copain américain, sont très sympa! Et le cuisinier, dont j'ai malheureusement oublié le nom, fait des muffins aux baies et chocolat blanc qui sont à tomber. Paco le bouledogue français est super gentil, et, avant que le chaton déménage dans une villa du quartier, c'était notre raison principale de visiter !",
         "date": "2018-09-24"
     },
     {
@@ -385,8 +346,8 @@
         "filter": "",
         "laptop": true,
         "osm": 5919670289,
-        "rating": "",
-        "comment": "",
+        "rating": 5,
+        "comment": "Coup de coeur à Chiang Mai ! Ouvert par deux soeurs (on pense) dans le garage familial reconverti en petit café. Petit et un peu serré, mais super accueillant et chaud. Filtre et latte délicieux, et le lait est préparé avec la machine que Clara a ensuite commandée pour faire des lattes à la maison ! Et bien sûr la fille est adorable et super souriante.",
         "date": "2018-09-24"
     },
     {
@@ -395,8 +356,8 @@
         "filter": "",
         "laptop": true,
         "osm": 5917955982,
-        "rating": "",
-        "comment": "",
+        "rating": 3,
+        "comment": "Espace sympa et bon café, mais moins bon, moins sympa et plus cher que Taste au bout de la rue. Le choix est vite fait.",
         "date": "2018-09-24"
     },
     {
@@ -405,8 +366,8 @@
         "filter": false,
         "laptop": true,
         "osm": 5915461228,
-        "rating": "",
-        "comment": "",
+        "rating": 5,
+        "comment": "Super espace très bien designé, pas mal de passage mais étrangement \"notre\" table (la grande en bois et en verre) est toujours disponible. Une serveuse qu'on a vue en training depuis ses débuts est adorable et très attentionnée, elle nous sert de l'eau et nuos amène des super bons biscuits maison. Seul inconvénient, pas de filte - mais le latte est très bon.",
         "date": "2018-09-24"
     },
     {
@@ -435,8 +396,9 @@
         "filter": "",
         "laptop": true,
         "osm": 4265515989,
-        "rating": "",
-        "comment": "",
+        "rating": 5,
+        "comment": "Délicieux café torréfié maison de différentes origines. Très bel espace, les meilleures places sont contre les vitres mais les tables vont aussi, malgré qu'il y fasse un peu plus sombre. Scones à tomber par terre, quand il y en a. Le café de choix avant d'aller à Maya.",
         "date": "2018-09-24"
-    }]
+    }
+    ]
 }
