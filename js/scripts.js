@@ -71,19 +71,17 @@ request.onload = function() {
         nodesV1.push(osmIds[i] + "v1");
     }
     console.log(nodesV1);
-    requestUser.open("GET", "https://www.openstreetmap.org/api/0.6/nodes?nodes=" + nodesV1, true); // get v1 of all nodes
+    requestUser.open("GET", "https://www.openstreetmap.org/api/0.6/nodes?nodes=" + nodesV1, true); // get v1 of all nodes asynchronously
     requestUser.onload = function (e) {
         if (requestUser.readyState === 4) {
             if (requestUser.status === 200) {
-                console.log(requestUser.responseText);
                 const requestUserXml = requestUser.responseXML;
                 let cafesAdded = 0;
                 for (let i = 0; i < osmIds.length; i++) {
                     if (requestUserXml.getElementById(osmIds[i]).getAttribute("user") === "robinmetral") {
-                        cafesAdded++;
+                        cafesAdded++; // Increment number of cafes added to OSM by user robinmetral
                     }
                 }
-                console.log(cafesAdded);
             }
             else {
                 console.error(requestUser.statusText);
