@@ -4,7 +4,7 @@
         "latte": [55],
         "filter": [80],
         "laptop": true,
-        "osm": [5974404529, true],
+        "osm": 5974404529,
         "rating": 2,
         "comment": "Petit café au bord de la ring road. Service sympa, mais route assez bruyante et café filtre surtorréfié.",
         "date": "2018-10-11"
@@ -14,7 +14,7 @@
         "latte": "",
         "filter": false,
         "laptop": true,
-        "osm": [3195504333, false],
+        "osm": 3195504333,
         "rating": "",
         "comment": "",
         "date": "2018-10-08"
@@ -24,7 +24,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [4871575722, false],
+        "osm": 4871575722,
         "rating": "",
         "comment": "",
         "date": "2018-10-08"
@@ -34,7 +34,7 @@
         "latte": "",
         "filter": false,
         "laptop": true,
-        "osm": [5956250105, true],
+        "osm": 5956250105,
         "rating": "",
         "comment": "",
         "date": "2018-10-05"
@@ -44,7 +44,7 @@
         "latte": "",
         "filter": false,
         "laptop": true,
-        "osm": [5950919672, true],
+        "osm": 5950919672,
         "rating": "",
         "comment": "",
         "date": "2018-10-02"
@@ -54,7 +54,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [5941633292, true],
+        "osm": 5941633292,
         "rating": "",
         "comment": "",
         "date": "2018-10-01"
@@ -64,7 +64,7 @@
         "latte": [55],
         "filter": [80, 100],
         "laptop": true,
-        "osm": [4539213080, false],
+        "osm": 4539213080,
         "rating": 5,
         "comment": "Proprio japonais donc Kalita, grains thaï ou importés, musique tranquille, longues heures d'ouverture, parfait pour travailler !",
         "date": "2018-10-01"
@@ -74,7 +74,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [5941619770, true],
+        "osm": 5941619770,
         "rating": "",
         "comment": "",
         "date": "2018-10-01"
@@ -84,7 +84,7 @@
         "latte": "",
         "filter": "",
         "laptop": false,
-        "osm": [4514610993, false],
+        "osm": 4514610993,
         "rating": "",
         "comment": "",
         "date": "2018-10-01"
@@ -94,7 +94,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [4655307491, false],
+        "osm": 4655307491,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -104,7 +104,7 @@
         "latte": "",
         "filter": false,
         "laptop": true,
-        "osm": [5933370536, true],
+        "osm": 5933370536,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -114,7 +114,7 @@
         "latte": "",
         "filter": false,
         "laptop": true,
-        "osm": [5933370535, true],
+        "osm": 5933370535,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -124,7 +124,7 @@
         "latte": "",
         "filter": false,
         "laptop": true,
-        "osm": [3395080851, false],
+        "osm": 3395080851,
         "rating": 4,
         "comment": "Espace agréable et staff adorable ! C'est aussi une boulangerie qui vend de délicieux cannelés... de temps en temps. Un peu dur à voir de l'extérieur avec la vitre teintée et sans inscriptions.",
         "date": "2018-09-27"
@@ -134,7 +134,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [5758046621, false],
+        "osm": 5758046621,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -144,7 +144,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [5933370534, true],
+        "osm": 5933370534,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -154,7 +154,7 @@
         "latte": "",
         "filter": "",
         "laptop": false,
-        "osm": [3305560828, false],
+        "osm": 3305560828,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -164,7 +164,7 @@
         "latte": "",
         "filter": "",
         "laptop": false,
-        "osm": [5933370531, true],
+        "osm": 5933370531,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -174,7 +174,7 @@
         "latte": "",
         "filter": "",
         "laptop": false,
-        "osm": [4848162223, false],
+        "osm": 4848162223,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -184,7 +184,7 @@
         "latte": "",
         "filter": false,
         "laptop": true,
-        "osm": [5933370533, true],
+        "osm": 5933370533,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -194,7 +194,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [4586796889, false],
+        "osm": 4586796889,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -204,7 +204,7 @@
         "latte": "",
         "filter": false,
         "laptop": false,
-        "osm": [3384152432, false],
+        "osm": 3384152432,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -214,7 +214,7 @@
         "latte": "",
         "filter": false,
         "laptop": true,
-        "osm": [5593553723, false],
+        "osm": 5593553723,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -224,7 +224,7 @@
         "latte": "",
         "filter": "",
         "laptop": false,
-        "osm": [2404044286, false],
+        "osm": 2404044286,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -234,7 +234,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [5933370532, true],
+        "osm": 5933370532,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -244,7 +244,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [4893144721, false],
+        "osm": 4893144721,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -254,7 +254,7 @@
         "latte": "",
         "filter": false,
         "laptop": false,
-        "osm": [2105726947, false],
+        "osm": 2105726947,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -264,7 +264,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [4438545289, false],
+        "osm": 4438545289,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -274,7 +274,7 @@
         "latte": "",
         "filter": false,
         "laptop": true,
-        "osm": [5933370530, true],
+        "osm": 5933370530,
         "rating": "",
         "comment": "",
         "date": "2018-09-27"
@@ -284,7 +284,7 @@
         "latte": "",
         "filter": false,
         "laptop": false,
-        "osm": [4555359051, false],
+        "osm": 4555359051,
         "rating": "",
         "comment": "",
         "date": "2018-09-24"
@@ -294,7 +294,7 @@
         "latte": "",
         "filter": false,
         "laptop": true,
-        "osm": [5925629982, true],
+        "osm": 5925629982,
         "rating": "",
         "comment": "",
         "date": "2018-09-24"
@@ -304,7 +304,7 @@
         "latte": "",
         "filter": false,
         "laptop": true,
-        "osm": [5925629983, true],
+        "osm": 5925629983,
         "rating": "",
         "comment": "",
         "date": "2018-09-24"
@@ -314,7 +314,7 @@
         "latte": [65],
         "filter": [120],
         "laptop": true,
-        "osm": [4265502391, false],
+        "osm": 4265502391,
         "rating": "5",
         "comment": "Très bon café d'origine thaï ou importée torréfié maison. Plantes vertes et mobilier en bois sombre, calme et agréable pour travailler. J'aime bien l'horloge art déco sur la grande table.",
         "date": "2018-09-24"
@@ -324,7 +324,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [5920089202, true],
+        "osm": 5920089202,
         "rating": "",
         "comment": "",
         "date": "2018-09-24"
@@ -334,7 +334,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [5920067081, true],
+        "osm": 5920067081,
         "rating": "",
         "comment": "",
         "date": "2018-09-24"
@@ -344,7 +344,7 @@
         "latte": "",
         "filter": "",
         "laptop": false,
-        "osm": [5920056999, true],
+        "osm": 5920056999,
         "rating": "",
         "comment": "",
         "date": "2018-09-24"
@@ -354,7 +354,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [5920045519, true],
+        "osm": 5920045519,
         "rating": "",
         "comment": "",
         "date": "2018-09-24"
@@ -364,7 +364,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [5432960921, false],
+        "osm": 5432960921,
         "rating": "",
         "comment": "",
         "date": "2018-09-24"
@@ -374,7 +374,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [3388701190, false],
+        "osm": 3388701190,
         "rating": 4,
         "comment": "Un des, sinon le meilleur, café filtre de la ville ! Torréfié maison en plus. Seul inconvénient, parfois un peu trop family-friendly :)",
         "date": "2018-09-24"
@@ -384,7 +384,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [5919670289, true],
+        "osm": 5919670289,
         "rating": "",
         "comment": "",
         "date": "2018-09-24"
@@ -394,7 +394,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [5917955982, true],
+        "osm": 5917955982,
         "rating": "",
         "comment": "",
         "date": "2018-09-24"
@@ -404,7 +404,7 @@
         "latte": [60],
         "filter": false,
         "laptop": true,
-        "osm": [5915461228, true],
+        "osm": 5915461228,
         "rating": "",
         "comment": "",
         "date": "2018-09-24"
@@ -414,7 +414,7 @@
         "latte": [55],
         "filter": [85],
         "laptop": true,
-        "osm": [5202076922, false],
+        "osm": 5202076922,
         "rating": 5,
         "comment": "Un des (le ?) premiers cafés découverts à Chiang Mai ! Taste est génial pour travailler et moins couru que d'autres cafés plus proches du centre de Nimman. Les prix sont raisonnables pour un excellent café d'origine locale torréfié maison par S.O.S.",
         "date": "2018-09-24"
@@ -424,7 +424,7 @@
         "latte": [50],
         "filter": [70],
         "laptop": true,
-        "osm": [2527662833, false],
+        "osm": 2527662833,
         "rating": 4,
         "comment": "Une institution à Chiang Mai ! Akha Ama est aussi une entreprise sociale : le café est produit par la minorité Akha en respectant l'environnement. Cette branche (il y en a une autre au centre-ville), entièrement rénovée en octobre 2018, est idéale pour un café après une course au marché Thanin (Sri Wattana).",
         "date": "2018-09-24"
@@ -434,7 +434,7 @@
         "latte": "",
         "filter": "",
         "laptop": true,
-        "osm": [4265515989, false],
+        "osm": 4265515989,
         "rating": "",
         "comment": "",
         "date": "2018-09-24"
