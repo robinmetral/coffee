@@ -421,12 +421,12 @@
     },
     {
         "name": "Akha Ama",
-        "latte": "",
-        "filter": "",
+        "latte": [50],
+        "filter": [70],
         "laptop": true,
         "osm": [2527662833, false],
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Une institution à Chiang Mai ! Akha Ama est aussi une entreprise sociale : le café est produit par la minorité Akha en respectant l'environnement. Cette branche (il y en a une autre au centre-ville), entièrement rénovée en octobre 2018, est idéale pour un café après une course au marché Thanin (Sri Wattana).",
         "date": "2018-09-24"
     },
     {
