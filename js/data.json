@@ -1,6 +1,16 @@
 {
     "cafes": [
     {
+        "name": "Roxpresso",
+        "latte": "",
+        "filter": "",
+        "laptop": true,
+        "osm": 5978043352,
+        "rating": 3,
+        "comment": "Très bon café mais se classe très luxe. Grande table communale sympa et quelques petites tables au fond. Espresso préparé à la main avec la ROK. Il y avait un petit chien excité quand on y est allés, +1.",
+        "date": "2018-10-08"
+    },
+    {
         "name": "The Baristro",
         "latte": "",
         "filter": false,
