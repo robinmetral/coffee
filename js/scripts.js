@@ -63,11 +63,9 @@ request.onload = function() {
     for (let i = 0; i < data.cafes.length; i++) {
         osmIds.push(data.cafes[i].osm[0]);
     }
-    console.log(osmIds);
 
     // sort() cafes array in OSM node id ascending order to fit Overpass
     const cafes = data.cafes.sort(function(a, b){return a.osm[0] - b.osm[0]});
-    console.log(cafes);
 
     // fetch() OSM data through the Overpass API
     fetch('https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:' + osmIds + ');out;')
@@ -76,16 +74,10 @@ request.onload = function() {
             for (let j = 0; j < jsonResponse.elements.length; j++) {
                 const cafeLat = jsonResponse.elements[j].lat;
                 const cafeLon = jsonResponse.elements[j].lon;
-                console.log(cafes[j].name);
-                console.log("Coordinates: " + cafeLon + "/" + cafeLat);
                 const cafeUrl = (jsonResponse.elements[j].hasOwnProperty("tags") === false) ? "" : (jsonResponse.elements[j].tags.hasOwnProperty("website")) ? jsonResponse.elements[j].tags.website : (jsonResponse.elements[j].tags.hasOwnProperty("facebook")) ? jsonResponse.elements[j].tags.facebook : "";
                 const cafeFilter = (Array.isArray(cafes[j].filter)) ? cafes[j].filter : (cafes[j].filter === false) ? "non" : "oui";
-                console.log(cafeFilter);
                 const cafeLatte = (Array.isArray(cafes[j].latte)) ? cafes[j].latte : (cafes[j].latte === false) ? "non" : "oui";
-                console.log(cafeLatte);
                 const cafeLaptop = (cafes[j].laptop) ? "oui" : "non";
-                console.log(cafeLaptop);
-                console.log("URL: " + cafeUrl + ", filter: " + cafeFilter + ", latte: " + cafeLatte + ", laptop: " + cafeLaptop);
 
                 // Print marker
                 L.marker([cafeLat, cafeLon], {icon: coffeeIcon}).addTo(myMap)
