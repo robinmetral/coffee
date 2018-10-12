@@ -71,18 +71,30 @@ request.onload = function() {
         nodesV1.push(osmIds[i] + "v1");
     }
     console.log(nodesV1);
-    requestUser.open("GET", "https://www.openstreetmap.org/api/0.6/nodes?nodes=" + nodesV1, false); // get v1 of all nodes
-	requestUser.send();
-    const requestUserXml = requestUser.responseXML;
-    let cafesAdded = 0;
-    for (let i = 0; i < osmIds.length; i++) {
-        if (requestUserXml.getElementById(osmIds[i]).getAttribute("user") === "robinmetral") {
-            cafesAdded++;
+    requestUser.open("GET", "https://www.openstreetmap.org/api/0.6/nodes?nodes=" + nodesV1, true); // get v1 of all nodes
+    requestUser.onload = function (e) {
+        if (requestUser.readyState === 4) {
+            if (requestUser.status === 200) {
+                console.log(requestUser.responseText);
+                const requestUserXml = requestUser.responseXML;
+                let cafesAdded = 0;
+                for (let i = 0; i < osmIds.length; i++) {
+                    if (requestUserXml.getElementById(osmIds[i]).getAttribute("user") === "robinmetral") {
+                        cafesAdded++;
+                    }
+                }
+                console.log(cafesAdded);
+            }
+            else {
+                console.error(requestUser.statusText);
+            }
         }
-    }
-	console.log(cafesAdded);
-
-
+    };
+    requestUser.onerror = function (e) {
+        console.error(requestUser.statusText);
+    };
+    requestUser.send(null);
+    
     // sort() cafes array in OSM node id ascending order to fit Overpass
     const cafes = data.cafes.sort(function(a, b){return a.osm[0] - b.osm[0]});
 
