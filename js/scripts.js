@@ -74,7 +74,7 @@ request.onload = function() {
     requestUser.open("GET", "https://www.openstreetmap.org/api/0.6/nodes?nodes=" + nodesV1, false); // get v1 of all nodes
 	requestUser.send();
     const requestUserXml = requestUser.responseXML;
-    const cafesAdded = 0;
+    let cafesAdded = 0;
     for (let i = 0; i < osmIds.length; i++) {
         if (requestUserXml.getElementById(osmIds[i]).getAttribute("user") === "robinmetral") {
             cafesAdded++;
