@@ -352,8 +352,8 @@
     },
     {
         "name": "ZMOY",
-        "latte": "",
-        "filter": "",
+        "latte": [50],
+        "filter": [65],
         "laptop": true,
         "osm": 5919670289,
         "rating": 5,
