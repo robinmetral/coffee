@@ -3,7 +3,7 @@ var myMap = L.map('mapid').setView([18.7884781, 98.9813945], 14);
 
 // Load the basemap
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Données &copy; <a href="https://www.openstreetmap.org/copyright">les contributeurs d\'OpenStreetMap</a>, fonds de carte Mapbox Light &copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a>, grain de café par Gyeong Seon Hong du <a href="https://thenounproject.com/icon/1886493/">Noun Project</a>. <a href="apropos.html">À propos de cette carte</a>',
+    attribution: 'Données &copy; <a href="https://www.openstreetmap.org/copyright">les contributeurs d\'OpenStreetMap</a>, fonds de carte Mapbox Light &copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a>, grain de café par Gyeong Seon Hong du <a href="https://thenounproject.com/icon/1886493/">Noun Project</a>. <a href="" onclick="about();return false;">À propos de cette carte</a>',
     maxZoom: 18,
     id: 'mapbox.light',
     accessToken: 'pk.eyJ1Ijoicm9iaW5tZXRyYWwiLCJhIjoiY2pkMTI0bWVnMmV6dzM0bnNhZHBvMDBqeiJ9.Z0gZrvkth24hNkLkvRxg-g'
