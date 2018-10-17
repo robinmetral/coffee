@@ -1,5 +1,9 @@
-# Robin's Coffee Map
+# Les cafés de Robin
 
-This is my coffee map, powered by [@Leaflet](https://github.com/Leaflet/Leaflet), using OpenStreetMap data, and inspired by [@taniarascia](https://github.com/taniarascia/)'s [Cafétography](https://taniarascia.github.io/coffee/).
+Bienvenue à la source de ma carte des cafés que j'aime.
 
-Follow [her tutorial](https://www.taniarascia.com/real-world-examples-of-map-filter-and-reduce-in-javascript/) to get started with your own map!
+Avant tout un exercice JavaScript, cette carte a été construite avec [Leaflet.js](https://github.com/Leaflet/Leaflet) et utilise des données OpenStreetMap.
+
+![Capture d'écran](coffee/screenshot.png)
+
+J'ai à l'origine été inspiré par [Cafétography](https://taniarascia.github.io/coffee/) de [@taniarascia](https://github.com/taniarascia/). Suivez [son tutoriel](https://www.taniarascia.com/real-world-examples-of-map-filter-and-reduce-in-javascript/) (en anglais) si vous aimeriez faire votre propre carte !
