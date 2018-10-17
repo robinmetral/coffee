@@ -1,9 +1,19 @@
+// About
+// Open function
+function openAbout() {
+    document.getElementById('about').style.cssText = 'visibility:visible;';
+}
+// Close function
+function closeAbout() {
+    document.getElementById('about').style.cssText = 'visibility:hidden;';
+}
+
 // Set the map view
 var myMap = L.map('mapid').setView([18.7884781, 98.9813945], 14);
 
 // Load the basemap
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-    attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>, Coffee Bean by Gyeong Seon Hong from <a href="https://thenounproject.com/icon/1886493/" target="_blank">the Noun Project</a>',
+    attribution: 'Données &copy; <a href="https://www.openstreetmap.org/copyright">les contributeurs d\'OpenStreetMap</a>, fonds de carte Mapbox Light &copy; <a href="https://www.mapbox.com/about/maps/">Mapbox</a>, grain de café par Gyeong Seon Hong du <a href="https://thenounproject.com/icon/1886493/">Noun Project</a>. <a href="" onclick="openAbout();return false;">À propos de cette carte</a>',
     maxZoom: 18,
     id: 'mapbox.light',
     accessToken: 'pk.eyJ1Ijoicm9iaW5tZXRyYWwiLCJhIjoiY2pkMTI0bWVnMmV6dzM0bnNhZHBvMDBqeiJ9.Z0gZrvkth24hNkLkvRxg-g'
@@ -34,6 +44,9 @@ request.onload = function() {
         osmIds.push(data.cafes[i].osm);
     }
 
+    // Print total number of cafes into about section
+    document.getElementById("number-of-cafes").innerHTML = data.cafes.length;
+
     // request v1 user through OpenStreetMap API 0.6
     const requestUser = new XMLHttpRequest();
     const nodesV1 = [];
@@ -51,6 +64,9 @@ request.onload = function() {
                         cafesAdded++; // Increment number of cafes added to OSM by user robinmetral
                     }
                 }
+                // Print cafesAdded into about section
+                console.log(cafesAdded);
+                document.getElementById("cafes-added-to-osm").innerHTML = cafesAdded;
             }
             else {
                 console.error(requestUser.statusText);
@@ -96,3 +112,4 @@ request.onload = function() {
 }
 
 request.send();
+

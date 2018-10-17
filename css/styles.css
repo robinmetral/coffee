@@ -1,6 +1,8 @@
 body {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Same font choice as openstreetmap.org */
 }
 
 html, body, #mapid {
@@ -10,6 +12,7 @@ html, body, #mapid {
 
 h1 {
     color: #6F4E37; /* This is the official coffee color! */
+    text-align: center;
 }
 
 ul {
@@ -18,7 +21,7 @@ ul {
     padding: 0;
 }
 
-.leaflet-popup-content a, .leaflet-control-attribution a {
+.leaflet-popup-content a, .leaflet-control-attribution a, #about a {
     color: #6F4E37 !important; /* Override Leaflet styles */
     text-decoration: none;
 }
@@ -29,4 +32,25 @@ ul {
 
 footer {
     margin-top: 0.67em; /* Same spacing as below h1 by default */
+}
+
+#about {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    bottom: 10%;
+    left: 10%;
+    padding: 20px;
+    background-color: hsl(0, 0%, 100%, 0.8);
+    border-radius: 20px;
+    z-index: 1000;
+    visibility: hidden;
+}
+
+.close-about {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: xx-large;
 }
