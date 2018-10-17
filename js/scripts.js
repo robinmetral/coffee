@@ -44,6 +44,9 @@ request.onload = function() {
         osmIds.push(data.cafes[i].osm);
     }
 
+    // Print total number of cafes into about section
+    document.getElementById("number-of-cafes").innerHTML = data.cafes.length;
+
     // request v1 user through OpenStreetMap API 0.6
     const requestUser = new XMLHttpRequest();
     const nodesV1 = [];
@@ -61,6 +64,9 @@ request.onload = function() {
                         cafesAdded++; // Increment number of cafes added to OSM by user robinmetral
                     }
                 }
+                // Print cafesAdded into about section
+                console.log(cafesAdded);
+                document.getElementById("cafes-added-to-osm").innerHTML = cafesAdded;
             }
             else {
                 console.error(requestUser.statusText);
