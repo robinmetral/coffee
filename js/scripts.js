@@ -1,36 +1,6 @@
 // Set the map view
 var myMap = L.map('mapid').setView([18.7884781, 98.9813945], 14);
 
-function locateMe() {
-    // Location icon
-    var locationIcon = L.icon({
-        iconUrl: "https://robinmetral.github.io/coffee/img/icon-location.png",
-        iconSize: [16, 16],
-        iconAnchor: [8, 8]
-    })
-
-    // Location found
-    function onLocationFound(e) {
-        var radius = e.accuracy / 2;
-        L.marker(e.latlng, {icon: locationIcon}).addTo(myMap);
-        L.circle(e.latlng, radius, {
-            stroke: false,
-            fillColor: "#5f7889",
-            fillOpacity: 0.2
-        }).addTo(myMap);
-    }
-
-    // Location not found
-    function onLocationError(e) {
-        alert(e.message);
-    }
-
-    // Locate!
-    myMap.on('locationfound', onLocationFound);
-    myMap.on('locationerror', onLocationError);
-    myMap.locate({setView: true, maxZoom: 16});
-}
-
 // Load the basemap
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/" target="_blank">Mapbox</a>, Coffee Bean by Gyeong Seon Hong from <a href="https://thenounproject.com/icon/1886493/" target="_blank">the Noun Project</a>',
