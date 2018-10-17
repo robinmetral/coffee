@@ -1,10 +1,5 @@
 # Robin's Coffee Map
 
-This is my coffee map, powered by [@Leaflet](https://github.com/Leaflet/Leaflet) and inspired by [@taniarascia](https://github.com/taniarascia/)'s [Cafétography](https://taniarascia.github.io/coffee/). Follow [her tutorial](https://www.taniarascia.com/real-world-examples-of-map-filter-and-reduce-in-javascript/) to make your own map!
+This is my coffee map, powered by [@Leaflet](https://github.com/Leaflet/Leaflet), using OpenStreetMap data, and inspired by [@taniarascia](https://github.com/taniarascia/)'s [Cafétography](https://taniarascia.github.io/coffee/).
 
-## To do
-
-- [ ] Use OpenStreetMap data instead of manually writing coordinates, opening hours, etc.
-- [ ] Add coffee shops!
-- [ ] Coffee shop count feature (by country and in total?)
-- [ ] Filter coffee shops with their JSON data (does it have filter, low price range, etc)
+Follow [her tutorial](https://www.taniarascia.com/real-world-examples-of-map-filter-and-reduce-in-javascript/) to get started with your own map!
