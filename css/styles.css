@@ -41,7 +41,7 @@ footer {
     bottom: 10%;
     left: 10%;
     padding: 20px;
-    background-color: hsl(0, 0%, 100%, 0.8);
+    background-color: hsl(0, 0%, 100%, 0.9);
     border-radius: 20px;
     z-index: 1000;
     visibility: hidden;
