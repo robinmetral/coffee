@@ -106,7 +106,7 @@ request.onload = function() {
                         </ul>
                         <footer>
                             Heures d'ouverture : ${cafeHours}<br>
-                            <a href="${cafeUrl}" target="_blank">Site web</a> · <a href="https://www.openstreetmap.org/node/${cafes[j].osm}" target="_blank">OpenStreetMap</a> · Mis à jour le ${cafes[j].date}
+                            <a href="${cafeUrl}">Site web</a> · <a href="https://www.openstreetmap.org/node/${cafes[j].osm}">OpenStreetMap</a> · Mis à jour le ${cafes[j].date}
                         </footer>
                     `);
             }
