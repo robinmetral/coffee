@@ -1,6 +1,16 @@
 {
     "cafes": [
     {
+        "name": "Around 18 Grams",
+        "latte": [60],
+        "filter": [70, 140],
+        "laptop": false,
+        "osm": 5994901904,
+        "rating": 4,
+        "comment": "À l'origine un stand à Nimman, Around 18 Grams a ouvert boutique depuis quelques semaines dans un petit espace à côté d'un temple chinois près du marché Warorot. Géré par deux jeunes passionnés du café, on y trouve cinq choix de grains pour le café filtre, deux torréfiés maison et trois guests (plus chers). Très bon ! J'aime aussi que l'on y serve des spécialités préparées à partir de food waste, comme un éventuel espresso surextrait. Un effort à encourager !",
+        "date": "2018-10-18"
+    },
+    {
         "name": "Roxpresso",
         "latte": "",
         "filter": "",
