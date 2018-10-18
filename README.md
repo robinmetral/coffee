@@ -1,4 +1,4 @@
-# Les cafés de Robin
+# Les cafés de Robin :coffee:
 
 Bienvenue à la source de ma carte des cafés.
 
