@@ -89,7 +89,7 @@ request.onload = function() {
                 const cafeLat = jsonResponse.elements[j].lat;
                 const cafeLon = jsonResponse.elements[j].lon;
                 const cafeUrl = (jsonResponse.elements[j].hasOwnProperty("tags") === false) ? "" : (jsonResponse.elements[j].tags.hasOwnProperty("website")) ? jsonResponse.elements[j].tags.website : (jsonResponse.elements[j].tags.hasOwnProperty("facebook")) ? jsonResponse.elements[j].tags.facebook : "";
-                const cafeHours = (jsonResponse.elements[j].hasOwnProperty("tags") === false || jsonResponse.elements[j].tags.hasOwnProperty("opening_hours") === false) ? "<a href=\"https://www.openstreetmap.org/edit?node=" + cafes[j].osm + "\">ajouter</a>" : jsonResponse.elements[j].tags.opening_hours;
+                const cafeHours = (jsonResponse.elements[j].hasOwnProperty("tags") === false || jsonResponse.elements[j].tags.hasOwnProperty("opening_hours") === false) ? "<a href=\"https://www.openstreetmap.org/edit?node=" + cafes[j].osm + "\">ajouter à OpenStreetMap !</a>" : jsonResponse.elements[j].tags.opening_hours;
                 const cafeFilter = (Array.isArray(cafes[j].filter)) ? cafes[j].filter : (cafes[j].filter === false) ? "non" : "oui";
                 const cafeLatte = (Array.isArray(cafes[j].latte)) ? cafes[j].latte : (cafes[j].latte === false) ? "non" : "oui";
                 const cafeLaptop = (cafes[j].laptop) ? "oui" : "non";
