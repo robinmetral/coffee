@@ -172,8 +172,8 @@
     },
     {
         "name": "ma-chill",
-        "latte": "",
-        "filter": "",
+        "latte": [70],
+        "filter": [70, 90],
         "laptop": true,
         "osm": 4586796889,
         "rating": 5,
