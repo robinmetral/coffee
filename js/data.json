@@ -51,16 +51,6 @@
         "date": "2018-10-05"
     },
     {
-        "name": "Johoney",
-        "latte": "",
-        "filter": false,
-        "laptop": true,
-        "osm": 5950919672,
-        "rating": 3,
-        "comment": "Les meilleures glaces de la ville, et en bonus du café. Le cold brew est moyen, et attention de demander sans jelly ni sucre ! Pas testé le latte. Espace étonamment agréable pour se poser et travailler, calme et lumineux avec des grandes tables.",
-        "date": "2018-10-02"
-    },
-    {
         "name": "A Day In Chiang Mai",
         "latte": "",
         "filter": "",
@@ -118,16 +108,6 @@
         "osm": 3395080851,
         "rating": 4,
         "comment": "Espace agréable et staff adorable ! C'est aussi une boulangerie qui vend de délicieux cannelés... de temps en temps. Un peu dur à voir de l'extérieur avec la vitre teintée et sans inscriptions.",
-        "date": "2018-09-27"
-    },
-    {
-        "name": "CoolMuang",
-        "latte": "",
-        "filter": "",
-        "laptop": true,
-        "osm": 5758046621,
-        "rating": 3,
-        "comment": "Ouvert et assez touristique car très en vue tout près de pratuu Thapae. Pourtant, bon café et ok pour travailler - mais les tables sont petites, et le passage important peut déranger.",
         "date": "2018-09-27"
     },
     {
@@ -198,16 +178,6 @@
         "osm": 5593553723,
         "rating": 4,
         "comment": "Pas de filtre ici, mais un choix de différents grains pour l'espresso. On sent bien la différence entre nos deux lattes ! Espace calme et bien illuminé, recommandé pour y travailler.",
-        "date": "2018-09-27"
-    },
-    {
-        "name": "Akha Ama La Fattoria",
-        "latte": "",
-        "filter": "",
-        "laptop": false,
-        "osm": 2404044286,
-        "rating": 2,
-        "comment": "Café varié et de qualité, comme à l'autre branche de Akha Ama à Santitham, mais celle-ci est petite, sombre, touristique, et les tables n'y sont pas faites pour travailler (une sorte de tonneau par exemple).",
         "date": "2018-09-27"
     },
     {
@@ -368,16 +338,6 @@
         "osm": 5919670289,
         "rating": 5,
         "comment": "Coup de coeur à Chiang Mai ! Ouvert par deux soeurs (on pense) dans le garage familial reconverti en petit café. Petit et un peu serré, mais super accueillant et chaud. Filtre et latte délicieux, et le lait est préparé avec la machine que Clara a ensuite commandée pour faire des lattes à la maison ! Et bien sûr la fille est adorable et super souriante.",
-        "date": "2018-09-24"
-    },
-    {
-        "name": "POSREST",
-        "latte": "",
-        "filter": "",
-        "laptop": true,
-        "osm": 5917955982,
-        "rating": 3,
-        "comment": "Espace sympa et bon café, mais moins bon, moins sympa et plus cher que Taste au bout de la rue. Le choix est vite fait.",
         "date": "2018-09-24"
     },
     {
