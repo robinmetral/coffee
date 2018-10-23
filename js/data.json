@@ -1,6 +1,16 @@
 {
     "cafes": [
     {
+        "name": "Yardstick Coffee",
+        "latte": "",
+        "filter": "",
+        "laptop": false,
+        "osm": 2655955664,
+        "rating": "",
+        "comment": "",
+        "date": "2018-10-23"
+    },
+    {
         "name": "Habitual Coffee",
         "latte": [140],
         "filter": [140],
