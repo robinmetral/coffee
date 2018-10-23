@@ -2,12 +2,12 @@
     "cafes": [
     {
         "name": "Yardstick Coffee",
-        "latte": "",
-        "filter": "",
+        "latte": [120, 160],
+        "filter": [100, 160],
         "laptop": false,
         "osm": 2655955664,
-        "rating": "",
-        "comment": "",
+        "rating": 4,
+        "comment": "Très bon café importé et torréfié maison. Espace super bien designé, coloré mais pas criard, bois, lean. Plein de gadgets de café et vente de grains. Par contre, le wifi est \"a bit sick lately\" (ne marche pas) depuis plus de huit mois...",
         "date": "2018-10-23"
     },
     {
