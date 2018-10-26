@@ -1,6 +1,16 @@
 {
     "cafes": [
     {
+        "name": "The Den",
+        "latte": [120],
+        "filter": [170],
+        "laptop": true,
+        "osm": 5558725558,
+        "rating": 5,
+        "comment": "Inside the HUB on the ground floor of the Escolta building, a Manila landmark built in the 20s during the American occupation. The Coffee shop is great for working (2h wifi per purchase), and the beans are sourced locally by Kalsada, the only local coffee producer I know of, and which has an office a few floors above The Den! We visited Kalsada in April 2018 and loved it. We tried to arrange a visit to their coffee farm in Benguet but unfortunately couldn't make it work... next time! Love their effort, and this coffee shop's, to promote local specialty coffee.",
+        "date": "2018-10-26"
+    },
+    {
         "name": "The Curator",
         "latte": [140],
         "filter": [120, 160],
