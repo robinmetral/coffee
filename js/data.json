@@ -1,6 +1,16 @@
 {
     "cafes": [
     {
+        "name": "Jhai",
+        "latte": false,
+        "filter": "",
+        "laptop": true,
+        "osm": 4620007791,
+        "rating": 5,
+        "comment": "Super café au milieu de nulle part (c'est-à-dire à Paksong) sur le plateau des Bolavens. Le café est sourcé et torréfié localement, par la Jhai Coffee Farmers Cooperative. En Octobre 2018, Jhai a annoncé se séparer de la coopérative et déménager ailleurs à Paksong.",
+        "date": "2018-10-28"
+    },
+    {
         "name": "The Den",
         "latte": [120],
         "filter": [170],
