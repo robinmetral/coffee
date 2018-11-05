@@ -1,6 +1,26 @@
 {
     "cafes": [
     {
+        "name": "Salaween",
+        "latte": "",
+        "filter": "",
+        "laptop": true,
+        "osm": 5029184523,
+        "rating": 4,
+        "comment": "",
+        "date": "2018-11-05"
+    },
+    {
+        "name": "Easy Café",
+        "latte": "",
+        "filter": "",
+        "laptop": true,
+        "osm": 4714707659,
+        "rating": 4,
+        "comment": "",
+        "date": "2018-11-05"
+    },
+    {
         "name": "Jhai",
         "latte": false,
         "filter": "",
