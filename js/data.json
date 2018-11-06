@@ -1,6 +1,36 @@
 {
     "cafes": [
     {
+        "name": "Coutume",
+        "latte": "",
+        "filter": "",
+        "laptop": true,
+        "osm": 6041013084,
+        "rating": 5,
+        "comment": "",
+        "date": "2018-11-06"
+    },
+    {
+        "name": "Birdie",
+        "latte": "",
+        "filter": "",
+        "laptop": false,
+        "osm": 4161978890,
+        "rating": 5,
+        "comment": "",
+        "date": "2018-11-06"
+    },
+    {
+        "name": "Paradiso",
+        "latte": "",
+        "filter": false,
+        "laptop": true,
+        "osm": 4701733689,
+        "rating": 4,
+        "comment": "",
+        "date": "2018-11-06"
+    },
+    {
         "name": "Salaween",
         "latte": "",
         "filter": "",
