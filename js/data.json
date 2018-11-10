@@ -2,8 +2,8 @@
     "cafes": [
     {
         "name": "Fieow",
-        "latte": 60,
-        "filter": 90,
+        "latte": [60],
+        "filter": [90],
         "laptop": true,
         "osm": 5201216548,
         "rating": 5,
