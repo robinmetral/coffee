@@ -1,6 +1,16 @@
 {
     "cafes": [
     {
+        "name": "Fieow",
+        "latte": 60,
+        "filter": 90,
+        "laptop": true,
+        "osm": 5201216548,
+        "rating": 5,
+        "comment": "Malheureusement un peu loin de Nimman, mais néanmoins un de mes cafés préférés à Chiang Mai ! Ambiance minimaliste-industrielle dans une halle spacieuse et tranquille, déco au top, et café délicieux torréfié maison, avec un accent sur l'acidité fruitée de la cerise de café. Génial, dommage qu'on y aura été qu'une seule fois !",
+        "date": "2018-11-10"
+    },
+    {
         "name": "Coutume",
         "latte": "",
         "filter": "",
