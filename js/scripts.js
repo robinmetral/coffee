@@ -86,8 +86,7 @@ request.onload = function() {
         .then(function(response) { return response.json(); })
         .then(function(jsonResponse) {
             for (let j = 0; j < jsonResponse.elements.length; j++) {
-                const cafeLat = jsonResponse.elements[j].lat;
-                const cafeLon = jsonResponse.elements[j].lon;
+                const { lat, lon } = jsonResponse.elements[j]; // es6 destructuring
                 const cafeUrl = (jsonResponse.elements[j].hasOwnProperty("tags") === false) ? "" : (jsonResponse.elements[j].tags.hasOwnProperty("website")) ? jsonResponse.elements[j].tags.website : (jsonResponse.elements[j].tags.hasOwnProperty("facebook")) ? jsonResponse.elements[j].tags.facebook : "";
                 const cafeHours = (jsonResponse.elements[j].hasOwnProperty("tags") === false || jsonResponse.elements[j].tags.hasOwnProperty("opening_hours") === false) ? "<a href=\"https://www.openstreetmap.org/edit?node=" + cafes[j].osm + "\">ajouter à OpenStreetMap !</a>" : jsonResponse.elements[j].tags.opening_hours;
                 const cafeFilter = (Array.isArray(cafes[j].filter)) ? cafes[j].filter : (cafes[j].filter === false) ? "non" : "oui";
@@ -95,7 +94,7 @@ request.onload = function() {
                 const cafeLaptop = (cafes[j].laptop) ? "oui" : "non";
 
                 // Print marker
-                L.marker([cafeLat, cafeLon], {icon: coffeeIcon}).addTo(myMap)
+                L.marker([lat, lon], {icon: coffeeIcon}).addTo(myMap)
                     .bindPopup(`
                         <header><h1>${cafes[j].name} (${cafes[j].rating}/5)</h1></header>
                         <p>${cafes[j].comment}</p>
