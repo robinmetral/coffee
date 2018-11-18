@@ -212,7 +212,7 @@
     },
     {
         "name": "Khagee",
-        "latte": "",
+        "latte": [85],
         "filter": false,
         "laptop": true,
         "osm": 3395080851,
