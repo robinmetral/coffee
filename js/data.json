@@ -1,6 +1,16 @@
 {
     "cafes": [
     {
+        "name": "Simply Happy",
+        "latte": "",
+        "filter": "",
+        "laptop": true,
+        "osm": 6094446495,
+        "rating": 3,
+        "comment": "Nouveau café ouvert (donc parfois un peu chaud) sur une ruelle du centre-ville. Une grande table pour travailler, le reste un peu petites. Excellent café filtre, grains locaux mais torréfiés à Bangkok par School Coffee. Tenu par une jeune dynamique et super sympa !",
+        "date": "2018-11-27"
+    },
+    {
         "name": "Fieow",
         "latte": [60],
         "filter": [90],
