@@ -1,13 +1,23 @@
 {
     "cafes": [
     {
+        "name": "The Roastery by Roj",
+        "latte": [70, 80],
+        "filter": [100, 150],
+        "laptop": true,
+        "osm": 6114554709,
+        "rating": 5,
+        "comment": "Avec moins de 24 heures en ville, The Roastery by Roj est le seul café qu'on a eu le temps de tester à Chiang Rai ! On est contents de notre choix : excellent café produit dans la province et torréfié sur place, école de barista, super espace lumineux pour travailler. Rappelle un peuDi Bosco près de Chiang Mai.",
+        "date": "2018-12-03"
+    },
+    {
         "name": "Simply Happy",
         "latte": "",
-        "filter": "",
+        "filter": [80, 100],
         "laptop": true,
         "osm": 6094446495,
-        "rating": 3,
-        "comment": "Nouveau café ouvert (donc parfois un peu chaud) sur une ruelle du centre-ville. Une grande table pour travailler, le reste un peu petites. Excellent café filtre, grains locaux mais torréfiés à Bangkok par School Coffee. Tenu par une jeune dynamique et super sympa !",
+        "rating": 5,
+        "comment": "Nouveau café ouvert (donc parfois un peu chaud) sur une ruelle du centre-ville. Une grande table pour travailler, le reste un peu petites. Excellent café filtre, grains locaux mais torréfiés à Bangkok par School Coffee. Tenu par une jeune super sympa passionnée de café et de livres, qui nous donne des conseils de cafés à tester à Chiang Rai, et des infos sur Big Bad Wolf, une book fair à Chiang Mai :)",
         "date": "2018-11-27"
     },
     {
