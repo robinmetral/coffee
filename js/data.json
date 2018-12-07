@@ -1,13 +1,23 @@
 {
     "cafes": [
     {
+        "name": "Saffron",
+        "latte": [17000, 22000],
+        "filter": [20000, 40000],
+        "laptop": true,
+        "osm": 3776052332,
+        "rating": 4,
+        "comment": "Joli café de spécialité au bord de la rivière, avec une bonne sélection de méthodes filtre de l'Aeropress au Syphon. Espace ouvert au rez, climatisé à l'étage, et places en terrasse au bord de l'eau. Café de la région et torréfié en ville. Bonus : la possibilité d'un \"Coffee Tour\", et la \"Brew Crew\", qu'on rejoint en goûtant toutes les méthodes filtres - t-shirt offert à la clé !",
+        "date": "2018-12-07"
+    },
+    {
         "name": "The Roastery by Roj",
         "latte": [70, 80],
         "filter": [100, 150],
         "laptop": true,
         "osm": 6114554709,
         "rating": 5,
-        "comment": "Avec moins de 24 heures en ville, The Roastery by Roj est le seul café qu'on a eu le temps de tester à Chiang Rai ! On est contents de notre choix : excellent café produit dans la province et torréfié sur place, école de barista, super espace lumineux pour travailler. Rappelle un peuDi Bosco près de Chiang Mai.",
+        "comment": "Avec moins de 24 heures en ville, The Roastery by Roj est le seul café qu'on a eu le temps de tester à Chiang Rai ! On est contents de notre choix : excellent café produit dans la province et torréfié sur place, école de barista, super espace lumineux pour travailler. Rappelle un peu Di Bosco près de Chiang Mai.",
         "date": "2018-12-03"
     },
     {
