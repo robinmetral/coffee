@@ -1,6 +1,16 @@
 {
     "cafes": [
     {
+        "name": "Le Trio",
+        "latte": [20000],
+        "filter": [25000],
+        "laptop": true,
+        "osm": 3610030408,
+        "rating": 5,
+        "comment": "Très bon café, choix de variétés Typica ou Catimor pour le filtre. La torréfaction se fait sur place, ça sent bon ! Places assises limitées sur la petite terrasse... Ou à Coco & Co, le bistro vegan d'à-côté, où l'espace à l'étage est super agréable et bien décoré.",
+        "date": "2018-12-15"
+    },
+    {
         "name": "Hidden Café",
         "latte": [20000],
         "filter": [20000],
