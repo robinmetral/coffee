@@ -1,6 +1,16 @@
 {
     "cafes": [
     {
+        "name": "Cabana",
+        "latte": [20000, 25000],
+        "filter": [20000],
+        "laptop": true,
+        "osm": 5432749521,
+        "rating": 4,
+        "comment": "Café de spécialité près du Mékong, déco style plage, cold brew et filtrs et très bon chai latte. Impressionnante carte des petits-dejs, pas (encore) essayés. Un peu sombre au fond, très lumineux vers les fenêtres.",
+        "date": "2018-12-15"
+    },
+    {
         "name": "Le Trio",
         "latte": [20000],
         "filter": [25000],
