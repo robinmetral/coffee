@@ -1,5 +1,15 @@
 {
     "cafes": [
+     {
+        "name": "Comma Lab",
+        "latte": [20000],
+        "filter": [30000],
+        "laptop": true,
+        "osm": 6139792746,
+        "rating": 5,
+        "comment": "La plus récente des trois branches de Comma à Vientiane, et de loin la meilleure ! Comma au centre-ville est sombre et petit. Celui-ci est immense, super lumineux, tout neuf, on y trouve une grande bibliothèque et plein d'infos sur le café. C'est ici que Comma torréfie. Ça vaut le détour !",
+        "date": "2018-12-16"
+    },
     {
         "name": "Cabana",
         "latte": [20000, 25000],
