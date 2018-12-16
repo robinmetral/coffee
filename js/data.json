@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "30ml",
+        "latte": [17000, 27000],
+        "filter": [25000, 28000],
+        "laptop": true,
+        "osm": 5105448234,
+        "rating": 4,
+        "comment": "Un peu en dehors du centre, donc moins de touristes et plus d'expats qui travaillent pour diverses associations et ONGs présentes au Laos. Bon filtre torréfié maison, espace lumineux, internet rapide, chouette pour travailler !",
+        "date": "2018-12-16"
+     },
+     {
         "name": "Comma Lab",
         "latte": [20000],
         "filter": [30000],
