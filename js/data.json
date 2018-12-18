@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "Wonderwall",
+        "latte": [95],
+        "filter": [170],
+        "laptop": true,
+        "osm": 4496875189,
+        "rating": 3,
+        "comment": "Espace sympa, grandes tables et prises, super pour travailler, mais un peu cher et café filtre trop amer. Peut-être une erreur d'un jour, je leur donne le bénéfice du doute !",
+        "date": "2018-12-18"
+     },
+     {
         "name": "30ml",
         "latte": [17000, 27000],
         "filter": [25000, 28000],
