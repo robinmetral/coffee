@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "Phil Coffee",
+        "latte": [100, 140],
+        "filter": [100, 140],
+        "laptop": true,
+        "osm": 4584070590,
+        "rating": 5,
+        "comment": "Super dernier café de spécialité découvert à Bangkok. Caché au fond d'une ruelle dans un quartier très sympa un peu hipster. Excellent café torréfié maison et de différentes origines, locales et internationales. Jeux de société et livres disponibles, et globalement super espace.",
+        "date": "2018-12-19"
+     },
+     {
         "name": "Wonderwall",
         "latte": [95],
         "filter": [170],
