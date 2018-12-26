@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "L'A-T-E-L-I-E-R",
+        "latte": [4],
+        "filter": false,
+        "laptop": true,
+        "osm": 3366793950,
+        "rating": 4,
+        "comment": "Super espace pour travailler avec un thé chaud en hiver ou une citronnade en été, mais aussi pour boire une bière artisanale entre amis ou bouquiner sur un fauteuil mismatch. En deux parties reliées par un couloir, caisse côté ouest et expos côté est.",
+        "date": "2018-12-26"
+     },
+     {
         "name": "Phil Coffee",
         "latte": [100, 140],
         "filter": [100, 140],
