@@ -9,7 +9,7 @@ function closeAbout() {
 }
 
 // Set the map view
-var myMap = L.map('mapid').setView([18.7884781, 98.9813945], 14);
+var myMap = L.map('mapid').setView([46.2052, 6.1532], 14);
 
 // Load the basemap
 L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
