@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "LUMA",
+        "latte": [4.80],
+        "filter": [5, 6.50],
+        "laptop": true,
+        "osm": 6184029126,
+        "rating": 3,
+        "comment": "Le propriétaire est artiste et ses oeuvres sont sur les murs, quelques tables à l'arrière ok pour travailler mais un poil sombre dans le style un peu vieillot, bon filtre de Sidamo torréfié à Moudon, par quoi, des Moudonois ? Plein de livres intéressants sur l'art, le design, le DIY...",
+        "date": "2019-01-05"
+     },
+     {
         "name": "L'A-T-E-L-I-E-R",
         "latte": [4],
         "filter": false,
