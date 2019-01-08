@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "BREW",
+        "latte": [4.80],
+        "filter": [5.90],
+        "laptop": true,
+        "osm": 412815451,
+        "rating": 4,
+        "comment": "Probablement l'un des, sinon le, seuls cafés de spécialité à Vevey. Café filtre méthode AeroPress ou Chemex, compte commencer à torréfier maison. Sympa pour se poser, musique jazz et plein de petites tables à deux. Brunch possible, et bar en soirée de fin de semaine.",
+        "date": "2019-01-08"
+     },
+     {
         "name": "LUMA",
         "latte": [4.80],
         "filter": [5, 6.50],
