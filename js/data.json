@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "Tres Cabezas",
+        "latte": [2.30],
+        "filter": [2.50],
+        "laptop": true,
+        "osm": 2640326880,
+        "rating": 5,
+        "comment": "Premier café testé à Berlin, torréfie du café direct trade. Grand espace, pas trop de monde, une table à l'arrière réservée pour les laptops le weekend (la semaine possible de s'asseoir partout). Super bon cappuccino et filtre, wifi rapide.",
+        "date": "2019-01-27"
+     },
+     {
         "name": "BREW",
         "latte": [4.80],
         "filter": [5.90],
