@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "Happy Baristas",
+        "latte": [2.90],
+        "filter": [2.60, 4.00],
+        "laptop": true,
+        "osm": 745154923,
+        "rating": 5,
+        "comment": "Plus populaire et plein que Tres Cabezas, mais toujours un super bon café, avec soit du batch brew à prix raisonnable ou du hand brew pour les fines bouches. Espace grand et animé, beaucoup de bruit des discussions des gens, parfois bien et d'autres fois moins. Une unique grande table réservée à l'utilisation de laptops.",
+        "date": "2019-01-27"
+     },
+     {
         "name": "Tres Cabezas",
         "latte": [2.30],
         "filter": [2.50],
