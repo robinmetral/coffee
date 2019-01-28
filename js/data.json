@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "Bonanza",
+        "latte": [3.60],
+        "filter": [3.20],
+        "laptop": true,
+        "osm": 4344303889,
+        "rating": 5,
+        "comment": "Il faudrait vraiment que j'adapte l'échelle de notation à Berlin, parce que jusque là tous les cafés étaient des 5, et Bonanza devrait être un 6 ! Comme d'habitude, table réservée aux laptops dans un grand espace lumineux dans une ancienne usine de briques. Industriel minimaliste, j'adore ! Excellent filtre, et option d'un tasting de filtres (j'en suis au troisième, un éthiopien lavé) pour €5.50. Baristas super sympas qui me parlent allemand malgré les difficultés :)",
+        "date": "2019-01-28"
+     },
+     {
         "name": "Happy Baristas",
         "latte": [2.90],
         "filter": [2.60, 4.00],
