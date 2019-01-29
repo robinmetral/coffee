@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "Two and Two",
+        "latte": [2.6],
+        "filter": [3.5],
+        "laptop": true,
+        "osm": 2764110685,
+        "rating": 4,
+        "comment": "Ouvert par une française et une japonaise, ce café sert des pâtisseries françaises et du café japonais, passe des musiques françaises et vend de la papeterie japonaise. Espace en deux parties, fauteuils et tables basses sympa pour bouquiner mais pas optimales pour travailler. Un peu trop rempli à notre visite.",
+        "date": "2019-01-29"
+     },
+     {
         "name": "isla",
         "latte": [2.8, 3.3],
         "filter": [2.4],
