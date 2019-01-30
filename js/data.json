@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "The Visit",
+        "latte": [3.5],
+        "filter": [2.8, 4.5],
+        "laptop": true,
+        "osm": 4379404319,
+        "rating": 3,
+        "comment": "Café très spacieux et parfait pour travailler. Grandes tables hautes communes, bancs, et petites tables rondes sans laptop les weekends. Peu de lumière naturelle par contre, et lumière artificielle très blanche néon. Café torréfié sur place et distribué dans les trois autres branches berlinoises. Super bon batch brew, mais aussi des méthodes manuelles disponibles.",
+        "date": "2019-01-30"
+     },
+     {
         "name": "Two and Two",
         "latte": [2.6],
         "filter": [3.5],
