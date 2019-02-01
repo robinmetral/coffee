@@ -4,10 +4,10 @@
         "name": "Companion",
         "latte": [2.60],
         "filter": false,
-        "laptop": true,
+        "laptop": false,
         "osm": 2444312258,
         "rating": 2,
-        "comment": "Petit café en retrait dans un magasin d'habits, Voo Store. Sur une estrade avec un joli parquet, quatre petites tables en béton. Presque pas trouvé de place à notre visite. Café ok mais pas de filtre, wifi pas génial parce qu'on doit utiliser le routeur de Voo qui est à l'autre bout du magasin. Je l'aurais sûrement mieux noté ailleurs, mais c'est Berlin et c'est un 2.",
+        "comment": "Petit café en retrait dans un magasin d'habits, Voo Store. Sur une estrade avec un joli parquet, quatre petites tables en béton. Presque pas trouvé de place à notre visite. Café ok mais pas de filtre, wifi faible et très instable parce qu'on doit utiliser le routeur de Voo qui est à l'autre bout du magasin. Je l'aurais sûrement mieux noté ailleurs, mais c'est Berlin et c'est un 2.",
         "date": "2019-02-01"
      },
      {
@@ -36,7 +36,7 @@
         "filter": [2.8, 4.5],
         "laptop": true,
         "osm": 4379404319,
-        "rating": 4,
+        "rating": 3,
         "comment": "Café très spacieux et parfait pour travailler. Grandes tables hautes communes, bancs, et petites tables rondes sans laptop les weekends. Peu de lumière naturelle par contre, et lumière artificielle très blanche néon. Café torréfié sur place et distribué dans les trois autres branches berlinoises. Super bon batch brew, mais aussi des méthodes manuelles disponibles.",
         "date": "2019-01-30"
      },
