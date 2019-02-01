@@ -1,12 +1,22 @@
 {
     "cafes": [
      {
+        "name": "Companion",
+        "latte": [2.60],
+        "filter": false,
+        "laptop": true,
+        "osm": 2444312258,
+        "rating": 2,
+        "comment": "Petit café en retrait dans un magasin d'habits, Voo Store. Sur une estrade avec un joli parquet, quatre petites tables en béton. Presque pas trouvé de place à notre visite. Café ok mais pas de filtre, wifi pas génial parce qu'on doit utiliser le routeur de Voo qui est à l'autre bout du magasin. Je l'aurais sûrement mieux noté ailleurs, mais c'est Berlin et c'est un 2.",
+        "date": "2019-02-01"
+     },
+     {
         "name": "Bonanza",
         "latte": [3.5],
         "filter": [3],
         "laptop": true,
         "osm": 802550080,
-        "rating": 5,
+        "rating": 4,
         "comment": "La deuxième branche du fameux torréfacteur de Kreuzberg, sur une rue animée près de l'ancienne démarcation Est-Ouest. Un peu plus petit, plus béton là où l'original est brique, mais quand-même très sympa ! Super café et service, wifi, plein de petites tables.",
         "date": "2019-01-30"
      },
