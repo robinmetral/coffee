@@ -1,8 +1,18 @@
 {
     "cafes": [
      {
+        "name": "Populus",
+        "latte": [2.9],
+        "filter": [2.5, 3.6],
+        "laptop": true,
+        "osm": 2947989521,
+        "rating": 4,
+        "comment": "Super bon café torréfié sur place dans un joli espace au bord du canal de Kruzberg. Clara a adoré son cappuccino, le filtre éthipien était très bon aussi. Batch brew meilleur marché à 2.50€. Attention, interdit aux laptops le weekend (zut).",
+        "date": "2019-02-02"
+     },
+     {
         "name": "Companion",
-        "latte": [2.60],
+        "latte": [2.6],
         "filter": false,
         "laptop": false,
         "osm": 2444312258,
