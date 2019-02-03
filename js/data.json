@@ -1,6 +1,36 @@
 {
     "cafes": [
      {
+        "name": "The Barn Mitte",
+        "latte": [3.5],
+        "filter": [5.5],
+        "laptop": false,
+        "osm": 3868790051,
+        "rating": 3,
+        "comment": "Un point pour être la toute première branche de The Barn, café de spécialité emblématique en Europe, que j'avais visitée en 2014, pendant un voyage dans le nord de l'Europe qui a marqué le début de ma passion pour le café. Sinon c'est assez petit et très connu, donc très plein. Théoriquement quelques places pour laptops contre les fenêtres, mais il ne faut pas compter dessus. Le café est bon mais cher, et plus aussi hors du commun qu'à l'époque.",
+        "date": "2019-02-03"
+     },
+     {
+        "name": "Ben Rahim",
+        "latte": [2.8],
+        "filter": [4.6],
+        "laptop": false,
+        "osm": 3868790050,
+        "rating": 3,
+        "comment": "Tout petit café de spécialité qui offre aussi une méthode ibrik (pas essayé). Café torréfié par Square Mile (Londres) lors de notre visite. Dissimulé dans les Hackesche Hofe, c'est un super endroit pour s'arrêter prendre un café. Trop petit par contre pour y sortir un laptop.",
+        "date": "2019-02-03"
+     },
+     {
+        "name": "19grams Alex",
+        "latte": [3],
+        "filter": [3],
+        "laptop": true,
+        "osm": 5827057077,
+        "rating": 4,
+        "comment": "19grams est le nom donné aux ventures de Tres Cabezas à Friedrichshain. Plus cher ici à Mitte qu'à l'est, mais raisonnable comparé aux autres prix du quartier, et à notre goût le meilleur café (testé le même jour que The Barn et Ben Rahim pas loin). Excellent batch brew. Assez brand, plutôt rempli le dimanche de notre visite, mais probablement possible d'y travailler contre les fenêtres sur les hauts tabourets.",
+        "date": "2019-02-03"
+     },
+     {
         "name": "Populus",
         "latte": [2.9],
         "filter": [2.5, 3.6],
