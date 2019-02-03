@@ -24,5 +24,6 @@
   ],
   "devDependencies": {
     "terser": "^3.14.1"
-  }
+  },
+  "homepage" : "http://robinmetral.github.io/resume"
 }
