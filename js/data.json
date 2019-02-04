@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "Five Elephant",
+        "latte": [3.5],
+        "filter": [2.6],
+        "laptop": false,
+        "osm": 2628471058,
+        "rating": 3,
+        "comment": "Première branche de Five Elephant à Berlin, maintenant présente aussi à Mitte. Espace sympa et bon, mais pas de wifi :( et très (trop) populaire, peut-être parce qu'on dit que c'est le meilleur café de Belrin (en tout cas c'est ce que notre coloc nous a dit). Nous on préfère le café à Tres Cabezas, Populus, et ailleurs !",
+        "date": "2019-02-04"
+     },
+     {
         "name": "The Barn Mitte",
         "latte": [3.5],
         "filter": [5.5],
@@ -76,8 +86,8 @@
         "filter": [2.8, 4.5],
         "laptop": true,
         "osm": 4379404319,
-        "rating": 3,
-        "comment": "Café très spacieux et parfait pour travailler. Grandes tables hautes communes, bancs, et petites tables rondes sans laptop les weekends. Peu de lumière naturelle par contre, et lumière artificielle très blanche néon. Café torréfié sur place et distribué dans les trois autres branches berlinoises. Super bon batch brew, mais aussi des méthodes manuelles disponibles.",
+        "rating": 4,
+        "comment": "Café très spacieux et parfait pour travailler. Grandes tables hautes communes, bancs, et petites tables rondes sans laptop les weekends. Peu de lumière naturelle loin des fenêtres par contre, et lumière artificielle très blanche néon. Café torréfié sur place et distribué dans les trois autres branches berlinoises. Super bon batch brew, mais aussi des méthodes manuelles disponibles.",
         "date": "2019-01-30"
      },
      {
