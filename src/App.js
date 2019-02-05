@@ -1,10 +1,11 @@
 import React, { Component } from "react";
+import Inventory from "./Inventory";
 
 class App extends Component {
   render() {
     return (
       <div>
-        <p>Hey</p>
+        <Inventory />
       </div>
     );
   }

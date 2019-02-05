@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "firebase": "^5.8.2",
     "gh-pages": "^2.0.1",
+    "prop-types": "^15.6.2",
+    "re-base": "^4.0.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.3"
