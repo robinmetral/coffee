@@ -1,48 +1,35 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React, { Component } from "react"
+import PropTypes from "prop-types"
 
-class AddFishForm extends React.Component {
+class AddResumeForm extends Component {
 
   static propTypes = {
-    addFish: PropTypes.func
-  };
+    addResume: PropTypes.func
+  }
 
-  nameRef = React.createRef();
-  priceRef = React.createRef();
-  statusRef = React.createRef();
-  descRef = React.createRef();
-  imageRef = React.createRef();
+  nameRef = React.createRef()
+  summaryRef = React.createRef()
 
-  createFish = (event) => {
-    // stop form from submitting
-    event.preventDefault();
-    const fish = {
+  createResume = (event) => {
+    event.preventDefault()
+    const resume = {
       name: this.nameRef.current.value,
-      price: parseFloat(this.priceRef.current.value),
-      status: this.statusRef.current.value,
-      desc: this.descRef.current.value,
-      image: this.imageRef.current.value
+      summary: this.summaryRef.current.value,
     }
-    this.props.addFish(fish);
+    this.props.addResume(resume)
     // refresh form
-    event.currentTarget.reset(); // event.currentTarget is the <form>
+    event.currentTarget.reset() // event.currentTarget is the <form>
   }
 
   render() {
     return (
-      <form className="fish-edit" onSubmit={this.createFish} >
+      <form onSubmit={this.createResume} >
         <input name="name" ref={this.nameRef} type="text" placeholder="Name" />
-        <input name="price" ref={this.priceRef} type="text" placeholder="Price" />
-        <select name="status" ref={this.statusRef}>
-          <option value="available">Fresh!</option>
-          <option value="unavailable">Sold Out</option>
-        </select>
-        <textarea name="desc" ref={this.descRef} placeholder="description" />
-        <input name="image" ref={this.imageRef} type="text" placeholder="Image URL" />
-        <button type="submit">+ Add Fish</button>
+        <textarea name="summary" ref={this.summaryRef} placeholder="Summary" />
+        <button type="submit">Add Resume !</button>
       </form>
-      );
+      )
   }
 }
 
-export default AddFishForm;
+export default AddResumeForm

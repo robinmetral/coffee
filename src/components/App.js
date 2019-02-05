@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import Inventory from "./Inventory";
+import React, { Component } from "react"
+import Inventory from "./Inventory"
 
 class App extends Component {
   render() {
@@ -7,8 +7,8 @@ class App extends Component {
       <div>
         <Inventory />
       </div>
-    );
+    )
   }
 }
 
-export default App;
+export default App

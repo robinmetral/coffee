@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
-import firebase from "firebase";
-import base, { firebaseApp } from "../base";
-import AddResumeForm from "./AddResumeForm";
-import EditResumeForm from "./EditResumeForm";
-import Login from "./Login";
+import React, { Component } from "react"
+import PropTypes from "prop-types"
+import firebase from "firebase"
+import base, { firebaseApp } from "../base"
+import AddResumeForm from "./AddResumeForm"
+import EditResumeForm from "./EditResumeForm"
+import Login from "./Login"
 
 class Inventory extends Component {
 
@@ -13,53 +13,53 @@ class Inventory extends Component {
     addResume: PropTypes.func,
     updateResume: PropTypes.func,
     deleteResume: PropTypes.func,
-  };
+  }
 
   state = {
     uid: null,
     owner: null
-  };
+  }
 
   // keep user logged in on page reload
   componentDidMount() {
     firebase.auth().onAuthStateChanged(user => {
       if(user) {
-        this.authHandler({ user });
+        this.authHandler({ user })
       }
     })
   }
 
   authHandler = async (authData) => {
     // look up current store in firebase db
-    console.log("Logging in to store " + this.props.storeId);
-    const store = await base.fetch(this.props.storeId, { context: this });
+    console.log("Logging in to store " + this.props.storeId)
+    const store = await base.fetch(this.props.storeId, { context: this })
     // claim it if there is no owner yet
     if(!store.owner) {
       // save it as our own
-      console.log("Making you store owner");
+      console.log("Making you store owner")
       await base.post(`${this.props.storeId}/owner`, {
         data: authData.user.uid
       })
     }
     // set the state of the inventory component to reflect current user
-    console.log("The store owner is " + store.owner);
-    console.log("Logged in as " + authData.user.uid);
+    console.log("The store owner is " + store.owner)
+    console.log("Logged in as " + authData.user.uid)
     this.setState({
       uid: authData.user.uid,
       owner: store.owner || authData.user.uid
     })
-  };
+  }
 
   authenticate = () => {
-    const authProvider = new firebase.auth.GithubAuthProvider();
-    firebaseApp.auth().signInWithPopup(authProvider).then(this.authHandler);
-  };
+    const authProvider = new firebase.auth.GithubAuthProvider()
+    firebaseApp.auth().signInWithPopup(authProvider).then(this.authHandler)
+  }
 
   logout = async () => {
-    console.log("Logging out...");
-    await firebase.auth().signOut(); // sign out via firebase
-    this.setState({ uid: null }); // clear state
-    console.log("Logged out!");
+    console.log("Logging out...")
+    await firebase.auth().signOut() // sign out via firebase
+    this.setState({ uid: null }) // clear state
+    console.log("Logged out!")
   }
 
   render() {
@@ -86,8 +86,8 @@ class Inventory extends Component {
         }
         <AddResumeForm addResume={this.props.addResume} />
       </div>
-      );
+      )
   }
 }
 
-export default Inventory;
+export default Inventory

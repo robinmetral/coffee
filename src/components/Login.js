@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 
 const Login = (props) => (
   <div>
@@ -7,10 +7,10 @@ const Login = (props) => (
     <p>Log in with GitHub to manage your online resumes.</p>
     <button onClick={() => props.authenticate()}>Log in with Github</button>
   </div>
-);
+)
 
 Login.propTypes = {
   authenticate: PropTypes.func.isRequired
-};
+}
 
-export default Login;
+export default Login
