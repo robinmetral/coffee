@@ -29,7 +29,7 @@ class AddResumeForm extends Component {
       <form onSubmit={this.createResume} >
         <input name="name" ref={this.nameRef} type="text" placeholder="Name" />
         <textarea name="summary" ref={this.summaryRef} placeholder="Summary" />
-        <button type="submit">Publish Resume</button>
+        <button type="submit">Add Resume</button>
       </form>
       )
   }

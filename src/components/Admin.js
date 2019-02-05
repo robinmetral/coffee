@@ -32,6 +32,7 @@ class Admin extends Component {
           index={key}
           resume={this.props.resumes[key]}
           updateResume={this.props.updateResume}
+          deleteResume={this.props.deleteResume}
         /> 
         ))}
         <AddResumeForm addResume={this.props.addResume} />

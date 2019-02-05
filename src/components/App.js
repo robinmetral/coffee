@@ -22,7 +22,7 @@ class App extends Component {
   }
 
   addResume = (resume) => {
-    // take a copy of state to avoid mutations
+    // take a copy of state
     const resumes = { ...this.state.resumes }
     // add new resume
     resumes[`${Date.now()}`] = resume
@@ -31,8 +31,20 @@ class App extends Component {
   }
 
   updateResume = (key, updatedResume) => {
+    // take a copy of state
     const resumes = { ...this.state.resumes }
-    resumes[key] = updatedResume
+    // update single resume object
+    resumes[key] = updatedResume // overriding
+    // set state
+    this.setState({ resumes })
+  }
+
+  deleteResume = (key) => {
+    // take a copy of state
+    const resumes = { ...this.state.resumes }
+    // remove single resume object
+    resumes[key] = null // need to set to null to work with Firebase
+    // set state
     this.setState({ resumes })
   }
 
@@ -48,6 +60,7 @@ class App extends Component {
         <Admin
           addResume={this.addResume}
           updateResume={this.updateResume}
+          deleteResume={this.deleteResume}
           resumes={this.state.resumes}
         />
       </div>
