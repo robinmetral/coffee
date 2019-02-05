@@ -4,7 +4,7 @@ import App from "./App"
 import ViewResume from "./ViewResume"
 
 const Router = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Switch>
       <Route exact path="/" component={App} />
       <Route path="/:resumeId" component={ViewResume} />
