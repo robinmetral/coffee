@@ -1,15 +1,13 @@
 import React from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
-import Home from "./Home"
 import App from "./App"
-import NotFound from "./NotFound"
+import ViewResume from "./ViewResume"
 
 const Router = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/:resumeId" component={App} />
-      <Route component={NotFound} />
+      <Route exact path="/" component={App} />
+      <Route path="/:resumeId" component={ViewResume} />
     </Switch>
   </BrowserRouter>
 )

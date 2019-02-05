@@ -5,7 +5,7 @@ class Resume extends Component {
     const { name, summary } = this.props.resume
     return (
       <div>
-        <h1>{ name }</h1>
+        <h4>{ name }</h4>
         <p>{ summary }</p>
       </div>
     )
