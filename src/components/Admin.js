@@ -6,7 +6,7 @@ import AddResumeForm from "./AddResumeForm"
 import EditResumeForm from "./EditResumeForm"
 import Login from "./Login"
 
-class Inventory extends Component {
+class Admin extends Component {
 
   static propTypes = {
     resumes: PropTypes.object,
@@ -69,7 +69,7 @@ class Inventory extends Component {
     // if logged in, render inventory
     return (
       <div className="inventory">
-        <h2>Inventory</h2>
+        <h2>Admin</h2>
         <button onClick={this.logout}>Log Out!</button>
         <AddResumeForm addResume={this.props.addResume} />
       </div>
@@ -77,4 +77,4 @@ class Inventory extends Component {
   }
 }
 
-export default Inventory
+export default Admin

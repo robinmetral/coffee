@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Inventory from "./Inventory"
+import Admin from "./Admin"
 import Resume from "./Resume"
 
 class App extends Component {
@@ -20,8 +20,13 @@ class App extends Component {
   render() {
     return (
       <div>
-        {Object.keys(this.state.resumes).map(key => <p>{key}</p>)}
-        <Inventory
+        {Object.keys(this.state.resumes).map(key => (
+        <Resume
+          key={key}
+          resume={this.state.resumes[key]}
+        />
+        ))}
+        <Admin
           addResume={this.addResume}
         />
       </div>
