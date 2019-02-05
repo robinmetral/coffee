@@ -3,7 +3,7 @@ import React, { Component } from "react"
 class Home extends Component {
   
   handleClick = () => {
-    this.props.history.push("/resume/manage")
+    this.props.history.push("/manage")
   }
 
   render() {
