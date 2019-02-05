@@ -2,7 +2,6 @@ import React from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import Home from "./Home"
 import App from "./App"
-import Resume from "./Resume"
 import NotFound from "./NotFound"
 
 const Router = () => (
