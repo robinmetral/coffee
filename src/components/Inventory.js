@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import firebase from "firebase";
-import base, { firebaseApp } from "./base";
+import base, { firebaseApp } from "../base";
 import AddResumeForm from "./AddResumeForm";
 import EditResumeForm from "./EditResumeForm";
 import Login from "./Login";
