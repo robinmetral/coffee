@@ -31,7 +31,6 @@ class Inventory extends Component {
 
   authHandler = async (authData) => {
     // look up current store in firebase db
-    console.log("Logging in to store " + this.props.storeId)
     const store = await base.fetch(this.props.storeId, { context: this })
     // claim it if there is no owner yet
     if(!store.owner) {
@@ -56,37 +55,25 @@ class Inventory extends Component {
   }
 
   logout = async () => {
-    console.log("Logging out...")
     await firebase.auth().signOut() // sign out via firebase
     this.setState({ uid: null }) // clear state
-    console.log("Logged out!")
+    console.log("Logged out")
   }
 
   render() {
     // if not logged in, render login form
     if(!this.state.uid) {
       return <Login authenticate={this.authenticate} />
-      }
+    }
 
     // if logged in, render inventory
     return (
       <div className="inventory">
         <h2>Inventory</h2>
         <button onClick={this.logout}>Log Out!</button>
-        {
-        Object.keys(this.props.resumes)
-        .map(key => <EditResumeForm
-          key={key}
-          index={key}
-          resume={this.props.resumes[key]}
-          updateResume={this.props.updateResume}
-          deleteResume={this.props.deleteResume}
-        />
-        )
-        }
         <AddResumeForm addResume={this.props.addResume} />
       </div>
-      )
+    )
   }
 }
 

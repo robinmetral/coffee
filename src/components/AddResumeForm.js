@@ -10,15 +10,18 @@ class AddResumeForm extends Component {
   nameRef = React.createRef()
   summaryRef = React.createRef()
 
-  createResume = (event) => {
+  createResume = event => {
+    // prevent form from submitting
     event.preventDefault()
+    // pull values from form into object
     const resume = {
       name: this.nameRef.current.value,
       summary: this.summaryRef.current.value,
     }
+    // call addResume function
     this.props.addResume(resume)
-    // refresh form
-    event.currentTarget.reset() // event.currentTarget is the <form>
+    // reset form
+    event.currentTarget.reset()
   }
 
   render() {
@@ -26,7 +29,7 @@ class AddResumeForm extends Component {
       <form onSubmit={this.createResume} >
         <input name="name" ref={this.nameRef} type="text" placeholder="Name" />
         <textarea name="summary" ref={this.summaryRef} placeholder="Summary" />
-        <button type="submit">Add Resume !</button>
+        <button type="submit">Publish Resume</button>
       </form>
       )
   }
