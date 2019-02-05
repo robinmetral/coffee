@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "Coffee Profilers",
+        "latte": true,
+        "filter": true,
+        "laptop": true,
+        "osm": 4320869993,
+        "rating": 4,
+        "comment": "Café de spécialité sympa sur la Karl-Marx-Allee. Grande table haut au fond à partager entre laptops, service adorable, bon café filtre et très bon cappuccino. Seul bémol, un wifi limité à une heure. C'est court.",
+        "date": "2019-02-05"
+     },
+     {
         "name": "Five Elephant",
         "latte": [3.5],
         "filter": [2.6],
