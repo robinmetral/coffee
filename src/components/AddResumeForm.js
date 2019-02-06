@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import PropTypes from "prop-types"
-import { Formik, Form, Field } from "formik"
+import { Formik, Form, Field, ErrorMessage } from "formik"
 
 class AddResumeForm extends Component {
 
@@ -8,6 +8,7 @@ class AddResumeForm extends Component {
     addResume: PropTypes.func
   }
 
+  /*
   nameRef = React.createRef()
   summaryRef = React.createRef()
 
@@ -24,15 +25,55 @@ class AddResumeForm extends Component {
     // reset form
     event.currentTarget.reset()
   }
+  */
 
   render() {
+    /*
     return (
       <form onSubmit={this.createResume} >
         <input name="name" ref={this.nameRef} type="text" placeholder="Name" />
         <textarea name="summary" ref={this.summaryRef} placeholder="Summary" />
         <button type="submit">Add Resume</button>
       </form>
-      )
+    )
+    */
+    return (
+      <Formik
+        initialValues={{
+          name: "",
+          summary: "",
+        }}
+        validate={values => {
+          let errors = {}
+          if (!values.name) {
+            errors.name = "The name is required."
+          }
+          if (values.summary.length < 100) {
+            errors.summary = "The summary is too short."
+          }
+          return errors
+        }}
+        onSubmit={(values, { setSubmitting, resetForm }) => {
+          setTimeout(() => {
+            this.props.addResume(values)
+            setSubmitting(false);
+            resetForm()
+            }, 400)
+        }}
+      >
+      {({ isSubmitting }) => (
+        <Form>
+          <Field type="text" name="name" />
+          <ErrorMessage name="name" component="div" />
+          <Field type="textarea" name="summary" />
+          <ErrorMessage name="summary" component="div" />
+          <button type="submit" disabled={isSubmitting}>
+            Submit
+          </button>
+        </Form>
+      )}
+      </Formik>
+    )
   }
 }
 
