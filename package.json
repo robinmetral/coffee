@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "firebase": "^5.8.2",
+    "formik": "^1.4.3",
     "gh-pages": "^2.0.1",
     "prop-types": "^15.6.2",
     "re-base": "^4.0.0",
