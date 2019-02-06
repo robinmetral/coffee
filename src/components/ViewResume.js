@@ -21,7 +21,7 @@ class ViewResume extends Component {
   }
 
   render() {
-    if(Object.getOwnPropertyNames(this.state.resume).length == 0){
+    if(Object.getOwnPropertyNames(this.state.resume).length === 0){
       return <p>No resume here :( Are you sure you have the right url?</p>
     }
 
