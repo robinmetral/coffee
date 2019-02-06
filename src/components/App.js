@@ -85,8 +85,17 @@ class App extends Component {
   logout = async () => {
     // log out on firebase
     await firebase.auth().signOut()
+    // remove binding of resumes in state
+    await base.removeBinding(this.ref)
+    // take a copy of resumes
+    const resumes = { ...this.state.resumes }
+    // delete all keys
+    for (const key of Object.getOwnPropertyNames(this.state.resumes)) delete this.state.resumes[key]
     // clear state
-    this.setState({ uid: null })
+    this.setState({
+      resumes,
+      uid: null
+    })
   }
 
   render() {
