@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "Fräulein Wild",
+        "latte": [2.6],
+        "filter": false,
+        "laptop": true,
+        "osm": 1342620541,
+        "rating": 3,
+        "comment": "Espace lumineux à cheval entre un coffee shop et un salon de thé. Mobilier mismatch et chaleureux, super chocolat chaud et cinq chau lattes différents. Pas essayé le café, mais pas de filtre. Wifi pour 1h uniquement, mais au moins il y en a (pas de wifi à la porte à côté à Nano).",
+        "date": "2019-02-06"
+     },
+     {
         "name": "Coffee Profilers",
         "latte": true,
         "filter": true,
