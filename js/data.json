@@ -1,6 +1,16 @@
 {
     "cafes": [
      {
+        "name": "% Arabica",
+        "latte": [3.7, 4.2],
+        "filter": [3.5, 4],
+        "laptop": true,
+        "osm": 6261939658,
+        "rating": 5,
+        "comment": "Très grande branche de la chaîne de cafés de spécialité de Kyoto. Super bon latte et filtre à la Chemex (mais avec filtre en tissu, pas les filtres Chemex papier). Lumineux, minimaliste, espacé, wifi, parfait pour travailler. Et il n'y a personne, sûrement parce que c'est encore peu connu (premier café visité à Berlin qui n'était pas encore sur OSM). Dans quelques mois, ce sera toujours plein !",
+        "date": "2019-02-06"
+     },
+     {
         "name": "Fräulein Wild",
         "latte": [2.6],
         "filter": false,
