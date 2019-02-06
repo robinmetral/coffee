@@ -9,6 +9,7 @@ class App extends Component {
     resumes: {}
   }
 
+  // sync state with firebase
   componentDidMount() {
     this.ref = base.syncState(`resumes`, {
       context: this,
@@ -16,7 +17,7 @@ class App extends Component {
     })
   }
 
-  // remove binding to avoid memory leak
+  // remove binding when unmounting to avoid memory leak
   componentWillUnmount() {
     base.removeBinding(this.ref);
   }
