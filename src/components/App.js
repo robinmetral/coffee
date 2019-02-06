@@ -52,12 +52,6 @@ class App extends Component {
   render() {
     return (
       <div>
-        {Object.keys(this.state.resumes).map(key => (
-        <Resume
-          key={key}
-          resume={this.state.resumes[key]}
-        />
-        ))}
         <Admin
           addResume={this.addResume}
           updateResume={this.updateResume}
