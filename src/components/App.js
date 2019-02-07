@@ -60,12 +60,6 @@ class App extends Component {
   authHandler = async (authData) => {
     // fetch firebase data
     const data = await base.fetch(`/`, { context: this })
-    // in case owner isn't set, set as my gh uid
-    if(!data.owner) {
-      await base.post(`/owner`, {
-        data: "YQogwrdn45fUQ7tGAESDraONoyN2"
-      })
-    }
     // set logged in user to state
     this.setState({
       uid: authData.user.uid,
