@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-class EditResumeForm extends React.Component {
+class Edit extends React.Component {
 
   static propTypes = {
     updateResume: PropTypes.func,
@@ -35,4 +35,4 @@ class EditResumeForm extends React.Component {
 }
 }
 
-export default EditResumeForm
+export default Edit

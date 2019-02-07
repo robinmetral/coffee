@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 import firebase from "firebase"
 import base, { firebaseApp } from "../base"
-import AddResumeForm from "./AddResumeForm"
-import EditResumeForm from "./EditResumeForm"
+import Add from "./Add"
+import Edit from "./Edit"
 import Login from "./Login"
 import Logout from "./Logout"
 
@@ -119,7 +119,7 @@ class App extends Component {
       <div>
         <h2>Admin</h2>
         { Object.keys(this.state.resumes).map( key => (
-        <EditResumeForm
+        <Edit
           key={key}
           index={key}
           resume={this.state.resumes[key]}
@@ -127,7 +127,7 @@ class App extends Component {
           deleteResume={this.deleteResume}
         /> 
         ))}
-        <AddResumeForm addResume={this.addResume} />
+        <Add addResume={this.addResume} />
         <Logout logout={this.logout} />
       </div>
     )

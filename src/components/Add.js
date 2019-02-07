@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 
-class AddResumeForm extends Component {
+class Add extends Component {
 
   static propTypes = {
     addResume: PropTypes.func
@@ -77,4 +77,4 @@ class AddResumeForm extends Component {
   }
 }
 
-export default AddResumeForm
+export default Add
