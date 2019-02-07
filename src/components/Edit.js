@@ -2,6 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 
+import FormValidation from "./FormValidation"
+
 class Edit extends React.Component {
 
   static propTypes = {
@@ -14,17 +16,6 @@ class Edit extends React.Component {
     })
   }
 
-  /*
-  handleChange = (event) => {
-    // take a copy of current cafe
-    const updatedCafe = {
-      ...this.props.cafe,
-      [event.currentTarget.name]: event.currentTarget.value
-    }
-    this.props.updateCafe(this.props.index, updatedCafe)
-  }
-  */
-
   handleChange = event => {
     const { name, value } = event.target
     const updatedCafe = {
@@ -35,16 +26,6 @@ class Edit extends React.Component {
   }
 
   render() {
-    /*
-    const { cafe } = this.props
-    return (
-      <div className="cafe-edit">
-        <input name="name" onChange={this.handleChange} value={cafe.name} type="text" />
-        <textarea name="summary" onChange={this.handleChange} value={cafe.summary} />
-        <button onClick={() => this.props.deleteCafe(this.props.index)}>Remove Cafe</button>
-      </div>
-    )
-    */
     return (
       <Formik
         initialValues={{
@@ -52,16 +33,7 @@ class Edit extends React.Component {
           summary: this.props.cafe.summary
         }}
         enableReinitialize={true}
-        validate={values => {
-          let errors = {}
-          if (!values.name) {
-            errors.name = "The name is required."
-          }
-          if (values.summary.length < 10) {
-            errors.summary = "The summary is too short."
-          }
-          return errors
-        }}
+        validate={FormValidation}
       >
         <Form>
           <Field type="text" name="name" onChange={this.handleChange} />
