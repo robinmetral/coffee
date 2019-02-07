@@ -7,7 +7,7 @@ import Add from "./Add"
 import Edit from "./Edit"
 import Login from "./Login"
 import Logout from "./Logout"
-import MyMap from "./MyMap"
+import Map from "./Map"
 
 class App extends Component {
 
@@ -126,7 +126,6 @@ class App extends Component {
         ))}
         <Add addCafe={this.addCafe} />
         <Logout logout={this.logout} />
-        <MyMap />
       </div>
     )
   }
