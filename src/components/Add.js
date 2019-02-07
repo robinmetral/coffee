@@ -30,8 +30,12 @@ class Add extends Component {
         <Form>
           <Field type="text" name="name" />
           <ErrorMessage name="name" component="div" />
-          <Field type="textarea" name="summary" />
-          <ErrorMessage name="summary" component="div" />
+          <Field type="text" name="osm" />
+          <ErrorMessage name="osm" component="div" />
+          <Field type="text" name="rating" />
+          <ErrorMessage name="rating" component="div" />
+          <Field type="text" name="comment" />
+          <ErrorMessage name="comment" component="div" />
           <button type="submit" disabled={isSubmitting}>
             Submit
           </button>
