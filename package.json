@@ -1,5 +1,5 @@
 {
-  "name": "resume",
+  "name": "coffee-react",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -33,5 +33,5 @@
   "devDependencies": {
     "terser": "^3.14.1"
   },
-  "homepage": "http://robinmetral.github.io/resume"
+  "homepage": "http://robinmetral.github.io/coffee-react"
 }
