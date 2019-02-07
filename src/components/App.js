@@ -1,11 +1,13 @@
 import React, { Component } from "react"
 import firebase from "firebase/app"
 import "firebase/auth"
+
 import base, { firebaseApp } from "../base"
 import Add from "./Add"
 import Edit from "./Edit"
 import Login from "./Login"
 import Logout from "./Logout"
+import MyMap from "./MyMap"
 
 class App extends Component {
 
@@ -124,6 +126,7 @@ class App extends Component {
         ))}
         <Add addCafe={this.addCafe} />
         <Logout logout={this.logout} />
+        <MyMap />
       </div>
     )
   }
