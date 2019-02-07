@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import base from "../base"
 
-class ViewResume extends Component {
+class View extends Component {
   // initialize state
   state = {
     resume: {}
@@ -35,4 +35,4 @@ class ViewResume extends Component {
   }
 }
 
-export default ViewResume
+export default View
