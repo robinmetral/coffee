@@ -15,7 +15,7 @@ class App extends Component {
     owner: null
   }
 
-  // check if logges in
+  // check if logged in
   componentDidMount() {
     firebase.auth().onAuthStateChanged(user => {
       if(user) {
