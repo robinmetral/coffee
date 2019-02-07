@@ -5,10 +5,10 @@ import { Formik, Form, Field, ErrorMessage } from "formik"
 class Edit extends React.Component {
 
   static propTypes = {
-    updateResume: PropTypes.func,
-    deleteResume: PropTypes.func,
+    updateCafe: PropTypes.func,
+    deleteCafe: PropTypes.func,
     index: PropTypes.string,
-    resume: PropTypes.shape({
+    cafe: PropTypes.shape({
       name: PropTypes.string,
       summary: PropTypes.string,
     })
@@ -16,40 +16,40 @@ class Edit extends React.Component {
 
   /*
   handleChange = (event) => {
-    // take a copy of current resume
-    const updatedResume = {
-      ...this.props.resume,
+    // take a copy of current cafe
+    const updatedCafe = {
+      ...this.props.cafe,
       [event.currentTarget.name]: event.currentTarget.value
     }
-    this.props.updateResume(this.props.index, updatedResume)
+    this.props.updateCafe(this.props.index, updatedCafe)
   }
   */
 
   handleChange = event => {
     const { name, value } = event.target
-    const updatedResume = {
-      ...this.props.resume,
+    const updatedCafe = {
+      ...this.props.cafe,
       [name]: value
     }
-    this.props.updateResume(this.props.index, updatedResume)
+    this.props.updateCafe(this.props.index, updatedCafe)
   }
 
   render() {
     /*
-    const { resume } = this.props
+    const { cafe } = this.props
     return (
-      <div className="resume-edit">
-        <input name="name" onChange={this.handleChange} value={resume.name} type="text" />
-        <textarea name="summary" onChange={this.handleChange} value={resume.summary} />
-        <button onClick={() => this.props.deleteResume(this.props.index)}>Remove Resume</button>
+      <div className="cafe-edit">
+        <input name="name" onChange={this.handleChange} value={cafe.name} type="text" />
+        <textarea name="summary" onChange={this.handleChange} value={cafe.summary} />
+        <button onClick={() => this.props.deleteCafe(this.props.index)}>Remove Cafe</button>
       </div>
     )
     */
     return (
       <Formik
         initialValues={{
-          name: this.props.resume.name,
-          summary: this.props.resume.summary
+          name: this.props.cafe.name,
+          summary: this.props.cafe.summary
         }}
         enableReinitialize={true}
         validate={values => {
@@ -68,7 +68,7 @@ class Edit extends React.Component {
           <ErrorMessage name="name" component="div" />
           <Field type="textarea" name="summary" onChange={this.handleChange} />
           <ErrorMessage name="summary" component="div" />
-          <button type="delete" onClick={() => this.props.deleteResume(this.props.index)}>
+          <button type="delete" onClick={() => this.props.deleteCafe(this.props.index)}>
             Delete
           </button>
         </Form>

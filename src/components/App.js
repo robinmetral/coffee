@@ -10,7 +10,7 @@ class App extends Component {
 
   // initialize state
   state = {
-    resumes: {},
+    cafes: {},
     uid: null,
     owner: null
   }
@@ -29,31 +29,31 @@ class App extends Component {
     base.removeBinding(this.ref);
   }
 
-  addResume = (resume) => {
+  addCafe = (cafe) => {
     // take a copy of state
-    const resumes = { ...this.state.resumes }
-    // add new resume
-    resumes[`${Date.now()}`] = resume
+    const cafes = { ...this.state.cafes }
+    // add new cafe
+    cafes[`${Date.now()}`] = cafe
     // set state
-    this.setState({ resumes })
+    this.setState({ cafes })
   }
 
-  updateResume = (key, updatedResume) => {
+  updateCafe = (key, updatedCafe) => {
     // take a copy of state
-    const resumes = { ...this.state.resumes }
-    // update single resume object
-    resumes[key] = updatedResume // overriding
+    const cafes = { ...this.state.cafes }
+    // update single cafe object
+    cafes[key] = updatedCafe // overriding
     // set state
-    this.setState({ resumes })
+    this.setState({ cafes })
   }
 
-  deleteResume = (key) => {
+  deleteCafe = (key) => {
     // take a copy of state
-    const resumes = { ...this.state.resumes }
-    // remove single resume object
-    resumes[key] = null // need to set to null to work with Firebase
+    const cafes = { ...this.state.cafes }
+    // remove single cafe object
+    cafes[key] = null // need to set to null to work with Firebase
     // set state
-    this.setState({ resumes })
+    this.setState({ cafes })
   }
 
   authHandler = async (authData) => {
@@ -70,10 +70,10 @@ class App extends Component {
       uid: authData.user.uid,
       owner: data.owner
     })
-    // sync resumes in state
-    this.ref = base.syncState(`resumes`, {
+    // sync cafes in state
+    this.ref = base.syncState(`cafes`, {
       context: this,
-      state: "resumes"
+      state: "cafes"
     })
   }
 
@@ -85,15 +85,15 @@ class App extends Component {
   logout = async () => {
     // log out on firebase
     await firebase.auth().signOut()
-    // remove binding of resumes in state
+    // remove binding of cafes in state
     await base.removeBinding(this.ref)
-    // take a copy of resumes
-    const resumes = { ...this.state.resumes }
+    // take a copy of cafes
+    const cafes = { ...this.state.cafes }
     // delete all keys
-    for (const key of Object.getOwnPropertyNames(this.state.resumes)) delete this.state.resumes[key]
+    for (const key of Object.getOwnPropertyNames(this.state.cafes)) delete this.state.cafes[key]
     // clear state
     this.setState({
-      resumes,
+      cafes,
       uid: null
     })
   }
@@ -118,16 +118,16 @@ class App extends Component {
     return (
       <div>
         <h2>Admin</h2>
-        { Object.keys(this.state.resumes).map( key => (
+        { Object.keys(this.state.cafes).map( key => (
         <Edit
           key={key}
           index={key}
-          resume={this.state.resumes[key]}
-          updateResume={this.updateResume}
-          deleteResume={this.deleteResume}
+          cafe={this.state.cafes[key]}
+          updateCafe={this.updateCafe}
+          deleteCafe={this.deleteCafe}
         /> 
         ))}
-        <Add addResume={this.addResume} />
+        <Add addCafe={this.addCafe} />
         <Logout logout={this.logout} />
       </div>
     )

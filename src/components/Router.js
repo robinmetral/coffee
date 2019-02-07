@@ -10,8 +10,8 @@ const Router = () => (
     <Switch>
       <Route exact path={`${process.env.PUBLIC_URL}/`} component={App} />
       <Route path={`${process.env.PUBLIC_URL}/add`} component={Add} />
-      <Route path={`${process.env.PUBLIC_URL}/edit/:resumeId`} component={Edit} />
-      <Route path={`${process.env.PUBLIC_URL}/:resumeId`} component={View} />
+      <Route path={`${process.env.PUBLIC_URL}/edit/:cafeId`} component={Edit} />
+      <Route path={`${process.env.PUBLIC_URL}/:cafeId`} component={View} />
     </Switch>
   </BrowserRouter>
 )

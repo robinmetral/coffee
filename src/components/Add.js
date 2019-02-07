@@ -5,23 +5,23 @@ import { Formik, Form, Field, ErrorMessage } from "formik"
 class Add extends Component {
 
   static propTypes = {
-    addResume: PropTypes.func
+    addCafe: PropTypes.func
   }
 
   /*
   nameRef = React.createRef()
   summaryRef = React.createRef()
 
-  createResume = event => {
+  createCafe = event => {
     // prevent form from submitting
     event.preventDefault()
     // pull values from form into object
-    const resume = {
+    const cafe = {
       name: this.nameRef.current.value,
       summary: this.summaryRef.current.value,
     }
-    // call addResume function
-    this.props.addResume(resume)
+    // call addCafe function
+    this.props.addCafe(cafe)
     // reset form
     event.currentTarget.reset()
   }
@@ -30,10 +30,10 @@ class Add extends Component {
   render() {
     /*
     return (
-      <form onSubmit={this.createResume} >
+      <form onSubmit={this.createCafe} >
         <input name="name" ref={this.nameRef} type="text" placeholder="Name" />
         <textarea name="summary" ref={this.summaryRef} placeholder="Summary" />
-        <button type="submit">Add Resume</button>
+        <button type="submit">Add Cafe</button>
       </form>
     )
     */
@@ -55,7 +55,7 @@ class Add extends Component {
         }}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           setTimeout(() => {
-            this.props.addResume(values)
+            this.props.addCafe(values)
             setSubmitting(false);
             resetForm()
             }, 400)
