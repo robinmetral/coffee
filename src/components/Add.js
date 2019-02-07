@@ -15,7 +15,9 @@ class Add extends Component {
       <Formik
         initialValues={{
           name: "",
-          summary: "",
+          osm: "",
+          rating: "",
+          comment: "",
         }}
         validate={FormValidation}
         onSubmit={(values, { setSubmitting, resetForm }) => {
