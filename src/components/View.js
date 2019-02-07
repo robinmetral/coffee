@@ -1,19 +1,19 @@
 import React, { Component } from "react"
 import base from "../base"
 
-class ViewResume extends Component {
+class View extends Component {
   // initialize state
   state = {
-    resume: {}
+    cafe: {}
   }
 
-  // fetch resume with firebase
+  // fetch cafe with firebase
   componentDidMount() {
-    base.fetch(`resumes/${this.props.match.params.resumeId}`, {
+    base.fetch(`cafes/${this.props.match.params.cafeId}`, {
       context: this
     }).then(data => {
       this.setState({
-        resume: data
+        cafe: data
       })
     }).catch(error => {
       console.log("There was an error fetching data on firebase.")
@@ -21,11 +21,11 @@ class ViewResume extends Component {
   }
 
   render() {
-    if(Object.getOwnPropertyNames(this.state.resume).length === 0){
-      return <p>No resume here :( Are you sure you have the right url?</p>
+    if(Object.getOwnPropertyNames(this.state.cafe).length === 0){
+      return <p>No cafe here :( Are you sure you have the right url?</p>
     }
 
-    const { name, summary } = this.state.resume
+    const { name, summary } = this.state.cafe
     return (
       <div>
         <h1>{ name }</h1>
@@ -35,4 +35,4 @@ class ViewResume extends Component {
   }
 }
 
-export default ViewResume
+export default View

@@ -1,8 +1,8 @@
 import React, { Component } from "react"
 
-class Resume extends Component {
+class Cafe extends Component {
   render () {
-    const { name, summary } = this.props.resume
+    const { name, summary } = this.props.cafe
     return (
       <div>
         <h4>{ name }</h4>
@@ -12,4 +12,4 @@ class Resume extends Component {
   }
 }
 
-export default Resume
+export default Cafe
