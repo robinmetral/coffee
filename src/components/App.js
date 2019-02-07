@@ -34,7 +34,7 @@ class App extends Component {
     // take a copy of state
     const cafes = { ...this.state.cafes }
     // add new cafe
-    cafes[`${Date.now()}`] = cafe
+    cafes[cafe.osm] = cafe
     // set state
     this.setState({ cafes })
   }
