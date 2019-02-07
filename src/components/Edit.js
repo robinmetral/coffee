@@ -32,7 +32,7 @@ class Edit extends React.Component {
           name: this.props.cafe.name,
           osm: this.props.cafe.osm,
           rating: this.props.cafe.rating,
-          summary: this.props.cafe.comment
+          comment: this.props.cafe.comment
         }}
         enableReinitialize={true}
         validate={FormValidation}
