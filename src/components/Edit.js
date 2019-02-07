@@ -30,7 +30,9 @@ class Edit extends React.Component {
       <Formik
         initialValues={{
           name: this.props.cafe.name,
-          summary: this.props.cafe.summary
+          osm: this.props.cafe.osm,
+          rating: this.props.cafe.rating,
+          summary: this.props.cafe.comment
         }}
         enableReinitialize={true}
         validate={FormValidation}
@@ -38,8 +40,12 @@ class Edit extends React.Component {
         <Form>
           <Field type="text" name="name" onChange={this.handleChange} />
           <ErrorMessage name="name" component="div" />
-          <Field type="textarea" name="summary" onChange={this.handleChange} />
-          <ErrorMessage name="summary" component="div" />
+          <Field type="text" name="osm" onChange={this.handleChange} />
+          <ErrorMessage name="osm" component="div" />
+          <Field type="text" name="rating" onChange={this.handleChange} />
+          <ErrorMessage name="rating" component="div" />
+          <Field type="text" name="comment" onChange={this.handleChange} />
+          <ErrorMessage name="comment" component="div" />
           <button type="delete" onClick={() => this.props.deleteCafe(this.props.index)}>
             Delete
           </button>
