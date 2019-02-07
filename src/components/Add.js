@@ -48,7 +48,7 @@ class Add extends Component {
           if (!values.name) {
             errors.name = "The name is required."
           }
-          if (values.summary.length < 100) {
+          if (values.summary.length < 10) {
             errors.summary = "The summary is too short."
           }
           return errors
