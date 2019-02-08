@@ -15,13 +15,24 @@ class App extends Component {
     owner: null
   }
 
-  // check if logged in
   componentDidMount() {
+
+    // fetch cafes from firebase
+    base.fetch(`cafes`, {
+      context: this
+    }).then(cafes => {
+      this.setState({ cafes })
+    }).catch(error => {
+      console.log("Error fetching cafes from Firebase")
+    })
+
+    // check if logged in
     firebase.auth().onAuthStateChanged(user => {
       if(user) {
         this.authHandler({ user })
       }
     })
+
   }
 
   // remove binding when unmounting to avoid memory leak
