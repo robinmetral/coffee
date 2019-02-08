@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 
-import FormValidation from "components/FormValidation"
+import FormValidation from "./FormValidation"
 
 class Edit extends React.Component {
 
