@@ -2,12 +2,12 @@ import React, { Component } from "react"
 import firebase from "firebase/app"
 import "firebase/auth"
 
-import base, { firebaseApp } from "../base"
-import Add from "./Add"
-import Edit from "./Edit"
-import Login from "./Login"
-import Logout from "./Logout"
-import Map from "./Map"
+import base, { firebaseApp } from "base"
+import Add from "components/Add"
+import Edit from "components/Edit"
+import Login from "components/Login"
+import Logout from "components/Logout"
+import Map from "components/Map"
 
 class App extends Component {
 
