@@ -1,6 +1,5 @@
 import React, { Component } from "react"
-import firebase from "firebase/app"
-import "firebase/auth"
+import firebase from "firebase"
 
 import base, { firebaseApp } from "base"
 import Add from "components/Add"
