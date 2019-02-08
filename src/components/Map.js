@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import { Map as LeafletMap, Marker, Popup, TileLayer } from "react-leaflet"
 
 // leaflet styles and map container dimensions
-import "../style.css"
+import "../leaflet.css"
 
 class Map extends Component {
   state = {

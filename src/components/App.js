@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import firebase from "firebase"
 
 import base, { firebaseApp } from "../base"
-import Layout from "./Layout"
+import Layout from "../containers/Layout"
 import Map from "./Map"
 import Admin from "./Admin"
 
