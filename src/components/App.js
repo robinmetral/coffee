@@ -1,12 +1,10 @@
 import React, { Component } from "react"
 import firebase from "firebase"
 
-import base, { firebaseApp } from "base"
-import Add from "components/Add"
-import Edit from "components/Edit"
-import Login from "components/Login"
-import Logout from "components/Logout"
-import Map from "components/Map"
+import base, { firebaseApp } from "../base"
+import Layout from "./Layout"
+import Map from "./Map"
+import Admin from "./Admin"
 
 class App extends Component {
 
@@ -95,37 +93,22 @@ class App extends Component {
   }
 
   render() {
-    // check if logged in
-    if(!this.state.uid) {
-      return <Login authenticate={this.authenticate} />
-    }
-
-    // check if owner
-    if(this.state.uid !== this.state.owner) {
-      return (
-        <div>
-          <p>Sorry, you're not the owner.</p>
-          <Logout logout={this.logout} />
-        </div>
-      )
-    }
-
-    // otherwise render admin
     return (
-      <div>
-        <h2>Admin</h2>
-        { Object.keys(this.state.cafes).map( key => (
-        <Edit
-          key={key}
-          index={key}
-          cafe={this.state.cafes[key]}
+      <Layout>
+        <Map
+          cafes={this.state.cafes}
+        />
+        <Admin
+          uid={this.state.uid}
+          owner={this.state.owner}
+          cafes={this.state.cafes}
+          addCafe={this.addCafe}
           updateCafe={this.updateCafe}
           deleteCafe={this.deleteCafe}
-        /> 
-        ))}
-        <Add addCafe={this.addCafe} />
-        <Logout logout={this.logout} />
-      </div>
+          authenticate={this.authenticate}
+          logout={this.logout}
+        />
+      </Layout>
     )
   }
 }

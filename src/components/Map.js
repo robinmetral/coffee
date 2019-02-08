@@ -1,10 +1,10 @@
 import React, { Component } from "react"
-import { Map, Marker, Popup, TileLayer } from "react-leaflet"
+import { Map as LeafletMap, Marker, Popup, TileLayer } from "react-leaflet"
 
 // leaflet styles and map container dimensions
-import "style.css"
+import "../style.css"
 
-class MyMap extends Component {
+class Map extends Component {
   state = {
     lat: 51.505,
     lng: -0.09,
@@ -14,7 +14,7 @@ class MyMap extends Component {
   render() {
     const position = [this.state.lat, this.state.lng]
     return (
-      <Map center={position} zoom={this.state.zoom}>
+      <LeafletMap center={position} zoom={this.state.zoom}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url='http://{s}.tile.osm.org/{z}/{x}/{y}.png'
@@ -24,9 +24,9 @@ class MyMap extends Component {
             A pretty CSS3 popup. <br/> Easily customizable.
           </Popup>
         </Marker>
-      </Map>
+      </LeafletMap>
     )
   }
 }
 
-export default MyMap
+export default Map
