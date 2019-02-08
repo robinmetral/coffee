@@ -16,7 +16,7 @@ class Map extends Component {
         />
         <Markers cafes={this.props.cafes} />
       </LeafletMap>
-    )
+      )
   }
 }
 

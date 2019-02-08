@@ -21,7 +21,10 @@ class App extends Component {
     base.fetch(`cafes`, {
       context: this
     }).then(cafes => {
-      this.setState({ cafes })
+      this.setState({
+        cafes,
+        loading: false
+      })
     }).catch(error => {
       console.log("Error fetching cafes from Firebase")
     })
@@ -107,6 +110,7 @@ class App extends Component {
     return (
       <Layout>
         <Map
+          loading={this.state.loading}
           cafes={this.state.cafes}
         />
         <Admin
