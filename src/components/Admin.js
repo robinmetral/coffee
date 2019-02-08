@@ -2,30 +2,27 @@ import React, { Component } from "react"
 
 import Add from "./Add"
 import Edit from "./Edit"
-import Login from "./Login"
 import Logout from "./Logout"
+import Home from "./Home"
 
 class Admin extends Component {
   render() {
     // check if logged in
-    if(!this.props.uid) {
-      return <Login authenticate={this.props.authenticate} />
-      }
-
-    // check if owner
-    if(this.props.uid !== this.props.owner) {
+    if(!this.props.uid || this.props.uid !== this.props.owner) {
       return (
-        <div>
-          <p>Sorry, you're not the owner.</p>
-          <Logout logout={this.props.logout} />
-        </div>
-        )
+        <Home
+          uid={this.props.uid}
+          owner={this.props.owner}
+          login={this.props.login}
+          logout={this.props.logout}
+        />
+      )
     }
 
     // otherwise render admin
     return (
       <div>
-        <h2>Admin</h2>
+        <h1>Admin</h1>
         { Object.keys(this.props.cafes).map( key => (
         <Edit
           key={key}
@@ -38,7 +35,7 @@ class Admin extends Component {
         <Add addCafe={this.props.addCafe} />
         <Logout logout={this.props.logout} />
       </div>
-      )
+    )
   }
 }
 

@@ -1,9 +1,12 @@
 import React from "react"
+import PropTypes from "prop-types"
 
 const Logout = (props) => (
-  <div>
-    <button onClick={props.logout}>Log out</button>
-  </div>
+  <button onClick={props.logout}>Log out</button>
 )
+
+Logout.propTypes = {
+  logout: PropTypes.func.isRequired
+}
 
 export default Logout

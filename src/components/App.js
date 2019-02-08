@@ -71,7 +71,7 @@ class App extends Component {
     })
   }
 
-  authenticate = () => {
+  login = () => {
     const authProvider = new firebase.auth.GithubAuthProvider()
     firebaseApp.auth().signInWithPopup(authProvider).then(this.authHandler)
   }
@@ -105,7 +105,7 @@ class App extends Component {
           addCafe={this.addCafe}
           updateCafe={this.updateCafe}
           deleteCafe={this.deleteCafe}
-          authenticate={this.authenticate}
+          login={this.login}
           logout={this.logout}
         />
       </Layout>
