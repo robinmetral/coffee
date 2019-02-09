@@ -1,6 +1,26 @@
 {
     "cafes": [
      {
+        "name": "Zweitausend",
+        "latte": [2.5],
+        "filter": false,
+        "laptop": true,
+        "osm": 6268406951,
+        "rating": 2,
+        "comment": "Café caché au fond d'une ruelle dans un quartier plutôt résidentiel. Comment on est tombés dessus ? On l'a vu sur une carte de Berlin, \"Oooh! Berlin\", et on a décidé d'essayer. Une fille travaillait sur son ordi donc c'est possible, et même assez grand, mais au fond c'est plutôt la cafet' rattachée à l'école de danse dans laquelle elle se trouve. Pas de filtre, et flat white franchement pas extra. Musique pas super pour s'installer.",
+        "date": "2019-02-09"
+     },
+     {
+        "name": "19grams Schlesi",
+        "latte": [2.9],
+        "filter": [2.9],
+        "laptop": false,
+        "osm": 6268406950,
+        "rating": 2,
+        "comment": "Très bon café comme d'habitude dans les branches de Tres Cabezas, mais celle-ci est minuscule, avec à peine quelques places à l'intérieur et deux petites tables dehors. Super pour une pause café au soleil pendant une balade street art le long du mur et dans Kreuzberg/Friedrichshain, mais impossible de venir travailler ici. Même pas de toilettes.",
+        "date": "2019-02-09"
+     },
+     {
         "name": "% Arabica",
         "latte": [3.7, 4.2],
         "filter": [3.5, 4],
