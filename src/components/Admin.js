@@ -4,24 +4,27 @@ import Add from "./Add"
 import Edit from "./Edit"
 import Logout from "./Logout"
 import Home from "./Home"
+import AdminLayout from "../containers/AdminLayout"
 
 class Admin extends Component {
   render() {
     // check if logged in
     if(!this.props.uid || this.props.uid !== this.props.owner) {
       return (
-        <Home
-          uid={this.props.uid}
-          owner={this.props.owner}
-          login={this.props.login}
-          logout={this.props.logout}
-        />
-      )
+        <AdminLayout>
+          <Home
+            uid={this.props.uid}
+            owner={this.props.owner}
+            login={this.props.login}
+            logout={this.props.logout}
+          />
+        </AdminLayout>
+        )
     }
 
     // otherwise render admin
     return (
-      <div>
+      <AdminLayout>
         <h1>Admin</h1>
         { Object.keys(this.props.cafes).map( key => (
         <Edit
@@ -34,8 +37,8 @@ class Admin extends Component {
         ))}
         <Add addCafe={this.props.addCafe} />
         <Logout logout={this.props.logout} />
-      </div>
-    )
+      </AdminLayout>
+      )
   }
 }
 

@@ -30,7 +30,6 @@ class Edit extends React.Component {
       <Formik
         initialValues={{
           name: this.props.cafe.name,
-          osm: this.props.cafe.osm,
           rating: this.props.cafe.rating,
           comment: this.props.cafe.comment
         }}
@@ -40,8 +39,6 @@ class Edit extends React.Component {
         <Form>
           <Field type="text" name="name" onChange={this.handleChange} />
           <ErrorMessage name="name" component="div" />
-          <Field type="text" name="osm" onChange={this.handleChange} />
-          <ErrorMessage name="osm" component="div" />
           <Field type="text" name="rating" onChange={this.handleChange} />
           <ErrorMessage name="rating" component="div" />
           <Field type="text" name="comment" onChange={this.handleChange} />
