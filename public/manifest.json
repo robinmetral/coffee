@@ -1,6 +1,6 @@
 {
-  "short_name": "Robin's cafes",
-  "name": "Robin's map of cafes",
+  "short_name": "Les cafés de Robin",
+  "name": "Carte des cafés de Robin",
   "icons": [
     {
       "src": "./favicon.png",
