@@ -40,17 +40,19 @@ class App extends Component {
     base.removeBinding(this.ref);
   }
 
-  addCafe = (cafe) => {
+  addCafe = async (cafe) => {
+    // fetch coordinates and opening hours from OSM based on ID
+    let response = await fetch(`https://www.overpass-api.de/api/interpreter?data=[out:json];node(${cafe.osm});out;`)
+    let node = await response.json()
+    let coordinates = await [node.elements[0].lat, node.elements[0].lon]
+    // add fetched values to cafe object
+    cafe.coordinates = await coordinates
     // take a copy of state
     const cafes = { ...this.state.cafes }
     // add new cafe
-    cafes[cafe.osm] = cafe
-    // fetch coordinates and opening hours from OSM based on ID
-    //
-    // add fetched values to cafe object
-    //
+    cafes[cafe.osm] = await cafe
     // set state
-    this.setState({ cafes })
+    await this.setState({ cafes })
   }
 
   updateCafe = (key, updatedCafe) => {
