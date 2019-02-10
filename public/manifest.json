@@ -3,12 +3,12 @@
   "name": "Robin's map of cafes",
   "icons": [
     {
-      "src": "../src/assets/icon-coffee-bean.png",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/x-icon"
+      "src": "./favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
     }
   ],
-  "start_url": ".",
+  "start_url": "/?source=pwa",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
