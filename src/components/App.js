@@ -102,13 +102,8 @@ class App extends Component {
     await firebase.auth().signOut()
     // remove binding of cafes in state
     await base.removeBinding(this.ref)
-    // take a copy of cafes
-    const cafes = { ...this.state.cafes }
-    // delete all keys
-    for (const key of Object.getOwnPropertyNames(this.state.cafes)) delete this.state.cafes[key]
-    // clear state
+    // remove uid from state
     this.setState({
-      cafes,
       uid: null
     })
   }
