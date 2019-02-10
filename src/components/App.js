@@ -44,15 +44,18 @@ class App extends Component {
     // fetch coordinates and opening hours from OSM based on ID
     let response = await fetch(`https://www.overpass-api.de/api/interpreter?data=[out:json];node(${cafe.osm});out;`)
     let node = await response.json()
-    let coordinates = await [node.elements[0].lat, node.elements[0].lon]
+    let coordinates = [node.elements[0].lat, node.elements[0].lon]
     // add fetched values to cafe object
-    cafe.coordinates = await coordinates
+    cafe.coordinates = coordinates
     // take a copy of state
     const cafes = { ...this.state.cafes }
     // add new cafe
-    cafes[cafe.osm] = await cafe
-    // set state
-    await this.setState({ cafes })
+    cafes[cafe.osm] = cafe
+    // use a setState callback to fire before re-rendering
+    // https://reactjs.org/docs/react-component.html#setstate
+    this.setState({ cafes }, () => {
+      console.log(`Successfully added ${cafe.name} to State.`)
+    })
   }
 
   updateCafe = (key, updatedCafe) => {
