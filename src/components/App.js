@@ -21,10 +21,7 @@ class App extends Component {
     base.fetch(`cafes`, {
       context: this
     }).then(cafes => {
-      this.setState({
-        cafes,
-        loading: false
-      })
+      this.setState({ cafes })
     }).catch(error => {
       console.log("Error fetching cafes from Firebase")
     })
@@ -48,6 +45,10 @@ class App extends Component {
     const cafes = { ...this.state.cafes }
     // add new cafe
     cafes[cafe.osm] = cafe
+    // fetch coordinates and opening hours from OSM based on ID
+    //
+    // add fetched values to cafe object
+    //
     // set state
     this.setState({ cafes })
   }
@@ -110,7 +111,6 @@ class App extends Component {
     return (
       <Layout>
         <Map
-          loading={this.state.loading}
           cafes={this.state.cafes}
         />
         <Admin
