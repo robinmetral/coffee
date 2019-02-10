@@ -10,7 +10,10 @@ class Markers extends Component {
         <>
         {
           Object.keys(cafes).map( cafe => (
-            <Marker position={cafes[cafe].coordinates}>
+            <Marker
+              key={cafes[cafe].osm}
+              position={cafes[cafe].coordinates}
+            >
               <Popup>{cafes[cafe].comment}</Popup>
             </Marker>
           ))
