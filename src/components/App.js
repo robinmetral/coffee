@@ -12,7 +12,7 @@ class App extends Component {
   // initialize state
   state = {
     cafes: {},
-    cafe: {},
+    clicked: {},
     uid: null,
     owner: null
   }
@@ -42,8 +42,15 @@ class App extends Component {
     base.removeBinding(this.ref);
   }
 
+  // set clicked cafe in state
   handleClick = event => {
-    console.log(event)
+    // find cafe is state that was clicked based on coordinates
+    const { cafes } = this.state
+    const osm = Object.keys(cafes).find(osm => cafes[osm].coordinates[0] === event.latlng.lat && cafes[osm].coordinates[1] === event.latlng.lng)
+    // set state
+    this.setState({
+      clicked: cafes[osm]
+    })
   }
 
   addCafe = async (cafe) => {
