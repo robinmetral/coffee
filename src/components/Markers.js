@@ -25,6 +25,7 @@ class Markers extends Component {
               key={cafes[cafe].osm}
               position={cafes[cafe].coordinates}
               icon={CoffeeBean}
+              onClick={this.props.handleClick}
             >
               <Popup>{cafes[cafe].comment}</Popup>
             </Marker>
