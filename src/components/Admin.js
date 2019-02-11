@@ -17,6 +17,7 @@ class Admin extends Component {
             owner={this.props.owner}
             login={this.props.login}
             logout={this.props.logout}
+            clicked={this.props.clicked}
           />
         </AdminLayout>
         )
@@ -26,15 +27,11 @@ class Admin extends Component {
     return (
       <AdminLayout>
         <h1>Admin</h1>
-        { Object.keys(this.props.cafes).map( key => (
         <EditForm
-          key={key}
-          index={key}
-          cafe={this.props.cafes[key]}
+          clicked={this.props.clicked}
           updateCafe={this.props.updateCafe}
           deleteCafe={this.props.deleteCafe}
         /> 
-        ))}
         <AddForm addCafe={this.props.addCafe} />
         <Logout logout={this.props.logout} />
       </AdminLayout>
