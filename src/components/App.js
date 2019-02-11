@@ -59,7 +59,6 @@ class App extends Component {
     cafe.url = tags.website ? tags.website : tags.facebook ? tags.facebook : ""
     // add current date to cafe
     cafe.date = Date.now()
-    console.log(cafe)
     // take a copy of state
     const cafes = { ...this.state.cafes }
     // add new cafe
