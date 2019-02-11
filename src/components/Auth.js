@@ -9,10 +9,7 @@ class Auth extends Component {
     // if not logged in
     if(!this.props.uid) {
       return (
-        <>
-          <p>Log in to manage coffee shops.</p>
-          <Login login={this.props.login} />
-        </>
+        <Login login={this.props.login} />
       )
     }
 
@@ -20,7 +17,7 @@ class Auth extends Component {
     if(this.props.uid !== this.props.owner) {
       return (
         <div>
-          <p>You can't manage coffee shops with these credentials.</p>
+          <p>Seulement Robin peut modifier les cafés, désolé.</p>
           <Logout logout={this.props.logout} />
         </div>
       )
@@ -28,7 +25,7 @@ class Auth extends Component {
 
     // if owner
     return (
-      <p>You are logged in as {this.props.uid} :)</p>
+      <p>Connecté !</p>
     )
   }
 }
