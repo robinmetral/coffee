@@ -136,8 +136,7 @@ class App extends Component {
         <Admin
           uid={this.state.uid}
           owner={this.state.owner}
-          cafes={this.state.cafes}
-          clicked={this.state.clicked}
+          cafe={this.state.cafes[this.state.clicked]}
           addCafe={this.addCafe}
           updateCafe={this.updateCafe}
           deleteCafe={this.deleteCafe}

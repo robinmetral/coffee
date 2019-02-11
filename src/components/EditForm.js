@@ -9,14 +9,14 @@ class EditForm extends React.Component {
   handleChange = event => {
     const { name, value } = event.target
     const updatedCafe = {
-      ...this.props.cafes[this.props.clicked],
+      ...this.props.cafe,
       [name]: value
     }
     this.props.updateCafe(updatedCafe)
   }
 
   render() {
-    const cafe = this.props.cafes[this.props.clicked]
+    const cafe = this.props.cafe
     if(!cafe) {
       return (
         <h2>Cliquer un café pour le modifier</h2>
@@ -91,7 +91,7 @@ class EditForm extends React.Component {
           />
           <ErrorMessage name="comment" component="div" />
 
-          <button type="delete" onClick={() => this.props.deleteCafe(this.props.index)}>
+          <button type="delete" onClick={() => this.props.deleteCafe(cafe.osm)}>
             Supprimer
           </button>
         </Form>

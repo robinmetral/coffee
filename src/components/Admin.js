@@ -17,7 +17,7 @@ class Admin extends Component {
             owner={this.props.owner}
             login={this.props.login}
             logout={this.props.logout}
-            cafes={this.props.cafes}
+            cafe={this.props.cafe}
             clicked={this.props.clicked}
           />
         </AdminLayout>
@@ -29,8 +29,7 @@ class Admin extends Component {
       <AdminLayout>
         <h1>Admin</h1>
         <EditForm
-          cafes={this.props.cafes}
-          clicked={this.props.clicked}
+          cafe={this.props.cafe}
           updateCafe={this.props.updateCafe}
           deleteCafe={this.props.deleteCafe}
         /> 
