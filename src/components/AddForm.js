@@ -33,6 +33,7 @@ class AddForm extends Component {
       >
       {({ isSubmitting }) => (
         <Form>
+          <h2>Ajouter un café</h2>
           <Field
             type="text"
             name="name"
