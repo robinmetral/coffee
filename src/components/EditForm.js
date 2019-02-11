@@ -30,6 +30,9 @@ class EditForm extends React.Component {
       <Formik
         initialValues={{
           name: this.props.cafe.name,
+          clara: this.props.cafe.clara,
+          robin: this.props.cafe.robin,
+          laptop: this.props.cafe.laptop,
           rating: this.props.cafe.rating,
           comment: this.props.cafe.comment
         }}
@@ -37,14 +40,61 @@ class EditForm extends React.Component {
         validate={FormValidation}
       >
         <Form>
-          <Field type="text" name="name" onChange={this.handleChange} />
+          <Field
+            type="text"
+            name="name"
+            onChange={this.handleChange}
+          />
           <ErrorMessage name="name" component="div" />
-          <Field type="text" name="rating" onChange={this.handleChange} />
+
+          <Field
+            type="text"
+            name="clara"
+            onChange={this.handleChange}
+          />
+          <ErrorMessage name="clara" component="div" />
+
+          <Field
+            type="text"
+            name="robin"
+            onChange={this.handleChange}
+          />
+          <ErrorMessage name="robin" component="div" />
+
+          <Field
+            component="select"
+            name="laptop"
+            onChange={this.handleChange}
+          >
+            <option value="" disabled>Laptop</option>
+            <option value="true">Oui</option>
+            <option value="false">Non</option>
+          </Field>
+          <ErrorMessage name="laptop" component="div" />
+
+          <Field
+            component="select"
+            name="rating"
+            onChange={this.handleChange}
+          >
+            <option value="" disabled>Note</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </Field>
           <ErrorMessage name="rating" component="div" />
-          <Field type="text" name="comment" onChange={this.handleChange} />
+
+          <Field
+            component="textarea"
+            name="comment"
+            onChange={this.handleChange}
+          />
           <ErrorMessage name="comment" component="div" />
+
           <button type="delete" onClick={() => this.props.deleteCafe(this.props.index)}>
-            Delete
+            Supprimer
           </button>
         </Form>
       </Formik>
