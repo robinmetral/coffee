@@ -6,42 +6,38 @@ import FormValidation from "./FormValidation"
 
 class EditForm extends React.Component {
 
-  static propTypes = {
-    updateCafe: PropTypes.func,
-    deleteCafe: PropTypes.func,
-    index: PropTypes.string,
-    clicked: PropTypes.shape({
-      name: PropTypes.string,
-      summary: PropTypes.string,
-    })
-  }
-
   handleChange = event => {
     const { name, value } = event.target
-    console.log(name)
-    console.log(value)
     const updatedCafe = {
-      ...this.props.clicked,
+      ...this.props.cafes[this.props.clicked],
       [name]: value
     }
     this.props.updateCafe(updatedCafe)
   }
 
   render() {
+    const cafe = this.props.cafes[this.props.clicked]
+    if(!cafe) {
+      return (
+        <h2>Cliquer un café pour le modifier</h2>
+      )
+    }
+
     return (
       <Formik
         initialValues={{
-          name: this.props.clicked.name,
-          clara: this.props.clicked.clara,
-          robin: this.props.clicked.robin,
-          laptop: this.props.clicked.laptop,
-          rating: this.props.clicked.rating,
-          comment: this.props.clicked.comment
+          name: cafe.name,
+          clara: cafe.clara,
+          robin: cafe.robin,
+          laptop: cafe.laptop,
+          rating: cafe.rating,
+          comment: cafe.comment
         }}
         enableReinitialize={true}
         validate={FormValidation}
       >
         <Form>
+          <h2>Modifier {cafe.name}</h2>
           <Field
             type="text"
             name="name"
