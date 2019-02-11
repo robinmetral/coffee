@@ -12,7 +12,7 @@ class App extends Component {
   // initialize state
   state = {
     cafes: {},
-    clicked: {},
+    clicked: "",
     uid: null,
     owner: null
   }
@@ -49,7 +49,7 @@ class App extends Component {
     const osm = Object.keys(cafes).find(osm => cafes[osm].coordinates[0] === event.latlng.lat && cafes[osm].coordinates[1] === event.latlng.lng)
     // set state
     this.setState({
-      clicked: cafes[osm]
+      clicked: osm
     })
   }
 
@@ -79,7 +79,6 @@ class App extends Component {
 
   updateCafe = (updatedCafe) => {
     // take a copy of state
-    console.log(updatedCafe)
     const cafes = { ...this.state.cafes }
     // update single cafe object
     cafes[updatedCafe.osm] = updatedCafe // overriding
