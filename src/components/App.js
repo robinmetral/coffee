@@ -12,6 +12,7 @@ class App extends Component {
   // initialize state
   state = {
     cafes: {},
+    cafe: {},
     uid: null,
     owner: null
   }
