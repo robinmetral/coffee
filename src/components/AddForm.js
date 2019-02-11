@@ -62,14 +62,14 @@ class AddForm extends Component {
           <ErrorMessage name="robin" component="div" />
 
           <Field component="select" name="laptop">
-            <option value="" selected disabled>Laptop</option>
+            <option value="" disabled>Laptop</option>
             <option value="true">Oui</option>
             <option value="false">Non</option>
           </Field>
           <ErrorMessage name="laptop" component="div" />
 
           <Field component="select" name="rating">
-            <option value="" selected disabled>Note</option>
+            <option value="" disabled>Note</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
