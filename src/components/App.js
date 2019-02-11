@@ -42,6 +42,10 @@ class App extends Component {
     base.removeBinding(this.ref);
   }
 
+  handleClick = event => {
+    console.log(event)
+  }
+
   addCafe = async (cafe) => {
     // fetch OSM data vie an Overpass API query
     let response = await fetch(`https://www.overpass-api.de/api/interpreter?data=[out:json];node(${cafe.osm});out;`)
@@ -121,6 +125,7 @@ class App extends Component {
       <Layout>
         <Map
           cafes={this.state.cafes}
+          handleClick={this.handleClick}
         />
         <Admin
           uid={this.state.uid}
