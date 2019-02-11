@@ -77,20 +77,21 @@ class App extends Component {
     })
   }
 
-  updateCafe = (key, updatedCafe) => {
+  updateCafe = (updatedCafe) => {
     // take a copy of state
+    console.log(updatedCafe)
     const cafes = { ...this.state.cafes }
     // update single cafe object
-    cafes[key] = updatedCafe // overriding
+    cafes[updatedCafe.osm] = updatedCafe // overriding
     // set state
     this.setState({ cafes })
   }
 
-  deleteCafe = (key) => {
+  deleteCafe = (osm) => {
     // take a copy of state
     const cafes = { ...this.state.cafes }
     // remove single cafe object
-    cafes[key] = null // need to set to null to work with Firebase
+    cafes[osm] = null // need to set to null to work with Firebase
     // set state
     this.setState({ cafes })
   }

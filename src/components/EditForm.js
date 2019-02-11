@@ -10,7 +10,7 @@ class EditForm extends React.Component {
     updateCafe: PropTypes.func,
     deleteCafe: PropTypes.func,
     index: PropTypes.string,
-    cafe: PropTypes.shape({
+    clicked: PropTypes.shape({
       name: PropTypes.string,
       summary: PropTypes.string,
     })
@@ -18,23 +18,25 @@ class EditForm extends React.Component {
 
   handleChange = event => {
     const { name, value } = event.target
+    console.log(name)
+    console.log(value)
     const updatedCafe = {
-      ...this.props.cafe,
+      ...this.props.clicked,
       [name]: value
     }
-    this.props.updateCafe(this.props.index, updatedCafe)
+    this.props.updateCafe(updatedCafe)
   }
 
   render() {
     return (
       <Formik
         initialValues={{
-          name: this.props.cafe.name,
-          clara: this.props.cafe.clara,
-          robin: this.props.cafe.robin,
-          laptop: this.props.cafe.laptop,
-          rating: this.props.cafe.rating,
-          comment: this.props.cafe.comment
+          name: this.props.clicked.name,
+          clara: this.props.clicked.clara,
+          robin: this.props.clicked.robin,
+          laptop: this.props.clicked.laptop,
+          rating: this.props.clicked.rating,
+          comment: this.props.clicked.comment
         }}
         enableReinitialize={true}
         validate={FormValidation}
