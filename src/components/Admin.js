@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 
-import Add from "./Add"
-import Edit from "./Edit"
+import AddForm from "./AddForm"
+import EditForm from "./EditForm"
 import Logout from "./Logout"
 import Home from "./Home"
 import AdminLayout from "../containers/AdminLayout"
@@ -27,7 +27,7 @@ class Admin extends Component {
       <AdminLayout>
         <h1>Admin</h1>
         { Object.keys(this.props.cafes).map( key => (
-        <Edit
+        <EditForm
           key={key}
           index={key}
           cafe={this.props.cafes[key]}
@@ -35,7 +35,7 @@ class Admin extends Component {
           deleteCafe={this.props.deleteCafe}
         /> 
         ))}
-        <Add addCafe={this.props.addCafe} />
+        <AddForm addCafe={this.props.addCafe} />
         <Logout logout={this.props.logout} />
       </AdminLayout>
       )
