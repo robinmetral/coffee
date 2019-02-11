@@ -7,7 +7,7 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <h1>Carte des cafés de Robin ☕</h1>
+        <h1>Carte des cafés de Robin <span role="img" aria-label="Coffee cup emoji">☕</span></h1>
         <ViewCafe
           cafe={this.props.cafe}
         />
