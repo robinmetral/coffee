@@ -42,12 +42,19 @@ class App extends Component {
   }
 
   addCafe = async (cafe) => {
-    // fetch coordinates and opening hours from OSM based on ID
+    // fetch OSM data vie an Overpass API query
     let response = await fetch(`https://www.overpass-api.de/api/interpreter?data=[out:json];node(${cafe.osm});out;`)
-    let node = await response.json()
-    let coordinates = [node.elements[0].lat, node.elements[0].lon]
+    let json = await response.json()
+    // destructure
+    let node = json.elements[0]
+    let { tags } = node
     // add fetched values to cafe object
-    cafe.coordinates = coordinates
+    cafe.coordinates = [node.lat, node.lon]
+    cafe.hours = tags.opening_hours
+    cafe.url = tags.website ? tags.website : tags.facebook ? tags.facebook : ""
+    // add current date to cafe
+    cafe.date = Date.now()
+    console.log(cafe)
     // take a copy of state
     const cafes = { ...this.state.cafes }
     // add new cafe
