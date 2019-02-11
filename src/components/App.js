@@ -12,6 +12,7 @@ class App extends Component {
   // initialize state
   state = {
     cafes: {},
+    clicked: "",
     uid: null,
     owner: null
   }
@@ -41,6 +42,17 @@ class App extends Component {
     base.removeBinding(this.ref);
   }
 
+  // set clicked cafe in state
+  handleClick = event => {
+    // find cafe is state that was clicked based on coordinates
+    const { cafes } = this.state
+    const osm = Object.keys(cafes).find(osm => cafes[osm].coordinates[0] === event.latlng.lat && cafes[osm].coordinates[1] === event.latlng.lng)
+    // set state
+    this.setState({
+      clicked: osm
+    })
+  }
+
   addCafe = async (cafe) => {
     // fetch OSM data vie an Overpass API query
     let response = await fetch(`https://www.overpass-api.de/api/interpreter?data=[out:json];node(${cafe.osm});out;`)
@@ -54,7 +66,6 @@ class App extends Component {
     cafe.url = tags.website ? tags.website : tags.facebook ? tags.facebook : ""
     // add current date to cafe
     cafe.date = Date.now()
-    console.log(cafe)
     // take a copy of state
     const cafes = { ...this.state.cafes }
     // add new cafe
@@ -66,20 +77,20 @@ class App extends Component {
     })
   }
 
-  updateCafe = (key, updatedCafe) => {
+  updateCafe = (updatedCafe) => {
     // take a copy of state
     const cafes = { ...this.state.cafes }
     // update single cafe object
-    cafes[key] = updatedCafe // overriding
+    cafes[updatedCafe.osm] = updatedCafe // overriding
     // set state
     this.setState({ cafes })
   }
 
-  deleteCafe = (key) => {
+  deleteCafe = (osm) => {
     // take a copy of state
     const cafes = { ...this.state.cafes }
     // remove single cafe object
-    cafes[key] = null // need to set to null to work with Firebase
+    cafes[osm] = null // need to set to null to work with Firebase
     // set state
     this.setState({ cafes })
   }
@@ -120,11 +131,12 @@ class App extends Component {
       <Layout>
         <Map
           cafes={this.state.cafes}
+          handleClick={this.handleClick}
         />
         <Admin
           uid={this.state.uid}
           owner={this.state.owner}
-          cafes={this.state.cafes}
+          cafe={this.state.cafes[this.state.clicked]}
           addCafe={this.addCafe}
           updateCafe={this.updateCafe}
           deleteCafe={this.deleteCafe}

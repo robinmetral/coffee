@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Marker, Popup } from "react-leaflet"
+import { Marker, Tooltip } from "react-leaflet"
 import L from "leaflet"
 
 const CoffeeBean = new L.Icon({
@@ -20,13 +20,18 @@ class Markers extends Component {
       return (
         <>
         {
-          Object.keys(cafes).map( cafe => (
+          Object.keys(cafes).map( osm => (
             <Marker
-              key={cafes[cafe].osm}
-              position={cafes[cafe].coordinates}
+              key={osm}
+              position={cafes[osm].coordinates}
               icon={CoffeeBean}
+              onClick={this.props.handleClick}
             >
-              <Popup>{cafes[cafe].comment}</Popup>
+              <Tooltip
+                direction="top"
+              >
+                {cafes[osm].name} &middot; <strong>{cafes[osm].rating}</strong>
+              </Tooltip>
             </Marker>
             ))
         }

@@ -1,12 +1,7 @@
 import React from "react"
-import PropTypes from "prop-types"
 
 const Login = (props) => (
-  <button onClick={() => props.login()}>Log in with Github</button>
+  <button onClick={() => props.login()}>Admin</button>
 )
-
-Login.propTypes = {
-  login: PropTypes.func.isRequired
-}
 
 export default Login

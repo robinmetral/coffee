@@ -1,20 +1,9 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 
 import FormValidation from "./FormValidation"
 
 class EditForm extends React.Component {
-
-  static propTypes = {
-    updateCafe: PropTypes.func,
-    deleteCafe: PropTypes.func,
-    index: PropTypes.string,
-    cafe: PropTypes.shape({
-      name: PropTypes.string,
-      summary: PropTypes.string,
-    })
-  }
 
   handleChange = event => {
     const { name, value } = event.target
@@ -22,24 +11,32 @@ class EditForm extends React.Component {
       ...this.props.cafe,
       [name]: value
     }
-    this.props.updateCafe(this.props.index, updatedCafe)
+    this.props.updateCafe(updatedCafe)
   }
 
   render() {
+    const cafe = this.props.cafe
+    if(!cafe) {
+      return (
+        <h2>Cliquer un café pour le modifier</h2>
+      )
+    }
+
     return (
       <Formik
         initialValues={{
-          name: this.props.cafe.name,
-          clara: this.props.cafe.clara,
-          robin: this.props.cafe.robin,
-          laptop: this.props.cafe.laptop,
-          rating: this.props.cafe.rating,
-          comment: this.props.cafe.comment
+          name: cafe.name,
+          clara: cafe.clara,
+          robin: cafe.robin,
+          laptop: cafe.laptop,
+          rating: cafe.rating,
+          comment: cafe.comment
         }}
         enableReinitialize={true}
         validate={FormValidation}
       >
         <Form>
+          <h2>Modifier {cafe.name}</h2>
           <Field
             type="text"
             name="name"
@@ -93,7 +90,7 @@ class EditForm extends React.Component {
           />
           <ErrorMessage name="comment" component="div" />
 
-          <button type="delete" onClick={() => this.props.deleteCafe(this.props.index)}>
+          <button type="delete" onClick={() => this.props.deleteCafe(cafe.osm)}>
             Supprimer
           </button>
         </Form>

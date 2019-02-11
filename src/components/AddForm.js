@@ -1,14 +1,9 @@
 import React, { Component } from "react"
-import PropTypes from "prop-types"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 
 import FormValidation from "./FormValidation"
 
 class AddForm extends Component {
-
-  static propTypes = {
-    addCafe: PropTypes.func
-  }
 
   render() {
     return (
@@ -33,6 +28,7 @@ class AddForm extends Component {
       >
       {({ isSubmitting }) => (
         <Form>
+          <h2>Ajouter un café</h2>
           <Field
             type="text"
             name="name"
