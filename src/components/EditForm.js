@@ -4,7 +4,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik"
 
 import FormValidation from "./FormValidation"
 
-class Edit extends React.Component {
+class EditForm extends React.Component {
 
   static propTypes = {
     updateCafe: PropTypes.func,
@@ -52,4 +52,4 @@ class Edit extends React.Component {
   }
 }
 
-export default Edit
+export default EditForm
