@@ -48,9 +48,10 @@ class App extends Component {
     // find cafe is state that was clicked based on coordinates
     const { cafes } = this.state
     const osm = Object.keys(cafes).find(osm => cafes[osm].coordinates[0] === event.latlng.lat && cafes[osm].coordinates[1] === event.latlng.lng)
-    // set state
+    // set clicked osm id in state and open panel
     this.setState({
-      clicked: osm
+      clicked: osm,
+      panel: "open"
     })
   }
 
