@@ -6,10 +6,10 @@ const Container = styled.div`
   flex: 1;
 `
 
-const AdminLayout = (props) => (
+const PanelLayout = (props) => (
   <Container panel={props.panel}>
     { props.children }
   </Container>
 )
 
-export default AdminLayout
+export default PanelLayout

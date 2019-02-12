@@ -5,7 +5,7 @@ import "firebase/auth"
 import base, { firebaseApp } from "../base"
 import Layout from "../containers/Layout"
 import Map from "./Map"
-import Admin from "./Admin"
+import Panel from "./Panel"
 
 class App extends Component {
 
@@ -143,7 +143,7 @@ class App extends Component {
           handleClick={this.handleClick}
           triggerPanel={this.triggerPanel}
         />
-        <Admin
+        <Panel
           uid={this.state.uid}
           owner={this.state.owner}
           cafe={this.state.cafes[this.state.clicked]}

@@ -4,14 +4,14 @@ import AddForm from "./AddForm"
 import EditForm from "./EditForm"
 import Logout from "./Logout"
 import Home from "./Home"
-import AdminLayout from "../containers/AdminLayout"
+import PanelLayout from "../containers/PanelLayout"
 
-class Admin extends Component {
+class Panel extends Component {
   render() {
     // check if logged in
     if(!this.props.uid || this.props.uid !== this.props.owner) {
       return (
-        <AdminLayout
+        <PanelLayout
           panel={this.props.panel}
         >
           <Home
@@ -22,13 +22,13 @@ class Admin extends Component {
             cafe={this.props.cafe}
             clicked={this.props.clicked}
           />
-        </AdminLayout>
+        </PanelLayout>
         )
     }
 
     // otherwise render admin
     return (
-      <AdminLayout>
+      <PanelLayout>
         <h1>Admin</h1>
         <EditForm
           cafe={this.props.cafe}
@@ -37,9 +37,9 @@ class Admin extends Component {
         /> 
         <AddForm addCafe={this.props.addCafe} />
         <Logout logout={this.props.logout} />
-      </AdminLayout>
+      </PanelLayout>
       )
   }
 }
 
-export default Admin
+export default Panel
