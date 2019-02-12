@@ -15,9 +15,9 @@ class Auth extends Component {
 
     // if not owner
     if(this.props.uid !== this.props.owner) {
+      console.log("Vous n'avez pas la permission de modifier les cafés")
       return (
         <div>
-          <p>Seulement Robin peut modifier les cafés, désolé.</p>
           <Logout logout={this.props.logout} />
         </div>
       )
