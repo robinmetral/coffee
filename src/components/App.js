@@ -152,6 +152,7 @@ class App extends Component {
           deleteCafe={this.deleteCafe}
           login={this.login}
           logout={this.logout}
+          panel={this.state.panel}
         />
       </Layout>
     )
