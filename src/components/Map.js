@@ -3,6 +3,7 @@ import { Map as LeafletMap, TileLayer } from "react-leaflet"
 import Control from "react-leaflet-control"
 
 import Markers from "./Markers"
+import TogglePanel from "./TogglePanel"
 
 class Map extends Component {
   render() {
@@ -17,7 +18,10 @@ class Map extends Component {
           handleClick={this.props.handleClick}
         />
         <Control position="topright">
-          <button onClick={this.props.togglePanel}>Info</button>
+          <TogglePanel
+            panel={this.props.panel}
+            togglePanel={this.props.togglePanel}
+          />
         </Control>
       </LeafletMap>
       )
