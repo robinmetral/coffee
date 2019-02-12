@@ -1,7 +1,5 @@
 import React, { Component } from "react"
 
-import Auth from "./Auth"
-
 class ViewCafe extends Component {
   render() {
     // is no cafe is passed, no cafe has been clicked
@@ -13,13 +11,6 @@ class ViewCafe extends Component {
     const { name, rating, comment, clara, robin, laptop, hours, url, osm } = this.props.cafe
     return (
       <>
-      <Auth
-        uid={this.props.uid}
-        owner={this.props.owner}
-        login={this.props.login}
-        logout={this.props.logout}
-      />
-      <div>
         <h1>{ name } &middot; { rating }</h1>
         <p>{ comment }</p>
         <ul>
@@ -29,10 +20,9 @@ class ViewCafe extends Component {
           <li>Heures d'ouverture : { hours }</li>
         </ul>
         <p><a href={ url }>Site web</a> &middot; <a href={`https://www.openstreetmap.org/node/${ osm }`}>OpenStreetMap</a></p>
-      </div>
-  </>
+      </>
     )
-}
+  }
 }
 
 export default ViewCafe
