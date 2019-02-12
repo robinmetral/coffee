@@ -17,7 +17,7 @@ const Container = styled.div`
 
 const PanelLayout = (props) => (
   <Container panel={props.panel}>
-    <TogglePanel togglePanel={props.togglePanel} />
+    <TogglePanel panel={props.panel} togglePanel={props.togglePanel} />
     { props.children }
   </Container>
 )
