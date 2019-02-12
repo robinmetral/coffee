@@ -8,7 +8,7 @@ import Auth from "./Auth"
 
 class Panel extends Component {
   render() {
-    const isLoggedIn = (this.props.uid === this.props.owner)
+    const isLoggedIn = (this.props.uid && this.props.uid === this.props.owner)
     return (
       <PanelLayout
         panel={this.props.panel}
