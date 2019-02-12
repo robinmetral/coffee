@@ -6,6 +6,13 @@ const GlobalStyle = createGlobalStyle`
     margin: 0;
     padding: 0;
   }
+
+  // Leaflet styles
+  @import url("https://unpkg.com/leaflet@1.4.0/dist/leaflet.css");
+  .leaflet-container {
+    height: 100vh;
+    width: 100%;
+  }
 `
 
 const Grid = styled.div`
@@ -15,11 +22,11 @@ const Grid = styled.div`
 
 const Layout = (props) => (
   <>
-    <GlobalStyle />
-    <Grid>
-      { props.children }
-    </Grid>
+  <GlobalStyle />
+  <Grid>
+    { props.children }
+  </Grid>
   </>
-  )
+)
 
 export default Layout

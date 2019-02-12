@@ -3,9 +3,6 @@ import { Map as LeafletMap, TileLayer } from "react-leaflet"
 
 import Markers from "./Markers"
 
-// leaflet styles and map container dimensions
-import "../leaflet.css"
-
 class Map extends Component {
   render() {
     return (
