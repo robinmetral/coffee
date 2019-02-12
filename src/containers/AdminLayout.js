@@ -11,11 +11,11 @@ const Container = styled.div`
   right: -50vw;
   z-index: 1000;
   transition: transform ease 250ms;
-  //  transform: translate3d(-50vw, 0, 0);
+  transform: ${props => props.panel ? "translate3d(-50vw, 0, 0)" : "none"};
 `
 
 const AdminLayout = (props) => (
-  <Container>
+  <Container panel={props.panel}>
     { props.children }
   </Container>
 )
