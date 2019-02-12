@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Map as LeafletMap, TileLayer } from "react-leaflet"
+import Control from "react-leaflet-control"
 
 import Markers from "./Markers"
 
@@ -15,6 +16,9 @@ class Map extends Component {
           cafes={this.props.cafes}
           handleClick={this.props.handleClick}
         />
+        <Control position="topright">
+          <button onClick={this.props.triggerPanel}>Info</button>
+        </Control>
       </LeafletMap>
       )
   }
