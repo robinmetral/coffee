@@ -3,7 +3,7 @@ import React, { Component } from "react"
 import AddForm from "./AddForm"
 import EditForm from "./EditForm"
 import Logout from "./Logout"
-import Home from "./Home"
+import ViewCafe from "./ViewCafe"
 import PanelLayout from "../containers/PanelLayout"
 
 class Panel extends Component {
@@ -14,7 +14,7 @@ class Panel extends Component {
         <PanelLayout
           panel={this.props.panel}
         >
-          <Home
+          <ViewCafe
             uid={this.props.uid}
             owner={this.props.owner}
             login={this.props.login}
@@ -29,7 +29,6 @@ class Panel extends Component {
     // otherwise render admin
     return (
       <PanelLayout>
-        <h1>Admin</h1>
         <EditForm
           cafe={this.props.cafe}
           updateCafe={this.props.updateCafe}
