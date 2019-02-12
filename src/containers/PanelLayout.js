@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import TogglePanel from "../components/TogglePanel"
+
 const Container = styled.div`
   width: 50vw;
   height: 100vh;
@@ -15,6 +17,7 @@ const Container = styled.div`
 
 const PanelLayout = (props) => (
   <Container panel={props.panel}>
+    <TogglePanel togglePanel={props.togglePanel} />
     { props.children }
   </Container>
 )
