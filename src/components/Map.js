@@ -1,9 +1,7 @@
 import React, { Component } from "react"
 import { Map as LeafletMap, TileLayer } from "react-leaflet"
-import Control from "react-leaflet-control"
 
 import Markers from "./Markers"
-import TogglePanel from "./TogglePanel"
 
 class Map extends Component {
   render() {
@@ -21,12 +19,6 @@ class Map extends Component {
           cafes={this.props.cafes}
           handleClick={this.props.handleClick}
         />
-        <Control position="topright">
-          <TogglePanel
-            panel={this.props.panel}
-            togglePanel={this.props.togglePanel}
-          />
-        </Control>
       </LeafletMap>
       )
   }

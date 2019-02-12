@@ -149,7 +149,6 @@ class App extends Component {
         <Map
           cafes={this.state.cafes}
           handleClick={this.handleClick}
-          togglePanel={this.togglePanel}
         />
         <Panel
           uid={this.state.uid}
@@ -161,7 +160,6 @@ class App extends Component {
           login={this.login}
           logout={this.logout}
           panel={this.state.panel}
-          togglePanel={this.togglePanel}
         />
       </Layout>
     )

@@ -13,7 +13,6 @@ class Panel extends Component {
       return (
         <PanelLayout
           panel={this.props.panel}
-          togglePanel={this.props.togglePanel}
         >
           <Home
             uid={this.props.uid}
