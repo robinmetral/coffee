@@ -11,6 +11,7 @@ const Container = styled.div`
   right: -38vw;
   transition: transform ease 500ms;
   transform: ${props => (props.panel === "open") ? "translate3d(-38vw, 0, 0)" : "none"};
+  padding: 1rem;
 `
 
 const PanelLayout = (props) => (
