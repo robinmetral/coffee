@@ -17,7 +17,7 @@ class Map extends Component {
           handleClick={this.props.handleClick}
         />
         <Control position="topright">
-          <button onClick={this.props.triggerPanel}>Info</button>
+          <button onClick={this.props.togglePanel}>Info</button>
         </Control>
       </LeafletMap>
       )

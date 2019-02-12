@@ -54,7 +54,7 @@ class App extends Component {
     })
   }
 
-  triggerPanel = () => {
+  togglePanel = () => {
     // take the opposite of current value
     const status = (this.state.panel === "closed") ? "open" : "closed"
     this.setState({
@@ -141,7 +141,7 @@ class App extends Component {
         <Map
           cafes={this.state.cafes}
           handleClick={this.handleClick}
-          triggerPanel={this.triggerPanel}
+          togglePanel={this.togglePanel}
         />
         <Panel
           uid={this.state.uid}
