@@ -13,6 +13,7 @@ class App extends Component {
   state = {
     cafes: {},
     clicked: "",
+    panel: false,
     uid: null,
     owner: null
   }
@@ -50,6 +51,14 @@ class App extends Component {
     // set state
     this.setState({
       clicked: osm
+    })
+  }
+
+  triggerPanel = () => {
+    // take the current value
+    const status = this.state.panel
+    this.setState({
+      panel: !status
     })
   }
 
@@ -132,6 +141,7 @@ class App extends Component {
         <Map
           cafes={this.state.cafes}
           handleClick={this.handleClick}
+          triggerPanel={this.triggerPanel}
         />
         <Admin
           uid={this.state.uid}
