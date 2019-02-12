@@ -25,7 +25,7 @@ class Auth extends Component {
 
     // if owner
     return (
-      <p>Connecté !</p>
+      <Logout logout={this.props.logout} />
     )
   }
 }
