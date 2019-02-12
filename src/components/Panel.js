@@ -28,7 +28,9 @@ class Panel extends Component {
 
     // otherwise render admin
     return (
-      <PanelLayout>
+      <PanelLayout
+        panel={this.props.panel}
+      >
         <EditForm
           cafe={this.props.cafe}
           updateCafe={this.props.updateCafe}
