@@ -13,7 +13,7 @@ class App extends Component {
   state = {
     cafes: {},
     clicked: "",
-    panel: false,
+    panel: "closed",
     uid: null,
     owner: null
   }
@@ -55,10 +55,10 @@ class App extends Component {
   }
 
   triggerPanel = () => {
-    // take the current value
-    const status = this.state.panel
+    // take the opposite of current value
+    const status = (this.state.panel === "closed") ? "open" : "closed"
     this.setState({
-      panel: !status
+      panel: status
     })
   }
 

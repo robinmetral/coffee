@@ -12,21 +12,20 @@ const GlobalStyle = createGlobalStyle`
   @import url("https://unpkg.com/leaflet@1.4.0/dist/leaflet.css");
   .leaflet-container {
     height: 100vh;
-    width: 100%;
+    flex: 1;
   }
 `
 
-const Grid = styled.div`
-  //  display: grid;
-  //  grid-template-columns: 1fr 1fr;
+const Container = styled.div`
+  display: flex;
 `
 
 const Layout = (props) => (
   <>
   <GlobalStyle />
-  <Grid>
+  <Container>
     { props.children }
-  </Grid>
+  </Container>
   </>
 )
 
