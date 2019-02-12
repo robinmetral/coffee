@@ -5,6 +5,7 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
 
   // Leaflet styles
@@ -16,8 +17,8 @@ const GlobalStyle = createGlobalStyle`
 `
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  //  display: grid;
+  //  grid-template-columns: 1fr 1fr;
 `
 
 const Layout = (props) => (
