@@ -11,7 +11,9 @@ class Admin extends Component {
     // check if logged in
     if(!this.props.uid || this.props.uid !== this.props.owner) {
       return (
-        <AdminLayout>
+        <AdminLayout
+          panel={this.props.panel}
+        >
           <Home
             uid={this.props.uid}
             owner={this.props.owner}
