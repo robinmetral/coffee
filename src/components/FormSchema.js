@@ -1,26 +1,29 @@
-const FormValidation = values => {
-  let errors = {}
-  // name
-  if (!values.name) {
-    errors.name = "Enter the cafe's name"
-  }
-  // osm id
-  if (!values.osm) {
-    errors.osm = "Enter the cafe's OpenStreetMap ID"
-  }
-  // rating
-  if (!values.rating) {
-    errors.rating = "Rate the cafe"
-  }
-  // validate that this is a number
-  // comment
-  if (!values.comment) {
-    errors.comment = "Enter a comment"
-  }
-  else if (values.comment.length < 10) {
-    errors.comment = "This comment is very short, write a bit more!"
-  }
-  return errors
-}
+import * as Yup from "yup"
 
-export default FormValidation
+Yup.setLocale({
+  mixed: {
+    default: "Erreur de validation",
+    required: "Obligatoire",
+    typeError: "Vous devez entrer un ${type}",
+  },
+  string: {
+    min: "Trop court (minimum ${min} caractères)",
+    max: "Trop long (maximum ${max} caractères)",
+  },
+  number: {
+    min: "Trop petit (minimum ${min})",
+    max: "Trop grand (maximum ${max})",
+  },
+})
+
+const FormSchema = Yup.object().shape({
+  name: Yup.string()
+    .min(2)
+    .max(25)
+    .required(),
+  osm: Yup.number()
+    .moreThan(1)
+    .required(),
+})
+
+export default FormSchema

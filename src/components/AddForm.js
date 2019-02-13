@@ -17,7 +17,7 @@ class AddForm extends Component {
           rating: "",
           comment: "",
         }}
-        validate={FormSchema}
+        validationSchema={FormSchema}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           setTimeout(() => {
             this.props.addCafe(values)
