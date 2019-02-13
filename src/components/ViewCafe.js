@@ -5,13 +5,13 @@ class ViewCafe extends Component {
     // is no cafe is passed, no cafe has been clicked
     if(!this.props.cafe) {
       return <p>Cliquez sur un grain de café pour voir ses détails</p>
-    }
+      }
 
     // if a cafe has been clicked, render
     const { name, rating, comment, clara, robin, laptop, hours, url, osm } = this.props.cafe
     return (
       <>
-        <h2>{ name } &middot; { rating }</h2>
+        <h1>{ name } &middot; { rating }</h1>
         <p>{ comment }</p>
         <ul>
           <li>Café pour Robin : { robin }</li>

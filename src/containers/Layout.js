@@ -5,21 +5,27 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
+  }
+
+  // Leaflet styles
+  @import url("https://unpkg.com/leaflet@1.4.0/dist/leaflet.css");
+  .leaflet-container {
+    height: 100vh;
+    width: 100vw;
   }
 `
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+const Container = styled.div`
 `
 
 const Layout = (props) => (
   <>
-    <GlobalStyle />
-    <Grid>
-      { props.children }
-    </Grid>
+  <GlobalStyle />
+  <Container>
+    { props.children }
+  </Container>
   </>
-  )
+)
 
 export default Layout

@@ -5,7 +5,7 @@ import "firebase/auth"
 import base, { firebaseApp } from "../base"
 import Layout from "../containers/Layout"
 import Map from "./Map"
-import Admin from "./Admin"
+import Panel from "./Panel"
 
 class App extends Component {
 
@@ -13,6 +13,7 @@ class App extends Component {
   state = {
     cafes: {},
     clicked: "",
+    panel: "closed",
     uid: null,
     owner: null
   }
@@ -42,14 +43,30 @@ class App extends Component {
     base.removeBinding(this.ref);
   }
 
-  // set clicked cafe in state
   handleClick = event => {
     // find cafe is state that was clicked based on coordinates
     const { cafes } = this.state
     const osm = Object.keys(cafes).find(osm => cafes[osm].coordinates[0] === event.latlng.lat && cafes[osm].coordinates[1] === event.latlng.lng)
-    // set state
+    // if no cafe was clicked close the panel
+    if (!osm) {
+      this.setState({
+        panel: "closed"
+      })
+    }
+    // else set clicked osm id in state and open panel
+    else {
+      this.setState({
+        clicked: osm,
+        panel: "open"
+      })
+    }
+  }
+
+  togglePanel = () => {
+    // take the opposite of current value
+    const status = (this.state.panel === "closed") ? "open" : "closed"
     this.setState({
-      clicked: osm
+      panel: status
     })
   }
 
@@ -133,7 +150,7 @@ class App extends Component {
           cafes={this.state.cafes}
           handleClick={this.handleClick}
         />
-        <Admin
+        <Panel
           uid={this.state.uid}
           owner={this.state.owner}
           cafe={this.state.cafes[this.state.clicked]}
@@ -142,6 +159,7 @@ class App extends Component {
           deleteCafe={this.deleteCafe}
           login={this.login}
           logout={this.logout}
+          panel={this.state.panel}
         />
       </Layout>
     )
