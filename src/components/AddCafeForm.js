@@ -12,7 +12,7 @@ class AddCafeForm extends Component {
         name: "",
         osm: "",
         laptop: "",
-        rating: "",
+        rating: "1",
         comment: "",
         }}
         validationSchema={FormSchema}
