@@ -1,8 +1,12 @@
 import React from "react"
-import { Formik, Field, ErrorMessage } from "formik"
+import { Formik, Form, Field, ErrorMessage } from "formik"
 
 import FormSchema from "./FormSchema"
 import StyledForm from "./styled/StyledForm"
+import StyledInputName from "./styled/StyledInputName"
+import StyledInputLaptop from "./styled/StyledInputLaptop"
+import StyledInputRating from "./styled/StyledInputRating"
+import StyledInputComment from "./styled/StyledInputComment"
 
 class EditCafeForm extends React.Component {
 
@@ -19,10 +23,10 @@ class EditCafeForm extends React.Component {
 
   render() {
     const cafe = this.props.cafe
+
+    // return empty fragment if there is no cafe
     if(!cafe) {
-      return (
-        <h2>Cliquer un café pour le modifier</h2>
-        )
+      return (<></>)
     }
 
     return (
@@ -36,22 +40,22 @@ class EditCafeForm extends React.Component {
         enableReinitialize={true}
         validate={FormSchema}
       >
-        <StyledForm>
-          <h2>Modifier {cafe.name}</h2>
+        <Form>
+          <StyledForm>
+            <legend>Modifier {cafe.name}</legend>
 
-          <div className="form-line">
-            <label>
-              <div>Nom</div>
+            <StyledInputName>
+              Nom
               <ErrorMessage name="name" component="div" />
               <Field
                 type="text"
                 name="name"
                 onChange={this.handleChange}
               />
-            </label>
+            </StyledInputName>
 
-            <label>
-              <div><span role="img" aria-label="laptop emoji">💻</span></div>
+            <StyledInputLaptop>
+              <span role="img" aria-label="laptop emoji">💻</span>
               <ErrorMessage name="laptop" component="div" />
               <Field
                 type="checkbox"
@@ -59,10 +63,10 @@ class EditCafeForm extends React.Component {
                 checked={cafe.laptop ? "checked" : ""}
                 onChange={this.handleChange}
               />
-            </label>
+            </StyledInputLaptop>
 
-            <label>
-              <div><span role="img" aria-label="star emoji">⭐</span></div>
+            <StyledInputRating>
+              <span role="img" aria-label="star emoji">⭐</span>
               <ErrorMessage name="rating" component="div" />
               <Field
                 component="select"
@@ -75,23 +79,23 @@ class EditCafeForm extends React.Component {
                 <option value="4">4</option>
                 <option value="5">5</option>
               </Field>
-            </label>
-          </div>
+            </StyledInputRating>
 
-          <label>
-            <div>Commentaire</div>
-            <ErrorMessage name="comment" component="div" />
-            <Field
-              component="textarea"
-              name="comment"
-              onChange={this.handleChange}
-            />
-          </label>
+            <StyledInputComment>
+              Commentaire
+              <ErrorMessage name="comment" component="div" />
+              <Field
+                component="textarea"
+                name="comment"
+                onChange={this.handleChange}
+              />
+            </StyledInputComment>
 
-          <button type="delete" onClick={() => this.props.deleteCafe(cafe.osm)}>
-            Supprimer
-          </button>
-        </StyledForm>
+            <button type="delete" onClick={() => this.props.deleteCafe(cafe.osm)}>
+              Supprimer
+            </button>
+          </StyledForm>
+        </Form>
       </Formik>
       )
 }
