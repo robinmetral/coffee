@@ -1,7 +1,7 @@
 import React from "react"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 
-import FormValidation from "./FormValidation"
+import FormSchema from "./FormSchema"
 
 class EditForm extends React.Component {
 
@@ -26,14 +26,12 @@ class EditForm extends React.Component {
       <Formik
         initialValues={{
           name: cafe.name,
-          clara: cafe.clara,
-          robin: cafe.robin,
           laptop: cafe.laptop,
           rating: cafe.rating,
           comment: cafe.comment
         }}
         enableReinitialize={true}
-        validate={FormValidation}
+        validate={FormSchema}
       >
         <Form>
           <h2>Modifier {cafe.name}</h2>
@@ -43,20 +41,6 @@ class EditForm extends React.Component {
             onChange={this.handleChange}
           />
           <ErrorMessage name="name" component="div" />
-
-          <Field
-            type="text"
-            name="clara"
-            onChange={this.handleChange}
-          />
-          <ErrorMessage name="clara" component="div" />
-
-          <Field
-            type="text"
-            name="robin"
-            onChange={this.handleChange}
-          />
-          <ErrorMessage name="robin" component="div" />
 
           <Field
             component="select"

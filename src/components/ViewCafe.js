@@ -8,14 +8,12 @@ class ViewCafe extends Component {
       }
 
     // if a cafe has been clicked, render
-    const { name, rating, comment, clara, robin, laptop, hours, url, osm } = this.props.cafe
+    const { name, rating, comment, laptop, hours, url, osm } = this.props.cafe
     return (
       <>
         <h1>{ name } &middot; { rating }</h1>
         <p>{ comment }</p>
         <ul>
-          <li>Café pour Robin : { robin }</li>
-          <li>Café pour Clara : { clara }</li>
           <li>Laptops ? { laptop }</li>
           <li>Heures d'ouverture : { hours }</li>
         </ul>
