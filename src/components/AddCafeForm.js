@@ -31,26 +31,27 @@ class AddCafeForm extends Component {
           <div className="form-line">
             <label>
               <div>Nom</div>
+              <ErrorMessage name="name" component="div" />
               <Field
                 type="text"
                 name="name"
                 placeholder="Nom"
               />
-              <ErrorMessage name="name" component="div" />
             </label>
 
             <label>
               <div>ID OpenStreetMap</div>
+              <ErrorMessage name="osm" component="div" />
               <Field
                 type="number"
                 name="osm"
                 placeholder="ID OSM"
               />
-              <ErrorMessage name="osm" component="div" />
             </label>
 
             <label>
               <div><span role="img" aria-label="laptop emoji">💻</span></div>
+              <ErrorMessage name="laptop" component="div" />
               <Field
                 type="checkbox"
                 name="laptop"
@@ -60,6 +61,7 @@ class AddCafeForm extends Component {
 
             <label>
               <div><span role="img" aria-label="star emoji">⭐</span></div>
+              <ErrorMessage name="rating" component="div" />
               <Field component="select" name="rating">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -72,12 +74,12 @@ class AddCafeForm extends Component {
 
           <label>
             <div>Commentaire</div>
+            <ErrorMessage name="comment" component="div" />
             <Field
               component="textarea"
               name="comment"
               placeholder="Commentaire"
             />
-            <ErrorMessage name="comment" component="div" />
           </label>
 
           <button type="submit" disabled={isSubmitting}>
