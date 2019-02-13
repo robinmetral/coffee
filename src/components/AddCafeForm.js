@@ -79,7 +79,7 @@ class AddCafeForm extends Component {
               <Field
                 type="number"
                 name="osm"
-                placeholder="ID OSM"
+                placeholder="ID OpenStreetMap"
               />
             </StyledInput>
 
