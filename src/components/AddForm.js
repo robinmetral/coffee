@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 
-import FormValidation from "./FormValidation"
+import FormSchema from "./FormSchema"
 
 class AddForm extends Component {
 
@@ -17,7 +17,7 @@ class AddForm extends Component {
           rating: "",
           comment: "",
         }}
-        validate={FormValidation}
+        validate={FormSchema}
         onSubmit={(values, { setSubmitting, resetForm }) => {
           setTimeout(() => {
             this.props.addCafe(values)

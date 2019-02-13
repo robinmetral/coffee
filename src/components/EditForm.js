@@ -1,7 +1,7 @@
 import React from "react"
 import { Formik, Form, Field, ErrorMessage } from "formik"
 
-import FormValidation from "./FormValidation"
+import FormSchema from "./FormSchema"
 
 class EditForm extends React.Component {
 
@@ -33,7 +33,7 @@ class EditForm extends React.Component {
           comment: cafe.comment
         }}
         enableReinitialize={true}
-        validate={FormValidation}
+        validate={FormSchema}
       >
         <Form>
           <h2>Modifier {cafe.name}</h2>
