@@ -5,7 +5,6 @@ import FormSchema from "./FormSchema"
 import StyledForm from "./styled/StyledForm"
 import StyledInput from "./styled/StyledInput"
 import StyledInputLaptop from "./styled/StyledInputLaptop"
-import StyledInputRating from "./styled/StyledInputRating"
 import StyledButton from "./styled/StyledButton"
 
 class EditCafeForm extends React.Component {
@@ -65,7 +64,7 @@ class EditCafeForm extends React.Component {
               />
             </StyledInputLaptop>
 
-            <StyledInputRating className="rating">
+            <StyledInput className="rating">
               <span role="img" aria-label="star emoji">⭐</span>
               <ErrorMessage name="rating" component="div" />
               <Field
@@ -79,7 +78,7 @@ class EditCafeForm extends React.Component {
                 <option value="4">4</option>
                 <option value="5">5</option>
               </Field>
-            </StyledInputRating>
+            </StyledInput>
 
             <StyledInput className="comment">
               Commentaire

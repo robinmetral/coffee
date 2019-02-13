@@ -5,7 +5,6 @@ import FormSchema from "./FormSchema"
 import StyledForm from "./styled/StyledForm"
 import StyledInput from "./styled/StyledInput"
 import StyledInputLaptop from "./styled/StyledInputLaptop"
-import StyledInputRating from "./styled/StyledInputRating"
 import StyledButton from "./styled/StyledButton"
 
 class AddCafeForm extends Component {
@@ -53,7 +52,7 @@ class AddCafeForm extends Component {
               />
             </StyledInputLaptop>
 
-            <StyledInputRating className="rating">
+            <StyledInput className="rating">
               <span role="img" aria-label="star emoji">⭐</span>
               <ErrorMessage name="rating" component="div" />
               <Field component="select" name="rating">
@@ -63,7 +62,7 @@ class AddCafeForm extends Component {
                 <option value="4">4</option>
                 <option value="5">5</option>
               </Field>
-            </StyledInputRating>
+            </StyledInput>
 
             <StyledInput className="comment">
               Commentaire
