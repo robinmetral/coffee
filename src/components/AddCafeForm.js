@@ -4,7 +4,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik"
 import FormSchema from "./FormSchema"
 import StyledForm from "./styled/StyledForm"
 import StyledInput from "./styled/StyledInput"
-import StyledInputLaptop from "./styled/StyledInputLaptop"
 import StyledButton from "./styled/StyledButton"
 
 class AddCafeForm extends Component {
@@ -42,7 +41,7 @@ class AddCafeForm extends Component {
               />
             </StyledInput>
 
-            <StyledInputLaptop className="laptop">
+            <StyledInput className="laptop">
               <span role="img" aria-label="laptop emoji">💻</span>
               <ErrorMessage name="laptop" component="div" />
               <Field
@@ -50,7 +49,7 @@ class AddCafeForm extends Component {
                 name="laptop"
                 value="true"
               />
-            </StyledInputLaptop>
+            </StyledInput>
 
             <StyledInput className="rating">
               <span role="img" aria-label="star emoji">⭐</span>

@@ -4,7 +4,6 @@ import { Formik, Form, Field, ErrorMessage } from "formik"
 import FormSchema from "./FormSchema"
 import StyledForm from "./styled/StyledForm"
 import StyledInput from "./styled/StyledInput"
-import StyledInputLaptop from "./styled/StyledInputLaptop"
 import StyledButton from "./styled/StyledButton"
 
 class EditCafeForm extends React.Component {
@@ -53,7 +52,7 @@ class EditCafeForm extends React.Component {
               />
             </StyledInput>
 
-            <StyledInputLaptop className="laptop">
+            <StyledInput className="laptop">
               <span role="img" aria-label="laptop emoji">💻</span>
               <ErrorMessage name="laptop" component="div" />
               <Field
@@ -62,7 +61,7 @@ class EditCafeForm extends React.Component {
                 checked={cafe.laptop ? "checked" : ""}
                 onChange={this.handleChange}
               />
-            </StyledInputLaptop>
+            </StyledInput>
 
             <StyledInput className="rating">
               <span role="img" aria-label="star emoji">⭐</span>
