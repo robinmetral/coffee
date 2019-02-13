@@ -3,8 +3,7 @@ import * as Yup from "yup"
 Yup.setLocale({
   mixed: {
     default: "Erreur de validation",
-    required: "Obligatoire",
-    typeError: "Vous devez entrer un ${type}",
+    required: "Ce champ est obligatoire",
   },
   string: {
     min: "Trop court (minimum ${min} caractères)",
@@ -23,6 +22,16 @@ const FormSchema = Yup.object().shape({
     .required(),
   osm: Yup.number()
     .moreThan(1)
+    .required(),
+  laptop: Yup.boolean()
+    .required(),
+  rating: Yup.number()
+    .min(1)
+    .max(5)
+    .required(),
+  comment: Yup.string()
+    .min(25)
+    .max(500)
     .required(),
 })
 
