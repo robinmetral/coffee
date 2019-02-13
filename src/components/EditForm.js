@@ -1,7 +1,8 @@
 import React from "react"
-import { Formik, Form, Field, ErrorMessage } from "formik"
+import { Formik, Field, ErrorMessage } from "formik"
 
 import FormSchema from "./FormSchema"
+import StyledForm from "./styled/StyledForm"
 
 class EditForm extends React.Component {
 
@@ -33,7 +34,7 @@ class EditForm extends React.Component {
         enableReinitialize={true}
         validate={FormSchema}
       >
-        <Form>
+        <StyledForm>
           <h2>Modifier {cafe.name}</h2>
           <Field
             type="text"
@@ -77,7 +78,7 @@ class EditForm extends React.Component {
           <button type="delete" onClick={() => this.props.deleteCafe(cafe.osm)}>
             Supprimer
           </button>
-        </Form>
+        </StyledForm>
       </Formik>
     )
   }

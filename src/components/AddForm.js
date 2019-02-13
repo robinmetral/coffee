@@ -1,10 +1,10 @@
 import React, { Component } from "react"
-import { Formik, Form, Field, ErrorMessage } from "formik"
+import { Formik, Field, ErrorMessage } from "formik"
 
 import FormSchema from "./FormSchema"
+import StyledForm from "./styled/StyledForm"
 
 class AddForm extends Component {
-
   render() {
     return (
       <Formik
@@ -25,7 +25,7 @@ class AddForm extends Component {
         }}
       >
       {({ isSubmitting }) => (
-        <Form>
+        <StyledForm>
           <h2>Ajouter un café</h2>
           <Field
             type="text"
@@ -68,7 +68,7 @@ class AddForm extends Component {
           <button type="submit" disabled={isSubmitting}>
             Ajouter
           </button>
-        </Form>
+        </StyledForm>
       )}
       </Formik>
     )
