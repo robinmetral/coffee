@@ -48,6 +48,7 @@ class AddCafeForm extends Component {
                 name="laptop"
                 value="true"
               />
+              <span></span>
               <ErrorMessage name="laptop" component="div" />
             </StyledInput>
 

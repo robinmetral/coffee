@@ -2,7 +2,8 @@ import styled from "styled-components"
 
 const StyledInput = styled.label`
   display: grid;
-  input, textarea, select {
+  input, textarea, select, input[type=checkbox]+span {
+    display: block; // teaxtarea is inline-block by default
     font-family: inherit; // not inherited by default
     font-size: 100%; // not inherited by default
     box-sizing: border-box; // harmonize box sizing
@@ -16,14 +17,28 @@ const StyledInput = styled.label`
     }
   }
   textarea {
-    display: block; // teaxtarea is inline-block by default
     resize: vertical; // resize only vertically
   }
   select {
+    width: 31px;
+    height: 31px;
     appearance: none; // hide arrow
   }
   input[type=number] {
     appearance: textfield; // hide arrows
+  }
+  input[type=checkbox] {
+    display: none;
+    &+span {
+      width: 31px;
+      text-align: center;
+      &::before {
+        content: "✗";
+      }
+    }
+    &:checked+span::before {
+      content: "✓";
+    }
   }
 `
 
