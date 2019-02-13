@@ -8,6 +8,7 @@ import StyledInputOsm from "./styled/StyledInputOsm"
 import StyledInputLaptop from "./styled/StyledInputLaptop"
 import StyledInputRating from "./styled/StyledInputRating"
 import StyledInputComment from "./styled/StyledInputComment"
+import StyledFormButton from "./styled/StyledFormButton"
 
 class AddCafeForm extends Component {
   render() {
@@ -86,9 +87,9 @@ class AddCafeForm extends Component {
               />
             </StyledInputOsm>
 
-            <button type="submit" disabled={isSubmitting}>
+            <StyledFormButton type="submit" disabled={isSubmitting}>
               Ajouter
-            </button>
+            </StyledFormButton>
           </StyledForm>
         </Form>
         )}

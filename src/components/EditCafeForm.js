@@ -7,6 +7,7 @@ import StyledInputName from "./styled/StyledInputName"
 import StyledInputLaptop from "./styled/StyledInputLaptop"
 import StyledInputRating from "./styled/StyledInputRating"
 import StyledInputComment from "./styled/StyledInputComment"
+import StyledFormButton from "./styled/StyledFormButton"
 
 class EditCafeForm extends React.Component {
 
@@ -91,9 +92,9 @@ class EditCafeForm extends React.Component {
               />
             </StyledInputComment>
 
-            <button type="delete" onClick={() => this.props.deleteCafe(cafe.osm)}>
+            <StyledFormButton type="delete" onClick={() => this.props.deleteCafe(cafe.osm)}>
               Supprimer
-            </button>
+            </StyledFormButton>
           </StyledForm>
         </Form>
       </Formik>
