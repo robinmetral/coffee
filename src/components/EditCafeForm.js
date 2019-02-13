@@ -42,27 +42,28 @@ class EditCafeForm extends React.Component {
           <div className="form-line">
             <label>
               <div>Nom</div>
+              <ErrorMessage name="name" component="div" />
               <Field
                 type="text"
                 name="name"
                 onChange={this.handleChange}
               />
-              <ErrorMessage name="name" component="div" />
             </label>
 
             <label>
               <div>Laptop</div>
+              <ErrorMessage name="laptop" component="div" />
               <Field
                 type="checkbox"
                 name="laptop"
                 checked={cafe.laptop ? "checked" : ""}
                 onChange={this.handleChange}
               />
-              <ErrorMessage name="laptop" component="div" />
             </label>
 
             <label>
               <div>Note</div>
+              <ErrorMessage name="rating" component="div" />
               <Field
                 component="select"
                 name="rating"
@@ -74,18 +75,17 @@ class EditCafeForm extends React.Component {
                 <option value="4">4</option>
                 <option value="5">5</option>
               </Field>
-              <ErrorMessage name="rating" component="div" />
             </label>
           </div>
 
           <label>
             <div>Commentaire</div>
+            <ErrorMessage name="comment" component="div" />
             <Field
               component="textarea"
               name="comment"
               onChange={this.handleChange}
             />
-            <ErrorMessage name="comment" component="div" />
           </label>
 
           <button type="delete" onClick={() => this.props.deleteCafe(cafe.osm)}>
