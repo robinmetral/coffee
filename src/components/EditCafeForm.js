@@ -60,6 +60,7 @@ class EditCafeForm extends React.Component {
                 checked={cafe.laptop ? "checked" : ""}
                 onChange={this.handleChange}
               />
+              <span></span>
               <ErrorMessage name="laptop" component="div" />
             </StyledInput>
 
