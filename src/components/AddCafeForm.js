@@ -49,18 +49,17 @@ class AddCafeForm extends Component {
 
           <label>
             Laptop
-            <Field component="select" name="laptop">
-              <option value="" disabled>Laptop</option>
-              <option value="true">Oui</option>
-              <option value="false">Non</option>
-            </Field>
+            <Field
+              type="checkbox"
+              name="laptop"
+              value="true"
+            />
             <ErrorMessage name="laptop" component="div" />
           </label>
 
           <label>
             Note
             <Field component="select" name="rating">
-              <option value="" disabled>Note</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
