@@ -14,7 +14,7 @@ class ViewCafe extends Component {
         <h1>{ name } &middot; { rating }</h1>
         <p>{ comment }</p>
         <ul>
-          <li>Laptops ? { laptop }</li>
+          <li>{ laptop ? "Bien pour les " : "Pas top pour les " }laptops</li>
           <li>Heures d'ouverture : { hours }</li>
         </ul>
         <p><a href={ url }>Site web</a> &middot; <a href={`https://www.openstreetmap.org/node/${ osm }`}>OpenStreetMap</a></p>
