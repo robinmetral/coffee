@@ -27,47 +27,52 @@ class AddCafeForm extends Component {
         {({ isSubmitting }) => (
         <StyledForm>
           <h2>Ajouter un café</h2>
-          <label>
-            Nom
-            <Field
-              type="text"
-              name="name"
-              placeholder="Nom"
-            />
-            <ErrorMessage name="name" component="div" />
-          </label>
 
-          <label>
-            ID OpenStreetMap
-            <Field
-              type="number"
-              name="osm"
-              placeholder="ID OSM"
-            />
-            <ErrorMessage name="osm" component="div" />
-          </label>
+          <div>
+            <label>
+              Nom
+              <Field
+                type="text"
+                name="name"
+                placeholder="Nom"
+              />
+              <ErrorMessage name="name" component="div" />
+            </label>
 
-          <label>
-            Laptop
-            <Field
-              type="checkbox"
-              name="laptop"
-              value="true"
-            />
-            <ErrorMessage name="laptop" component="div" />
-          </label>
+            <label>
+              ID OpenStreetMap
+              <Field
+                type="number"
+                name="osm"
+                placeholder="ID OSM"
+              />
+              <ErrorMessage name="osm" component="div" />
+            </label>
+          </div>
 
-          <label>
-            Note
-            <Field component="select" name="rating">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </Field>
-            <ErrorMessage name="rating" component="div" />
-          </label>
+          <div>
+            <label>
+              <span role="img" aria-label="laptop emoji">💻</span>
+              <Field
+                type="checkbox"
+                name="laptop"
+                value="true"
+              />
+              <ErrorMessage name="laptop" component="div" />
+            </label>
+
+            <label>
+              Note
+              <Field component="select" name="rating">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </Field>
+              <ErrorMessage name="rating" component="div" />
+            </label>
+          </div>
 
           <label>
             Commentaire

@@ -49,32 +49,34 @@ class EditCafeForm extends React.Component {
             <ErrorMessage name="name" component="div" />
           </label>
 
-          <label>
-            Laptop
-            <Field
-              type="checkbox"
-              name="laptop"
-              checked={cafe.laptop ? "checked" : ""}
-              onChange={this.handleChange}
-            />
-            <ErrorMessage name="laptop" component="div" />
-          </label>
+          <div>
+            <label>
+              Laptop
+              <Field
+                type="checkbox"
+                name="laptop"
+                checked={cafe.laptop ? "checked" : ""}
+                onChange={this.handleChange}
+              />
+              <ErrorMessage name="laptop" component="div" />
+            </label>
 
-          <label>
-            Note
-            <Field
-              component="select"
-              name="rating"
-              onChange={this.handleChange}
-            >
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </Field>
-            <ErrorMessage name="rating" component="div" />
-          </label>
+            <label>
+              Note
+              <Field
+                component="select"
+                name="rating"
+                onChange={this.handleChange}
+              >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </Field>
+              <ErrorMessage name="rating" component="div" />
+            </label>
+          </div>
 
           <label>
             Commentaire
@@ -92,7 +94,7 @@ class EditCafeForm extends React.Component {
         </StyledForm>
       </Formik>
       )
-  }
+}
 }
 
 export default EditCafeForm
