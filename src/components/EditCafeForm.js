@@ -50,14 +50,10 @@ class EditCafeForm extends React.Component {
           <label>
             Laptop
             <Field
-              component="select"
+              type="checkbox"
               name="laptop"
               onChange={this.handleChange}
-            >
-              <option value="" disabled>Laptop</option>
-              <option value="true">Oui</option>
-              <option value="false">Non</option>
-            </Field>
+            />
             <ErrorMessage name="laptop" component="div" />
           </label>
 
@@ -68,7 +64,6 @@ class EditCafeForm extends React.Component {
               name="rating"
               onChange={this.handleChange}
             >
-              <option value="" disabled>Note</option>
               <option value="1">1</option>
               <option value="2">2</option>
               <option value="3">3</option>
