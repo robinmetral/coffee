@@ -39,19 +39,19 @@ class EditCafeForm extends React.Component {
         <StyledForm>
           <h2>Modifier {cafe.name}</h2>
 
-          <label>
-            Nom
-            <Field
-              type="text"
-              name="name"
-              onChange={this.handleChange}
-            />
-            <ErrorMessage name="name" component="div" />
-          </label>
-
-          <div>
+          <div className="form-line">
             <label>
-              Laptop
+              <div>Nom</div>
+              <Field
+                type="text"
+                name="name"
+                onChange={this.handleChange}
+              />
+              <ErrorMessage name="name" component="div" />
+            </label>
+
+            <label>
+              <div>Laptop</div>
               <Field
                 type="checkbox"
                 name="laptop"
@@ -62,7 +62,7 @@ class EditCafeForm extends React.Component {
             </label>
 
             <label>
-              Note
+              <div>Note</div>
               <Field
                 component="select"
                 name="rating"
@@ -79,7 +79,7 @@ class EditCafeForm extends React.Component {
           </div>
 
           <label>
-            Commentaire
+            <div>Commentaire</div>
             <Field
               component="textarea"
               name="comment"
