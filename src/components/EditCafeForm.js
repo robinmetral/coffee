@@ -51,7 +51,7 @@ class EditCafeForm extends React.Component {
             </label>
 
             <label>
-              <div>Laptop</div>
+              <div><span role="img" aria-label="laptop emoji">💻</span></div>
               <ErrorMessage name="laptop" component="div" />
               <Field
                 type="checkbox"
@@ -62,7 +62,7 @@ class EditCafeForm extends React.Component {
             </label>
 
             <label>
-              <div>Note</div>
+              <div><span role="img" aria-label="star emoji">⭐</span></div>
               <ErrorMessage name="rating" component="div" />
               <Field
                 component="select"

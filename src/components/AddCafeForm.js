@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Formik, Field, ErrorMessage } from "formik"
+import { Formik, Form, Field, ErrorMessage } from "formik"
 
 import FormSchema from "./FormSchema"
 import StyledForm from "./styled/StyledForm"
@@ -25,67 +25,69 @@ class AddCafeForm extends Component {
         }}
       >
         {({ isSubmitting }) => (
-        <StyledForm>
-          <h2>Ajouter un café</h2>
+        <Form>
+          <fieldset>
+            <legend>Ajouter un café</legend>
 
-          <div className="form-line">
-            <label>
-              <div>Nom</div>
-              <ErrorMessage name="name" component="div" />
-              <Field
-                type="text"
-                name="name"
-                placeholder="Nom"
-              />
-            </label>
+            <StyledForm>
+              <label>
+                <div>Nom</div>
+                <ErrorMessage name="name" component="div" />
+                <Field
+                  type="text"
+                  name="name"
+                  placeholder="Nom"
+                />
+              </label>
 
-            <label>
-              <div>ID OpenStreetMap</div>
-              <ErrorMessage name="osm" component="div" />
-              <Field
-                type="number"
-                name="osm"
-                placeholder="ID OSM"
-              />
-            </label>
+              <label>
+                <div>ID OpenStreetMap</div>
+                <ErrorMessage name="osm" component="div" />
+                <Field
+                  type="number"
+                  name="osm"
+                  placeholder="ID OSM"
+                />
+              </label>
 
-            <label>
-              <div><span role="img" aria-label="laptop emoji">💻</span></div>
-              <ErrorMessage name="laptop" component="div" />
-              <Field
-                type="checkbox"
-                name="laptop"
-                value="true"
-              />
-            </label>
+              <label>
+                <div><span role="img" aria-label="laptop emoji">💻</span></div>
+                <ErrorMessage name="laptop" component="div" />
+                <Field
+                  type="checkbox"
+                  name="laptop"
+                  value="true"
+                />
+              </label>
 
-            <label>
-              <div><span role="img" aria-label="star emoji">⭐</span></div>
-              <ErrorMessage name="rating" component="div" />
-              <Field component="select" name="rating">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-              </Field>
-            </label>
-          </div>
+              <label>
+                <div><span role="img" aria-label="star emoji">⭐</span></div>
+                <ErrorMessage name="rating" component="div" />
+                <Field component="select" name="rating">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </Field>
+              </label>
 
-          <label>
-            <div>Commentaire</div>
-            <ErrorMessage name="comment" component="div" />
-            <Field
-              component="textarea"
-              name="comment"
-              placeholder="Commentaire"
-            />
-          </label>
+              <label>
+                <div>Commentaire</div>
+                <ErrorMessage name="comment" component="div" />
+                <Field
+                  component="textarea"
+                  name="comment"
+                  placeholder="Commentaire"
+                />
+              </label>
 
-          <button type="submit" disabled={isSubmitting}>
-            Ajouter
-          </button>
-        </StyledForm>
+              <button type="submit" disabled={isSubmitting}>
+                Ajouter
+              </button>
+            </StyledForm>
+          </fieldset>
+        </Form>
         )}
       </Formik>
       )
