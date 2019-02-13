@@ -25,6 +25,10 @@ const FormSchema = Yup.object().shape({
   osm: Yup.number()
     .moreThan(1)
     .required(),
+  rating: Yup.number()
+    .min(1)
+    .max(5)
+    .required(),
   comment: Yup.string()
     .min(25)
     .max(500)
