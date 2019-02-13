@@ -3,12 +3,10 @@ import { Formik, Form, Field, ErrorMessage } from "formik"
 
 import FormSchema from "./FormSchema"
 import StyledForm from "./styled/StyledForm"
-import StyledInputName from "./styled/StyledInputName"
-import StyledInputOsm from "./styled/StyledInputOsm"
+import StyledInput from "./styled/StyledInput"
 import StyledInputLaptop from "./styled/StyledInputLaptop"
 import StyledInputRating from "./styled/StyledInputRating"
-import StyledInputComment from "./styled/StyledInputComment"
-import StyledFormButton from "./styled/StyledFormButton"
+import StyledButton from "./styled/StyledButton"
 
 class AddCafeForm extends Component {
   render() {
@@ -35,7 +33,7 @@ class AddCafeForm extends Component {
           <StyledForm>
             <legend>Ajouter un café</legend>
 
-            <StyledInputName>
+            <StyledInput className="name">
               Nom
               <ErrorMessage name="name" component="div" />
               <Field
@@ -43,9 +41,9 @@ class AddCafeForm extends Component {
                 name="name"
                 placeholder="Nom"
               />
-            </StyledInputName>
+            </StyledInput>
 
-            <StyledInputLaptop>
+            <StyledInputLaptop className="laptop">
               <span role="img" aria-label="laptop emoji">💻</span>
               <ErrorMessage name="laptop" component="div" />
               <Field
@@ -55,7 +53,7 @@ class AddCafeForm extends Component {
               />
             </StyledInputLaptop>
 
-            <StyledInputRating>
+            <StyledInputRating className="rating">
               <span role="img" aria-label="star emoji">⭐</span>
               <ErrorMessage name="rating" component="div" />
               <Field component="select" name="rating">
@@ -67,7 +65,7 @@ class AddCafeForm extends Component {
               </Field>
             </StyledInputRating>
 
-            <StyledInputComment>
+            <StyledInput className="comment">
               Commentaire
               <ErrorMessage name="comment" component="div" />
               <Field
@@ -75,9 +73,9 @@ class AddCafeForm extends Component {
                 name="comment"
                 placeholder="Commentaire"
               />
-            </StyledInputComment>
+            </StyledInput>
 
-            <StyledInputOsm>
+            <StyledInput className="osm">
               ID OpenStreetMap
               <ErrorMessage name="osm" component="div" />
               <Field
@@ -85,11 +83,11 @@ class AddCafeForm extends Component {
                 name="osm"
                 placeholder="ID OSM"
               />
-            </StyledInputOsm>
+            </StyledInput>
 
-            <StyledFormButton type="submit" disabled={isSubmitting}>
+            <StyledButton type="submit" disabled={isSubmitting}>
               Ajouter
-            </StyledFormButton>
+            </StyledButton>
           </StyledForm>
         </Form>
         )}

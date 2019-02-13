@@ -4,6 +4,9 @@ const StyledForm = styled.fieldset`
   display: grid;
   grid-template-columns: 1fr auto auto;
   grid-gap: 0.5rem;
+  .comment, .osm {
+    grid-column: 1/4;
+  }
 `
 
 export default StyledForm

@@ -3,11 +3,10 @@ import { Formik, Form, Field, ErrorMessage } from "formik"
 
 import FormSchema from "./FormSchema"
 import StyledForm from "./styled/StyledForm"
-import StyledInputName from "./styled/StyledInputName"
+import StyledInput from "./styled/StyledInput"
 import StyledInputLaptop from "./styled/StyledInputLaptop"
 import StyledInputRating from "./styled/StyledInputRating"
-import StyledInputComment from "./styled/StyledInputComment"
-import StyledFormButton from "./styled/StyledFormButton"
+import StyledButton from "./styled/StyledButton"
 
 class EditCafeForm extends React.Component {
 
@@ -45,7 +44,7 @@ class EditCafeForm extends React.Component {
           <StyledForm>
             <legend>Modifier {cafe.name}</legend>
 
-            <StyledInputName>
+            <StyledInput className="name">
               Nom
               <ErrorMessage name="name" component="div" />
               <Field
@@ -53,9 +52,9 @@ class EditCafeForm extends React.Component {
                 name="name"
                 onChange={this.handleChange}
               />
-            </StyledInputName>
+            </StyledInput>
 
-            <StyledInputLaptop>
+            <StyledInputLaptop className="laptop">
               <span role="img" aria-label="laptop emoji">💻</span>
               <ErrorMessage name="laptop" component="div" />
               <Field
@@ -66,7 +65,7 @@ class EditCafeForm extends React.Component {
               />
             </StyledInputLaptop>
 
-            <StyledInputRating>
+            <StyledInputRating className="rating">
               <span role="img" aria-label="star emoji">⭐</span>
               <ErrorMessage name="rating" component="div" />
               <Field
@@ -82,7 +81,7 @@ class EditCafeForm extends React.Component {
               </Field>
             </StyledInputRating>
 
-            <StyledInputComment>
+            <StyledInput className="comment">
               Commentaire
               <ErrorMessage name="comment" component="div" />
               <Field
@@ -90,11 +89,11 @@ class EditCafeForm extends React.Component {
                 name="comment"
                 onChange={this.handleChange}
               />
-            </StyledInputComment>
+            </StyledInput>
 
-            <StyledFormButton type="delete" onClick={() => this.props.deleteCafe(cafe.osm)}>
+            <StyledButton type="delete" onClick={() => this.props.deleteCafe(cafe.osm)}>
               Supprimer
-            </StyledFormButton>
+            </StyledButton>
           </StyledForm>
         </Form>
       </Formik>
