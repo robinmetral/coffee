@@ -11,6 +11,9 @@ const StyledInput = styled.label`
     padding: 4px;
     border: 2px solid darkgray;
     border-radius: 4px;
+    &:focus {
+      border-color: gray;
+    }
   }
 `
 
