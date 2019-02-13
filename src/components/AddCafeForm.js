@@ -28,9 +28,9 @@ class AddCafeForm extends Component {
         <StyledForm>
           <h2>Ajouter un café</h2>
 
-          <div>
+          <div className="form-line">
             <label>
-              Nom
+              <div>Nom</div>
               <Field
                 type="text"
                 name="name"
@@ -40,7 +40,7 @@ class AddCafeForm extends Component {
             </label>
 
             <label>
-              ID OpenStreetMap
+              <div>ID OpenStreetMap</div>
               <Field
                 type="number"
                 name="osm"
@@ -48,21 +48,18 @@ class AddCafeForm extends Component {
               />
               <ErrorMessage name="osm" component="div" />
             </label>
-          </div>
 
-          <div>
             <label>
-              <span role="img" aria-label="laptop emoji">💻</span>
+              <div><span role="img" aria-label="laptop emoji">💻</span></div>
               <Field
                 type="checkbox"
                 name="laptop"
                 value="true"
               />
-              <ErrorMessage name="laptop" component="div" />
             </label>
 
             <label>
-              <span role="img" aria-label="star emoji">⭐</span>
+              <div><span role="img" aria-label="star emoji">⭐</span></div>
               <Field component="select" name="rating">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -70,12 +67,11 @@ class AddCafeForm extends Component {
                 <option value="4">4</option>
                 <option value="5">5</option>
               </Field>
-              <ErrorMessage name="rating" component="div" />
             </label>
           </div>
 
           <label>
-            Commentaire
+            <div>Commentaire</div>
             <Field
               component="textarea"
               name="comment"
