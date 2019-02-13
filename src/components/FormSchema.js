@@ -25,8 +25,6 @@ const FormSchema = Yup.object().shape({
   osm: Yup.number()
     .moreThan(1)
     .required(),
-  laptop: Yup.boolean()
-    .required(),
   rating: Yup.number()
     .min(1)
     .max(5)
