@@ -62,7 +62,7 @@ class AddCafeForm extends Component {
             </label>
 
             <label>
-              Note
+              <span role="img" aria-label="star emoji">⭐</span>
               <Field component="select" name="rating">
                 <option value="1">1</option>
                 <option value="2">2</option>
