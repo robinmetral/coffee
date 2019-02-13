@@ -11,8 +11,6 @@ class AddForm extends Component {
         initialValues={{
           name: "",
           osm: "",
-          clara: "",
-          robin: "",
           laptop: "",
           rating: "",
           comment: "",
@@ -42,20 +40,6 @@ class AddForm extends Component {
             placeholder="ID OSM"
           />
           <ErrorMessage name="osm" component="div" />
-
-          <Field
-            type="text"
-            name="clara"
-            placeholder="Café de Clara"
-          />
-          <ErrorMessage name="clara" component="div" />
-
-          <Field
-            type="text"
-            name="robin"
-            placeholder="Café de Robin"
-          />
-          <ErrorMessage name="robin" component="div" />
 
           <Field component="select" name="laptop">
             <option value="" disabled>Laptop</option>

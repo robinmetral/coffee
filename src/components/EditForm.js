@@ -26,8 +26,6 @@ class EditForm extends React.Component {
       <Formik
         initialValues={{
           name: cafe.name,
-          clara: cafe.clara,
-          robin: cafe.robin,
           laptop: cafe.laptop,
           rating: cafe.rating,
           comment: cafe.comment
@@ -43,20 +41,6 @@ class EditForm extends React.Component {
             onChange={this.handleChange}
           />
           <ErrorMessage name="name" component="div" />
-
-          <Field
-            type="text"
-            name="clara"
-            onChange={this.handleChange}
-          />
-          <ErrorMessage name="clara" component="div" />
-
-          <Field
-            type="text"
-            name="robin"
-            onChange={this.handleChange}
-          />
-          <ErrorMessage name="robin" component="div" />
 
           <Field
             component="select"
