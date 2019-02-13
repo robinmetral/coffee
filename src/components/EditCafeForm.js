@@ -7,7 +7,9 @@ import StyledForm from "./styled/StyledForm"
 class EditCafeForm extends React.Component {
 
   handleChange = event => {
-    const { name, value } = event.target
+    const { target } = event
+    const value = target.type === "checkbox" ? target.checked : target.value
+    const { name } = target
     const updatedCafe = {
       ...this.props.cafe,
       [name]: value
