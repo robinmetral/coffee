@@ -15,10 +15,10 @@ class AddCafeForm extends Component {
       <Formik
         initialValues={{
         name: "",
-        osm: "",
         laptop: "",
         rating: "1",
         comment: "",
+        osm: "",
         }}
         validationSchema={FormSchema}
         onSubmit={(values, { setSubmitting, resetForm }) => {
@@ -43,16 +43,6 @@ class AddCafeForm extends Component {
                 placeholder="Nom"
               />
             </StyledInputName>
-
-            <StyledInputOsm>
-              ID OpenStreetMap
-              <ErrorMessage name="osm" component="div" />
-              <Field
-                type="number"
-                name="osm"
-                placeholder="ID OSM"
-              />
-            </StyledInputOsm>
 
             <StyledInputLaptop>
               <span role="img" aria-label="laptop emoji">💻</span>
@@ -85,6 +75,16 @@ class AddCafeForm extends Component {
                 placeholder="Commentaire"
               />
             </StyledInputComment>
+
+            <StyledInputOsm>
+              ID OpenStreetMap
+              <ErrorMessage name="osm" component="div" />
+              <Field
+                type="number"
+                name="osm"
+                placeholder="ID OSM"
+              />
+            </StyledInputOsm>
 
             <button type="submit" disabled={isSubmitting}>
               Ajouter
