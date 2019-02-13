@@ -5,6 +5,7 @@ const StyledForm = styled.fieldset`
   display: grid;
   grid-template-columns: 1fr auto auto;
   grid-gap: 0.5rem;
+  align-items: start;
   .comment, .osm, button {
     grid-column: 1/4;
   }
