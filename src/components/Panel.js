@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 
-import AddForm from "./AddForm"
-import EditForm from "./EditForm"
+import AddCafeForm from "./AddCafeForm"
+import EditCafeForm from "./EditCafeForm"
 import ViewCafe from "./ViewCafe"
 import PanelLayout from "../containers/PanelLayout"
 import Auth from "./Auth"
@@ -22,12 +22,12 @@ class Panel extends Component {
         {
         isLoggedIn ? (
           <>
-            <EditForm
+            <EditCafeForm
               cafe={this.props.cafe}
               updateCafe={this.props.updateCafe}
               deleteCafe={this.props.deleteCafe}
             /> 
-            <AddForm addCafe={this.props.addCafe} />
+            <AddCafeForm addCafe={this.props.addCafe} />
           </>
         ) : (
           <ViewCafe

@@ -4,7 +4,7 @@ import { Formik, Field, ErrorMessage } from "formik"
 import FormSchema from "./FormSchema"
 import StyledForm from "./styled/StyledForm"
 
-class EditForm extends React.Component {
+class EditCafeForm extends React.Component {
 
   handleChange = event => {
     const { name, value } = event.target
@@ -84,4 +84,4 @@ class EditForm extends React.Component {
   }
 }
 
-export default EditForm
+export default EditCafeForm

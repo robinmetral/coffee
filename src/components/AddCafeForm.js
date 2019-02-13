@@ -4,7 +4,7 @@ import { Formik, Field, ErrorMessage } from "formik"
 import FormSchema from "./FormSchema"
 import StyledForm from "./styled/StyledForm"
 
-class AddForm extends Component {
+class AddCafeForm extends Component {
   render() {
     return (
       <Formik
@@ -90,4 +90,4 @@ class AddForm extends Component {
   }
 }
 
-export default AddForm
+export default AddCafeForm
