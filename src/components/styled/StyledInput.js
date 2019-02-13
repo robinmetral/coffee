@@ -8,6 +8,9 @@ const StyledInput = styled.label`
     font-size: 100%; // not inherited by default
     box-sizing: border-box; // harmonize box sizing
     width: 100%;
+    padding: 4px;
+    border: 2px solid darkgray;
+    border-radius: 4px;
   }
 `
 
