@@ -7,6 +7,7 @@ const StyledInput = styled.label`
     font-family: inherit; // not inherited by default
     font-size: 100%; // not inherited by default
     box-sizing: border-box; // harmonize box sizing
+    background-color: white; // select is gray by default
     width: 100%;
     padding: 4px;
     border: 2px solid darkgray;
