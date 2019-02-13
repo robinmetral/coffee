@@ -44,28 +44,27 @@ class EditCafeForm extends React.Component {
 
             <StyledInput className="name">
               Nom
-              <ErrorMessage name="name" component="div" />
               <Field
                 type="text"
                 name="name"
                 onChange={this.handleChange}
               />
+              <ErrorMessage name="name" component="div" />
             </StyledInput>
 
             <StyledInput className="laptop">
               <span role="img" aria-label="laptop emoji">💻</span>
-              <ErrorMessage name="laptop" component="div" />
               <Field
                 type="checkbox"
                 name="laptop"
                 checked={cafe.laptop ? "checked" : ""}
                 onChange={this.handleChange}
               />
+              <ErrorMessage name="laptop" component="div" />
             </StyledInput>
 
             <StyledInput className="rating">
               <span role="img" aria-label="star emoji">⭐</span>
-              <ErrorMessage name="rating" component="div" />
               <Field
                 component="select"
                 name="rating"
@@ -77,16 +76,17 @@ class EditCafeForm extends React.Component {
                 <option value="4">4</option>
                 <option value="5">5</option>
               </Field>
+              <ErrorMessage name="rating" component="div" />
             </StyledInput>
 
             <StyledInput className="comment">
               Commentaire
-              <ErrorMessage name="comment" component="div" />
               <Field
                 component="textarea"
                 name="comment"
                 onChange={this.handleChange}
               />
+              <ErrorMessage name="comment" component="div" />
             </StyledInput>
 
             <StyledButton type="delete" onClick={() => this.props.deleteCafe(cafe.osm)}>

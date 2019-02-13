@@ -33,27 +33,26 @@ class AddCafeForm extends Component {
 
             <StyledInput className="name">
               Nom
-              <ErrorMessage name="name" component="div" />
               <Field
                 type="text"
                 name="name"
                 placeholder="Nom"
               />
+              <ErrorMessage name="name" component="div" />
             </StyledInput>
 
             <StyledInput className="laptop">
               <span role="img" aria-label="laptop emoji">💻</span>
-              <ErrorMessage name="laptop" component="div" />
               <Field
                 type="checkbox"
                 name="laptop"
                 value="true"
               />
+              <ErrorMessage name="laptop" component="div" />
             </StyledInput>
 
             <StyledInput className="rating">
               <span role="img" aria-label="star emoji">⭐</span>
-              <ErrorMessage name="rating" component="div" />
               <Field component="select" name="rating">
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -61,26 +60,27 @@ class AddCafeForm extends Component {
                 <option value="4">4</option>
                 <option value="5">5</option>
               </Field>
+              <ErrorMessage name="rating" component="div" />
             </StyledInput>
 
             <StyledInput className="comment">
               Commentaire
-              <ErrorMessage name="comment" component="div" />
               <Field
                 component="textarea"
                 name="comment"
                 placeholder="Commentaire"
               />
+              <ErrorMessage name="comment" component="div" />
             </StyledInput>
 
             <StyledInput className="osm">
               ID OpenStreetMap
-              <ErrorMessage name="osm" component="div" />
               <Field
                 type="number"
                 name="osm"
                 placeholder="ID OpenStreetMap"
               />
+              <ErrorMessage name="osm" component="div" />
             </StyledInput>
 
             <StyledButton type="submit" disabled={isSubmitting}>
