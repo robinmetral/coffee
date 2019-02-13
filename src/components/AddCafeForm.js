@@ -3,6 +3,11 @@ import { Formik, Form, Field, ErrorMessage } from "formik"
 
 import FormSchema from "./FormSchema"
 import StyledForm from "./styled/StyledForm"
+import StyledInputName from "./styled/StyledInputName"
+import StyledInputOsm from "./styled/StyledInputOsm"
+import StyledInputLaptop from "./styled/StyledInputLaptop"
+import StyledInputRating from "./styled/StyledInputRating"
+import StyledInputComment from "./styled/StyledInputComment"
 
 class AddCafeForm extends Component {
   render() {
@@ -29,38 +34,38 @@ class AddCafeForm extends Component {
           <StyledForm>
             <legend>Ajouter un café</legend>
 
-            <label>
-              <div>Nom</div>
+            <StyledInputName>
+              Nom
               <ErrorMessage name="name" component="div" />
               <Field
                 type="text"
                 name="name"
                 placeholder="Nom"
               />
-            </label>
+            </StyledInputName>
 
-            <label>
-              <div>ID OpenStreetMap</div>
+            <StyledInputOsm>
+              ID OpenStreetMap
               <ErrorMessage name="osm" component="div" />
               <Field
                 type="number"
                 name="osm"
                 placeholder="ID OSM"
               />
-            </label>
+            </StyledInputOsm>
 
-            <label>
-              <div><span role="img" aria-label="laptop emoji">💻</span></div>
+            <StyledInputLaptop>
+              <span role="img" aria-label="laptop emoji">💻</span>
               <ErrorMessage name="laptop" component="div" />
               <Field
                 type="checkbox"
                 name="laptop"
                 value="true"
               />
-            </label>
+            </StyledInputLaptop>
 
-            <label>
-              <div><span role="img" aria-label="star emoji">⭐</span></div>
+            <StyledInputRating>
+              <span role="img" aria-label="star emoji">⭐</span>
               <ErrorMessage name="rating" component="div" />
               <Field component="select" name="rating">
                 <option value="1">1</option>
@@ -69,17 +74,17 @@ class AddCafeForm extends Component {
                 <option value="4">4</option>
                 <option value="5">5</option>
               </Field>
-            </label>
+            </StyledInputRating>
 
-            <label>
-              <div>Commentaire</div>
+            <StyledInputComment>
+              Commentaire
               <ErrorMessage name="comment" component="div" />
               <Field
                 component="textarea"
                 name="comment"
                 placeholder="Commentaire"
               />
-            </label>
+            </StyledInputComment>
 
             <button type="submit" disabled={isSubmitting}>
               Ajouter
