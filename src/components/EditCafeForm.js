@@ -54,6 +54,7 @@ class EditCafeForm extends React.Component {
             <Field
               type="checkbox"
               name="laptop"
+              checked={cafe.laptop ? "checked" : ""}
               onChange={this.handleChange}
             />
             <ErrorMessage name="laptop" component="div" />
