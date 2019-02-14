@@ -5,6 +5,7 @@ import FormSchema from "./FormSchema"
 import StyledForm from "./styled/StyledForm"
 import StyledInput from "./styled/StyledInput"
 import StyledButton from "./styled/StyledButton"
+import Heading from "./styled/Heading"
 
 class EditCafeForm extends React.Component {
 
@@ -40,7 +41,7 @@ class EditCafeForm extends React.Component {
       >
         <Form>
           <StyledForm>
-            <legend>Modifier {cafe.name}</legend>
+            <legend><Heading>Modifier {cafe.name}</Heading></legend>
 
             <StyledInput className="name">
               Nom

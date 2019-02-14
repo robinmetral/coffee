@@ -5,6 +5,7 @@ import FormSchema from "./FormSchema"
 import StyledForm from "./styled/StyledForm"
 import StyledInput from "./styled/StyledInput"
 import StyledButton from "./styled/StyledButton"
+import Heading from "./styled/Heading.js"
 
 class AddCafeForm extends Component {
   render() {
@@ -29,7 +30,7 @@ class AddCafeForm extends Component {
         {({ isSubmitting }) => (
         <Form>
           <StyledForm>
-            <legend>Ajouter un café</legend>
+            <legend><Heading>Ajouter un café</Heading></legend>
 
             <StyledInput className="name">
               Nom
