@@ -15,6 +15,7 @@ class ViewCafe extends Component {
       <CafeLayout>
         <Heading>
           { name }
+          <br />
           { [...Array(rating)].map((star, key) =>
             <span role="img" aria-label="star emoji" key={key}>&#x2b50;</span>
           )}
