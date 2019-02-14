@@ -3,6 +3,7 @@ import styled from "styled-components"
 const StyledForm = styled.fieldset`
   border: none;
   margin: 1rem;
+  padding: 0;
   display: grid;
   grid-template-columns: 1fr auto auto;
   grid-gap: 0.5rem;
