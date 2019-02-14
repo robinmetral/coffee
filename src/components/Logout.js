@@ -1,7 +1,9 @@
 import React from "react"
 
+import StyledButton from "./styled/StyledButton"
+
 const Logout = (props) => (
-  <button onClick={props.logout}>Déconnexion</button>
+  <StyledButton onClick={props.logout}>Déconnexion</StyledButton>
 )
 
 export default Logout

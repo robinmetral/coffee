@@ -1,7 +1,9 @@
 import React from "react"
 
+import StyledButton from "./styled/StyledButton"
+
 const Login = (props) => (
-  <button onClick={() => props.login()}>Connexion</button>
+  <StyledButton onClick={() => props.login()}>Connexion</StyledButton>
 )
 
 export default Login
