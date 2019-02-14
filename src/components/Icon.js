@@ -1,28 +1,33 @@
 import React from "react"
 import styled from "styled-components"
 
-const StyledIcon = styled.button`
+const Button = styled.button`
   background: none;
   border: none;
-  font-size: 2rem;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+`
+
+const Emoji = styled.span`
+  font-size: 2rem;
   &:hover {
     filter: brightness(75%);
   }
 `
 
 const Icon = (props) => (
-  <StyledIcon
-    onClick={props.action}
-    title={props.title}
+  <Button
+    onClick={ props.action }
   >
-    <span
+    <Emoji
       role="img"
-      aria-label={`${props.description} emoji`}
+      aria-label={ `${ props.description } emoji` }
     >
-      {props.code}
-    </span>
-  </StyledIcon>
+      { props.code }
+    </Emoji>
+    { props.title }
+  </Button>
 )
 
 export default Icon
