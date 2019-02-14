@@ -14,6 +14,9 @@ const StyledForm = styled.fieldset`
   .laptop, .rating {
     justify-items: center;
   }
+  select {
+    text-align: center;
+  }
 `
 
 export default StyledForm
