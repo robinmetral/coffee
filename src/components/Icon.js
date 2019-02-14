@@ -5,6 +5,7 @@ const StyledIcon = styled.button`
   background: none;
   border: none;
   font-size: 2rem;
+  cursor: pointer;
   &:hover {
     filter: brightness(75%);
   }
