@@ -5,6 +5,7 @@ import CafeLayout from "./styled/CafeLayout"
 import Heading from "./styled/Heading"
 
 const IconsList = styled.ul`
+  border-top: 1px solid lightgray;
   list-style-type: none;
   padding: 0;
   display: flex;
@@ -20,6 +21,13 @@ const Icon = styled.li`
     content: "${props => props.code}";
     margin-right: 1rem;
   }
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 `
 
 class ViewCafe extends Component {
@@ -32,13 +40,10 @@ class ViewCafe extends Component {
     const { name, rating, comment, laptop, hours, url, osm } = this.props.cafe
     return (
       <CafeLayout>
-        <Heading>
-          { name }
-          <br />
-          { [...Array(rating)].map((star, key) =>
-            <span role="img" aria-label="star emoji" key={key}>&#x2b50;</span>
-          )}
-        </Heading>
+        <Heading>{ name }</Heading>
+        { [...Array(rating)].map((star, key) =>
+          <span role="img" aria-label="star emoji" key={key}>&#x2b50;</span>
+        )}
         <p>{ comment }</p>
         <IconsList>
           { laptop && (
