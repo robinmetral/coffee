@@ -1,8 +1,18 @@
 import React, { Component } from "react"
+import styled from "styled-components"
 
 import CafeLayout from "./styled/CafeLayout"
 import Heading from "./styled/Heading"
 import Icon from "./Icon"
+
+const IconsList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  li {
+    margin-right: 0.5rem;
+  }
+`
 
 class ViewCafe extends Component {
   render() {
@@ -22,7 +32,7 @@ class ViewCafe extends Component {
           )}
         </Heading>
         <p>{ comment }</p>
-        <ul>
+        <IconsList>
           { laptop && (
           <li>
             <Icon
@@ -50,8 +60,8 @@ class ViewCafe extends Component {
               url={`https://www.openstreetmap.org/node/${ osm }`}
             />
           </li>
-          <li>Heures d'ouverture : { hours }</li>
-        </ul>
+        </IconsList>
+        { hours }
       </CafeLayout>
     )
   }
