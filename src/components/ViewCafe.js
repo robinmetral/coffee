@@ -3,14 +3,30 @@ import styled from "styled-components"
 
 import CafeLayout from "./styled/CafeLayout"
 import Heading from "./styled/Heading"
-import Icon from "./Icon"
 
 const IconsList = styled.ul`
+  border-top: 1px solid lightgray;
   list-style-type: none;
   padding: 0;
   display: flex;
+  flex-direction: column;
   li {
-    margin-right: 0.5rem;
+    display: flex;
+  }
+`
+
+const Icon = styled.li`
+  margin-top: 0.5rem;
+  &::before {
+    content: "${props => props.code}";
+    margin-right: 1rem;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 `
 
@@ -24,50 +40,28 @@ class ViewCafe extends Component {
     const { name, rating, comment, laptop, hours, url, osm } = this.props.cafe
     return (
       <CafeLayout>
-        <Heading>
-          { name }
-          <br />
-          { [...Array(rating)].map((star, key) =>
-            <span role="img" aria-label="star emoji" key={key}>&#x2b50;</span>
-          )}
-        </Heading>
+        <Heading>{ name }</Heading>
+        { [...Array(rating)].map((star, key) =>
+          <span role="img" aria-label="star emoji" key={key}>&#x2b50;</span>
+        )}
         <p>{ comment }</p>
         <IconsList>
           { laptop && (
-          <li>
-            <Icon
-              code="&#x1f4bb;"
-              description="laptop computer"
-              title="Bien pour travailler"
-            />
-          </li>
+          <Icon code="\01F4BB">
+            Recommandé pour travailler
+          </Icon>
           ) }
           { url && (
-          <li>
-            <Icon
-              code="&#x1f517;"
-              description="link"
-              title="Site Web"
-              url={url}
-            />
-          </li>
+          <Icon code="\01F517">
+            <a href={ url }>{ url }</a>
+          </Icon>
           ) }
-          <li>
-            <Icon
-              code="&#x1f30d;"
-              description="globe showing Europe-Africa"
-              title="OpenStreetMap"
-              url={`https://www.openstreetmap.org/node/${ osm }`}
-            />
-          </li>
-          <li>
-            <Icon
-              code="&#x1f557;"
-              description="eight o'clock"
-              title={hours}
-              url={`http://projets.pavie.info/yohours/?oh=${ hours }`}
-            />
-          </li>
+          <Icon code="\01f30d">
+            <a href={`https://www.openstreetmap.org/node/${ osm }`}>Ouvrir dans OpenStreetMap</a>
+          </Icon>
+          <Icon code="\01f557">
+            { hours }
+          </Icon>
         </IconsList>
       </CafeLayout>
     )

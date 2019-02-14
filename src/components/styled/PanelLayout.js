@@ -12,6 +12,7 @@ const Container = styled.div`
   right: -38vw;
   transition: transform ease 500ms;
   transform: ${props => (props.panel === "open") ? "translate3d(-38vw, 0, 0)" : "none"};
+  box-shadow: -5px 0 25px 0 rgba(0, 0, 0, 0.3);
   // children
   display: grid;
   grid-template-columns: 1fr auto;

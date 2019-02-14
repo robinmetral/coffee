@@ -34,7 +34,7 @@ class Panel extends Component {
           <Icon
             code="&#x1f449;"
             description="backhand index pointing right"
-            title="close"
+            title="Fermer"
             action={this.props.togglePanel}
           />
           <Auth

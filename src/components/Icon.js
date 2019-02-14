@@ -1,69 +1,35 @@
-import React, { Component } from "react"
+import React from "react"
 import styled from "styled-components"
 
 const Button = styled.button`
   background: none;
   border: none;
   cursor: pointer;
-  &:hover {
-    filter: brightness(75%);
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 1rem;
 `
 
-const Link = styled.a`
-  text-decoration: none;
-  &:hover {
-    filter: brightness(75%);
-  }
-`
-
-const StyledEmoji = styled.span`
+const Emoji = styled.span`
   font-size: 2rem;
+  &:hover {
+    filter: brightness(75%);
+  }
 `
 
-const Emoji = (props) => (
-  <StyledEmoji
-    role="img"
-    title={ props.title }
-    aria-label={`${ props.description } emoji`}
+const Icon = (props) => (
+  <Button
+    onClick={ props.action }
   >
-    { props.code }
-  </StyledEmoji>
+    <Emoji
+      role="img"
+      aria-label={ `${ props.description } emoji` }
+    >
+      { props.code }
+    </Emoji>
+    { props.title }
+  </Button>
 )
-
-class Icon extends Component {
-  render() {
-
-    // desctructure
-    const { code, description, title, action, url } = this.props
-
-    // if button
-    if (action) {
-      return (
-        <Button
-          onClick={action}
-          title={title}
-        >
-          <Emoji code={code} description={description} />
-        </Button>
-        )
-    }
-
-    // if link
-    if (url) {
-      return (
-        <Link
-          href={url}
-          title={title}
-        >
-          <Emoji code={code} description={description} />
-        </Link>
-        )
-    }
-
-    // otherwise render static icon
-    return <Emoji code={code} description={description} title={title} />
-  }
-}
 
 export default Icon
