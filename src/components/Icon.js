@@ -8,6 +8,7 @@ const Button = styled.button`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  margin-bottom: 1rem;
 `
 
 const Emoji = styled.span`
