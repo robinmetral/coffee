@@ -9,8 +9,15 @@ const IconsList = styled.ul`
   list-style-type: none;
   padding: 0;
   display: flex;
+  flex-direction: column;
   li {
-    margin-right: 0.5rem;
+    display: flex;
+  }
+`
+
+const Label = styled.span`
+  a {
+    text-decoration: none;
   }
 `
 
@@ -40,6 +47,7 @@ class ViewCafe extends Component {
               description="laptop computer"
               title="Bien pour travailler"
             />
+            <Label>Recommandé pour travailler</Label>
           </li>
           ) }
           { url && (
@@ -48,8 +56,9 @@ class ViewCafe extends Component {
               code="&#x1f517;"
               description="link"
               title="Site Web"
-              url={url}
+              url={ url }
             />
+            <Label><a href={ url }>{ url }</a></Label>
           </li>
           ) }
           <li>
@@ -59,6 +68,7 @@ class ViewCafe extends Component {
               title="OpenStreetMap"
               url={`https://www.openstreetmap.org/node/${ osm }`}
             />
+            <Label><a href={`https://www.openstreetmap.org/node/${ osm }`}>Ouvrir dans OpenStreetMap</a></Label>
           </li>
           <li>
             <Icon
@@ -67,6 +77,7 @@ class ViewCafe extends Component {
               title={hours}
               url={`http://projets.pavie.info/yohours/?oh=${ hours }`}
             />
+            <Label>{ hours }</Label>
           </li>
         </IconsList>
       </CafeLayout>
