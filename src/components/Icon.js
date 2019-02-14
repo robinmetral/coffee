@@ -7,6 +7,7 @@ const Button = styled.button`
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
 `
 
 const Emoji = styled.span`
