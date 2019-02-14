@@ -3,7 +3,6 @@ import styled from "styled-components"
 
 import CafeLayout from "./styled/CafeLayout"
 import Heading from "./styled/Heading"
-import Icon from "./Icon"
 
 const IconsList = styled.ul`
   list-style-type: none;
@@ -15,9 +14,10 @@ const IconsList = styled.ul`
   }
 `
 
-const Label = styled.span`
-  a {
-    text-decoration: none;
+const Icon = styled.li`
+  &::before {
+    content: "${props => props.code}";
+    margin-right: 0.5rem;
   }
 `
 
@@ -41,44 +41,21 @@ class ViewCafe extends Component {
         <p>{ comment }</p>
         <IconsList>
           { laptop && (
-          <li>
-            <Icon
-              code="&#x1f4bb;"
-              description="laptop computer"
-              title="Bien pour travailler"
-            />
-            <Label>Recommandé pour travailler</Label>
-          </li>
+          <Icon code="\01F4BB">
+            Recommandé pour travailler
+          </Icon>
           ) }
           { url && (
-          <li>
-            <Icon
-              code="&#x1f517;"
-              description="link"
-              title="Site Web"
-              url={ url }
-            />
-            <Label><a href={ url }>{ url }</a></Label>
-          </li>
+          <Icon code="\01F517">
+            <a href={ url }>{ url }</a>
+          </Icon>
           ) }
-          <li>
-            <Icon
-              code="&#x1f30d;"
-              description="globe showing Europe-Africa"
-              title="OpenStreetMap"
-              url={`https://www.openstreetmap.org/node/${ osm }`}
-            />
-            <Label><a href={`https://www.openstreetmap.org/node/${ osm }`}>Ouvrir dans OpenStreetMap</a></Label>
-          </li>
-          <li>
-            <Icon
-              code="&#x1f557;"
-              description="eight o'clock"
-              title={hours}
-              url={`http://projets.pavie.info/yohours/?oh=${ hours }`}
-            />
-            <Label>{ hours }</Label>
-          </li>
+          <Icon code="\01f30d">
+            <a href={`https://www.openstreetmap.org/node/${ osm }`}>Ouvrir dans OpenStreetMap</a>
+          </Icon>
+          <Icon code="\01f557">
+            { hours }
+          </Icon>
         </IconsList>
       </CafeLayout>
     )
