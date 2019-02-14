@@ -33,7 +33,7 @@ const StyledInput = styled.label`
       width: 31px;
       text-align: center;
       &::before {
-        content: "✗";
+        content: "\00a0";
       }
     }
     &:checked+span::before {
