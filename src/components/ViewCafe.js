@@ -10,11 +10,15 @@ class ViewCafe extends Component {
       return <p>Cliquez sur un grain de café pour voir ses détails</p>
       }
 
-    // if a cafe has been clicked, render
     const { name, rating, comment, laptop, hours, url, osm } = this.props.cafe
     return (
       <CafeLayout>
-        <Heading>{ name } &middot; { rating }</Heading>
+        <Heading>
+          { name }
+          { [...Array(rating)].map((star, key) =>
+            <span role="img" aria-label="star emoji" key={key}>&#x2b50;</span>
+          )}
+        </Heading>
         <p>{ comment }</p>
         <ul>
           <li>{ laptop ? "Bien pour les " : "Pas top pour les " }laptops</li>
