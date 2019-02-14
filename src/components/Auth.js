@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 
-import Login from "./Login"
-import Logout from "./Logout"
+import Icon from "./Icon"
 
 class Auth extends Component {
   render() {
@@ -9,23 +8,29 @@ class Auth extends Component {
     // if not logged in
     if(!this.props.uid) {
       return (
-        <Login login={this.props.login} />
+        <Icon
+          code="&#x1f527;"
+          description="wrench"
+          title="login"
+          action={this.props.login}
+        />
       )
     }
 
     // if not owner
     if(this.props.uid !== this.props.owner) {
-      console.log("Vous n'avez pas la permission de modifier les cafés")
-      return (
-        <div>
-          <Logout logout={this.props.logout} />
-        </div>
-      )
+      alert("Vous n'avez pas la permission de modifier les cafés")
+      this.props.logout()
     }
 
-    // if owner
+    // if logged in
     return (
-      <Logout logout={this.props.logout} />
+      <Icon
+        code="&#x1f512;"
+        description="locked"
+        title="logout"
+        action={this.props.logout}
+      />
     )
   }
 }

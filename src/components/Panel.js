@@ -1,9 +1,11 @@
 import React, { Component } from "react"
 
-import AddForm from "./AddForm"
-import EditForm from "./EditForm"
+import AddCafeForm from "./AddCafeForm"
+import EditCafeForm from "./EditCafeForm"
 import ViewCafe from "./ViewCafe"
-import PanelLayout from "../containers/PanelLayout"
+import PanelLayout from "./styled/PanelLayout"
+import PanelIcons from "./styled/PanelIcons"
+import Icon from "./Icon"
 import Auth from "./Auth"
 
 class Panel extends Component {
@@ -13,29 +15,35 @@ class Panel extends Component {
       <PanelLayout
         panel={this.props.panel}
       >
-        <Auth
-          uid={this.props.uid}
-          owner={this.props.owner}
-          login={this.props.login}
-          logout={this.props.logout}
-        />
-        {
-        isLoggedIn ? (
-          <>
-            <EditForm
-              cafe={this.props.cafe}
-              updateCafe={this.props.updateCafe}
-              deleteCafe={this.props.deleteCafe}
-            /> 
-            <AddForm addCafe={this.props.addCafe} />
-          </>
+        { isLoggedIn ? (
+        <>
+          <EditCafeForm
+            cafe={this.props.cafe}
+            updateCafe={this.props.updateCafe}
+            deleteCafe={this.props.deleteCafe}
+          /> 
+          <AddCafeForm addCafe={this.props.addCafe} />
+        </>
         ) : (
           <ViewCafe
             cafe={this.props.cafe}
             clicked={this.props.clicked}
           />
-        )
-        }
+        ) }
+        <PanelIcons>
+          <Icon
+            code="&#x1f449;"
+            description="backhand index pointing right"
+            title="close"
+            action={this.props.togglePanel}
+          />
+          <Auth
+            uid={this.props.uid}
+            owner={this.props.owner}
+            login={this.props.login}
+            logout={this.props.logout}
+          />
+        </PanelIcons>
       </PanelLayout>
     )
   }

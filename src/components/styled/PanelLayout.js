@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
+  // position and animation
   width: 38vw;
   height: 100vh;
   z-index: 1000;
@@ -11,7 +12,9 @@ const Container = styled.div`
   right: -38vw;
   transition: transform ease 500ms;
   transform: ${props => (props.panel === "open") ? "translate3d(-38vw, 0, 0)" : "none"};
-  padding: 1rem;
+  // children
+  display: grid;
+  grid-template-columns: 1fr auto;
 `
 
 const PanelLayout = (props) => (

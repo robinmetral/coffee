@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import * as Yup from "yup"
 
 Yup.setLocale({
@@ -22,8 +24,6 @@ const FormSchema = Yup.object().shape({
     .required(),
   osm: Yup.number()
     .moreThan(1)
-    .required(),
-  laptop: Yup.boolean()
     .required(),
   rating: Yup.number()
     .min(1)

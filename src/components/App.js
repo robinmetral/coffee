@@ -3,7 +3,7 @@ import firebase from "firebase/app"
 import "firebase/auth"
 
 import base, { firebaseApp } from "../base"
-import Layout from "../containers/Layout"
+import Layout from "./Layout"
 import Map from "./Map"
 import Panel from "./Panel"
 
@@ -83,6 +83,8 @@ class App extends Component {
     cafe.url = tags.website ? tags.website : tags.facebook ? tags.facebook : ""
     // add current date to cafe
     cafe.date = Date.now()
+    // convert rating value to an integer
+    cafe.rating = Number(cafe.rating)
     // take a copy of state
     const cafes = { ...this.state.cafes }
     // add new cafe
@@ -160,6 +162,7 @@ class App extends Component {
           login={this.login}
           logout={this.logout}
           panel={this.state.panel}
+          togglePanel={this.togglePanel}
         />
       </Layout>
     )
