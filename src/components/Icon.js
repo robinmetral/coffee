@@ -2,6 +2,12 @@ import React from "react"
 import styled from "styled-components"
 
 const StyledIcon = styled.button`
+  background: none;
+  border: none;
+  font-size: 2rem;
+  &:hover {
+    filter: brightness(75%);
+  }
 `
 
 const Icon = (props) => (
