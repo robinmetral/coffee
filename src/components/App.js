@@ -3,7 +3,7 @@ import firebase from "firebase/app"
 import "firebase/auth"
 
 import base, { firebaseApp } from "../base"
-import Layout from "../containers/Layout"
+import Layout from "./Layout"
 import Map from "./Map"
 import Panel from "./Panel"
 

@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import StyledButton from "./styled/StyledButton"
+import StyledIcon from "./styled/StyledIcon"
 
 class Auth extends Component {
   render() {
@@ -8,7 +8,7 @@ class Auth extends Component {
     // if not logged in
     if(!this.props.uid) {
       return (
-        <StyledButton onClick={this.props.login}>Connexion</StyledButton>
+        <StyledIcon onClick={this.props.login}>&#x1f527;</StyledIcon>
       )
     }
 
@@ -20,7 +20,7 @@ class Auth extends Component {
 
     // if logged in
     return (
-      <StyledButton onClick={this.props.logout}>Déconnexion</StyledButton>
+      <StyledIcon onClick={this.props.logout}>Déconnexion</StyledIcon>
     )
   }
 }

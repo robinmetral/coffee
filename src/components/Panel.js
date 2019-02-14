@@ -3,7 +3,7 @@ import React, { Component } from "react"
 import AddCafeForm from "./AddCafeForm"
 import EditCafeForm from "./EditCafeForm"
 import ViewCafe from "./ViewCafe"
-import PanelLayout from "../containers/PanelLayout"
+import PanelLayout from "./PanelLayout"
 import Auth from "./Auth"
 
 class Panel extends Component {
