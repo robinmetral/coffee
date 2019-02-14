@@ -1,11 +1,14 @@
 import React from "react"
 import styled, { createGlobalStyle } from "styled-components"
 
+require("typeface-montserrat")
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
     overflow: hidden;
+    font-family: "Montserrat", sans-serif;
   }
 
   // Leaflet styles
