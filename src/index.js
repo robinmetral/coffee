@@ -1,8 +1,9 @@
 import React from "react"
 import { render } from "react-dom"
-import Router from "./components/Router"
 import * as serviceWorker from "./serviceWorker"
 
-render(<Router />, document.getElementById("root"))
+import App from "./components/App"
+
+render(<App />, document.getElementById("root"))
 
 serviceWorker.register()
