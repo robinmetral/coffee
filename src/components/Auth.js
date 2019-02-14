@@ -11,7 +11,7 @@ class Auth extends Component {
         <Icon
           code="&#x1f527;"
           description="wrench"
-          title="login"
+          title="Login"
           action={this.props.login}
         />
       )
@@ -28,7 +28,7 @@ class Auth extends Component {
       <Icon
         code="&#x1f512;"
         description="locked"
-        title="logout"
+        title="Logout"
         action={this.props.logout}
       />
     )
