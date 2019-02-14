@@ -8,8 +8,8 @@ class ViewCafe extends Component {
   render() {
     // is no cafe is passed, no cafe has been clicked
     if(!this.props.cafe) {
-      return <p>Cliquez sur un grain de café pour voir ses détails</p>
-      }
+      return null
+    }
 
     const { name, rating, comment, laptop, hours, url, osm } = this.props.cafe
     return (
