@@ -15,9 +15,10 @@ const IconsList = styled.ul`
 `
 
 const Icon = styled.li`
+  margin-top: 0.5rem;
   &::before {
     content: "${props => props.code}";
-    margin-right: 0.5rem;
+    margin-right: 1rem;
   }
 `
 
