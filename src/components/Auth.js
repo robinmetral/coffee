@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import StyledIcon from "./styled/StyledIcon"
+import Icon from "./Icon"
 
 class Auth extends Component {
   render() {
@@ -8,7 +8,12 @@ class Auth extends Component {
     // if not logged in
     if(!this.props.uid) {
       return (
-        <StyledIcon onClick={this.props.login}>&#x1f527;</StyledIcon>
+        <Icon
+          code="&#x1f527;"
+          description="wrench"
+          title="login"
+          action={this.props.login}
+        />
       )
     }
 
@@ -20,7 +25,12 @@ class Auth extends Component {
 
     // if logged in
     return (
-      <StyledIcon onClick={this.props.logout}>Déconnexion</StyledIcon>
+      <Icon
+        code="&#x1f512;"
+        description="locked"
+        title="logout"
+        action={this.props.logout}
+      />
     )
   }
 }

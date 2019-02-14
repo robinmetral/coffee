@@ -160,6 +160,7 @@ class App extends Component {
           login={this.login}
           logout={this.logout}
           panel={this.state.panel}
+          togglePanel={this.togglePanel}
         />
       </Layout>
     )
