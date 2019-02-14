@@ -43,7 +43,7 @@ class AddCafeForm extends Component {
             </StyledInput>
 
             <StyledInput className="laptop">
-              <span role="img" aria-label="laptop emoji">💻</span>
+              <span role="img" aria-label="laptop emoji">&#x1f4bb;</span>
               <Field
                 type="checkbox"
                 name="laptop"
@@ -54,7 +54,7 @@ class AddCafeForm extends Component {
             </StyledInput>
 
             <StyledInput className="rating">
-              <span role="img" aria-label="star emoji">⭐</span>
+              <span role="img" aria-label="star emoji">&#x2b50;</span>
               <Field component="select" name="rating">
                 <option value="1">1</option>
                 <option value="2">2</option>
