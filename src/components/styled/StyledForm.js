@@ -9,6 +9,9 @@ const StyledForm = styled.fieldset`
   .comment, .osm, button {
     grid-column: 1/4;
   }
+  .laptop, .rating {
+    justify-items: center;
+  }
 `
 
 export default StyledForm
