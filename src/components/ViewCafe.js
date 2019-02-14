@@ -2,6 +2,7 @@ import React, { Component } from "react"
 
 import CafeLayout from "./styled/CafeLayout"
 import Heading from "./styled/Heading"
+import Icon from "./Icon"
 
 class ViewCafe extends Component {
   render() {
@@ -22,10 +23,35 @@ class ViewCafe extends Component {
         </Heading>
         <p>{ comment }</p>
         <ul>
-          <li>{ laptop ? "Bien pour les " : "Pas top pour les " }laptops</li>
+          { laptop && (
+          <li>
+            <Icon
+              code="&#x1f4bb;"
+              description="laptop computer"
+              title="good for laptops"
+            />
+          </li>
+          ) }
+          { url && (
+          <li>
+            <Icon
+              code="&#x1f517;"
+              description="link"
+              title="website"
+              url={url}
+            />
+          </li>
+          ) }
+          <li>
+            <Icon
+              code="&#x1f30d;"
+              description="globe showing Europe-Africa"
+              title="openstreetmap"
+              url={`https://www.openstreetmap.org/node/${ osm }`}
+            />
+          </li>
           <li>Heures d'ouverture : { hours }</li>
         </ul>
-        <p><a href={ url }>Site web</a> &middot; <a href={`https://www.openstreetmap.org/node/${ osm }`}>OpenStreetMap</a></p>
       </CafeLayout>
     )
   }
