@@ -38,7 +38,7 @@ class ViewCafe extends Component {
             <Icon
               code="&#x1f4bb;"
               description="laptop computer"
-              title="good for laptops"
+              title="Bien pour travailler"
             />
           </li>
           ) }
@@ -47,7 +47,7 @@ class ViewCafe extends Component {
             <Icon
               code="&#x1f517;"
               description="link"
-              title="website"
+              title="Site Web"
               url={url}
             />
           </li>
@@ -56,12 +56,19 @@ class ViewCafe extends Component {
             <Icon
               code="&#x1f30d;"
               description="globe showing Europe-Africa"
-              title="openstreetmap"
+              title="OpenStreetMap"
               url={`https://www.openstreetmap.org/node/${ osm }`}
             />
           </li>
+          <li>
+            <Icon
+              code="&#x1f557;"
+              description="eight o'clock"
+              title={hours}
+              url={`http://projets.pavie.info/yohours/?oh=${ hours }`}
+            />
+          </li>
         </IconsList>
-        { hours }
       </CafeLayout>
     )
   }
