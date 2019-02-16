@@ -1,6 +1,20 @@
 {
   "cafes": [
     {
+      "name": "Godshot",
+      "laptop": true,
+      "osm": 1964235517,
+      "rating": 3,
+      "comment": "Très bon café à Prenzlauer Berg, pas trop loin non plus de la maison. L'espace est sur deux étages un peu ouverts, difficile à expliquer, mais sympa ! On n'y a pas travaillé mais vu pas mal de gens sur un laptop. Si il y a du wifi c'est bon, mais pas sur toutes les tables. Cours de barista aussi."
+    },
+    {
+      "name": "Kaffeekirsche",
+      "laptop": false,
+      "osm": 5180183156,
+      "rating": 3,
+      "comment": "Très bon café torréfié sur place. Malheureusement pas de wifi malgré la tolérance à l'utilisation de laptops. Les places près de la fenêtre ont l'air sympa et lumineuses, un peu plus sombre à l'arrière où on était assis, faute de places disponibles. Terrasse probablement sympa en été, à re-tester !"
+    },
+    {
       "name": "Zweitausend",
       "laptop": true,
       "osm": 6268406951,
