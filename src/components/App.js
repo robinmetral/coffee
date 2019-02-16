@@ -7,7 +7,7 @@ import Layout from "./Layout"
 import Map from "./Map"
 import Panel from "./Panel"
 
-import cafesbackup from "../../public/cafes.json"
+import cafesbackup from "../cafes.json"
 
 class App extends Component {
 
