@@ -7,8 +7,6 @@ import Layout from "./Layout"
 import Map from "./Map"
 import Panel from "./Panel"
 
-import cafesbackup from "../cafes.json"
-
 class App extends Component {
 
   // initialize state
@@ -45,6 +43,11 @@ class App extends Component {
     base.removeBinding(this.ref);
   }
 
+  /* MIGRATED FEB 16TH 2019
+  // a backup of my previous data in json was imported
+  // as cafesbackup and migrated to firebase
+  // see commit 77f43d9c464c5e615241217a7f22bd8c7a1395b9
+  // and github issue #36
   importCafes = async () => {
     // sort cafes by ascending node id
     const data = cafesbackup.cafes.sort( (a, b) => (a.osm - b.osm) )
@@ -79,6 +82,7 @@ class App extends Component {
       })
     }
   }
+  */
 
   handleClick = event => {
     // find cafe is state that was clicked based on coordinates
@@ -200,7 +204,6 @@ class App extends Component {
           logout={this.logout}
           panel={this.state.panel}
           togglePanel={this.togglePanel}
-          importCafes={this.importCafes}
         />
       </Layout>
       )
