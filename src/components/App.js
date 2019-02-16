@@ -46,7 +46,9 @@ class App extends Component {
   }
 
   importCafes = () => {
-    console.log(cafesbackup)
+    cafesbackup.cafes.forEach( cafe => {
+      console.log(cafe.name)
+    })
   }
 
   handleClick = event => {
