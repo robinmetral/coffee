@@ -1,564 +1,564 @@
 {
-    "cafes": [
-     {
-        "name": "Zweitausend",
-        "laptop": true,
-        "osm": 6268406951,
-        "rating": 2,
-        "comment": "Café caché au fond d'une ruelle dans un quartier plutôt résidentiel. Comment on est tombés dessus ? On l'a vu sur une carte de Berlin, \"Oooh! Berlin\", et on a décidé d'essayer. Une fille travaillait sur son ordi donc c'est possible, et même assez grand, mais au fond c'est plutôt la cafet' rattachée à l'école de danse dans laquelle elle se trouve. Pas de filtre, et flat white franchement pas extra. Musique pas super pour s'installer."
-     },
-     {
-        "name": "19grams Schlesi",
-        "laptop": false,
-        "osm": 6268406950,
-        "rating": 2,
-        "comment": "Très bon café comme d'habitude dans les branches de Tres Cabezas, mais celle-ci est minuscule, avec à peine quelques places à l'intérieur et deux petites tables dehors. Super pour une pause café au soleil pendant une balade street art le long du mur et dans Kreuzberg/Friedrichshain, mais impossible de venir travailler ici. Même pas de toilettes."
-     },
-     {
-        "name": "% Arabica",
-        "laptop": true,
-        "osm": 6261939658,
-        "rating": 5,
-        "comment": "Très grande branche de la chaîne de cafés de spécialité de Kyoto. Super bon latte et filtre à la Chemex (mais avec filtre en tissu, pas les filtres Chemex papier). Lumineux, minimaliste, espacé, wifi, parfait pour travailler. Et il n'y a personne, sûrement parce que c'est encore peu connu (premier café visité à Berlin qui n'était pas encore sur OSM). Dans quelques mois, ce sera toujours plein !"
-     },
-     {
-        "name": "Fräulein Wild",
-        "laptop": true,
-        "osm": 1342620541,
-        "rating": 3,
-        "comment": "Espace lumineux à cheval entre un coffee shop et un salon de thé. Mobilier mismatch et chaleureux, super chocolat chaud et cinq chau lattes différents. Pas essayé le café, mais pas de filtre. Wifi pour 1h uniquement, mais au moins il y en a (pas de wifi à la porte à côté à Nano)."
-     },
-     {
-        "name": "Coffee Profilers",
-        "laptop": true,
-        "osm": 4320869993,
-        "rating": 4,
-        "comment": "Café de spécialité sympa sur la Karl-Marx-Allee. Grande table haut au fond à partager entre laptops, service adorable, bon café filtre et très bon cappuccino. Seul bémol, un wifi limité à une heure. C'est court."
-     },
-     {
-        "name": "Five Elephant",
-        "laptop": false,
-        "osm": 2628471058,
-        "rating": 2,
-        "comment": "Première branche de Five Elephant à Berlin, maintenant présente aussi à Mitte. Espace sympa et bon, mais pas de wifi :( et très (trop) populaire, peut-être parce qu'on dit que c'est le meilleur café de Belrin (en tout cas c'est ce que notre coloc nous a dit). Nous on préfère le café à Tres Cabezas, Populus, et ailleurs !"
-     },
-     {
-        "name": "The Barn Mitte",
-        "laptop": false,
-        "osm": 3868790051,
-        "rating": 3,
-        "comment": "Un point pour être la toute première branche de The Barn, café de spécialité emblématique en Europe, que j'avais visitée en 2014, pendant un voyage dans le nord de l'Europe qui a marqué le début de ma passion pour le café. Sinon c'est assez petit et très connu, donc très plein. Théoriquement quelques places pour laptops contre les fenêtres, mais il ne faut pas compter dessus. Le café est bon mais cher, et plus aussi hors du commun qu'à l'époque."
-     },
-     {
-        "name": "Ben Rahim",
-        "laptop": false,
-        "osm": 3868790050,
-        "rating": 3,
-        "comment": "Tout petit café de spécialité qui offre aussi une méthode ibrik (pas essayé). Café torréfié par Square Mile (Londres) lors de notre visite. Dissimulé dans les Hackesche Hofe, c'est un super endroit pour s'arrêter prendre un café. Trop petit par contre pour y sortir un laptop."
-     },
-     {
-        "name": "19grams Alex",
-        "laptop": true,
-        "osm": 5827057077,
-        "rating": 4,
-        "comment": "19grams est le nom donné aux ventures de Tres Cabezas à Friedrichshain. Plus cher ici à Mitte qu'à l'est, mais raisonnable comparé aux autres prix du quartier, et à notre goût le meilleur café (testé le même jour que The Barn et Ben Rahim pas loin). Excellent batch brew. Assez brand, plutôt rempli le dimanche de notre visite, mais probablement possible d'y travailler contre les fenêtres sur les hauts tabourets."
-     },
-     {
-        "name": "Populus",
-        "laptop": true,
-        "osm": 2947989521,
-        "rating": 4,
-        "comment": "Super bon café torréfié sur place dans un joli espace au bord du canal de Kreuzberg. On adore les places contre la fenêtre, face aux arbres qui bordent le canal ! Clara a adoré son cappuccino, le filtre éthipien était très bon aussi. Batch brew meilleur marché à 2.50€. Attention, interdit aux laptops le weekend (zut). Et en semaine, le wifi ne marchait par bien."
-     },
-     {
-        "name": "Companion",
-        "laptop": false,
-        "osm": 2444312258,
-        "rating": 2,
-        "comment": "Petit café en retrait dans un magasin d'habits, Voo Store. Sur une estrade avec un joli parquet, quatre petites tables en béton. Presque pas trouvé de place à notre visite. Café ok mais pas de filtre, wifi faible et très instable parce qu'on doit utiliser le routeur de Voo qui est à l'autre bout du magasin. Je l'aurais sûrement mieux noté ailleurs, mais c'est Berlin et c'est un 2."
-     },
-     {
-        "name": "Bonanza",
-        "laptop": true,
-        "osm": 802550080,
-        "rating": 4,
-        "comment": "La deuxième branche du fameux torréfacteur de Kreuzberg, sur une rue animée près de l'ancienne démarcation Est-Ouest. Un peu plus petit, plus béton là où l'original est brique, mais quand-même très sympa ! Super café et service, wifi, plein de petites tables."
-     },
-     {
-        "name": "Silo",
-        "laptop": true,
-        "osm": 2678567862,
-        "rating": 3,
-        "comment": "Café petit mais cosy dans le style bois tamisé. Quelques places lumineuses près des fenêtres. Théoriquement pas de laptops pendant les heures d'ouverture de la cuisine, soit jusqu'à 15h en semaine et 17h le weekend, mais lors de notre visite on nous en a donné la permission à 14h30. Utilisation du wifi une heure maximum. Bon batch brew et refill pour 2€, et bons efforts pour des produits locaux et moins de gaspillage (pas de pailles, tampons si café emporté dans des tasses réutilisables...)"
-     },
-     {
-        "name": "The Visit",
-        "laptop": true,
-        "osm": 4379404319,
-        "rating": 4,
-        "comment": "Café très spacieux et parfait pour travailler. Grandes tables hautes communes, bancs, et petites tables rondes sans laptop les weekends. Peu de lumière naturelle loin des fenêtres par contre, et lumière artificielle très blanche néon. Café torréfié sur place et distribué dans les trois autres branches berlinoises. Super bon batch brew, mais aussi des méthodes manuelles disponibles."
-     },
-     {
-        "name": "Two and Two",
-        "laptop": true,
-        "osm": 2764110685,
-        "rating": 4,
-        "comment": "Ouvert par une française et une japonaise, ce café sert des pâtisseries françaises et du café japonais, passe des musiques françaises et vend de la papeterie japonaise. Espace en deux parties, fauteuils et tables basses sympa pour bouquiner mais pas optimales pour travailler. Un peu trop rempli à notre visite."
-     },
-     {
-        "name": "isla",
-        "laptop": true,
-        "osm": 2477072118,
-        "rating": 4,
-        "comment": "Premier café à Neukölln, espace sympa et jolie déco plein de lumière et de plantes. Par contre un peu  petit et presque plein lors de notre visite, et café moins bon qu'ailleurs à Berlin. Filtre uniquement en batch, petit, et dépot au fond du verre. Un bon point pour le côté responsable : isla est gagnant d'honneur du Sprudgie Award 2018 dans la catégorie \"sustainable cafe\". Autre café à Mitte."
-     },
-     {
-        "name": "Bonanza",
-        "laptop": true,
-        "osm": 4344303889,
-        "rating": 5,
-        "comment": "Il faudrait vraiment que j'adapte l'échelle de notation à Berlin, parce que jusque là tous les cafés étaient des 5, et Bonanza devrait être un 6 ! Comme d'habitude, table réservée aux laptops dans un grand espace lumineux dans une ancienne usine de briques. Industriel minimaliste, j'adore ! Excellent filtre, et option d'un tasting de filtres (j'en suis au troisième, un éthiopien lavé) pour €5.50. Baristas super sympas qui me parlent allemand malgré les difficultés :)"
-     },
-     {
-        "name": "Happy Baristas",
-        "laptop": true,
-        "osm": 745154923,
-        "rating": 5,
-        "comment": "Plus populaire et plein que Tres Cabezas, mais toujours un super bon café, avec soit du batch brew à prix raisonnable ou du hand brew pour les fines bouches. Espace grand et animé, beaucoup de bruit des discussions des gens, parfois bien et d'autres fois moins. Une unique grande table réservée à l'utilisation de laptops."
-     },
-     {
-        "name": "Tres Cabezas",
-        "laptop": true,
-        "osm": 2640326880,
-        "rating": 5,
-        "comment": "Premier café testé à Berlin, torréfie du café direct trade. Grand espace, pas trop de monde, une table à l'arrière réservée pour les laptops le weekend (la semaine possible de s'asseoir partout). Super bon cappuccino et filtre, wifi rapide."
-     },
-     {
-        "name": "BREW",
-        "laptop": true,
-        "osm": 412815451,
-        "rating": 4,
-        "comment": "Probablement l'un des, sinon le, seuls cafés de spécialité à Vevey. Café filtre méthode AeroPress ou Chemex, compte commencer à torréfier maison. Sympa pour se poser, musique jazz et plein de petites tables à deux. Brunch possible, et bar en soirée de fin de semaine."
-     },
-     {
-        "name": "LUMA",
-        "laptop": true,
-        "osm": 6184029126,
-        "rating": 3,
-        "comment": "Le propriétaire est artiste et ses oeuvres sont sur les murs, quelques tables à l'arrière ok pour travailler mais un poil sombre dans le style un peu vieillot, bon filtre de Sidamo torréfié à Moudon, par quoi, des Moudonois ? Plein de livres intéressants sur l'art, le design, le DIY..."
-     },
-     {
-        "name": "L'A-T-E-L-I-E-R",
-        "laptop": true,
-        "osm": 3366793950,
-        "rating": 4,
-        "comment": "Super espace pour travailler avec un thé chaud en hiver ou une citronnade en été, mais aussi pour boire une bière artisanale entre amis ou bouquiner sur un fauteuil mismatch. En deux parties reliées par un couloir, caisse côté ouest et expos côté est."
-     },
-     {
-        "name": "Phil Coffee",
-        "laptop": true,
-        "osm": 4584070590,
-        "rating": 5,
-        "comment": "Super dernier café de spécialité découvert à Bangkok. Caché au fond d'une ruelle dans un quartier très sympa un peu hipster. Excellent café torréfié maison et de différentes origines, locales et internationales. Jeux de société et livres disponibles, et globalement super espace."
-     },
-     {
-        "name": "Wonderwall",
-        "laptop": true,
-        "osm": 4496875189,
-        "rating": 3,
-        "comment": "Espace sympa, grandes tables et prises, super pour travailler, mais un peu cher et café filtre trop amer. Peut-être une erreur d'un jour, je leur donne le bénéfice du doute !"
-     },
-     {
-        "name": "30ml",
-        "laptop": true,
-        "osm": 5105448234,
-        "rating": 4,
-        "comment": "Un peu en dehors du centre, donc moins de touristes et plus d'expats qui travaillent pour diverses associations et ONGs présentes au Laos. Bon filtre torréfié maison, espace lumineux, internet rapide, chouette pour travailler !"
-     },
-     {
-        "name": "Comma Lab",
-        "laptop": true,
-        "osm": 6139792746,
-        "rating": 5,
-        "comment": "La plus récente des trois branches de Comma à Vientiane, et de loin la meilleure ! Comma au centre-ville est sombre et petit. Celui-ci est immense, super lumineux, tout neuf, on y trouve une grande bibliothèque et plein d'infos sur le café. C'est ici que Comma torréfie. Ça vaut le détour !"
+  "cafes": [
+    {
+      "name": "Zweitausend",
+      "laptop": true,
+      "osm": 6268406951,
+      "rating": 2,
+      "comment": "Café caché au fond d'une ruelle dans un quartier plutôt résidentiel. Comment on est tombés dessus ? On l'a vu sur une carte de Berlin, \"Oooh! Berlin\", et on a décidé d'essayer. Une fille travaillait sur son ordi donc c'est possible, et même assez grand, mais au fond c'est plutôt la cafet' rattachée à l'école de danse dans laquelle elle se trouve. Pas de filtre, et flat white franchement pas extra. Musique pas super pour s'installer."
     },
     {
-        "name": "Cabana",
-        "laptop": true,
-        "osm": 5432749521,
-        "rating": 4,
-        "comment": "Café de spécialité près du Mékong, déco style plage, cold brew et filtrs et très bon chai latte. Impressionnante carte des petits-dejs, pas (encore) essayés. Un peu sombre au fond, très lumineux vers les fenêtres."
+      "name": "19grams Schlesi",
+      "laptop": false,
+      "osm": 6268406950,
+      "rating": 2,
+      "comment": "Très bon café comme d'habitude dans les branches de Tres Cabezas, mais celle-ci est minuscule, avec à peine quelques places à l'intérieur et deux petites tables dehors. Super pour une pause café au soleil pendant une balade street art le long du mur et dans Kreuzberg/Friedrichshain, mais impossible de venir travailler ici. Même pas de toilettes."
     },
     {
-        "name": "Le Trio",
-        "laptop": true,
-        "osm": 3610030408,
-        "rating": 5,
-        "comment": "Très bon café, choix de variétés Typica ou Catimor pour le filtre. La torréfaction se fait sur place, ça sent bon ! Places assises limitées sur la petite terrasse... Ou à Coco & Co, le bistro vegan d'à-côté, où l'espace à l'étage est super agréable et bien décoré."
+      "name": "% Arabica",
+      "laptop": true,
+      "osm": 6261939658,
+      "rating": 5,
+      "comment": "Très grande branche de la chaîne de cafés de spécialité de Kyoto. Super bon latte et filtre à la Chemex (mais avec filtre en tissu, pas les filtres Chemex papier). Lumineux, minimaliste, espacé, wifi, parfait pour travailler. Et il n'y a personne, sûrement parce que c'est encore peu connu (premier café visité à Berlin qui n'était pas encore sur OSM). Dans quelques mois, ce sera toujours plein !"
     },
     {
-        "name": "Hidden Café",
-        "laptop": true,
-        "osm": 5365654377,
-        "rating": 4,
-        "comment": "Comme le nom l'indique, un petit café dissimulé à l'étage de HerWorks, une boutique/entreprise sociale d'artisanat de femmes d'ethnies minoritaires. Espace étonnnament spacieux et qui sent bon la citronnelle, musique jazzy sympa."
+      "name": "Fräulein Wild",
+      "laptop": true,
+      "osm": 1342620541,
+      "rating": 3,
+      "comment": "Espace lumineux à cheval entre un coffee shop et un salon de thé. Mobilier mismatch et chaleureux, super chocolat chaud et cinq chau lattes différents. Pas essayé le café, mais pas de filtre. Wifi pour 1h uniquement, mais au moins il y en a (pas de wifi à la porte à côté à Nano)."
     },
     {
-        "name": "Saffron",
-        "laptop": true,
-        "osm": 3776052332,
-        "rating": 4,
-        "comment": "Joli café de spécialité au bord de la rivière, avec une bonne sélection de méthodes filtre de l'Aeropress au Syphon. Espace ouvert au rez, climatisé à l'étage, et places en terrasse au bord de l'eau. Café de la région et torréfié en ville. Bonus : la possibilité d'un \"Coffee Tour\", et la \"Brew Crew\", qu'on rejoint en goûtant toutes les méthodes filtres - t-shirt offert à la clé !"
+      "name": "Coffee Profilers",
+      "laptop": true,
+      "osm": 4320869993,
+      "rating": 4,
+      "comment": "Café de spécialité sympa sur la Karl-Marx-Allee. Grande table haut au fond à partager entre laptops, service adorable, bon café filtre et très bon cappuccino. Seul bémol, un wifi limité à une heure. C'est court."
     },
     {
-        "name": "The Roastery by Roj",
-        "laptop": true,
-        "osm": 6114554709,
-        "rating": 5,
-        "comment": "Avec moins de 24 heures en ville, The Roastery by Roj est le seul café qu'on a eu le temps de tester à Chiang Rai ! On est contents de notre choix : excellent café produit dans la province et torréfié sur place, école de barista, super espace lumineux pour travailler. Rappelle un peu Di Bosco près de Chiang Mai."
+      "name": "Five Elephant",
+      "laptop": false,
+      "osm": 2628471058,
+      "rating": 2,
+      "comment": "Première branche de Five Elephant à Berlin, maintenant présente aussi à Mitte. Espace sympa et bon, mais pas de wifi :( et très (trop) populaire, peut-être parce qu'on dit que c'est le meilleur café de Belrin (en tout cas c'est ce que notre coloc nous a dit). Nous on préfère le café à Tres Cabezas, Populus, et ailleurs !"
     },
     {
-        "name": "Simply Happy",
-        "laptop": true,
-        "osm": 6094446495,
-        "rating": 5,
-        "comment": "Nouveau café ouvert (donc parfois un peu chaud) sur une ruelle du centre-ville. Une grande table pour travailler, le reste un peu petites. Excellent café filtre, grains locaux mais torréfiés à Bangkok par School Coffee. Tenu par une jeune super sympa passionnée de café et de livres, qui nous donne des conseils de cafés à tester à Chiang Rai, et des infos sur Big Bad Wolf, une book fair à Chiang Mai :)"
+      "name": "The Barn Mitte",
+      "laptop": false,
+      "osm": 3868790051,
+      "rating": 3,
+      "comment": "Un point pour être la toute première branche de The Barn, café de spécialité emblématique en Europe, que j'avais visitée en 2014, pendant un voyage dans le nord de l'Europe qui a marqué le début de ma passion pour le café. Sinon c'est assez petit et très connu, donc très plein. Théoriquement quelques places pour laptops contre les fenêtres, mais il ne faut pas compter dessus. Le café est bon mais cher, et plus aussi hors du commun qu'à l'époque."
     },
     {
-        "name": "Fieow",
-        "laptop": true,
-        "osm": 5201216548,
-        "rating": 5,
-        "comment": "Malheureusement un peu loin de Nimman, mais néanmoins un de mes cafés préférés à Chiang Mai ! Ambiance minimaliste-industrielle dans une halle spacieuse et tranquille, déco au top, et café délicieux torréfié maison, avec un accent sur l'acidité fruitée de la cerise de café. Génial, dommage qu'on y aura été qu'une seule fois !"
+      "name": "Ben Rahim",
+      "laptop": false,
+      "osm": 3868790050,
+      "rating": 3,
+      "comment": "Tout petit café de spécialité qui offre aussi une méthode ibrik (pas essayé). Café torréfié par Square Mile (Londres) lors de notre visite. Dissimulé dans les Hackesche Hofe, c'est un super endroit pour s'arrêter prendre un café. Trop petit par contre pour y sortir un laptop."
     },
     {
-        "name": "Coutume",
-        "laptop": true,
-        "osm": 6041013084,
-        "rating": 5,
-        "comment": "Notre café préféré à Genève !"
+      "name": "19grams Alex",
+      "laptop": true,
+      "osm": 5827057077,
+      "rating": 4,
+      "comment": "19grams est le nom donné aux ventures de Tres Cabezas à Friedrichshain. Plus cher ici à Mitte qu'à l'est, mais raisonnable comparé aux autres prix du quartier, et à notre goût le meilleur café (testé le même jour que The Barn et Ben Rahim pas loin). Excellent batch brew. Assez brand, plutôt rempli le dimanche de notre visite, mais probablement possible d'y travailler contre les fenêtres sur les hauts tabourets."
     },
     {
-        "name": "Birdie",
-        "laptop": false,
-        "osm": 4161978890,
-        "rating": 5,
-        "comment": "J'étais le premier client fidèle de Florian (le barista, anciennement au Boréal) et Bastien (le cuisinier) quand ils ont ouvert le Birdie en 2015. Je travaillais à une rue de là et je venais tous les jours boire une AeroPress accompagnée d'un cannelé en travaillant un peu. Puis ils ont engagé du staff, interdit les laptops dans leur petit espace, et finalement agrandi l'espace en achetant l'arcade d'à-côté. Ça a bien changé."
+      "name": "Populus",
+      "laptop": true,
+      "osm": 2947989521,
+      "rating": 4,
+      "comment": "Super bon café torréfié sur place dans un joli espace au bord du canal de Kreuzberg. On adore les places contre la fenêtre, face aux arbres qui bordent le canal ! Clara a adoré son cappuccino, le filtre éthipien était très bon aussi. Batch brew meilleur marché à 2.50€. Attention, interdit aux laptops le weekend (zut). Et en semaine, le wifi ne marchait par bien."
     },
     {
-        "name": "Salaween",
-        "laptop": true,
-        "osm": 5029184523,
-        "rating": 4,
-        "comment": "Un des deux cafés de spécialité testés à Yangon."
+      "name": "Companion",
+      "laptop": false,
+      "osm": 2444312258,
+      "rating": 2,
+      "comment": "Petit café en retrait dans un magasin d'habits, Voo Store. Sur une estrade avec un joli parquet, quatre petites tables en béton. Presque pas trouvé de place à notre visite. Café ok mais pas de filtre, wifi faible et très instable parce qu'on doit utiliser le routeur de Voo qui est à l'autre bout du magasin. Je l'aurais sûrement mieux noté ailleurs, mais c'est Berlin et c'est un 2."
     },
     {
-        "name": "Easy Café",
-        "laptop": true,
-        "osm": 4714707659,
-        "rating": 4,
-        "comment": "Un des deux cafés de spécialité testés à Yangon."
+      "name": "Bonanza",
+      "laptop": true,
+      "osm": 802550080,
+      "rating": 4,
+      "comment": "La deuxième branche du fameux torréfacteur de Kreuzberg, sur une rue animée près de l'ancienne démarcation Est-Ouest. Un peu plus petit, plus béton là où l'original est brique, mais quand-même très sympa ! Super café et service, wifi, plein de petites tables."
     },
     {
-        "name": "Jhai",
-        "laptop": true,
-        "osm": 4620007791,
-        "rating": 5,
-        "comment": "Super café au milieu de nulle part (c'est-à-dire à Paksong) sur le plateau des Bolavens. Le café est sourcé et torréfié localement, par la Jhai Coffee Farmers Cooperative. En Octobre 2018, Jhai a annoncé se séparer de la coopérative et déménager ailleurs à Paksong."
+      "name": "Silo",
+      "laptop": true,
+      "osm": 2678567862,
+      "rating": 3,
+      "comment": "Café petit mais cosy dans le style bois tamisé. Quelques places lumineuses près des fenêtres. Théoriquement pas de laptops pendant les heures d'ouverture de la cuisine, soit jusqu'à 15h en semaine et 17h le weekend, mais lors de notre visite on nous en a donné la permission à 14h30. Utilisation du wifi une heure maximum. Bon batch brew et refill pour 2€, et bons efforts pour des produits locaux et moins de gaspillage (pas de pailles, tampons si café emporté dans des tasses réutilisables...)"
     },
     {
-        "name": "The Den",
-        "laptop": true,
-        "osm": 5558725558,
-        "rating": 5,
-        "comment": "Inside the HUB on the ground floor of the Escolta building, a Manila landmark built in the 20s during the American occupation. The Coffee shop is great for working (2h wifi per purchase), and the beans are sourced locally by Kalsada, the only local coffee producer I know of, and which has an office a few floors above The Den! We visited Kalsada in April 2018 and loved it. We tried to arrange a visit to their coffee farm in Benguet but unfortunately couldn't make it work... next time! Love their effort, and this coffee shop's, to promote local specialty coffee."
+      "name": "The Visit",
+      "laptop": true,
+      "osm": 4379404319,
+      "rating": 4,
+      "comment": "Café très spacieux et parfait pour travailler. Grandes tables hautes communes, bancs, et petites tables rondes sans laptop les weekends. Peu de lumière naturelle loin des fenêtres par contre, et lumière artificielle très blanche néon. Café torréfié sur place et distribué dans les trois autres branches berlinoises. Super bon batch brew, mais aussi des méthodes manuelles disponibles."
     },
     {
-        "name": "The Curator",
-        "laptop": false,
-        "osm": 3678117064,
-        "rating": 3,
-        "comment": "Café le jour et bar à cocktails la nuit, on y trouve différents choix de guests beans (de Taïwan à Hong Kong en passant pas la Malaisie, quand on y était). Espace en deux parties, lumineux à l'avant (mais petit, pas de tables) et plus grande pièce style speakeasy à l'arrière, plutôt pour un cocktail en soirée (pas goûtés). Staff sympa, bonnes viennoiseries, mais pas de wifi. Joli logo."
+      "name": "Two and Two",
+      "laptop": true,
+      "osm": 2764110685,
+      "rating": 4,
+      "comment": "Ouvert par une française et une japonaise, ce café sert des pâtisseries françaises et du café japonais, passe des musiques françaises et vend de la papeterie japonaise. Espace en deux parties, fauteuils et tables basses sympa pour bouquiner mais pas optimales pour travailler. Un peu trop rempli à notre visite."
     },
     {
-        "name": "Yardstick Coffee",
-        "laptop": false,
-        "osm": 2655955664,
-        "rating": 4,
-        "comment": "Très bon café importé et torréfié maison. Espace super bien designé, coloré mais pas criard, bois, lean. Plein de gadgets de café et vente de grains. Par contre, le wifi est \"a bit sick lately\" (ne marche pas) depuis plus de huit mois..."
+      "name": "isla",
+      "laptop": true,
+      "osm": 2477072118,
+      "rating": 4,
+      "comment": "Premier café à Neukölln, espace sympa et jolie déco plein de lumière et de plantes. Par contre un peu  petit et presque plein lors de notre visite, et café moins bon qu'ailleurs à Berlin. Filtre uniquement en batch, petit, et dépot au fond du verre. Un bon point pour le côté responsable : isla est gagnant d'honneur du Sprudgie Award 2018 dans la catégorie \"sustainable cafe\". Autre café à Mitte."
     },
     {
-        "name": "Habitual Coffee",
-        "laptop": true,
-        "osm": 6006451997,
-        "rating": 5,
-        "comment": "Un des rares cafés avec un wifi stable à Makati. Mérite ses prix d'AeroPress nationaux (2015 1er, 2016 2ème) et internationaux (2015 3ème). Grains locaux torréfiés par Kalsada ou internationaux torréfiés par Yardstick, à 10 minutes à pied. Bonne nourriture de café aussi, dans le style sandwiches et banana bread."
+      "name": "Bonanza",
+      "laptop": true,
+      "osm": 4344303889,
+      "rating": 5,
+      "comment": "Il faudrait vraiment que j'adapte l'échelle de notation à Berlin, parce que jusque là tous les cafés étaient des 5, et Bonanza devrait être un 6 ! Comme d'habitude, table réservée aux laptops dans un grand espace lumineux dans une ancienne usine de briques. Industriel minimaliste, j'adore ! Excellent filtre, et option d'un tasting de filtres (j'en suis au troisième, un éthiopien lavé) pour €5.50. Baristas super sympas qui me parlent allemand malgré les difficultés :)"
     },
     {
-        "name": "Around 18 Grams",
-        "laptop": false,
-        "osm": 5994901904,
-        "rating": 4,
-        "comment": "À l'origine un stand à Nimman, Around 18 Grams a ouvert boutique depuis quelques semaines dans un petit espace à côté d'un temple chinois près du marché Warorot. Géré par deux jeunes passionnés du café, on y trouve cinq choix de grains pour le café filtre, deux torréfiés maison et trois guests (plus chers). Très bon ! J'aime aussi que l'on y serve des spécialités préparées à partir de food waste, comme un éventuel espresso surextrait. Un effort à encourager !"
+      "name": "Happy Baristas",
+      "laptop": true,
+      "osm": 745154923,
+      "rating": 5,
+      "comment": "Plus populaire et plein que Tres Cabezas, mais toujours un super bon café, avec soit du batch brew à prix raisonnable ou du hand brew pour les fines bouches. Espace grand et animé, beaucoup de bruit des discussions des gens, parfois bien et d'autres fois moins. Une unique grande table réservée à l'utilisation de laptops."
     },
     {
-        "name": "Roxpresso",
-        "laptop": true,
-        "osm": 5978043352,
-        "rating": 3,
-        "comment": "Très bon café mais se classe très luxe. Grande table communale sympa et quelques petites tables au fond. Espresso préparé à la main avec la ROK. Il y avait un petit chien excité quand on y est allés, +1."
+      "name": "Tres Cabezas",
+      "laptop": true,
+      "osm": 2640326880,
+      "rating": 5,
+      "comment": "Premier café testé à Berlin, torréfie du café direct trade. Grand espace, pas trop de monde, une table à l'arrière réservée pour les laptops le weekend (la semaine possible de s'asseoir partout). Super bon cappuccino et filtre, wifi rapide."
     },
     {
-        "name": "The Baristro",
-        "laptop": true,
-        "osm": 3195504333,
-        "rating": 4,
-        "comment": "Une branche du Baristro plus calme car moins bien située que celle de Nimman. Déco moins blanche et immaculée, donc pour moi un endroit plus relaxant pour travailler. Mêmes boissons, pas de filtre mais du cold brew (servi avec une tranche d'orange, un bâton de cannelle et une tige de romarin)."
+      "name": "BREW",
+      "laptop": true,
+      "osm": 412815451,
+      "rating": 4,
+      "comment": "Probablement l'un des, sinon le, seuls cafés de spécialité à Vevey. Café filtre méthode AeroPress ou Chemex, compte commencer à torréfier maison. Sympa pour se poser, musique jazz et plein de petites tables à deux. Brunch possible, et bar en soirée de fin de semaine."
     },
     {
-        "name": "Di Bosco",
-        "laptop": true,
-        "osm": 4871575722,
-        "rating": 5,
-        "comment": "Découverte incroyable de ce café perdu dans les montagnes à 45min de la ville ! Staff ultra attentionné et café plus que délicieux. C'est aussi une académie de baristas. Une halte parfaite lors d'un tour à Mon Chaem !"
+      "name": "LUMA",
+      "laptop": true,
+      "osm": 6184029126,
+      "rating": 3,
+      "comment": "Le propriétaire est artiste et ses oeuvres sont sur les murs, quelques tables à l'arrière ok pour travailler mais un poil sombre dans le style un peu vieillot, bon filtre de Sidamo torréfié à Moudon, par quoi, des Moudonois ? Plein de livres intéressants sur l'art, le design, le DIY..."
     },
     {
-        "name": "Roastwood",
-        "laptop": true,
-        "osm": 5956250105,
-        "rating": 4,
-        "comment": "Tout nouveau café ouvert au début de l'été 2018 un peu en retrait de la canal road. Équipe super sympa ! Un peu petit par contre, et peut devenir très bruyant (ça résonne)."
+      "name": "L'A-T-E-L-I-E-R",
+      "laptop": true,
+      "osm": 3366793950,
+      "rating": 4,
+      "comment": "Super espace pour travailler avec un thé chaud en hiver ou une citronnade en été, mais aussi pour boire une bière artisanale entre amis ou bouquiner sur un fauteuil mismatch. En deux parties reliées par un couloir, caisse côté ouest et expos côté est."
     },
     {
-        "name": "A Day In Chiang Mai",
-        "laptop": true,
-        "osm": 5941633292,
-        "rating": 3,
-        "comment": "Espace et tables assez petites donc pas optimal pour travailler, mais très bon café filtre et latte, et ils vendent des films photo !"
+      "name": "Phil Coffee",
+      "laptop": true,
+      "osm": 4584070590,
+      "rating": 5,
+      "comment": "Super dernier café de spécialité découvert à Bangkok. Caché au fond d'une ruelle dans un quartier très sympa un peu hipster. Excellent café torréfié maison et de différentes origines, locales et internationales. Jeux de société et livres disponibles, et globalement super espace."
     },
     {
-        "name": "Hana Zono",
-        "laptop": true,
-        "osm": 4539213080,
-        "rating": 5,
-        "comment": "Proprio japonais donc Kalita, grains thaï ou importés, musique tranquille, longues heures d'ouverture, parfait pour travailler !"
+      "name": "Wonderwall",
+      "laptop": true,
+      "osm": 4496875189,
+      "rating": 3,
+      "comment": "Espace sympa, grandes tables et prises, super pour travailler, mais un peu cher et café filtre trop amer. Peut-être une erreur d'un jour, je leur donne le bénéfice du doute !"
     },
     {
-        "name": "The Localist",
-        "laptop": true,
-        "osm": 5941619770,
-        "rating": 4,
-        "comment": "Très bon café dans un espace lié à un magasin d'artisanat. Beaucoup de place, à l'étage aussi. Pas encore essayé d'y travailler, mais ça paraît prometteur ! Attention c'est ouvert, pas de climatisation mais ventilateurs. Il faisait frais le jour où on y était."
+      "name": "30ml",
+      "laptop": true,
+      "osm": 5105448234,
+      "rating": 4,
+      "comment": "Un peu en dehors du centre, donc moins de touristes et plus d'expats qui travaillent pour diverses associations et ONGs présentes au Laos. Bon filtre torréfié maison, espace lumineux, internet rapide, chouette pour travailler !"
     },
     {
-        "name": "Mix Kaffee",
-        "laptop": false,
-        "osm": 4514610993,
-        "rating": 5,
-        "comment": "Un minuscule café dont le patron et barista se spécialise en cafetière italienne, qu'il prépare selon les recettes de la grand-mère de sa femme japonaise. Préparée avec des grains torréfiés pour le filtre, c'est doux et délicieux ! Et il fait aussi des boissons style espresso avec un café plus fort et du lait. Il s'essaie aussi au cold drip qu'on a pu goûter - super bon ! À essayer absolument pour boire un café différent."
+      "name": "Comma Lab",
+      "laptop": true,
+      "osm": 6139792746,
+      "rating": 5,
+      "comment": "La plus récente des trois branches de Comma à Vientiane, et de loin la meilleure ! Comma au centre-ville est sombre et petit. Celui-ci est immense, super lumineux, tout neuf, on y trouve une grande bibliothèque et plein d'infos sur le café. C'est ici que Comma torréfie. Ça vaut le détour !"
     },
     {
-        "name": "Rakuda",
-        "laptop": true,
-        "osm": 4655307491,
-        "rating": 3,
-        "comment": "Espace ouvert et quelques tables sympa pour travailler (celles qui reçoivent beaucoup de lumière près des fenêtres). Les tables du fond sont dans la pénombre : ce café développe aussi des films photo et peut même faire des tirages (mais, pour en avoir commandé, je recommande de s'en tenir au développement)."
+      "name": "Cabana",
+      "laptop": true,
+      "osm": 5432749521,
+      "rating": 4,
+      "comment": "Café de spécialité près du Mékong, déco style plage, cold brew et filtrs et très bon chai latte. Impressionnante carte des petits-dejs, pas (encore) essayés. Un peu sombre au fond, très lumineux vers les fenêtres."
     },
     {
-        "name": "Khagee",
-        "laptop": true,
-        "osm": 3395080851,
-        "rating": 4,
-        "comment": "Espace agréable et staff adorable ! C'est aussi une boulangerie qui vend de délicieux cannelés... de temps en temps. Un peu dur à voir de l'extérieur avec la vitre teintée et sans inscriptions."
+      "name": "Le Trio",
+      "laptop": true,
+      "osm": 3610030408,
+      "rating": 5,
+      "comment": "Très bon café, choix de variétés Typica ou Catimor pour le filtre. La torréfaction se fait sur place, ça sent bon ! Places assises limitées sur la petite terrasse... Ou à Coco & Co, le bistro vegan d'à-côté, où l'espace à l'étage est super agréable et bien décoré."
     },
     {
-        "name": "Gateway",
-        "laptop": true,
-        "osm": 5933370534,
-        "rating": 4,
-        "comment": "Délicieuse odeur de café vert (!) en montant à ce café au premier étage, au-dessus d'un magasin d'habits, facile à rater depuis la route. Plusieurs types de grains torréfiés maison, malheureusement mon filtre n'avait pas super bon goût - je sais pas si c'est la faute de la torréfaction ou de la préparation. Très spacieux et lumineux, et agréable pour travailler malgré l'absence de climatisation."
+      "name": "Hidden Café",
+      "laptop": true,
+      "osm": 5365654377,
+      "rating": 4,
+      "comment": "Comme le nom l'indique, un petit café dissimulé à l'étage de HerWorks, une boutique/entreprise sociale d'artisanat de femmes d'ethnies minoritaires. Espace étonnnament spacieux et qui sent bon la citronnelle, musique jazzy sympa."
     },
     {
-        "name": "Ponganes",
-        "laptop": false,
-        "osm": 3305560828,
-        "rating": 3,
-        "comment": "Très bon café filtre torréfié maison, mais un peu cher et l'espace n'est pas du tout designé pour s'y mettre à l'aise. Minuscules tables quand il y en a, contre le mur ou serrées les unes contre les autres sur la terrasse. Bébé-chaises."
+      "name": "Saffron",
+      "laptop": true,
+      "osm": 3776052332,
+      "rating": 4,
+      "comment": "Joli café de spécialité au bord de la rivière, avec une bonne sélection de méthodes filtre de l'Aeropress au Syphon. Espace ouvert au rez, climatisé à l'étage, et places en terrasse au bord de l'eau. Café de la région et torréfié en ville. Bonus : la possibilité d'un \"Coffee Tour\", et la \"Brew Crew\", qu'on rejoint en goûtant toutes les méthodes filtres - t-shirt offert à la clé !"
     },
     {
-        "name": "Nowhere",
-        "laptop": false,
-        "osm": 5933370531,
-        "rating": 4,
-        "comment": "Petit café plutôt pour emporter, avec une unique table sur un petit rooftop à l'étage. Barista passionné et super sympa qui prépare son espresso avec une AeroPress et un filtre Prismo - qu'on a ensuite commandé pour faire des lattes à la maison !"
+      "name": "The Roastery by Roj",
+      "laptop": true,
+      "osm": 6114554709,
+      "rating": 5,
+      "comment": "Avec moins de 24 heures en ville, The Roastery by Roj est le seul café qu'on a eu le temps de tester à Chiang Rai ! On est contents de notre choix : excellent café produit dans la province et torréfié sur place, école de barista, super espace lumineux pour travailler. Rappelle un peu Di Bosco près de Chiang Mai."
     },
     {
-        "name": "Graph",
-        "laptop": false,
-        "osm": 4848162223,
-        "rating": 3,
-        "comment": "Café délicieux et grains locaux mais chers, et espace minuscule et toujours bondé - trop touristique et connu. Une autre branche à One Nimman connaît le même sort. Pas génial pour autre chose que déguster."
+      "name": "Simply Happy",
+      "laptop": true,
+      "osm": 6094446495,
+      "rating": 5,
+      "comment": "Nouveau café ouvert (donc parfois un peu chaud) sur une ruelle du centre-ville. Une grande table pour travailler, le reste un peu petites. Excellent café filtre, grains locaux mais torréfiés à Bangkok par School Coffee. Tenu par une jeune super sympa passionnée de café et de livres, qui nous donne des conseils de cafés à tester à Chiang Rai, et des infos sur Big Bad Wolf, une book fair à Chiang Mai :)"
     },
     {
-        "name": "Artisan",
-        "laptop": true,
-        "osm": 5933370533,
-        "rating": 4,
-        "comment": "Café spacieux et très agréable pour travailler, lié à l'auberge Oxotel. Pas de filtre par contre, mais cold brew dans le style du Baristro."
+      "name": "Fieow",
+      "laptop": true,
+      "osm": 5201216548,
+      "rating": 5,
+      "comment": "Malheureusement un peu loin de Nimman, mais néanmoins un de mes cafés préférés à Chiang Mai ! Ambiance minimaliste-industrielle dans une halle spacieuse et tranquille, déco au top, et café délicieux torréfié maison, avec un accent sur l'acidité fruitée de la cerise de café. Génial, dommage qu'on y aura été qu'une seule fois !"
     },
     {
-        "name": "ma-chill",
-        "laptop": true,
-        "osm": 4586796889,
-        "rating": 5,
-        "comment": "Pour moi un des meilleurs cafés de la ville, sur le podium avec Thor Phan. Tenu il me semble par un couple passionné de café - ça se sent ! Espace sympa mais un peu sombre quand on s'éloigne de la vitrine."
+      "name": "Coutume",
+      "laptop": true,
+      "osm": 6041013084,
+      "rating": 5,
+      "comment": "Notre café préféré à Genève !"
     },
     {
-        "name": "Tenten",
-        "laptop": true,
-        "osm": 5593553723,
-        "rating": 4,
-        "comment": "Pas de filtre ici, mais un choix de différents grains pour l'espresso. On sent bien la différence entre nos deux lattes ! Espace calme et bien illuminé, recommandé pour y travailler."
+      "name": "Birdie",
+      "laptop": false,
+      "osm": 4161978890,
+      "rating": 5,
+      "comment": "J'étais le premier client fidèle de Florian (le barista, anciennement au Boréal) et Bastien (le cuisinier) quand ils ont ouvert le Birdie en 2015. Je travaillais à une rue de là et je venais tous les jours boire une AeroPress accompagnée d'un cannelé en travaillant un peu. Puis ils ont engagé du staff, interdit les laptops dans leur petit espace, et finalement agrandi l'espace en achetant l'arcade d'à-côté. Ça a bien changé."
     },
     {
-        "name": "Maled",
-        "laptop": true,
-        "osm": 5933370532,
-        "rating": 3,
-        "comment": "Petit café torréfacteur découvert près de CMU. Très bon café, endroit local et jeune, ça change des cafés de Nimman ! Par contre pas super pour travailler, assez peu de tables. Poufs à l'étage mais en simili-cuir."
+      "name": "Salaween",
+      "laptop": true,
+      "osm": 5029184523,
+      "rating": 4,
+      "comment": "Un des deux cafés de spécialité testés à Yangon."
     },
     {
-        "name": "Yellow Crafts",
-        "laptop": true,
-        "osm": 4893144721,
-        "rating": 2,
-        "comment": "Bon cold brew et délicieux lait de soja maison, utilisé dans plein de boissons originales avec ou sans café. Par contre, c'est beaucoup trop instagrammable, à un point où ça en devient dérangeant. Dommage."
+      "name": "Easy Café",
+      "laptop": true,
+      "osm": 4714707659,
+      "rating": 4,
+      "comment": "Un des deux cafés de spécialité testés à Yangon."
     },
     {
-        "name": "Ristr8to",
-        "laptop": false,
-        "osm": 2105726947,
-        "rating": 2,
-        "comment": "Une institution à Chiang Mai, probablement l'un des tout premiers cafés de spécialité de la ville. Pas de filtre mais des lattes de compétition, vainqueurs à plusieurs reprises de championnats de latte art ! Cette branche, l'originale je pense, est ouverte, petite et pas faite pour travailler où s'installer pour plus qu'un café. Préférer Ristr8to Lab sur la rue parallèle !"
+      "name": "Jhai",
+      "laptop": true,
+      "osm": 4620007791,
+      "rating": 5,
+      "comment": "Super café au milieu de nulle part (c'est-à-dire à Paksong) sur le plateau des Bolavens. Le café est sourcé et torréfié localement, par la Jhai Coffee Farmers Cooperative. En Octobre 2018, Jhai a annoncé se séparer de la coopérative et déménager ailleurs à Paksong."
     },
     {
-        "name": "Ristr8to Lab",
-        "laptop": true,
-        "osm": 4438545289,
-        "rating": 3,
-        "comment": "Même qualité de café qu'à Ristr8to, avec en bonus du café filtre (mais pas incroyable, pas recommandé) et un espace plus spacieux. Ce serait très bien pour travailler si ce n'était pas aussi touristique - trop de passage - et moins serré à l'intérieur."
+      "name": "The Den",
+      "laptop": true,
+      "osm": 5558725558,
+      "rating": 5,
+      "comment": "Inside the HUB on the ground floor of the Escolta building, a Manila landmark built in the 20s during the American occupation. The Coffee shop is great for working (2h wifi per purchase), and the beans are sourced locally by Kalsada, the only local coffee producer I know of, and which has an office a few floors above The Den! We visited Kalsada in April 2018 and loved it. We tried to arrange a visit to their coffee farm in Benguet but unfortunately couldn't make it work... next time! Love their effort, and this coffee shop's, to promote local specialty coffee."
     },
     {
-        "name": "Barisotel",
-        "laptop": true,
-        "osm": 5933370530,
-        "rating": 4,
-        "comment": "Pas de filtre et cold brew servi avec une tranche d'orange, un bâton de cannelle et une tige de romarin dans le verre (aïe), mais bon quand-même. Espace calme et agréable pour travailler. Très instagrammable mais les shootings se font aux tables, pas partout dans l'espace. Un peu trop blanc à mon goût."
+      "name": "The Curator",
+      "laptop": false,
+      "osm": 3678117064,
+      "rating": 3,
+      "comment": "Café le jour et bar à cocktails la nuit, on y trouve différents choix de guests beans (de Taïwan à Hong Kong en passant pas la Malaisie, quand on y était). Espace en deux parties, lumineux à l'avant (mais petit, pas de tables) et plus grande pièce style speakeasy à l'arrière, plutôt pour un cocktail en soirée (pas goûtés). Staff sympa, bonnes viennoiseries, mais pas de wifi. Joli logo."
     },
     {
-        "name": "Asama",
-        "laptop": false,
-        "osm": 4555359051,
-        "rating": 3,
-        "comment": "Magnifique espace en terrasse au bord d'un petit lac artificiel, dans ce qui semble être un village de résidences de luxe. Pas de filtre mais bons latte et flat white, et très relaxant. Possible d'y travailler je pense, mais il doit y faire chaud dans la journée, et je n'y resterais pas des heures."
+      "name": "Yardstick Coffee",
+      "laptop": false,
+      "osm": 2655955664,
+      "rating": 4,
+      "comment": "Très bon café importé et torréfié maison. Espace super bien designé, coloré mais pas criard, bois, lean. Plein de gadgets de café et vente de grains. Par contre, le wifi est \"a bit sick lately\" (ne marche pas) depuis plus de huit mois..."
     },
     {
-        "name": "The Mellow",
-        "laptop": true,
-        "osm": 5925629982,
-        "rating": 4,
-        "comment": "Petit café sympa juste au bord de la rivière Ping, quelques dizaines de kilomètres après son passage à Chiang Mai. Tranquille, vert, barista très sympa. Ils servent aussi des pizzas qu'on n'a pas essayées. On n'y a pas travaillé non plus, mais l'espace s'y prêterait bien, quelques grandes tables et moins de passage qu'à Youngfolk."
+      "name": "Habitual Coffee",
+      "laptop": true,
+      "osm": 6006451997,
+      "rating": 5,
+      "comment": "Un des rares cafés avec un wifi stable à Makati. Mérite ses prix d'AeroPress nationaux (2015 1er, 2016 2ème) et internationaux (2015 3ème). Grains locaux torréfiés par Kalsada ou internationaux torréfiés par Yardstick, à 10 minutes à pied. Bonne nourriture de café aussi, dans le style sandwiches et banana bread."
     },
     {
-        "name": "Youngfolk",
-        "laptop": true,
-        "osm": 5925629983,
-        "rating": 4,
-        "comment": "Super café avec des très bonnes boissons à base d'espresso ! Dans une maison très spacieuse, avec des places non seulement au bar mais aussi à l'extérieur et même à l'étage. Très vert, un peu instagrammable. Pas essayé d'y travailler mais d'autres le faisaient. Le café trendy de la ville."
+      "name": "Around 18 Grams",
+      "laptop": false,
+      "osm": 5994901904,
+      "rating": 4,
+      "comment": "À l'origine un stand à Nimman, Around 18 Grams a ouvert boutique depuis quelques semaines dans un petit espace à côté d'un temple chinois près du marché Warorot. Géré par deux jeunes passionnés du café, on y trouve cinq choix de grains pour le café filtre, deux torréfiés maison et trois guests (plus chers). Très bon ! J'aime aussi que l'on y serve des spécialités préparées à partir de food waste, comme un éventuel espresso surextrait. Un effort à encourager !"
     },
     {
-        "name": "Omnia",
-        "laptop": true,
-        "osm": 4265502391,
-        "rating": "5",
-        "comment": "Très bon café d'origine thaï ou importée torréfié maison. Plantes vertes et mobilier en bois sombre, calme et agréable pour travailler. J'aime bien l'horloge art déco sur la grande table."
+      "name": "Roxpresso",
+      "laptop": true,
+      "osm": 5978043352,
+      "rating": 3,
+      "comment": "Très bon café mais se classe très luxe. Grande table communale sympa et quelques petites tables au fond. Espresso préparé à la main avec la ROK. Il y avait un petit chien excité quand on y est allés, +1."
     },
     {
-        "name": "Brewman",
-        "laptop": true,
-        "osm": 5920089202,
-        "rating": 5,
-        "comment": "Le dernier café qu'on a découvert pendant nos quelques mois à Da Nang ! Barista super sympa et passionné de café, qui me fait goûter différentes méthodes avec différents grains. Lumineux et agréable pour travailler, mais souvent assez plein."
+      "name": "The Baristro",
+      "laptop": true,
+      "osm": 3195504333,
+      "rating": 4,
+      "comment": "Une branche du Baristro plus calme car moins bien située que celle de Nimman. Déco moins blanche et immaculée, donc pour moi un endroit plus relaxant pour travailler. Mêmes boissons, pas de filtre mais du cold brew (servi avec une tranche d'orange, un bâton de cannelle et une tige de romarin)."
     },
     {
-        "name": "Why",
-        "laptop": true,
-        "osm": 5920067081,
-        "rating": 4,
-        "comment": "Spacieux, lumineux et bien bossable, staff sympa, très bon café. Assez peu de caractère mais c'est bien pour se concentrer."
+      "name": "Di Bosco",
+      "laptop": true,
+      "osm": 4871575722,
+      "rating": 5,
+      "comment": "Découverte incroyable de ce café perdu dans les montagnes à 45min de la ville ! Staff ultra attentionné et café plus que délicieux. C'est aussi une académie de baristas. Une halte parfaite lors d'un tour à Mon Chaem !"
     },
     {
-        "name": "Cong Kopi",
-        "laptop": false,
-        "osm": 5920056999,
-        "rating": 5,
-        "comment": "Énorme coup de coeur à Da Nang, je suis pas sûr qu'on aurait découvert Cong Kopi si c'était pas aussi notre Airbnb lors de notre premier passage dans la ville en 2017. Kit et Melda sont adorables et passionnées de café, et adorent partager leurs expériences ! Super de faire du cupping avec elles avec du café ramené du Laos, et que Melda y découvre une acidité d'ananas. Kit est fan de la Kalita Wave depuis qu'elle l'a reçue du Japon. Au fil des mois, on a vu Sid la petite chienne grandir mais rester toujours surexcitée."
+      "name": "Roastwood",
+      "laptop": true,
+      "osm": 5956250105,
+      "rating": 4,
+      "comment": "Tout nouveau café ouvert au début de l'été 2018 un peu en retrait de la canal road. Équipe super sympa ! Un peu petit par contre, et peut devenir très bruyant (ça résonne)."
     },
     {
-        "name": "Gold Star",
-        "laptop": true,
-        "osm": 5920045519,
-        "rating": 3,
-        "comment": "Premier café de spécialité découvert à Da Nang lors de notre premier passage à l'automne 2017 ! Staff très sympa et bon café de différentes origines, torréfié maison. Ouvert, peut être un peu bruyant selon le passage ou les travaux sur la route."
+      "name": "A Day In Chiang Mai",
+      "laptop": true,
+      "osm": 5941633292,
+      "rating": 3,
+      "comment": "Espace et tables assez petites donc pas optimal pour travailler, mais très bon café filtre et latte, et ils vendent des films photo !"
     },
     {
-        "name": "Six On Six",
-        "laptop": true,
-        "osm": 5432960921,
-        "rating": 5,
-        "comment": "Espace super accueillant et bien designé, comme entrer dans le salon d'un ami qui a très bon goût ! Les places alternent entre canapés, une grande table communale, un bar ou encore des places en terrasse. Lien et Brenn, la patronne et son copain américain, sont très sympa! Et le cuisinier, dont j'ai malheureusement oublié le nom, fait des muffins aux baies et chocolat blanc qui sont à tomber. Paco le bouledogue français est super gentil, et, avant que le chaton déménage dans une villa du quartier, c'était notre raison principale de visiter !"
+      "name": "Hana Zono",
+      "laptop": true,
+      "osm": 4539213080,
+      "rating": 5,
+      "comment": "Proprio japonais donc Kalita, grains thaï ou importés, musique tranquille, longues heures d'ouverture, parfait pour travailler !"
     },
     {
-        "name": "Thor Phan",
-        "laptop": true,
-        "osm": 3388701190,
-        "rating": 4,
-        "comment": "Un des, sinon le meilleur, café filtre de la ville ! Torréfié maison en plus. Seul inconvénient, parfois un peu trop family-friendly :)"
+      "name": "The Localist",
+      "laptop": true,
+      "osm": 5941619770,
+      "rating": 4,
+      "comment": "Très bon café dans un espace lié à un magasin d'artisanat. Beaucoup de place, à l'étage aussi. Pas encore essayé d'y travailler, mais ça paraît prometteur ! Attention c'est ouvert, pas de climatisation mais ventilateurs. Il faisait frais le jour où on y était."
     },
     {
-        "name": "ZMOY",
-        "laptop": true,
-        "osm": 5919670289,
-        "rating": 5,
-        "comment": "Coup de coeur à Chiang Mai ! Ouvert par deux soeurs (on pense) dans le garage familial reconverti en petit café. Petit et un peu serré, mais super accueillant et chaud. Filtre et latte délicieux, et le lait est préparé avec la machine que Clara a ensuite commandée pour faire des lattes à la maison ! Et bien sûr la fille est adorable et super souriante."
+      "name": "Mix Kaffee",
+      "laptop": false,
+      "osm": 4514610993,
+      "rating": 5,
+      "comment": "Un minuscule café dont le patron et barista se spécialise en cafetière italienne, qu'il prépare selon les recettes de la grand-mère de sa femme japonaise. Préparée avec des grains torréfiés pour le filtre, c'est doux et délicieux ! Et il fait aussi des boissons style espresso avec un café plus fort et du lait. Il s'essaie aussi au cold drip qu'on a pu goûter - super bon ! À essayer absolument pour boire un café différent."
     },
     {
-        "name": "A.B.C.D.",
-        "laptop": true,
-        "osm": 5915461228,
-        "rating": 5,
-        "comment": "Super espace très bien designé, pas mal de passage mais étrangement \"notre\" table (la grande en bois et en verre) est toujours disponible. Une serveuse qu'on a vue en training depuis ses débuts est adorable et très attentionnée, elle nous sert de l'eau et nuos amène des super bons biscuits maison. Seul inconvénient, pas de filte - mais le latte est très bon."
+      "name": "Rakuda",
+      "laptop": true,
+      "osm": 4655307491,
+      "rating": 3,
+      "comment": "Espace ouvert et quelques tables sympa pour travailler (celles qui reçoivent beaucoup de lumière près des fenêtres). Les tables du fond sont dans la pénombre : ce café développe aussi des films photo et peut même faire des tirages (mais, pour en avoir commandé, je recommande de s'en tenir au développement)."
     },
     {
-        "name": "Taste",
-        "laptop": true,
-        "osm": 5202076922,
-        "rating": 5,
-        "comment": "Un des (le ?) premiers cafés découverts à Chiang Mai ! Taste est génial pour travailler et moins couru que d'autres cafés plus proches du centre de Nimman. Les prix sont raisonnables pour un excellent café d'origine locale torréfié maison par S.O.S."
+      "name": "Khagee",
+      "laptop": true,
+      "osm": 3395080851,
+      "rating": 4,
+      "comment": "Espace agréable et staff adorable ! C'est aussi une boulangerie qui vend de délicieux cannelés... de temps en temps. Un peu dur à voir de l'extérieur avec la vitre teintée et sans inscriptions."
     },
     {
-        "name": "Akha Ama",
-        "laptop": true,
-        "osm": 2527662833,
-        "rating": 4,
-        "comment": "Une institution à Chiang Mai ! Akha Ama est aussi une entreprise sociale : le café est produit par la minorité Akha en respectant l'environnement. Cette branche (il y en a une autre au centre-ville), entièrement rénovée en octobre 2018, est idéale pour un café après une course au marché Thanin (Sri Wattana)."
+      "name": "Gateway",
+      "laptop": true,
+      "osm": 5933370534,
+      "rating": 4,
+      "comment": "Délicieuse odeur de café vert (!) en montant à ce café au premier étage, au-dessus d'un magasin d'habits, facile à rater depuis la route. Plusieurs types de grains torréfiés maison, malheureusement mon filtre n'avait pas super bon goût - je sais pas si c'est la faute de la torréfaction ou de la préparation. Très spacieux et lumineux, et agréable pour travailler malgré l'absence de climatisation."
     },
     {
-        "name": "Cottontree",
-        "laptop": true,
-        "osm": 4265515989,
-        "rating": 5,
-        "comment": "Délicieux café torréfié maison de différentes origines. Très bel espace, les meilleures places sont contre les vitres mais les tables vont aussi, malgré qu'il y fasse un peu plus sombre. Scones à tomber par terre, quand il y en a. Le café de choix avant d'aller à Maya."
+      "name": "Ponganes",
+      "laptop": false,
+      "osm": 3305560828,
+      "rating": 3,
+      "comment": "Très bon café filtre torréfié maison, mais un peu cher et l'espace n'est pas du tout designé pour s'y mettre à l'aise. Minuscules tables quand il y en a, contre le mur ou serrées les unes contre les autres sur la terrasse. Bébé-chaises."
+    },
+    {
+      "name": "Nowhere",
+      "laptop": false,
+      "osm": 5933370531,
+      "rating": 4,
+      "comment": "Petit café plutôt pour emporter, avec une unique table sur un petit rooftop à l'étage. Barista passionné et super sympa qui prépare son espresso avec une AeroPress et un filtre Prismo - qu'on a ensuite commandé pour faire des lattes à la maison !"
+    },
+    {
+      "name": "Graph",
+      "laptop": false,
+      "osm": 4848162223,
+      "rating": 3,
+      "comment": "Café délicieux et grains locaux mais chers, et espace minuscule et toujours bondé - trop touristique et connu. Une autre branche à One Nimman connaît le même sort. Pas génial pour autre chose que déguster."
+    },
+    {
+      "name": "Artisan",
+      "laptop": true,
+      "osm": 5933370533,
+      "rating": 4,
+      "comment": "Café spacieux et très agréable pour travailler, lié à l'auberge Oxotel. Pas de filtre par contre, mais cold brew dans le style du Baristro."
+    },
+    {
+      "name": "ma-chill",
+      "laptop": true,
+      "osm": 4586796889,
+      "rating": 5,
+      "comment": "Pour moi un des meilleurs cafés de la ville, sur le podium avec Thor Phan. Tenu il me semble par un couple passionné de café - ça se sent ! Espace sympa mais un peu sombre quand on s'éloigne de la vitrine."
+    },
+    {
+      "name": "Tenten",
+      "laptop": true,
+      "osm": 5593553723,
+      "rating": 4,
+      "comment": "Pas de filtre ici, mais un choix de différents grains pour l'espresso. On sent bien la différence entre nos deux lattes ! Espace calme et bien illuminé, recommandé pour y travailler."
+    },
+    {
+      "name": "Maled",
+      "laptop": true,
+      "osm": 5933370532,
+      "rating": 3,
+      "comment": "Petit café torréfacteur découvert près de CMU. Très bon café, endroit local et jeune, ça change des cafés de Nimman ! Par contre pas super pour travailler, assez peu de tables. Poufs à l'étage mais en simili-cuir."
+    },
+    {
+      "name": "Yellow Crafts",
+      "laptop": true,
+      "osm": 4893144721,
+      "rating": 2,
+      "comment": "Bon cold brew et délicieux lait de soja maison, utilisé dans plein de boissons originales avec ou sans café. Par contre, c'est beaucoup trop instagrammable, à un point où ça en devient dérangeant. Dommage."
+    },
+    {
+      "name": "Ristr8to",
+      "laptop": false,
+      "osm": 2105726947,
+      "rating": 2,
+      "comment": "Une institution à Chiang Mai, probablement l'un des tout premiers cafés de spécialité de la ville. Pas de filtre mais des lattes de compétition, vainqueurs à plusieurs reprises de championnats de latte art ! Cette branche, l'originale je pense, est ouverte, petite et pas faite pour travailler où s'installer pour plus qu'un café. Préférer Ristr8to Lab sur la rue parallèle !"
+    },
+    {
+      "name": "Ristr8to Lab",
+      "laptop": true,
+      "osm": 4438545289,
+      "rating": 3,
+      "comment": "Même qualité de café qu'à Ristr8to, avec en bonus du café filtre (mais pas incroyable, pas recommandé) et un espace plus spacieux. Ce serait très bien pour travailler si ce n'était pas aussi touristique - trop de passage - et moins serré à l'intérieur."
+    },
+    {
+      "name": "Barisotel",
+      "laptop": true,
+      "osm": 5933370530,
+      "rating": 4,
+      "comment": "Pas de filtre et cold brew servi avec une tranche d'orange, un bâton de cannelle et une tige de romarin dans le verre (aïe), mais bon quand-même. Espace calme et agréable pour travailler. Très instagrammable mais les shootings se font aux tables, pas partout dans l'espace. Un peu trop blanc à mon goût."
+    },
+    {
+      "name": "Asama",
+      "laptop": false,
+      "osm": 4555359051,
+      "rating": 3,
+      "comment": "Magnifique espace en terrasse au bord d'un petit lac artificiel, dans ce qui semble être un village de résidences de luxe. Pas de filtre mais bons latte et flat white, et très relaxant. Possible d'y travailler je pense, mais il doit y faire chaud dans la journée, et je n'y resterais pas des heures."
+    },
+    {
+      "name": "The Mellow",
+      "laptop": true,
+      "osm": 5925629982,
+      "rating": 4,
+      "comment": "Petit café sympa juste au bord de la rivière Ping, quelques dizaines de kilomètres après son passage à Chiang Mai. Tranquille, vert, barista très sympa. Ils servent aussi des pizzas qu'on n'a pas essayées. On n'y a pas travaillé non plus, mais l'espace s'y prêterait bien, quelques grandes tables et moins de passage qu'à Youngfolk."
+    },
+    {
+      "name": "Youngfolk",
+      "laptop": true,
+      "osm": 5925629983,
+      "rating": 4,
+      "comment": "Super café avec des très bonnes boissons à base d'espresso ! Dans une maison très spacieuse, avec des places non seulement au bar mais aussi à l'extérieur et même à l'étage. Très vert, un peu instagrammable. Pas essayé d'y travailler mais d'autres le faisaient. Le café trendy de la ville."
+    },
+    {
+      "name": "Omnia",
+      "laptop": true,
+      "osm": 4265502391,
+      "rating": "5",
+      "comment": "Très bon café d'origine thaï ou importée torréfié maison. Plantes vertes et mobilier en bois sombre, calme et agréable pour travailler. J'aime bien l'horloge art déco sur la grande table."
+    },
+    {
+      "name": "Brewman",
+      "laptop": true,
+      "osm": 5920089202,
+      "rating": 5,
+      "comment": "Le dernier café qu'on a découvert pendant nos quelques mois à Da Nang ! Barista super sympa et passionné de café, qui me fait goûter différentes méthodes avec différents grains. Lumineux et agréable pour travailler, mais souvent assez plein."
+    },
+    {
+      "name": "Why",
+      "laptop": true,
+      "osm": 5920067081,
+      "rating": 4,
+      "comment": "Spacieux, lumineux et bien bossable, staff sympa, très bon café. Assez peu de caractère mais c'est bien pour se concentrer."
+    },
+    {
+      "name": "Cong Kopi",
+      "laptop": false,
+      "osm": 5920056999,
+      "rating": 5,
+      "comment": "Énorme coup de coeur à Da Nang, je suis pas sûr qu'on aurait découvert Cong Kopi si c'était pas aussi notre Airbnb lors de notre premier passage dans la ville en 2017. Kit et Melda sont adorables et passionnées de café, et adorent partager leurs expériences ! Super de faire du cupping avec elles avec du café ramené du Laos, et que Melda y découvre une acidité d'ananas. Kit est fan de la Kalita Wave depuis qu'elle l'a reçue du Japon. Au fil des mois, on a vu Sid la petite chienne grandir mais rester toujours surexcitée."
+    },
+    {
+      "name": "Gold Star",
+      "laptop": true,
+      "osm": 5920045519,
+      "rating": 3,
+      "comment": "Premier café de spécialité découvert à Da Nang lors de notre premier passage à l'automne 2017 ! Staff très sympa et bon café de différentes origines, torréfié maison. Ouvert, peut être un peu bruyant selon le passage ou les travaux sur la route."
+    },
+    {
+      "name": "Six On Six",
+      "laptop": true,
+      "osm": 5432960921,
+      "rating": 5,
+      "comment": "Espace super accueillant et bien designé, comme entrer dans le salon d'un ami qui a très bon goût ! Les places alternent entre canapés, une grande table communale, un bar ou encore des places en terrasse. Lien et Brenn, la patronne et son copain américain, sont très sympa! Et le cuisinier, dont j'ai malheureusement oublié le nom, fait des muffins aux baies et chocolat blanc qui sont à tomber. Paco le bouledogue français est super gentil, et, avant que le chaton déménage dans une villa du quartier, c'était notre raison principale de visiter !"
+    },
+    {
+      "name": "Thor Phan",
+      "laptop": true,
+      "osm": 3388701190,
+      "rating": 4,
+      "comment": "Un des, sinon le meilleur, café filtre de la ville ! Torréfié maison en plus. Seul inconvénient, parfois un peu trop family-friendly :)"
+    },
+    {
+      "name": "ZMOY",
+      "laptop": true,
+      "osm": 5919670289,
+      "rating": 5,
+      "comment": "Coup de coeur à Chiang Mai ! Ouvert par deux soeurs (on pense) dans le garage familial reconverti en petit café. Petit et un peu serré, mais super accueillant et chaud. Filtre et latte délicieux, et le lait est préparé avec la machine que Clara a ensuite commandée pour faire des lattes à la maison ! Et bien sûr la fille est adorable et super souriante."
+    },
+    {
+      "name": "A.B.C.D.",
+      "laptop": true,
+      "osm": 5915461228,
+      "rating": 5,
+      "comment": "Super espace très bien designé, pas mal de passage mais étrangement \"notre\" table (la grande en bois et en verre) est toujours disponible. Une serveuse qu'on a vue en training depuis ses débuts est adorable et très attentionnée, elle nous sert de l'eau et nuos amène des super bons biscuits maison. Seul inconvénient, pas de filte - mais le latte est très bon."
+    },
+    {
+      "name": "Taste",
+      "laptop": true,
+      "osm": 5202076922,
+      "rating": 5,
+      "comment": "Un des (le ?) premiers cafés découverts à Chiang Mai ! Taste est génial pour travailler et moins couru que d'autres cafés plus proches du centre de Nimman. Les prix sont raisonnables pour un excellent café d'origine locale torréfié maison par S.O.S."
+    },
+    {
+      "name": "Akha Ama",
+      "laptop": true,
+      "osm": 2527662833,
+      "rating": 4,
+      "comment": "Une institution à Chiang Mai ! Akha Ama est aussi une entreprise sociale : le café est produit par la minorité Akha en respectant l'environnement. Cette branche (il y en a une autre au centre-ville), entièrement rénovée en octobre 2018, est idéale pour un café après une course au marché Thanin (Sri Wattana)."
+    },
+    {
+      "name": "Cottontree",
+      "laptop": true,
+      "osm": 4265515989,
+      "rating": 5,
+      "comment": "Délicieux café torréfié maison de différentes origines. Très bel espace, les meilleures places sont contre les vitres mais les tables vont aussi, malgré qu'il y fasse un peu plus sombre. Scones à tomber par terre, quand il y en a. Le café de choix avant d'aller à Maya."
     }
-    ]
+  ]
 }
