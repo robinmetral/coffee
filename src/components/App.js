@@ -87,7 +87,7 @@ class App extends Component {
     let { tags } = node
     // add fetched values to cafe object
     cafe.coordinates = [node.lat, node.lon]
-    cafe.hours = tags.opening_hours
+    cafe.hours = tags.opening_hours ? tags.opening_hours : ""
     cafe.url = tags.website ? tags.website : tags.facebook ? tags.facebook : ""
     // add current date to cafe
     cafe.date = Date.now()
