@@ -16,14 +16,14 @@ class Panel extends Component {
         panel={this.props.panel}
       >
         { isLoggedIn ? (
-        <>
+        <div>
           <EditCafeForm
             cafe={this.props.cafe}
             updateCafe={this.props.updateCafe}
             deleteCafe={this.props.deleteCafe}
           /> 
           <AddCafeForm addCafe={this.props.addCafe} />
-        </>
+        </div>
         ) : (
           <ViewCafe
             cafe={this.props.cafe}
