@@ -2,7 +2,6 @@ import React from "react"
 import styled from "styled-components"
 
 const Container = styled.div`
-  // position and animation
   width: 100vw;
   height: 100vh;
   z-index: 1000;
@@ -12,7 +11,13 @@ const Container = styled.div`
   right: -100vw;
   transition: transform ease 500ms;
   transform: ${props => (props.panel === "open") ? "translate3d(-100vw, 0, 0)" : "none"};
-  box-shadow: ${props => (props.panel === "open") ? "-5px 0 25px 0 rgba(0, 0, 0, 0.3)" : "none"};
+  // responsive styles
+  @media (min-width: 992px) {
+    width: 38vw;
+    right: -38vw;
+    transform: ${props => (props.panel === "open") ? "translate3d(-38vw, 0, 0)" : "none"};
+    box-shadow: ${props => (props.panel === "open") ? "-5px 0 25px 0 rgba(0, 0, 0, 0.3)" : "none"};
+  }
   // children
   display: grid;
   grid-template-columns: 1fr auto;
