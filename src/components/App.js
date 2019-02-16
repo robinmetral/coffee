@@ -46,9 +46,11 @@ class App extends Component {
   }
 
   importCafes = () => {
+    const osmids = []
     cafesbackup.cafes.forEach( cafe => {
-      this.addCafe(cafe)
+      osmids.push(cafe.osm)
     })
+    console.log(osmids)
   }
 
   handleClick = event => {
