@@ -7,6 +7,8 @@ import Layout from "./Layout"
 import Map from "./Map"
 import Panel from "./Panel"
 
+import cafesbackup from "../../public/cafes.json"
+
 class App extends Component {
 
   // initialize state
@@ -41,6 +43,10 @@ class App extends Component {
   // remove binding when unmounting to avoid memory leak
   componentWillUnmount() {
     base.removeBinding(this.ref);
+  }
+
+  importCafes = () => {
+    console.log(cafesbackup)
   }
 
   handleClick = event => {
@@ -163,6 +169,7 @@ class App extends Component {
           logout={this.logout}
           panel={this.state.panel}
           togglePanel={this.togglePanel}
+          importCafes={this.importCafes}
         />
       </Layout>
     )
