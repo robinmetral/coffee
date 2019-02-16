@@ -47,9 +47,8 @@ class App extends Component {
 
   importCafes = () => {
     cafesbackup.cafes.forEach( cafe => {
-      // console.log(cafe.name)
+      this.addCafe(cafe)
     })
-    this.addCafe(cafesbackup.cafes[0])
   }
 
   handleClick = event => {
