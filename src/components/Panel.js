@@ -23,6 +23,7 @@ class Panel extends Component {
             deleteCafe={this.props.deleteCafe}
           /> 
           <AddCafeForm addCafe={this.props.addCafe} />
+          <button onClick={this.props.importCafes}>Migrate!</button>
         </div>
         ) : (
           <ViewCafe
