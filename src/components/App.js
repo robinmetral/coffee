@@ -45,12 +45,39 @@ class App extends Component {
     base.removeBinding(this.ref);
   }
 
-  importCafes = () => {
+  importCafes = async () => {
+    // sort cafes by ascending node id
+    const data = cafesbackup.cafes.sort( (a, b) => (a.osm - b.osm) )
+    // make an array of osm nodes
     const osmids = []
-    cafesbackup.cafes.forEach( cafe => {
+    data.forEach( cafe => {
       osmids.push(cafe.osm)
     })
-    console.log(osmids)
+    // fetch data though overpass
+    let response = await fetch(`https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:${osmids});out;`)
+    let json = await response.json()
+    // build final cafe objects
+    for (let i = 0; i < json.elements.length; i++) {
+      // destructure
+      let node = json.elements[i]
+      let { tags } = node
+      let cafe = data[i]
+      // add fetched values to cafe object
+      cafe.coordinates = [node.lat, node.lon]
+      cafe.hours = !tags ? "" : tags.opening_hours ? tags.opening_hours : ""
+      cafe.url = !tags ? "" : tags.website ? tags.website : tags.facebook ? tags.facebook : ""
+      // add current date to cafe
+      cafe.date = Date.now()
+      // set state
+      const cafes = { ...this.state.cafes }
+      // add cafes
+      cafes[cafe.osm] = cafe
+      // use a setState callback to fire before re-rendering
+      // https://reactjs.org/docs/react-component.html#setstate
+      this.setState({ cafes }, () => {
+        console.log(`Successfully added ${cafe.name} to State.`)
+      })
+    }
   }
 
   handleClick = event => {
@@ -83,27 +110,27 @@ class App extends Component {
   addCafe = async (cafe) => {
     // fetch OSM data vie an Overpass API query
     let response = await fetch(`https://www.overpass-api.de/api/interpreter?data=[out:json];node(${cafe.osm});out;`)
-    let json = await response.json()
-    // destructure
-    let node = json.elements[0]
-    let { tags } = node
-    // add fetched values to cafe object
-    cafe.coordinates = [node.lat, node.lon]
-    cafe.hours = tags.opening_hours ? tags.opening_hours : ""
-    cafe.url = tags.website ? tags.website : tags.facebook ? tags.facebook : ""
-    // add current date to cafe
-    cafe.date = Date.now()
-    // convert rating value to an integer
-    cafe.rating = Number(cafe.rating)
-    // take a copy of state
-    const cafes = { ...this.state.cafes }
-    // add new cafe
-    cafes[cafe.osm] = cafe
-    // use a setState callback to fire before re-rendering
-    // https://reactjs.org/docs/react-component.html#setstate
-    this.setState({ cafes }, () => {
-      console.log(`Successfully added ${cafe.name} to State.`)
-    })
+      let json = await response.json()
+      // destructure
+      let node = json.elements[0]
+      let { tags } = node
+      // add fetched values to cafe object
+      cafe.coordinates = [node.lat, node.lon]
+      cafe.hours = tags.opening_hours ? tags.opening_hours : ""
+      cafe.url = tags.website ? tags.website : tags.facebook ? tags.facebook : ""
+      // add current date to cafe
+      cafe.date = Date.now()
+      // convert rating value to an integer
+      cafe.rating = Number(cafe.rating)
+      // take a copy of state
+      const cafes = { ...this.state.cafes }
+      // add new cafe
+      cafes[cafe.osm] = cafe
+      // use a setState callback to fire before re-rendering
+      // https://reactjs.org/docs/react-component.html#setstate
+      this.setState({ cafes }, () => {
+        console.log(`Successfully added ${cafe.name} to State.`)
+      })
   }
 
   updateCafe = (updatedCafe) => {
@@ -176,7 +203,7 @@ class App extends Component {
           importCafes={this.importCafes}
         />
       </Layout>
-    )
+      )
   }
 }
 
