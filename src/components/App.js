@@ -14,6 +14,7 @@ class App extends Component {
   state = {
     cafes: {},
     clicked: "",
+    title: "",
     panel: "closed",
     uid: null,
     owner: null
@@ -95,10 +96,13 @@ class App extends Component {
         panel: "closed"
       })
     }
-    // else set clicked osm id in state and open panel
     else {
+      // get clicked cafe's name
+      const name = cafes[osm].name
+      // set clicked cafe id, its name, and panel status in state
       this.setState({
         clicked: osm,
+        title: name,
         panel: "open"
       })
     }
