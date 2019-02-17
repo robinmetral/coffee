@@ -196,7 +196,7 @@ class App extends Component {
   render() {
     return (
       <Layout>
-        <Helmet />
+        <Helmet title={this.state.title} />
         <Map
           cafes={this.state.cafes}
           handleClick={this.handleClick}
