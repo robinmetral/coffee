@@ -4,6 +4,7 @@ import "firebase/auth"
 
 import base, { firebaseApp } from "../base"
 import Layout from "./Layout"
+import Helmet from "./Helmet"
 import Map from "./Map"
 import Panel from "./Panel"
 
@@ -13,6 +14,7 @@ class App extends Component {
   state = {
     cafes: {},
     clicked: "",
+    name: "",
     panel: "closed",
     uid: null,
     owner: null
@@ -91,13 +93,18 @@ class App extends Component {
     // if no cafe was clicked close the panel
     if (!osm) {
       this.setState({
+        clicked: "",
+        name: "",
         panel: "closed"
       })
     }
-    // else set clicked osm id in state and open panel
     else {
+      // get clicked cafe's name
+      const name = cafes[osm].name
+      // set clicked cafe id, its name, and panel status in state
       this.setState({
         clicked: osm,
+        name: name,
         panel: "open"
       })
     }
@@ -189,6 +196,7 @@ class App extends Component {
   render() {
     return (
       <Layout>
+        <Helmet name={this.state.name} />
         <Map
           cafes={this.state.cafes}
           handleClick={this.handleClick}

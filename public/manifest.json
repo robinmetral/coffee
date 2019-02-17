@@ -1,6 +1,6 @@
 {
   "short_name": "Les cafés de Robin",
-  "name": "Carte des cafés de Robin",
+  "name": "Les cafés de Robin",
   "icons": [
     {
       "src": "./favicon-192.png",
@@ -15,6 +15,6 @@
   ],
   "start_url": "./?source=pwa",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#6F4E37",
   "background_color": "#ffffff"
 }
