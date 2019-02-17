@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet as ReactHelmet } from "react-helmet"
 
 import favicon from "../assets/icon-coffee-bean.png"
+import screenshot from "../assets/screenshot.png"
 
 const metadata = {
   title: "Les cafés de Robin",
@@ -27,7 +28,11 @@ const Helmet = (props) => (
     <meta property="og:description" content={description} />
     <meta property="og:url" content={url} />
     <meta property="og:locale" content="fr" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content={screenshot} />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="600" />
+    <meta property="og:image:alt" content="Capture d'écran" />
     <title>{ props.name === "" ? title : `${props.name} | ${title}` }</title>
     <meta name="description" content={description} />
   </ReactHelmet>
