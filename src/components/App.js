@@ -93,6 +93,8 @@ class App extends Component {
     // if no cafe was clicked close the panel
     if (!osm) {
       this.setState({
+        clicked: "",
+        title: "",
         panel: "closed"
       })
     }
