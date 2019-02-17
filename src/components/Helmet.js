@@ -33,6 +33,8 @@ const Helmet = (props) => (
     <meta property="og:image:width" content="800" />
     <meta property="og:image:height" content="600" />
     <meta property="og:image:alt" content="Capture d'écran" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:creator" content="@robinmetral" />
     <title>{ props.name === "" ? title : `${props.name} | ${title}` }</title>
     <meta name="description" content={description} />
   </ReactHelmet>
