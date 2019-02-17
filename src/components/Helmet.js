@@ -14,7 +14,7 @@ const Helmet = (props) => (
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <meta name="theme-color" content="#000000" />
+    <meta name="theme-color" content="#6F4E37" />
 
     <title>{ props.title === "" ? `Les cafés de Robin` : `${props.title} | Les cafés de Robin` }</title>
     <meta name="description" content="Une app React pour partager les cafés que j'aime !" />
