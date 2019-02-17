@@ -14,7 +14,7 @@ class App extends Component {
   state = {
     cafes: {},
     clicked: "",
-    title: "",
+    name: "",
     panel: "closed",
     uid: null,
     owner: null
@@ -94,7 +94,7 @@ class App extends Component {
     if (!osm) {
       this.setState({
         clicked: "",
-        title: "",
+        name: "",
         panel: "closed"
       })
     }
@@ -104,7 +104,7 @@ class App extends Component {
       // set clicked cafe id, its name, and panel status in state
       this.setState({
         clicked: osm,
-        title: name,
+        name: name,
         panel: "open"
       })
     }
@@ -196,7 +196,7 @@ class App extends Component {
   render() {
     return (
       <Layout>
-        <Helmet title={this.state.title} />
+        <Helmet name={this.state.name} />
         <Map
           cafes={this.state.cafes}
           handleClick={this.handleClick}
