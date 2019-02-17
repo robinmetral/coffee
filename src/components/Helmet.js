@@ -3,16 +3,33 @@ import { Helmet as ReactHelmet } from "react-helmet"
 
 import favicon from "../assets/icon-coffee-bean.png"
 
+const metadata = {
+  title: "Les cafés de Robin",
+  description: "Une app React pour partager les cafés que j'aime !",
+  color: "#6F4E37",
+  url: process.env.PUBLIC_URL,
+}
+
+const { title, description, color, url } = metadata
+
 const Helmet = (props) => (
   <ReactHelmet>
     <html lang="fr" />
     <meta charSet="utf-8" />
     <link rel="icon" type="image/png" href={favicon} />
-    <link rel="manifest" href={`${process.env.PUBLIC_URL}/manifest.json`} />
+    <link rel="canonical" href={url} />
+    <link rel="manifest" href={`${url}/manifest.json`} />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="theme-color" content="#6F4E37" />
-    <title>{ props.title === "" ? `Les cafés de Robin` : `${props.title} | Les cafés de Robin` }</title>
-    <meta name="description" content="Une app React pour partager les cafés que j'aime !" />
+    <meta name="theme-color" content={color} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:site_name" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:locale" content="fr" />
+    <meta property="og:image" content="" />
+    <title>{ props.name === "" ? title : `${props.name} | ${title}` }</title>
+    <meta name="description" content={description} />
   </ReactHelmet>
 )
 
