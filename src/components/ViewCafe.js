@@ -21,6 +21,9 @@ const List = styled.ul`
         text-decoration: underline;
       }
     }
+    img {
+      margin-right: 1rem;
+    }
   }
 `
 
