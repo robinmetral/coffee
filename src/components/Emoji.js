@@ -3,7 +3,6 @@ import styled from "styled-components"
 
 const Img = styled.img`
   height: 1em;
-  margin-right: 1rem;
 `
 
 class Emoji extends Component {
