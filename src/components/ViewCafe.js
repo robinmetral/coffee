@@ -1,33 +1,28 @@
-/* eslint-disable */
-
 import React, { Component } from "react"
 import styled from "styled-components"
 
 import CafeLayout from "./styled/CafeLayout"
 import Heading from "./styled/Heading"
+import Emoji from "./Emoji"
 
-const IconsList = styled.ul`
+const List = styled.ul`
   border-top: 1px solid lightgray;
   list-style-type: none;
-  padding: 0;
+  padding: 1rem 0 0 0;
   display: flex;
   flex-direction: column;
   li {
     display: flex;
-  }
-`
-
-const Icon = styled.li`
-  margin-top: 0.5rem;
-  &::before {
-    content: "${props => props.code}";
-    margin-right: 1rem;
-  }
-  a {
-    text-decoration: none;
-    color: inherit;
-    &:hover {
-      text-decoration: underline;
+    margin-top: 0.5rem;
+    a {
+      text-decoration: none;
+      color: inherit;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+    img {
+      margin-right: 1rem;
     }
   }
 `
@@ -44,30 +39,34 @@ class ViewCafe extends Component {
       <CafeLayout>
         <Heading>{ name }</Heading>
         { [...Array(rating)].map((star, key) =>
-          <span role="img" aria-label="star emoji" key={key}>&#x2b50;</span>
+        <Emoji unicode="2b50" alt="Star" key={key} />
         )}
         <p>{ comment }</p>
-        <IconsList>
+        <List>
           { laptop && (
-          <Icon code="\01F4BB">
+          <li>
+            <Emoji unicode="1f4bb" alt="Laptop Computer" />
             Recommandé pour travailler
-          </Icon>
+          </li>
           ) }
           { url && (
-          <Icon code="\01F517">
+          <li>
+            <Emoji unicode="1f517" alt="Link" />
             <a href={ url }>{ url }</a>
-          </Icon>
+          </li>
           ) }
-          <Icon code="\01f30d">
+          <li>
+            <Emoji unicode="1f30d" alt="Globe Showing Europe-Africa" />
             <a href={`https://www.openstreetmap.org/node/${ osm }`}>Ouvrir dans OpenStreetMap</a>
-          </Icon>
-          <Icon code="\01f557">
+          </li>
+          <li>
+            <Emoji unicode="1f557" alt="Eight O'Clock" />
             { hours }
-          </Icon>
-        </IconsList>
+          </li>
+        </List>
       </CafeLayout>
-    )
-  }
+      )
+}
 }
 
 export default ViewCafe

@@ -1,6 +1,8 @@
 import React from "react"
 import styled from "styled-components"
 
+import Emoji from "./Emoji.js"
+
 const Button = styled.button`
   background: none;
   border: none;
@@ -9,27 +11,22 @@ const Button = styled.button`
   flex-direction: column;
   align-items: flex-end;
   margin-bottom: 1rem;
-`
-
-const Emoji = styled.span`
-  font-size: 2rem;
   &:hover {
     filter: brightness(75%);
   }
+  img {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
 `
 
-const Icon = (props) => (
+const ActionButton = (props) => (
   <Button
-    onClick={ props.action }
+    onClick={props.action}
   >
-    <Emoji
-      role="img"
-      aria-label={ `${ props.description } emoji` }
-    >
-      { props.code }
-    </Emoji>
-    { props.title }
+    <Emoji unicode={props.unicode} alt={props.alt} />
+    {props.title}
   </Button>
 )
 
-export default Icon
+export default ActionButton
