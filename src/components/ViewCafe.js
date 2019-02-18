@@ -39,7 +39,7 @@ class ViewCafe extends Component {
       <CafeLayout>
         <Heading>{ name }</Heading>
         { [...Array(rating)].map((star, key) =>
-        <span role="img" aria-label="star emoji" key={key}>&#x2b50;</span>
+        <Emoji unicode="2b50" alt="Star" key={key} />
         )}
         <p>{ comment }</p>
         <List>
