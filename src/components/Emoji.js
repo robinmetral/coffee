@@ -1,10 +1,16 @@
 import React, { Component } from "react"
+import styled from "styled-components"
+
+const Img = styled.img`
+  height: 16px;
+  margin-right: 1rem;
+`
 
 class Emoji extends Component {
   render() {
     const source = require(`../assets/emojis/${this.props.unicode}.png`)
     return (
-      <img
+      <Img
         src={source}
         alt={`${this.props.alt} emoji`}
       />
