@@ -16,6 +16,7 @@ const Button = styled.button`
   }
   img {
     font-size: 2rem;
+    margin-bottom: 0.5rem;
   }
 `
 
