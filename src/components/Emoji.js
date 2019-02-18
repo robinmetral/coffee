@@ -4,7 +4,10 @@ class Emoji extends Component {
   render() {
     const source = require(`../assets/emojis/${this.props.unicode}.png`)
     return (
-      <img src={source} />
+      <img
+        src={source}
+        alt={`${this.props.alt} emoji`}
+      />
     )
   }
 }

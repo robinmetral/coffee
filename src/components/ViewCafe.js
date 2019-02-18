@@ -45,22 +45,22 @@ class ViewCafe extends Component {
         <IconsList>
           { laptop && (
           <Icon>
-            <Emoji unicode="1f4bb" />
+            <Emoji unicode="1f4bb" alt="Laptop Computer" />
             Recommandé pour travailler
           </Icon>
           ) }
           { url && (
           <Icon>
-            <Emoji unicode="1f517" />
+            <Emoji unicode="1f517" alt="Link" />
             <a href={ url }>{ url }</a>
           </Icon>
           ) }
           <Icon>
-            <Emoji unicode="1f30d" />
+            <Emoji unicode="1f30d" alt="Globe Showing Europe-Africa" />
             <a href={`https://www.openstreetmap.org/node/${ osm }`}>Ouvrir dans OpenStreetMap</a>
           </Icon>
           <Icon>
-            <Emoji unicode="1f557" />
+            <Emoji unicode="1f557" alt="Eight O'Clock" />
             { hours }
           </Icon>
         </IconsList>
