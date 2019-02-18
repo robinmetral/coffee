@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 
-import Icon from "./Icon"
+import ActionButton from "./ActionButton"
 
 class Auth extends Component {
   render() {
@@ -8,9 +8,9 @@ class Auth extends Component {
     // if not logged in
     if(!this.props.uid) {
       return (
-        <Icon
-          code="&#x1f527;"
-          description="wrench"
+        <ActionButton
+          unicode="1f527"
+          description="Wrench"
           title="Connexion"
           action={this.props.login}
         />
@@ -25,9 +25,9 @@ class Auth extends Component {
 
     // if logged in
     return (
-      <Icon
-        code="&#x1f512;"
-        description="locked"
+      <ActionButton
+        unicode="1f512"
+        description="Locked"
         title="Déconnexion"
         action={this.props.logout}
       />

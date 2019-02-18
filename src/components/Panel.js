@@ -4,8 +4,8 @@ import AddCafeForm from "./AddCafeForm"
 import EditCafeForm from "./EditCafeForm"
 import ViewCafe from "./ViewCafe"
 import PanelLayout from "./styled/PanelLayout"
-import PanelIcons from "./styled/PanelIcons"
-import Icon from "./Icon"
+import PanelButtons from "./styled/PanelButtons"
+import ActionButton from "./ActionButton"
 import Auth from "./Auth"
 
 class Panel extends Component {
@@ -30,10 +30,10 @@ class Panel extends Component {
             clicked={this.props.clicked}
           />
         ) }
-        <PanelIcons>
-          <Icon
-            code="&#x1f449;"
-            description="backhand index pointing right"
+        <PanelButtons>
+          <ActionButton
+            unicode="1f449"
+            alt="Backhand Index Pointing Right"
             title="Fermer"
             action={this.props.togglePanel}
           />
@@ -43,7 +43,7 @@ class Panel extends Component {
             login={this.props.login}
             logout={this.props.logout}
           />
-        </PanelIcons>
+        </PanelButtons>
       </PanelLayout>
     )
   }
