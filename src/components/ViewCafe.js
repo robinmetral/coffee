@@ -1,10 +1,9 @@
-/* eslint-disable */
-
 import React, { Component } from "react"
 import styled from "styled-components"
 
 import CafeLayout from "./styled/CafeLayout"
 import Heading from "./styled/Heading"
+import Emoji from "./Emoji"
 
 const IconsList = styled.ul`
   border-top: 1px solid lightgray;
@@ -19,10 +18,6 @@ const IconsList = styled.ul`
 
 const Icon = styled.li`
   margin-top: 0.5rem;
-  &::before {
-    content: "${props => props.code}";
-    margin-right: 1rem;
-  }
   a {
     text-decoration: none;
     color: inherit;
@@ -49,19 +44,23 @@ class ViewCafe extends Component {
         <p>{ comment }</p>
         <IconsList>
           { laptop && (
-          <Icon code="\01F4BB">
+          <Icon>
+            <Emoji unicode="1f4bb" />
             Recommandé pour travailler
           </Icon>
           ) }
           { url && (
-          <Icon code="\01F517">
+          <Icon>
+            <Emoji unicode="1f517" />
             <a href={ url }>{ url }</a>
           </Icon>
           ) }
-          <Icon code="\01f30d">
+          <Icon>
+            <Emoji unicode="1f30d" />
             <a href={`https://www.openstreetmap.org/node/${ osm }`}>Ouvrir dans OpenStreetMap</a>
           </Icon>
-          <Icon code="\01f557">
+          <Icon>
+            <Emoji unicode="1f557" />
             { hours }
           </Icon>
         </IconsList>
