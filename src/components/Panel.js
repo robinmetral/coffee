@@ -1,12 +1,18 @@
 import React, { Component } from "react"
+import styled from "styled-components"
 
 import AddCafeForm from "./AddCafeForm"
 import EditCafeForm from "./EditCafeForm"
 import ViewCafe from "./ViewCafe"
 import PanelLayout from "./styled/PanelLayout"
-import PanelButtons from "./styled/PanelButtons"
 import ActionButton from "./ActionButton"
 import Auth from "./Auth"
+
+const PanelButtons = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+`
 
 class Panel extends Component {
   render() {
@@ -15,6 +21,20 @@ class Panel extends Component {
       <PanelLayout
         panel={this.props.panel}
       >
+        <PanelButtons>
+          <Auth
+            uid={this.props.uid}
+            owner={this.props.owner}
+            login={this.props.login}
+            logout={this.props.logout}
+          />
+          <ActionButton
+            unicode="1f449"
+            alt="Backhand Index Pointing Right"
+            title="Fermer"
+            action={this.props.togglePanel}
+          />
+        </PanelButtons>
         { isLoggedIn ? (
         <div>
           <EditCafeForm
@@ -30,20 +50,6 @@ class Panel extends Component {
             clicked={this.props.clicked}
           />
         ) }
-        <PanelButtons>
-          <ActionButton
-            unicode="1f449"
-            alt="Backhand Index Pointing Right"
-            title="Fermer"
-            action={this.props.togglePanel}
-          />
-          <Auth
-            uid={this.props.uid}
-            owner={this.props.owner}
-            login={this.props.login}
-            logout={this.props.logout}
-          />
-        </PanelButtons>
       </PanelLayout>
     )
   }
