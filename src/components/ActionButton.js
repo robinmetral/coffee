@@ -4,19 +4,27 @@ import styled from "styled-components"
 import Emoji from "./Emoji.js"
 
 const Button = styled.button`
-  background: none;
+  width: 100%;
+  padding: 1rem 0 1rem 0;
   border: none;
   cursor: pointer;
+  font-size: 1.2rem;
+  font-family: inherit;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin-bottom: 1rem;
+  align-items: center;
+  justify-content: center;
   &:hover {
     filter: brightness(75%);
+    border: 0;
+  }
+  &:first-child {
+    background: green;
+  }
+  &:last-child {
+    background: red;
   }
   img {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
   }
 `
 
@@ -24,8 +32,8 @@ const ActionButton = (props) => (
   <Button
     onClick={props.action}
   >
-    <Emoji unicode={props.unicode} alt={props.alt} />
     {props.title}
+    <Emoji unicode={props.unicode} alt={props.alt} />
   </Button>
 )
 
