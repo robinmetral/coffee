@@ -9,7 +9,9 @@ import ActionButton from "./ActionButton"
 import Auth from "./Auth"
 
 const PanelButtons = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
 `
 
 class Panel extends Component {
