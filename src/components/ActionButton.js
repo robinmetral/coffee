@@ -8,20 +8,23 @@ const Button = styled.button`
   padding: 1rem 0 1rem 0;
   border: none;
   cursor: pointer;
+  color: inherit;
   font-size: 1.2rem;
   font-family: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
-  &:hover {
-    filter: brightness(75%);
-    border: 0;
-  }
   &:first-child {
-    background: green;
+    background: hsl(200, 75%, 75%);
+    &:hover {
+      background: hsl(200, 75%, 85%);
+    }
   }
   &:last-child {
-    background: red;
+    background: hsl(360, 75%, 75%);
+    &:hover {
+      background: hsl(360, 75%, 85%);
+    }
   }
   img {
     margin-left: 0.5rem;
