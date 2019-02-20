@@ -19,9 +19,6 @@ const Container = styled.div`
     transform: ${props => (props.panel === "open") ? "translate3d(-38vw, 0, 0)" : "none"};
     box-shadow: ${props => (props.panel === "open") ? "-5px 0 25px 0 rgba(0, 0, 0, 0.3)" : "none"};
   }
-  // children
-  display: grid;
-  grid-template-columns: 1fr auto;
 `
 
 const PanelLayout = (props) => (
