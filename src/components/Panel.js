@@ -1,12 +1,16 @@
 import React, { Component } from "react"
+import styled from "styled-components"
 
 import AddCafeForm from "./AddCafeForm"
 import EditCafeForm from "./EditCafeForm"
 import ViewCafe from "./ViewCafe"
 import PanelLayout from "./styled/PanelLayout"
-import PanelButtons from "./styled/PanelButtons"
 import ActionButton from "./ActionButton"
 import Auth from "./Auth"
+
+const PanelButtons = styled.div`
+  display: flex;
+`
 
 class Panel extends Component {
   render() {
