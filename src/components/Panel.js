@@ -15,6 +15,20 @@ class Panel extends Component {
       <PanelLayout
         panel={this.props.panel}
       >
+        <PanelButtons>
+          <Auth
+            uid={this.props.uid}
+            owner={this.props.owner}
+            login={this.props.login}
+            logout={this.props.logout}
+          />
+          <ActionButton
+            unicode="1f449"
+            alt="Backhand Index Pointing Right"
+            title="Fermer"
+            action={this.props.togglePanel}
+          />
+        </PanelButtons>
         { isLoggedIn ? (
         <div>
           <EditCafeForm
@@ -30,20 +44,6 @@ class Panel extends Component {
             clicked={this.props.clicked}
           />
         ) }
-        <PanelButtons>
-          <ActionButton
-            unicode="1f449"
-            alt="Backhand Index Pointing Right"
-            title="Fermer"
-            action={this.props.togglePanel}
-          />
-          <Auth
-            uid={this.props.uid}
-            owner={this.props.owner}
-            login={this.props.login}
-            logout={this.props.logout}
-          />
-        </PanelButtons>
       </PanelLayout>
     )
   }
