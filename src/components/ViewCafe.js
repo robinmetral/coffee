@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import CafeLayout from "./styled/CafeLayout"
 import Heading from "./styled/Heading"
+import Rating from "./Rating"
 import Emoji from "./Emoji"
 
 const List = styled.ul`
@@ -38,9 +39,7 @@ class ViewCafe extends Component {
     return (
       <CafeLayout>
         <Heading>{ name }</Heading>
-        { [...Array(rating)].map((star, key) =>
-        <Emoji unicode="2b50" alt="Star" key={key} />
-        )}
+        <Rating rating={rating} />
         <p>{ comment }</p>
         <List>
           { laptop && (
