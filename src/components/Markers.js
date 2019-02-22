@@ -1,6 +1,8 @@
 import React, { Component } from "react"
-import { Marker, Tooltip } from "react-leaflet"
+import { Marker } from "react-leaflet"
 import L from "leaflet"
+
+import Tooltip from "./Tooltip"
 
 const CoffeeBean = new L.Icon({
   iconUrl: require("../assets/icon-coffee-bean.png"),
@@ -28,10 +30,9 @@ class Markers extends Component {
               onClick={this.props.handleClick}
             >
               <Tooltip
-                direction="top"
-              >
-                {cafes[osm].name} &middot; <strong>{cafes[osm].rating}</strong>
-              </Tooltip>
+                name={cafes[osm].name}
+                rating={cafes[osm].rating}
+              />
             </Marker>
             ))
         }
