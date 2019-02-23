@@ -14,13 +14,7 @@ class Auth extends Component {
           title="Connexion"
           action={this.props.login}
         />
-      )
-    }
-
-    // if not owner
-    if(this.props.uid !== this.props.owner) {
-      alert("Vous n'avez pas la permission de modifier les cafés")
-      this.props.logout()
+        )
     }
 
     // if logged in
@@ -31,7 +25,7 @@ class Auth extends Component {
         title="Déconnexion"
         action={this.props.logout}
       />
-    )
+      )
   }
 }
 
