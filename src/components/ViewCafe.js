@@ -3,6 +3,7 @@ import styled from "styled-components"
 
 import CafeLayout from "./styled/CafeLayout"
 import Heading from "./styled/Heading"
+import Error from "./styled/Error"
 import Rating from "./Rating"
 import Emoji from "./Emoji"
 
@@ -38,6 +39,9 @@ class ViewCafe extends Component {
     const { name, rating, comment, laptop, hours, url, osm } = this.props.cafe
     return (
       <CafeLayout>
+        { this.props.isLoggedIn && (
+          <Error>Désolé, vous ne pouvez pas modifier les cafés.</Error>
+        ) }
         <Heading>{ name }</Heading>
         <Rating rating={rating} />
         <p>{ comment }</p>
