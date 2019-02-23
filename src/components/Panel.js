@@ -16,7 +16,8 @@ const PanelButtons = styled.div`
 
 class Panel extends Component {
   render() {
-    const isLoggedIn = (this.props.uid && this.props.uid === this.props.owner)
+    const isLoggedIn = this.props.uid
+    const isOwner = (this.props.uid && this.props.uid === this.props.owner)
     return (
       <PanelLayout
         panel={this.props.panel}
@@ -35,7 +36,7 @@ class Panel extends Component {
             action={this.props.togglePanel}
           />
         </PanelButtons>
-        { isLoggedIn ? (
+        { isOwner ? (
         <div>
           <EditCafeForm
             cafe={this.props.cafe}
@@ -45,10 +46,15 @@ class Panel extends Component {
           <AddCafeForm addCafe={this.props.addCafe} />
         </div>
         ) : (
+        <>
+          { isLoggedIn && (
+            <p>Désolé, vous ne pouvez pas modifier mes cafés</p>
+          ) }
           <ViewCafe
             cafe={this.props.cafe}
             clicked={this.props.clicked}
           />
+        </>
         ) }
       </PanelLayout>
     )
