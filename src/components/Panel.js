@@ -46,15 +46,11 @@ class Panel extends Component {
           <AddCafeForm addCafe={this.props.addCafe} />
         </div>
         ) : (
-        <>
-          { isLoggedIn && (
-            <p>Désolé, vous ne pouvez pas modifier mes cafés</p>
-          ) }
-          <ViewCafe
-            cafe={this.props.cafe}
-            clicked={this.props.clicked}
-          />
-        </>
+        <ViewCafe
+          cafe={this.props.cafe}
+          clicked={this.props.clicked}
+          isLoggedIn={isLoggedIn}
+        />
         ) }
       </PanelLayout>
     )
