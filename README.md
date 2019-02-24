@@ -2,7 +2,7 @@ Languages: [:uk:](#mapping-coffee) / [:fr:](#les-cafés-de-robin)
 
 # Mapping Coffee
 
-This project emerged in September 2016 from [a Tania Rascia article](https://www.taniarascia.com/real-world-examples-of-map-filter-and-reduce-in-javascript/). I created my own version of Tania's [Cafétography](https://github.com/taniarascia/coffee), a JavaScript ES6 coffee map, powered by [Leaflet](https://leafletjs.com).
+This project emerged in September 2018 from [a Tania Rascia article](https://www.taniarascia.com/real-world-examples-of-map-filter-and-reduce-in-javascript/). I created my own version of Tania's [Cafétography](https://github.com/taniarascia/coffee), a JavaScript ES6 coffee map, powered by [Leaflet](https://leafletjs.com).
 
 But every time I wanted to add a new coffee shop to my map, I had to manually edit a `json` file.
 
@@ -28,7 +28,7 @@ This project is powered by:
 
 # Les cafés de Robin
 
-Ce projet a commencé en septembre 2016 avec [ce tutoriel de Tania Rascia](https://www.taniarascia.com/real-world-examples-of-map-filter-and-reduce-in-javascript/). J'ai créé ma propre version de [Cafétography](https://github.com/taniarascia/coffee), une carte en JavaScript ES6 avec [Leaflet](https://leafletjs.com) où j'affichais mes cafés préférés.
+Ce projet a commencé en septembre 2018 avec [ce tutoriel de Tania Rascia](https://www.taniarascia.com/real-world-examples-of-map-filter-and-reduce-in-javascript/). J'ai créé ma propre version de [Cafétography](https://github.com/taniarascia/coffee), une carte en JavaScript ES6 avec [Leaflet](https://leafletjs.com) où j'affichais mes cafés préférés.
 
 Mais à chaque fois que je voulais ajouter un café je devais modifier manuellement un fichier `json`.
 
