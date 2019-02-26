@@ -19,15 +19,12 @@ const GlobalStyle = createGlobalStyle`
   }
 `
 
-const Container = styled.div`
-`
-
 const Layout = (props) => (
   <>
   <GlobalStyle />
-  <Container>
+  <src>
     { props.children }
-  </Container>
+  </src>
   </>
 )
 
