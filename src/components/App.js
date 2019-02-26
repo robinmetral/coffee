@@ -45,47 +45,6 @@ class App extends Component {
     base.removeBinding(this.ref);
   }
 
-  /* MIGRATED FEB 16TH 2019
-  // a backup of my previous data in json was imported
-  // as cafesbackup and migrated to firebase
-  // see commit 77f43d9c464c5e615241217a7f22bd8c7a1395b9
-  // and github issue #36
-  importCafes = async () => {
-    // sort cafes by ascending node id
-    const data = cafesbackup.cafes.sort( (a, b) => (a.osm - b.osm) )
-    // make an array of osm nodes
-    const osmids = []
-    data.forEach( cafe => {
-      osmids.push(cafe.osm)
-    })
-    // fetch data though overpass
-    let response = await fetch(`https://www.overpass-api.de/api/interpreter?data=[out:json];node(id:${osmids});out;`)
-    let json = await response.json()
-    // build final cafe objects
-    for (let i = 0; i < json.elements.length; i++) {
-      // destructure
-      let node = json.elements[i]
-      let { tags } = node
-      let cafe = data[i]
-      // add fetched values to cafe object
-      cafe.coordinates = [node.lat, node.lon]
-      cafe.hours = !tags ? "" : tags.opening_hours ? tags.opening_hours : ""
-      cafe.url = !tags ? "" : tags.website ? tags.website : tags.facebook ? tags.facebook : ""
-      // add current date to cafe
-      cafe.date = Date.now()
-      // set state
-      const cafes = { ...this.state.cafes }
-      // add cafes
-      cafes[cafe.osm] = cafe
-      // use a setState callback to fire before re-rendering
-      // https://reactjs.org/docs/react-component.html#setstate
-      this.setState({ cafes }, () => {
-        console.log(`Successfully added ${cafe.name} to State.`)
-      })
-    }
-  }
-  */
-
   handleClick = event => {
     // find cafe is state that was clicked based on coordinates
     const { cafes } = this.state
