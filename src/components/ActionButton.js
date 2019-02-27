@@ -1,7 +1,7 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
-import Emoji from "./Emoji.js"
+import Emoji from "./Emoji.js";
 
 const Button = styled.button`
   width: 100%;
@@ -29,15 +29,13 @@ const Button = styled.button`
   img {
     margin-left: 0.5rem;
   }
-`
+`;
 
-const ActionButton = (props) => (
-  <Button
-    onClick={props.action}
-  >
+const ActionButton = props => (
+  <Button onClick={props.action}>
     {props.title}
     <Emoji unicode={props.unicode} alt={props.alt} />
   </Button>
-)
+);
 
-export default ActionButton
+export default ActionButton;

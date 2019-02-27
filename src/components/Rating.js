@@ -1,15 +1,13 @@
-import React from "react"
+import React from "react";
 
-import Emoji from "./Emoji"
+import Emoji from "./Emoji";
 
-const Rating = (props) => (
+const Rating = props => (
   <>
-    {
-      [...Array(props.rating)].map((star, key) =>
-        <Emoji unicode="2b50" alt="Star" key={key} />
-      )
-    }
+    {[...Array(props.rating)].map((star, key) => (
+      <Emoji unicode="2b50" alt="Star" key={key} />
+    ))}
   </>
-)
+);
 
-export default Rating
+export default Rating;

@@ -1,12 +1,11 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 
-import ActionButton from "./ActionButton"
+import ActionButton from "./ActionButton";
 
 class Auth extends Component {
   render() {
-
     // if not logged in
-    if(!this.props.uid) {
+    if (!this.props.uid) {
       return (
         <ActionButton
           unicode="1f527"
@@ -14,7 +13,7 @@ class Auth extends Component {
           title="Connexion"
           action={this.props.login}
         />
-        )
+      );
     }
 
     // if logged in
@@ -25,8 +24,8 @@ class Auth extends Component {
         title="Déconnexion"
         action={this.props.logout}
       />
-      )
+    );
   }
 }
 
-export default Auth
+export default Auth;

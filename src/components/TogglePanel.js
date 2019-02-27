@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 
-const TogglePanel = (props) => (
+const TogglePanel = props => (
   <button onClick={props.togglePanel}>
-    { props.panel === "open" ? "Close" : "Open" }
+    {props.panel === "open" ? "Close" : "Open"}
   </button>
-)
+);
 
-export default TogglePanel
+export default TogglePanel;

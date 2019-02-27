@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const StyledForm = styled.fieldset`
   border: none;
@@ -8,15 +8,18 @@ const StyledForm = styled.fieldset`
   grid-template-columns: 1fr auto auto;
   grid-gap: 0.5rem;
   align-items: start;
-  .comment, .osm, button {
+  .comment,
+  .osm,
+  button {
     grid-column: 1/4;
   }
-  .laptop, .rating {
+  .laptop,
+  .rating {
     justify-items: center;
   }
   select {
     text-align: center;
   }
-`
+`;
 
-export default StyledForm
+export default StyledForm;

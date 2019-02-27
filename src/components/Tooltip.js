@@ -1,19 +1,20 @@
-import React from "react"
-import { Tooltip as LeafletTooltip } from "react-leaflet"
-import styled from "styled-components"
+import React from "react";
+import { Tooltip as LeafletTooltip } from "react-leaflet";
+import styled from "styled-components";
 
-import Rating from "./Rating"
+import Rating from "./Rating";
 
-const Name = styled.span`
+const Name = styled.span`
   font-size: 1rem;
   font-weight: 500;
-`
+`;
 
-const Tooltip = (props) => (
+const Tooltip = props => (
   <LeafletTooltip direction="top">
-    <Name>{ props.name }</Name><br />
-    <Rating rating={ props.rating } />
+    <Name>{props.name}</Name>
+    <br />
+    <Rating rating={props.rating} />
   </LeafletTooltip>
-)
+);
 
-export default Tooltip
+export default Tooltip;

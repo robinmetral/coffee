@@ -1,27 +1,25 @@
-import React, { Component } from "react"
-import styled from "styled-components"
+import React, { Component } from "react";
+import styled from "styled-components";
 
-import AddCafeForm from "./AddCafeForm"
-import EditCafeForm from "./EditCafeForm"
-import ViewCafe from "./ViewCafe"
-import PanelLayout from "./styled/PanelLayout"
-import ActionButton from "./ActionButton"
-import Auth from "./Auth"
+import AddCafeForm from "./AddCafeForm";
+import EditCafeForm from "./EditCafeForm";
+import ViewCafe from "./ViewCafe";
+import PanelLayout from "./styled/PanelLayout";
+import ActionButton from "./ActionButton";
+import Auth from "./Auth";
 
 const PanelButtons = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-`
+`;
 
 class Panel extends Component {
   render() {
-    const isLoggedIn = this.props.uid
-    const isOwner = (this.props.uid && this.props.uid === this.props.owner)
+    const isLoggedIn = this.props.uid;
+    const isOwner = this.props.uid && this.props.uid === this.props.owner;
     return (
-      <PanelLayout
-        panel={this.props.panel}
-      >
+      <PanelLayout panel={this.props.panel}>
         <PanelButtons>
           <Auth
             uid={this.props.uid}
@@ -36,25 +34,25 @@ class Panel extends Component {
             action={this.props.togglePanel}
           />
         </PanelButtons>
-        { isOwner ? (
-        <div>
-          <EditCafeForm
-            cafe={this.props.cafe}
-            updateCafe={this.props.updateCafe}
-            deleteCafe={this.props.deleteCafe}
-          /> 
-          <AddCafeForm addCafe={this.props.addCafe} />
-        </div>
+        {isOwner ? (
+          <div>
+            <EditCafeForm
+              cafe={this.props.cafe}
+              updateCafe={this.props.updateCafe}
+              deleteCafe={this.props.deleteCafe}
+            />
+            <AddCafeForm addCafe={this.props.addCafe} />
+          </div>
         ) : (
-        <ViewCafe
-          cafe={this.props.cafe}
-          clicked={this.props.clicked}
-          isLoggedIn={isLoggedIn}
-        />
-        ) }
+          <ViewCafe
+            cafe={this.props.cafe}
+            clicked={this.props.clicked}
+            isLoggedIn={isLoggedIn}
+          />
+        )}
       </PanelLayout>
-    )
+    );
   }
 }
 
-export default Panel
+export default Panel;

@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const StyledButton = styled.button`
   font-family: inherit;
@@ -11,6 +11,6 @@ const StyledButton = styled.button`
   &:hover {
     background-color: darkgray;
   }
-`
+`;
 
-export default StyledButton
+export default StyledButton;
