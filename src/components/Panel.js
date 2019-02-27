@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import CreateCafe from "./CreateCafe"
+import CreateCafe from "./CreateCafe";
 import ViewCafe from "./ViewCafe";
 import PanelLayout from "./styled/PanelLayout";
 import ActionButton from "./ActionButton";
@@ -15,8 +15,6 @@ const PanelButtons = styled.div`
 
 class Panel extends Component {
   render() {
-    const isLoggedIn = this.props.uid;
-    const isOwner = this.props.uid && this.props.uid === this.props.owner;
     return (
       <PanelLayout panel={this.props.panel}>
         <PanelButtons>
@@ -33,17 +31,12 @@ class Panel extends Component {
             action={this.props.togglePanel}
           />
         </PanelButtons>
-        {isOwner ? (
-          <div>
-            <CreateCafe createCafe={this.props.createCafe} />
-          </div>
-        ) : (
-          <ViewCafe
-            cafe={this.props.cafe}
-            clicked={this.props.clicked}
-            isLoggedIn={isLoggedIn}
-          />
-        )}
+        <ViewCafe
+          cafe={this.props.cafe}
+          clicked={this.props.clicked}
+          isLoggedIn={isLoggedIn}
+        />
+        <CreateCafe createCafe={this.props.createCafe} />
       </PanelLayout>
     );
   }

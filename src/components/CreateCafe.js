@@ -6,7 +6,7 @@ class CreateCafe extends Component {
     return (
       <Form onSubmit={this.props.createCafe}>
         <FormField label="OpenStreetMap ID">
-          <TextInput value="number" />
+          <TextInput value="number" placeholder="OpenStreetMap ID" />
         </FormField>
         <Button type="submit" primary label="Submit" />
       </Form>
