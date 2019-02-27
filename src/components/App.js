@@ -14,7 +14,7 @@ class App extends Component {
     devcafes: {},
     clicked: "",
     panel: "open",
-    uid: null,
+    uid: null
   };
 
   componentDidMount() {
@@ -164,6 +164,17 @@ class App extends Component {
     this.setState({ devcafes });
   };
 
+  createReview = (id, review) => {
+    // take a copy of state
+    const { devcafes } = this.state;
+    // create unique id
+    review.createdAt = Date.now();
+    // add review to copy of state
+    devcafes[id].properties.reviews[review.createdAt] = review;
+    // update state
+    this.setState({ devcafes });
+  };
+
   authHandler = async authData => {
     // fetch firebase data
     const data = await base.fetch(`/`, { context: this });
@@ -208,6 +219,7 @@ class App extends Component {
           cafe={this.state.devcafes[this.state.clicked]}
           createCafe={this.createCafe}
           deleteCafe={this.deleteCafe}
+          createReview={this.createReview}
           login={this.login}
           logout={this.logout}
           panel={this.state.panel}
