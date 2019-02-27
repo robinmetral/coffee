@@ -21,14 +21,14 @@ class Markers extends Component {
       const { cafes } = this.props;
       return (
         <>
-          {Object.keys(cafes).map(osm => (
+          {Object.keys(cafes).map(id => (
             <Marker
-              key={osm}
-              position={cafes[osm].coordinates}
+              key={id}
+              position={cafes[id].geometry.coordinates}
               icon={CoffeeBean}
               onClick={this.props.handleClick}
             >
-              <Tooltip name={cafes[osm].name} rating={cafes[osm].rating} />
+              <Tooltip name={cafes[id].properties.name} rating={3} />
             </Marker>
           ))}
         </>
