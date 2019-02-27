@@ -14,7 +14,7 @@ class App extends Component {
     devcafes: {},
     clicked: "",
     name: "",
-    panel: "closed",
+    panel: "open",
     uid: null,
     owner: null
   };
