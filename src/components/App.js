@@ -49,12 +49,12 @@ class App extends Component {
     // find cafe is state that was clicked based on coordinates
     const { devcafes } = this.state;
     const id = Object.keys(devcafes).find(
-      osm =>
-        cafes[osm].coordinates[0] === event.latlng.lat &&
-        cafes[osm].coordinates[1] === event.latlng.lng
+      id =>
+        cafes[id].coordinates[0] === event.latlng.lat &&
+        cafes[id].coordinates[1] === event.latlng.lng
     );
     // if no cafe was clicked close the panel
-    if (!osm) {
+    if (!id) {
       this.setState({
         clicked: "",
         name: "",
@@ -62,10 +62,10 @@ class App extends Component {
       });
     } else {
       // get clicked cafe's name
-      const name = cafes[osm].name;
+      const name = cafes[id].properties.name;
       // set clicked cafe id, its name, and panel status in state
       this.setState({
-        clicked: osm,
+        clicked: id,
         name: name,
         panel: "open"
       });
@@ -155,15 +155,6 @@ class App extends Component {
     this.setState({ cafes }, () => {
       console.log(`Added ${cafe.properties.name} to State.`);
     });
-  };
-
-  updateCafe = updatedCafe => {
-    // take a copy of state
-    const cafes = { ...this.state.cafes };
-    // update single cafe object
-    cafes[updatedCafe.osm] = updatedCafe; // overriding
-    // set state
-    this.setState({ cafes });
   };
 
   deleteCafe = osm => {
