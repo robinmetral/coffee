@@ -102,7 +102,7 @@ class App extends Component {
     // populate with pulled data
     geometry.coordinates = [node.lat, node.lon];
     properties.nodeId = nodeId;
-    properties.createdAt = +new Date.now();
+    properties.createdAt = Date.now();
     if (tags.name) {
       properties.name = tags.name;
     }
@@ -147,12 +147,12 @@ class App extends Component {
       properties.microroasting = true;
     }
     // take a copy of state
-    const cafes = { ...this.state.cafes };
+    const devcafes = { ...this.state.devcafes };
     // add new cafe
-    cafes[cafe.properties.createdAt] = cafe;
+    devcafes[cafe.properties.createdAt] = cafe;
     // use a setState callback to fire before re-rendering
     // https://reactjs.org/docs/react-component.html#setstate
-    this.setState({ cafes }, () => {
+    this.setState({ devcafes }, () => {
       console.log(`Added ${cafe.properties.name} to State.`);
     });
   };
