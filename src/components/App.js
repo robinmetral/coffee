@@ -175,9 +175,9 @@ class App extends Component {
       owner: data.owner
     });
     // sync cafes in state
-    this.ref = base.syncState(`cafes`, {
+    this.ref = base.syncState(`devcafes`, {
       context: this,
-      state: "cafes"
+      state: "devcafes"
     });
   };
 
@@ -204,13 +204,12 @@ class App extends Component {
     return (
       <Layout>
         <Helmet name={this.state.name} />
-        <Map cafes={this.state.cafes} handleClick={this.handleClick} />
+        <Map cafes={this.state.devcafes} handleClick={this.handleClick} />
         <Panel
           uid={this.state.uid}
           owner={this.state.owner}
-          cafe={this.state.cafes[this.state.clicked]}
+          cafe={this.state.devcafes[this.state.clicked]}
           addCafe={this.addCafe}
-          updateCafe={this.updateCafe}
           deleteCafe={this.deleteCafe}
           login={this.login}
           logout={this.logout}
