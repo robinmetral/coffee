@@ -13,7 +13,7 @@ class ViewCafe extends Component {
     return (
       <div>
         <Heading>{name}</Heading>
-        {this.props.isLoggedIn && <CreateReview />}
+        <CreateReview id={this.props.clicked} />
       </div>
     );
   }

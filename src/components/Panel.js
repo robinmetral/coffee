@@ -34,7 +34,6 @@ class Panel extends Component {
         <ViewCafe
           cafe={this.props.cafe}
           clicked={this.props.clicked}
-          isLoggedIn={isLoggedIn}
         />
         <CreateCafe createCafe={this.props.createCafe} />
       </PanelLayout>
