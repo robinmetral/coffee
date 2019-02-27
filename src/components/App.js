@@ -11,7 +11,7 @@ import Panel from "./Panel";
 class App extends Component {
   // initialize state
   state = {
-    cafes: {},
+    devcafes: {},
     clicked: "",
     name: "",
     panel: "closed",
@@ -22,11 +22,11 @@ class App extends Component {
   componentDidMount() {
     // fetch cafes from firebase
     base
-      .fetch(`cafes`, {
+      .fetch(`devcafes`, {
         context: this
       })
-      .then(cafes => {
-        this.setState({ cafes });
+      .then(devcafes => {
+        this.setState({ devcafes });
       })
       .catch(error => {
         console.log("Error fetching cafes from Firebase");
@@ -47,8 +47,8 @@ class App extends Component {
 
   handleClick = event => {
     // find cafe is state that was clicked based on coordinates
-    const { cafes } = this.state;
-    const osm = Object.keys(cafes).find(
+    const { devcafes } = this.state;
+    const osm = Object.keys(devcafes).find(
       osm =>
         cafes[osm].coordinates[0] === event.latlng.lat &&
         cafes[osm].coordinates[1] === event.latlng.lng
@@ -80,33 +80,80 @@ class App extends Component {
     });
   };
 
-  addCafe = async cafe => {
+  addCafe = async id => {
     // fetch OSM data vie an Overpass API query
     let response = await fetch(
-      `https://www.overpass-api.de/api/interpreter?data=[out:json];node(${
-        cafe.osm
-      });out;`
+      `https://www.overpass-api.de/api/interpreter?data=[out:json];node(${id});out;`
     );
     let json = await response.json();
+    // initialize GeoJSON object
+    const cafe = {
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: []
+      },
+      properties: {}
+    };
     // destructure
     let node = json.elements[0];
     let { tags } = node;
-    // add fetched values to cafe object
-    cafe.coordinates = [node.lat, node.lon];
-    cafe.hours = tags.opening_hours ? tags.opening_hours : "";
-    cafe.url = tags.website ? tags.website : tags.facebook ? tags.facebook : "";
-    // add current date to cafe
-    cafe.date = Date.now();
-    // convert rating value to an integer
-    cafe.rating = Number(cafe.rating);
+    let { geometry, properties } = cafe;
+    // populate with pulled data
+    geometry.coordinates = [node.lat, node.lon];
+    properties.id = id;
+    properties.createdAt = Date.now();
+    if (tags.name) {
+      properties.name = tags.name;
+    }
+    if (tags["addr:city"]) {
+      properties.addrCity = tags["addr:city"];
+    }
+    if (tags["addr:postcode"]) {
+      properties.addrPostcode = tags["addr:postcode"];
+    }
+    if (tags["addr:street"]) {
+      properties.addrStreet = tags["addr:street"];
+    }
+    if (tags["addr:housenumber"]) {
+      properties.addrHousenumber = tags["addr:housenumber"];
+    }
+    if (tags.internet_access) {
+      if (tags.internet_access === ("wlan" | "yes")) {
+        properties.internetAccess = true;
+      } else if (tags.internet_access === "no") {
+        properties.internetAccess = false;
+      }
+    }
+    if (tags.opening_hours) {
+      properties.openingHours = tags.opening_hours;
+    }
+    if (tags.website) {
+      properties.url = tags.website;
+    } else if (tags.facebook) {
+      properties.url = tags.facebook;
+    }
+    if (tags["drink:espresso"] === ("served" | "yes")) {
+      properties.servesEspresso = true;
+    } else if (tags["drink:espresso"] === "no") {
+      properties.servesEspresso = false;
+    }
+    if (tags["drink:filter_coffee"] === ("served" | "yes")) {
+      properties.servesFilter = true;
+    } else if (tags["drink:filter_coffee"] === "no") {
+      properties.servesFilter = false;
+    }
+    if (tags.microroasting === "yes") {
+      properties.microroasting = true;
+    }
     // take a copy of state
     const cafes = { ...this.state.cafes };
     // add new cafe
-    cafes[cafe.osm] = cafe;
+    cafes[Date.parse(cafe.properties.createdAt)] = cafe;
     // use a setState callback to fire before re-rendering
     // https://reactjs.org/docs/react-component.html#setstate
     this.setState({ cafes }, () => {
-      console.log(`Successfully added ${cafe.name} to State.`);
+      console.log(`Added ${cafe.properties.name} to State.`);
     });
   };
 
