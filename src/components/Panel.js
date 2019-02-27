@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 
-import AddCafeForm from "./AddCafeForm";
+import CreateCafe from "./CreateCafe"
 import EditCafeForm from "./EditCafeForm";
 import ViewCafe from "./ViewCafe";
 import PanelLayout from "./styled/PanelLayout";
@@ -41,7 +41,7 @@ class Panel extends Component {
               updateCafe={this.props.updateCafe}
               deleteCafe={this.props.deleteCafe}
             />
-            <AddCafeForm addCafe={this.props.addCafe} />
+            <CreateCafe createCafe={this.props.createCafe} />
           </div>
         ) : (
           <ViewCafe

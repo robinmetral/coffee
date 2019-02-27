@@ -80,7 +80,7 @@ class App extends Component {
     });
   };
 
-  addCafe = async nodeId => {
+  createCafe = async nodeId => {
     // fetch OSM data vie an Overpass API query
     let response = await fetch(
       `https://www.overpass-api.de/api/interpreter?data=[out:json];node(${nodeId});out;`
@@ -209,7 +209,7 @@ class App extends Component {
           uid={this.state.uid}
           owner={this.state.owner}
           cafe={this.state.devcafes[this.state.clicked]}
-          addCafe={this.addCafe}
+          createCafe={this.createCafe}
           deleteCafe={this.deleteCafe}
           login={this.login}
           logout={this.logout}
