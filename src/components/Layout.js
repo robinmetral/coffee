@@ -22,7 +22,7 @@ const GlobalStyle = createGlobalStyle`
 const Layout = props => (
   <>
     <GlobalStyle />
-    <src>{props.children}</src>
+    {props.children}
   </>
 );
 
