@@ -1,15 +1,14 @@
-import React, { Component } from "react"
-import firebase from "firebase/app"
-import "firebase/auth"
+import React, { Component } from "react";
+import firebase from "firebase/app";
+import "firebase/auth";
 
-import base, { firebaseApp } from "../base"
-import Layout from "./Layout"
-import Helmet from "./Helmet"
-import Map from "./Map"
-import Panel from "./Panel"
+import base, { firebaseApp } from "../base";
+import Layout from "./Layout";
+import Helmet from "./Helmet";
+import Map from "./Map";
+import Panel from "./Panel";
 
 class App extends Component {
-
   // initialize state
   state = {
     cafes: {},
@@ -18,26 +17,27 @@ class App extends Component {
     panel: "closed",
     uid: null,
     owner: null
-  }
+  };
 
   componentDidMount() {
-
     // fetch cafes from firebase
-    base.fetch(`cafes`, {
-      context: this
-    }).then(cafes => {
-      this.setState({ cafes })
-    }).catch(error => {
-      console.log("Error fetching cafes from Firebase")
-    })
+    base
+      .fetch(`cafes`, {
+        context: this
+      })
+      .then(cafes => {
+        this.setState({ cafes });
+      })
+      .catch(error => {
+        console.log("Error fetching cafes from Firebase");
+      });
 
     // check if logged in
     firebase.auth().onAuthStateChanged(user => {
-      if(user) {
-        this.authHandler({ user })
+      if (user) {
+        this.authHandler({ user });
       }
-    })
-
+    });
   }
 
   // remove binding when unmounting to avoid memory leak
@@ -47,119 +47,126 @@ class App extends Component {
 
   handleClick = event => {
     // find cafe is state that was clicked based on coordinates
-    const { cafes } = this.state
-    const osm = Object.keys(cafes).find(osm => cafes[osm].coordinates[0] === event.latlng.lat && cafes[osm].coordinates[1] === event.latlng.lng)
+    const { cafes } = this.state;
+    const osm = Object.keys(cafes).find(
+      osm =>
+        cafes[osm].coordinates[0] === event.latlng.lat &&
+        cafes[osm].coordinates[1] === event.latlng.lng
+    );
     // if no cafe was clicked close the panel
     if (!osm) {
       this.setState({
         clicked: "",
         name: "",
         panel: "closed"
-      })
-    }
-    else {
+      });
+    } else {
       // get clicked cafe's name
-      const name = cafes[osm].name
+      const name = cafes[osm].name;
       // set clicked cafe id, its name, and panel status in state
       this.setState({
         clicked: osm,
         name: name,
         panel: "open"
-      })
+      });
     }
-  }
+  };
 
   togglePanel = () => {
     // take the opposite of current value
-    const status = (this.state.panel === "closed") ? "open" : "closed"
+    const status = this.state.panel === "closed" ? "open" : "closed";
     this.setState({
       panel: status
-    })
-  }
+    });
+  };
 
-  addCafe = async (cafe) => {
+  addCafe = async cafe => {
     // fetch OSM data vie an Overpass API query
-    let response = await fetch(`https://www.overpass-api.de/api/interpreter?data=[out:json];node(${cafe.osm});out;`)
-      let json = await response.json()
-      // destructure
-      let node = json.elements[0]
-      let { tags } = node
-      // add fetched values to cafe object
-      cafe.coordinates = [node.lat, node.lon]
-      cafe.hours = tags.opening_hours ? tags.opening_hours : ""
-      cafe.url = tags.website ? tags.website : tags.facebook ? tags.facebook : ""
-      // add current date to cafe
-      cafe.date = Date.now()
-      // convert rating value to an integer
-      cafe.rating = Number(cafe.rating)
-      // take a copy of state
-      const cafes = { ...this.state.cafes }
-      // add new cafe
-      cafes[cafe.osm] = cafe
-      // use a setState callback to fire before re-rendering
-      // https://reactjs.org/docs/react-component.html#setstate
-      this.setState({ cafes }, () => {
-        console.log(`Successfully added ${cafe.name} to State.`)
-      })
-  }
-
-  updateCafe = (updatedCafe) => {
+    let response = await fetch(
+      `https://www.overpass-api.de/api/interpreter?data=[out:json];node(${
+        cafe.osm
+      });out;`
+    );
+    let json = await response.json();
+    // destructure
+    let node = json.elements[0];
+    let { tags } = node;
+    // add fetched values to cafe object
+    cafe.coordinates = [node.lat, node.lon];
+    cafe.hours = tags.opening_hours ? tags.opening_hours : "";
+    cafe.url = tags.website ? tags.website : tags.facebook ? tags.facebook : "";
+    // add current date to cafe
+    cafe.date = Date.now();
+    // convert rating value to an integer
+    cafe.rating = Number(cafe.rating);
     // take a copy of state
-    const cafes = { ...this.state.cafes }
+    const cafes = { ...this.state.cafes };
+    // add new cafe
+    cafes[cafe.osm] = cafe;
+    // use a setState callback to fire before re-rendering
+    // https://reactjs.org/docs/react-component.html#setstate
+    this.setState({ cafes }, () => {
+      console.log(`Successfully added ${cafe.name} to State.`);
+    });
+  };
+
+  updateCafe = updatedCafe => {
+    // take a copy of state
+    const cafes = { ...this.state.cafes };
     // update single cafe object
-    cafes[updatedCafe.osm] = updatedCafe // overriding
+    cafes[updatedCafe.osm] = updatedCafe; // overriding
     // set state
-    this.setState({ cafes })
-  }
+    this.setState({ cafes });
+  };
 
-  deleteCafe = (osm) => {
+  deleteCafe = osm => {
     // take a copy of state
-    const cafes = { ...this.state.cafes }
+    const cafes = { ...this.state.cafes };
     // remove single cafe object
-    cafes[osm] = null // need to set to null to work with Firebase
+    cafes[osm] = null; // need to set to null to work with Firebase
     // set state
-    this.setState({ cafes })
-  }
+    this.setState({ cafes });
+  };
 
-  authHandler = async (authData) => {
+  authHandler = async authData => {
     // fetch firebase data
-    const data = await base.fetch(`/`, { context: this })
+    const data = await base.fetch(`/`, { context: this });
     // set logged in user to state
     this.setState({
       uid: authData.user.uid,
       owner: data.owner
-    })
+    });
     // sync cafes in state
-    this.ref = base.syncState(`cafes`, {
+    this.ref = base.syncState(`cafes`, {
       context: this,
       state: "cafes"
-    })
-  }
+    });
+  };
 
-  login = () => {
-    const authProvider = new firebase.auth.GithubAuthProvider()
-    firebaseApp.auth().signInWithPopup(authProvider).then(this.authHandler)
-  }
+  login = () => {
+    const authProvider = new firebase.auth.GithubAuthProvider();
+    firebaseApp
+      .auth()
+      .signInWithPopup(authProvider)
+      .then(this.authHandler);
+  };
 
   logout = async () => {
     // log out on firebase
-    await firebase.auth().signOut()
+    await firebase.auth().signOut();
     // remove binding of cafes in state
-    await base.removeBinding(this.ref)
+    await base.removeBinding(this.ref);
     // remove uid from state
     this.setState({
       uid: null
-    })
-  }
+    });
+  };
 
   render() {
     return (
       <Layout>
         <Helmet name={this.state.name} />
-        <Map
-          cafes={this.state.cafes}
-          handleClick={this.handleClick}
-        />
+        <Map cafes={this.state.cafes} handleClick={this.handleClick} />
         <Panel
           uid={this.state.uid}
           owner={this.state.owner}
@@ -173,8 +180,8 @@ class App extends Component {
           togglePanel={this.togglePanel}
         />
       </Layout>
-      )
+    );
   }
 }
 
-export default App
+export default App;

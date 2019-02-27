@@ -1,7 +1,7 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
-const CafeLayout = styled.div`
+const CafeLayout = styled.div`
   margin: 2rem;
-`
+`;
 
-export default CafeLayout
+export default CafeLayout;

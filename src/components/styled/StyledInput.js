@@ -1,8 +1,11 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 const StyledInput = styled.label`
   display: grid;
-  input, textarea, select, input[type=checkbox]+span {
+  input,
+  textarea,
+  select,
+  input[type="checkbox"] + span {
     display: block; // teaxtarea is inline-block by default
     font-family: inherit; // not inherited by default
     font-size: 100%; // not inherited by default
@@ -24,22 +27,22 @@ const StyledInput = styled.label`
     height: 31px;
     appearance: none; // hide arrow
   }
-  input[type=number] {
+  input[type="number"] {
     appearance: textfield; // hide arrows
   }
-  input[type=checkbox] {
+  input[type="checkbox"] {
     display: none;
-    &+span {
+    & + span {
       width: 31px;
       text-align: center;
       &::before {
         content: "\00a0";
       }
     }
-    &:checked+span::before {
+    &:checked + span::before {
       content: "✓";
     }
   }
-`
+`;
 
-export default StyledInput
+export default StyledInput;

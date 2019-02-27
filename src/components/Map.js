@@ -1,7 +1,7 @@
-import React, { Component } from "react"
-import { Map as LeafletMap, TileLayer } from "react-leaflet"
+import React, { Component } from "react";
+import { Map as LeafletMap, TileLayer } from "react-leaflet";
 
-import Markers from "./Markers"
+import Markers from "./Markers";
 
 class Map extends Component {
   render() {
@@ -20,8 +20,8 @@ class Map extends Component {
           handleClick={this.props.handleClick}
         />
       </LeafletMap>
-      )
+    );
   }
 }
 
-export default Map
+export default Map;

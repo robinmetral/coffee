@@ -1,21 +1,21 @@
 /* eslint-disable */
 
-import * as Yup from "yup"
+import * as Yup from "yup";
 
 Yup.setLocale({
   mixed: {
     default: "Erreur de validation",
-    required: "Ce champ est obligatoire",
+    required: "Ce champ est obligatoire"
   },
   string: {
     min: "Trop court (minimum ${min} caractères)",
-    max: "Trop long (maximum ${max} caractères)",
+    max: "Trop long (maximum ${max} caractères)"
   },
   number: {
     min: "Trop petit (minimum ${min})",
-    max: "Trop grand (maximum ${max})",
-  },
-})
+    max: "Trop grand (maximum ${max})"
+  }
+});
 
 const FormSchema = Yup.object().shape({
   name: Yup.string()
@@ -32,7 +32,7 @@ const FormSchema = Yup.object().shape({
   comment: Yup.string()
     .min(25)
     .max(500)
-    .required(),
-})
+    .required()
+});
 
-export default FormSchema
+export default FormSchema;

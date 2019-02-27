@@ -1,72 +1,78 @@
-import React from "react"
-import { Formik, Form, Field, ErrorMessage } from "formik"
+import React from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
 
-import FormSchema from "./FormSchema"
-import StyledForm from "./styled/StyledForm"
-import StyledInput from "./styled/StyledInput"
-import StyledButton from "./styled/StyledButton"
-import Heading from "./styled/Heading"
+import FormSchema from "./FormSchema";
+import StyledForm from "./styled/StyledForm";
+import StyledInput from "./styled/StyledInput";
+import StyledButton from "./styled/StyledButton";
+import Heading from "./styled/Heading";
 
 class EditCafeForm extends React.Component {
-
   handleChange = event => {
-    const { target } = event
-    const value = target.type === "checkbox" ? target.checked : target.value
-    const { name } = target
+    const { target } = event;
+    const value =
+      target.type === "checkbox"
+        ? target.checked
+        : target.type === "select-one"
+        ? parseFloat(target.value)
+        : target.value;
+    const { name } = target;
     const updatedCafe = {
       ...this.props.cafe,
       [name]: value
-    }
-    this.props.updateCafe(updatedCafe)
-  }
+    };
+    this.props.updateCafe(updatedCafe);
+  };
 
   render() {
-    const cafe = this.props.cafe
+    const cafe = this.props.cafe;
 
     // return empty fragment if there is no cafe
-    if(!cafe) {
-      return (<></>)
+    if (!cafe) {
+      return <></>;
     }
 
     return (
       <Formik
         initialValues={{
-        name: cafe.name,
-        laptop: cafe.laptop,
-        rating: cafe.rating,
-        comment: cafe.comment
+          name: cafe.name,
+          laptop: cafe.laptop,
+          rating: cafe.rating,
+          comment: cafe.comment
         }}
         enableReinitialize={true}
         validate={FormSchema}
       >
         <Form>
           <StyledForm>
-            <legend><Heading>Modifier {cafe.name}</Heading></legend>
+            <legend>
+              <Heading>Modifier {cafe.name}</Heading>
+            </legend>
 
             <StyledInput className="name">
               Nom
-              <Field
-                type="text"
-                name="name"
-                onChange={this.handleChange}
-              />
+              <Field type="text" name="name" onChange={this.handleChange} />
               <ErrorMessage name="name" component="div" />
             </StyledInput>
 
             <StyledInput className="laptop">
-              <span role="img" aria-label="laptop emoji">&#x1f4bb;</span>
+              <span role="img" aria-label="laptop emoji">
+                &#x1f4bb;
+              </span>
               <Field
                 type="checkbox"
                 name="laptop"
                 checked={cafe.laptop ? "checked" : ""}
                 onChange={this.handleChange}
               />
-              <span></span>
+              <span />
               <ErrorMessage name="laptop" component="div" />
             </StyledInput>
 
             <StyledInput className="rating">
-              <span role="img" aria-label="star emoji">&#x2b50;</span>
+              <span role="img" aria-label="star emoji">
+                &#x2b50;
+              </span>
               <Field
                 component="select"
                 name="rating"
@@ -91,14 +97,17 @@ class EditCafeForm extends React.Component {
               <ErrorMessage name="comment" component="div" />
             </StyledInput>
 
-            <StyledButton type="delete" onClick={() => this.props.deleteCafe(cafe.osm)}>
+            <StyledButton
+              type="delete"
+              onClick={() => this.props.deleteCafe(cafe.osm)}
+            >
               Supprimer
             </StyledButton>
           </StyledForm>
         </Form>
       </Formik>
-      )
-}
+    );
+  }
 }
 
-export default EditCafeForm
+export default EditCafeForm;

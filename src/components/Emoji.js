@@ -1,20 +1,15 @@
-import React, { Component } from "react"
-import styled from "styled-components"
+import React, { Component } from "react";
+import styled from "styled-components";
 
 const Img = styled.img`
   height: 1em;
-`
+`;
 
 class Emoji extends Component {
   render() {
-    const source = require(`../assets/emojis/${this.props.unicode}.png`)
-    return (
-      <Img
-        src={source}
-        alt={`${this.props.alt} emoji`}
-      />
-    )
+    const source = require(`../assets/emojis/${this.props.unicode}.png`);
+    return <Img src={source} alt={`${this.props.alt} emoji`} />;
   }
 }
 
-export default Emoji
+export default Emoji;

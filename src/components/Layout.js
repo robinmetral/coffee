@@ -1,7 +1,7 @@
-import React from "react"
-import { createGlobalStyle } from "styled-components"
+import React from "react";
+import { createGlobalStyle } from "styled-components";
 
-require("typeface-montserrat")
+require("typeface-montserrat");
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -17,15 +17,13 @@ const GlobalStyle = createGlobalStyle`
     height: 100vh;
     width: 100vw;
   }
-`
+`;
 
-const Layout = (props) => (
+const Layout = props => (
   <>
-  <GlobalStyle />
-  <src>
-    { props.children }
-  </src>
+    <GlobalStyle />
+    <src>{props.children}</src>
   </>
-)
+);
 
-export default Layout
+export default Layout;
