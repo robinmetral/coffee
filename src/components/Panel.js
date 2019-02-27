@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import styled from "styled-components";
 
 import CreateCafe from "./CreateCafe"
-import EditCafeForm from "./EditCafeForm";
 import ViewCafe from "./ViewCafe";
 import PanelLayout from "./styled/PanelLayout";
 import ActionButton from "./ActionButton";
@@ -36,11 +35,6 @@ class Panel extends Component {
         </PanelButtons>
         {isOwner ? (
           <div>
-            <EditCafeForm
-              cafe={this.props.cafe}
-              updateCafe={this.props.updateCafe}
-              deleteCafe={this.props.deleteCafe}
-            />
             <CreateCafe createCafe={this.props.createCafe} />
           </div>
         ) : (
