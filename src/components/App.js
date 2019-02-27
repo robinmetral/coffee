@@ -13,10 +13,8 @@ class App extends Component {
   state = {
     devcafes: {},
     clicked: "",
-    name: "",
     panel: "open",
     uid: null,
-    owner: null
   };
 
   componentDidMount() {
@@ -207,7 +205,6 @@ class App extends Component {
         <Map cafes={this.state.devcafes} handleClick={this.handleClick} />
         <Panel
           uid={this.state.uid}
-          owner={this.state.owner}
           cafe={this.state.devcafes[this.state.clicked]}
           createCafe={this.createCafe}
           deleteCafe={this.deleteCafe}
