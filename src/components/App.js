@@ -50,8 +50,8 @@ class App extends Component {
     const { devcafes } = this.state;
     const id = Object.keys(devcafes).find(
       id =>
-        devcafes[id].coordinates[0] === event.latlng.lat &&
-        devcafes[id].coordinates[1] === event.latlng.lng
+        devcafes[id].geometry.coordinates[0] === event.latlng.lat &&
+        devcafes[id].geometry.coordinates[1] === event.latlng.lng
     );
     // if no cafe was clicked close the panel
     if (!id) {
