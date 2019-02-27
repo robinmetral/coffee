@@ -50,8 +50,8 @@ class App extends Component {
     const { devcafes } = this.state;
     const id = Object.keys(devcafes).find(
       id =>
-        cafes[id].coordinates[0] === event.latlng.lat &&
-        cafes[id].coordinates[1] === event.latlng.lng
+        devcafes[id].coordinates[0] === event.latlng.lat &&
+        devcafes[id].coordinates[1] === event.latlng.lng
     );
     // if no cafe was clicked close the panel
     if (!id) {
@@ -62,7 +62,7 @@ class App extends Component {
       });
     } else {
       // get clicked cafe's name
-      const name = cafes[id].properties.name;
+      const name = devcafes[id].properties.name;
       // set clicked cafe id, its name, and panel status in state
       this.setState({
         clicked: id,
