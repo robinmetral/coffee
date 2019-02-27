@@ -157,13 +157,13 @@ class App extends Component {
     });
   };
 
-  deleteCafe = osm => {
+  deleteCafe = id => {
     // take a copy of state
-    const cafes = { ...this.state.cafes };
+    const devcafes = { ...this.state.devcafes };
     // remove single cafe object
-    cafes[osm] = null; // need to set to null to work with Firebase
+    devcafes[id] = null; // need to set to null to work with Firebase
     // set state
-    this.setState({ cafes });
+    this.setState({ devcafes });
   };
 
   authHandler = async authData => {
