@@ -48,7 +48,7 @@ class App extends Component {
   handleClick = event => {
     // find cafe is state that was clicked based on coordinates
     const { devcafes } = this.state;
-    const osm = Object.keys(devcafes).find(
+    const id = Object.keys(devcafes).find(
       osm =>
         cafes[osm].coordinates[0] === event.latlng.lat &&
         cafes[osm].coordinates[1] === event.latlng.lng
@@ -80,10 +80,10 @@ class App extends Component {
     });
   };
 
-  addCafe = async id => {
+  addCafe = async nodeId => {
     // fetch OSM data vie an Overpass API query
     let response = await fetch(
-      `https://www.overpass-api.de/api/interpreter?data=[out:json];node(${id});out;`
+      `https://www.overpass-api.de/api/interpreter?data=[out:json];node(${nodeId});out;`
     );
     let json = await response.json();
     // initialize GeoJSON object
@@ -101,8 +101,8 @@ class App extends Component {
     let { geometry, properties } = cafe;
     // populate with pulled data
     geometry.coordinates = [node.lat, node.lon];
-    properties.id = id;
-    properties.createdAt = Date.now();
+    properties.nodeId = nodeId;
+    properties.createdAt = +new Date.now();
     if (tags.name) {
       properties.name = tags.name;
     }
@@ -149,7 +149,7 @@ class App extends Component {
     // take a copy of state
     const cafes = { ...this.state.cafes };
     // add new cafe
-    cafes[Date.parse(cafe.properties.createdAt)] = cafe;
+    cafes[cafe.properties.createdAt] = cafe;
     // use a setState callback to fire before re-rendering
     // https://reactjs.org/docs/react-component.html#setstate
     this.setState({ cafes }, () => {
