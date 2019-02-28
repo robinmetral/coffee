@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Box, Form, TextInput, Button } from "grommet";
+import { UserAdd } from "grommet-icons";
 import firebase from "firebase/app";
 import "firebase/auth";
 
@@ -34,7 +35,7 @@ class SignUp extends Component {
             placeholder="password"
             ref={this.passwordRef}
           />
-          <Button type="submit" primary label="Sign up" />
+          <Button icon={<UserAdd />} type="submit" primary label="Sign up" />
         </Form>
       </Box>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Box, Form, TextInput, Button } from "grommet";
+import { Send } from "grommet-icons";
 
 class CreateCafe extends Component {
   nodeIdRef = React.createRef();
@@ -87,7 +88,7 @@ class CreateCafe extends Component {
             placeholder="OpenStreetMap ID"
             ref={this.nodeIdRef}
           />
-          <Button type="submit" primary label="Submit" />
+          <Button icon={<Send />} type="submit" primary label="Submit" />
         </Form>
       </Box>
     );
