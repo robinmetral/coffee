@@ -3,7 +3,13 @@ import { Box, Form, TextInput, Button } from "grommet";
 import { Send } from "grommet-icons";
 
 class CreateCafe extends Component {
-  nodeIdRef = React.createRef();
+  state = {
+    id: ""
+  };
+
+  handleChange = e => {
+    this.setState({ id: e.target.value });
+  };
 
   handleSubmit = async e => {
     e.preventDefault();
@@ -85,8 +91,9 @@ class CreateCafe extends Component {
         <Form onSubmit={this.handleSubmit}>
           <TextInput
             type="number"
+            value={this.state.id}
             placeholder="OpenStreetMap ID"
-            ref={this.nodeIdRef}
+            onChange={handleChange}
           />
           <Button icon={<Send />} type="submit" primary label="Submit" />
         </Form>
