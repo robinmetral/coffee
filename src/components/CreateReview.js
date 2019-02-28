@@ -1,13 +1,14 @@
 import React, { Component } from "react";
-import { Form, RadioButtonGroup, TextArea, Button } from "grommet";
+import { Form, RangeInput, TextArea, Button } from "grommet";
+import { Chat } from "grommet-icons";
 
 class CreateReview extends Component {
   render() {
     return (
       <Form>
-        <RadioButtonGroup name="rating" options={[1, 2, 3, 4, 5]} />
+        <RangeInput name="rating" min={1} max={5} />
         <TextArea value="Write a review" />
-        <Button type="submit" primary label="Submit" />
+        <Button icon={<Chat />} type="submit" primary label="Submit" />
       </Form>
     );
   }
