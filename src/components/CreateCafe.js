@@ -81,7 +81,7 @@ class CreateCafe extends Component {
   render() {
     return (
       <Form onSubmit={this.handleSubmit}>
-        <FormField label="OpenStreetMap ID">
+        <FormField label="OpenStreetMap ID" required={true}>
           <TextInput
             type="number"
             placeholder="OpenStreetMap ID"

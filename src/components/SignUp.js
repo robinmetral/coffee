@@ -22,10 +22,10 @@ class SignUp extends Component {
   render() {
     return (
       <Form onSubmit={this.handleSubmit}>
-        <FormField label="email">
+        <FormField label="email" required={true}>
           <TextInput type="email" ref={this.emailRef} />
         </FormField>
-        <FormField label="password">
+        <FormField label="password" required={true}>
           <TextInput type="password" ref={this.passwordRef} />
         </FormField>
       </Form>
