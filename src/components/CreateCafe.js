@@ -4,16 +4,12 @@ import { Send } from "grommet-icons";
 
 class CreateCafe extends Component {
   state = {
-    id: ""
-  };
-
-  handleChange = e => {
-    this.setState({ id: e.target.value });
+    nodeId: ""
   };
 
   handleSubmit = async e => {
     e.preventDefault();
-    const nodeId = this.nodeIdRef.current.value;
+    const { nodeId } = this.state;
     // fetch OSM data vie an Overpass API query
     let response = await fetch(
       `https://www.overpass-api.de/api/interpreter?data=[out:json];node(${nodeId});out;`
@@ -91,9 +87,9 @@ class CreateCafe extends Component {
         <Form onSubmit={this.handleSubmit}>
           <TextInput
             type="number"
-            value={this.state.id}
+            value={this.state.nodeId}
             placeholder="OpenStreetMap ID"
-            onChange={handleChange}
+            onChange={e => this.setState({ nodeId: e.target.value })}
           />
           <Button icon={<Send />} type="submit" primary label="Submit" />
         </Form>
