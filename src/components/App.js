@@ -4,7 +4,6 @@ import "firebase/auth";
 
 import base, { firebaseApp } from "../base";
 import Layout from "./Layout";
-import Helmet from "./Helmet";
 import Map from "./Map";
 import Panel from "./Panel";
 
@@ -147,7 +146,6 @@ class App extends Component {
   render() {
     return (
       <Layout>
-        <Helmet name={this.state.name} />
         <Map cafes={this.state.devcafes} handleClick={this.handleClick} />
         <Panel
           uid={this.state.uid}
