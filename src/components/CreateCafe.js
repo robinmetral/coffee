@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, FormField, TextInput, Button } from "grommet";
+import { Form, TextInput, Button } from "grommet";
 
 class CreateCafe extends Component {
   nodeIdRef = React.createRef();
@@ -81,13 +81,11 @@ class CreateCafe extends Component {
   render() {
     return (
       <Form onSubmit={this.handleSubmit}>
-        <FormField label="OpenStreetMap ID" required={true}>
-          <TextInput
-            type="number"
-            placeholder="OpenStreetMap ID"
-            ref={this.nodeIdRef}
-          />
-        </FormField>
+        <TextInput
+          type="number"
+          placeholder="OpenStreetMap ID"
+          ref={this.nodeIdRef}
+        />
         <Button type="submit" primary label="Submit" />
       </Form>
     );
