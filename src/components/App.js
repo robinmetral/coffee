@@ -4,7 +4,7 @@ import "firebase/auth";
 import base, { firebaseApp } from "../base";
 import Layout from "./Layout";
 import Map from "./Map";
-import Layer from "./Layer";
+import Panel from "./Panel";
 
 class App extends Component {
   // initialize state
@@ -142,7 +142,7 @@ class App extends Component {
     return (
       <Layout>
         <Map cafes={this.state.devcafes} handleClick={this.handleClick} />
-        <Layer
+        <Panel
           uid={this.state.uid}
           cafe={this.state.devcafes[this.state.clicked]}
           createCafe={this.createCafe}

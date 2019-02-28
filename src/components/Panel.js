@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { ThemeContext, Layer as GrommetLayer, Box } from "grommet";
+import { ThemeContext, Layer, Box } from "grommet";
 import CreateCafe from "./CreateCafe";
 import Cafe from "./Cafe";
 import SignUp from "./SignUp";
 
-class Layer extends Component {
+class Panel extends Component {
   render() {
     if (!this.props.open) return null;
     return (
@@ -17,7 +17,7 @@ class Layer extends Component {
           }
         }}
       >
-        <GrommetLayer
+        <Layer
           position="right"
           full="vertical"
           modal={false}
@@ -29,10 +29,10 @@ class Layer extends Component {
             <Cafe cafe={this.props.cafe} clicked={this.props.clicked} />
             <CreateCafe createCafe={this.props.createCafe} />
           </Box>
-        </GrommetLayer>
+        </Layer>
       </ThemeContext.Extend>
     );
   }
 }
 
-export default Layer;
+export default Panel;
