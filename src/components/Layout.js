@@ -1,5 +1,5 @@
 import React from "react";
-import styled, { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from "styled-components";
 import { Grommet } from "grommet";
 
 const GlobalStyle = createGlobalStyle`
@@ -7,7 +7,7 @@ const GlobalStyle = createGlobalStyle`
   @import url("https://unpkg.com/leaflet@1.4.0/dist/leaflet.css");
   .leaflet-container {
     height: 100vh;
-    width: 50vw;
+    width: 100vw;
   }
 `;
 
@@ -19,14 +19,10 @@ const theme = {
   }
 };
 
-const Flex = styled.div`
-  display: flex;
-`;
-
 const Layout = props => (
   <Grommet theme={theme} full={true}>
     <GlobalStyle />
-    <Flex>{props.children}</Flex>
+    {props.children}
   </Grommet>
 );
 

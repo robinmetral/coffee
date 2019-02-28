@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import firebase from "firebase/app";
 import "firebase/auth";
-import { Grommet, Layer as GrommetLayer, Box, Text } from "grommet";
 import base, { firebaseApp } from "../base";
 import Layout from "./Layout";
 import Map from "./Map";
