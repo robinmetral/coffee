@@ -1,6 +1,7 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import { Grommet } from "grommet";
+import { grommet } from "grommet/themes";
 
 const GlobalStyle = createGlobalStyle`
   // Leaflet styles
@@ -11,16 +12,8 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const theme = {
-  layer: {
-    container: {
-      zIndex: "1000"
-    }
-  }
-};
-
 const Layout = props => (
-  <Grommet theme={theme} full={true}>
+  <Grommet theme={grommet} full={true}>
     <GlobalStyle />
     {props.children}
   </Grommet>
