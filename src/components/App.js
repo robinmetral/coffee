@@ -11,7 +11,8 @@ class App extends Component {
   state = {
     devcafes: {},
     clicked: "",
-    uid: null
+    uid: null,
+    open: true
   };
 
   componentDidMount() {
@@ -151,6 +152,8 @@ class App extends Component {
           createReview={this.createReview}
           login={this.login}
           logout={this.logout}
+          open={this.state.open}
+          toggleLayer={this.toggleLayer}
         />
       </Layout>
     );
