@@ -13,7 +13,10 @@ class Cafe extends Component {
     return (
       <Box pad="small">
         <Heading>{name}</Heading>
-        <CreateReview id={this.props.clicked} />
+        <CreateReview
+          createReview={this.props.createReview}
+          id={this.props.clicked}
+        />
       </Box>
     );
   }

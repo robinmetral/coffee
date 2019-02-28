@@ -28,11 +28,10 @@ class App extends Component {
         console.log("Error fetching cafes from Firebase");
       });
 
-    // check if logged in
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        this.authHandler({ user });
-      }
+    // sync cafes in state
+    this.ref = base.syncState(`devcafes`, {
+      context: this,
+      state: "devcafes"
     });
   }
 
@@ -91,13 +90,19 @@ class App extends Component {
 
   createReview = (id, review) => {
     // take a copy of state
-    const { devcafes } = this.state;
-    // add review to copy of state
+    const devcafes = { ...this.state.devcafes };
+    // create reviews object if undefined
+    devcafes[id].properties.reviews = devcafes[id].properties.reviews || {};
+    // add review
     devcafes[id].properties.reviews[review.createdAt] = review;
-    // update state
-    this.setState({ devcafes });
+    // use a setState callback to fire before re-rendering
+    // https://reactjs.org/docs/react-component.html#setstate
+    this.setState({ devcafes }, () => {
+      console.log(`Added the review to State.`);
+    });
   };
 
+  /*
   authHandler = async authData => {
     // fetch firebase data
     const data = await base.fetch(`/`, { context: this });
@@ -112,6 +117,7 @@ class App extends Component {
       state: "devcafes"
     });
   };
+  */
 
   login = () => {
     const authProvider = new firebase.auth.GithubAuthProvider();
@@ -146,6 +152,7 @@ class App extends Component {
           logout={this.logout}
           open={this.state.open}
           togglePanel={this.togglePanel}
+          clicked={this.state.clicked}
         />
       </Layout>
     );

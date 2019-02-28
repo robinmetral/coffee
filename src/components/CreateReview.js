@@ -11,11 +11,14 @@ class CreateReview extends Component {
     e.preventDefault();
     // build review object
     const review = {};
-    review.rating = this.ratingRef.current.value;
+    review.rating = parseFloat(this.ratingRef.current.value);
     review.text = this.textRef.current.value;
     // create unique id
     review.createdAt = Date.now();
-    console.log(review);
+    // send to App
+    this.props.createReview(this.props.id, review);
+    // reset form
+    e.target.reset();
   };
 
   render() {
