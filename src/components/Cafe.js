@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Box, Heading } from "grommet";
 import CreateReview from "./CreateReview";
 
-class ViewCafe extends Component {
+class Cafe extends Component {
   render() {
     // is no cafe is passed, no cafe has been clicked
     if (!this.props.cafe) {
@@ -19,4 +19,4 @@ class ViewCafe extends Component {
   }
 }
 
-export default ViewCafe;
+export default Cafe;

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Layer as GrommetLayer, Box } from "grommet";
 import CreateCafe from "./CreateCafe";
-import ViewCafe from "./ViewCafe";
+import Cafe from "./Cafe";
 import SignUp from "./SignUp";
 
 class Layer extends Component {
@@ -17,7 +17,7 @@ class Layer extends Component {
       >
         <Box>
           <SignUp />
-          <ViewCafe cafe={this.props.cafe} clicked={this.props.clicked} />
+          <Cafe cafe={this.props.cafe} clicked={this.props.clicked} />
           <CreateCafe createCafe={this.props.createCafe} />
         </Box>
       </GrommetLayer>
