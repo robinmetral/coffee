@@ -56,9 +56,7 @@ class App extends Component {
         open: false
       });
     } else {
-      // get clicked cafe's name
-      const name = devcafes[id].properties.name;
-      // set clicked cafe id, its name, and panel status in state
+      // put cafe id in state and open panel
       this.setState({
         clicked: id,
         open: true
