@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { ThemeContext, Layer, Box } from "grommet";
-import CreateCafe from "./CreateCafe";
+import { ThemeContext, Layer } from "grommet";
 import Cafe from "./Cafe";
 
 class Panel extends Component {
