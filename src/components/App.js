@@ -1,18 +1,17 @@
 import React, { Component } from "react";
 import firebase from "firebase/app";
 import "firebase/auth";
-
+import { Grommet, Layer as GrommetLayer, Box, Text } from "grommet";
 import base, { firebaseApp } from "../base";
 import Layout from "./Layout";
 import Map from "./Map";
-import Panel from "./Panel";
+import Layer from "./Layer";
 
 class App extends Component {
   // initialize state
   state = {
     devcafes: {},
     clicked: "",
-    panel: "open",
     uid: null
   };
 
@@ -53,9 +52,8 @@ class App extends Component {
     // if no cafe was clicked close the panel
     if (!id) {
       this.setState({
-        clicked: "",
-        name: "",
-        panel: "closed"
+        clicked: undefined,
+        open: false
       });
     } else {
       // get clicked cafe's name
@@ -63,17 +61,16 @@ class App extends Component {
       // set clicked cafe id, its name, and panel status in state
       this.setState({
         clicked: id,
-        name: name,
-        panel: "open"
+        open: true
       });
     }
   };
 
-  togglePanel = () => {
+  toggleLayer = () => {
     // take the opposite of current value
-    const status = this.state.panel === "closed" ? "open" : "closed";
+    const open = this.state.open ? false : true;
     this.setState({
-      panel: status
+      open
     });
   };
 
@@ -147,7 +144,7 @@ class App extends Component {
     return (
       <Layout>
         <Map cafes={this.state.devcafes} handleClick={this.handleClick} />
-        <Panel
+        <Layer
           uid={this.state.uid}
           cafe={this.state.devcafes[this.state.clicked]}
           createCafe={this.createCafe}
@@ -155,8 +152,6 @@ class App extends Component {
           createReview={this.createReview}
           login={this.login}
           logout={this.logout}
-          panel={this.state.panel}
-          togglePanel={this.togglePanel}
         />
       </Layout>
     );

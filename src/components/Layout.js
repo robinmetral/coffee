@@ -1,26 +1,33 @@
 import React from "react";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
+import { Grommet } from "grommet";
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-  }
-
   // Leaflet styles
   @import url("https://unpkg.com/leaflet@1.4.0/dist/leaflet.css");
   .leaflet-container {
     height: 100vh;
-    width: 100vw;
+    width: 50vw;
   }
 `;
 
+const theme = {
+  layer: {
+    container: {
+      zIndex: "1000"
+    }
+  }
+};
+
+const Flex = styled.div`
+  display: flex;
+`;
+
 const Layout = props => (
-  <>
+  <Grommet theme={theme} full={true}>
     <GlobalStyle />
-    {props.children}
-  </>
+    <Flex>{props.children}</Flex>
+  </Grommet>
 );
 
 export default Layout;
