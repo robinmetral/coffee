@@ -49,27 +49,23 @@ class App extends Component {
         devcafes[id].geometry.coordinates[0] === event.latlng.lat &&
         devcafes[id].geometry.coordinates[1] === event.latlng.lng
     );
-    // if no cafe was clicked close the panel
-    if (!id) {
-      this.setState({
-        clicked: undefined,
-        open: false
-      });
-    } else {
+    if (id) {
       // put cafe id in state and open panel
       this.setState({
         clicked: id,
         open: true
       });
+    } else {
+      // toggle panel
+      this.setState({ clicked: undefined });
+      this.togglePanel();
     }
   };
 
-  toggleLayer = () => {
+  togglePanel = () => {
     // take the opposite of current value
     const open = this.state.open ? false : true;
-    this.setState({
-      open
-    });
+    this.setState({ open });
   };
 
   createCafe = async cafe => {
@@ -151,7 +147,7 @@ class App extends Component {
           login={this.login}
           logout={this.logout}
           open={this.state.open}
-          toggleLayer={this.toggleLayer}
+          togglePanel={this.togglePanel}
         />
       </Layout>
     );

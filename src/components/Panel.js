@@ -21,8 +21,7 @@ class Panel extends Component {
           position="right"
           full="vertical"
           modal={false}
-          onClickOutside={this.props.toggleLayer}
-          onEsc={this.props.toggleLayer}
+          onEsc={this.props.togglePanel}
         >
           <Box>
             <SignUp />
