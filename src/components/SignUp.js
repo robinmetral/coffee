@@ -3,7 +3,7 @@ import { Form, FormField, TextInput } from "grommet";
 import firebase from "firebase/app";
 import "firebase/auth";
 
-class Auth extends Component {
+class SignUp extends Component {
   emailRef = React.createRef();
   passwordRef = React.createRef();
 
@@ -33,4 +33,4 @@ class Auth extends Component {
   }
 }
 
-export default Auth;
+export default SignUp;
