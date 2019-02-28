@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-import { Box, Heading } from "grommet";
+import { Box, Text, Button } from "grommet";
 import CreateReview from "./CreateReview";
+import { FormClose } from "grommet-icons";
 
 class Cafe extends Component {
   render() {
@@ -11,12 +12,24 @@ class Cafe extends Component {
 
     const { name } = this.props.cafe.properties;
     return (
-      <Box pad="small">
-        <Heading>{name}</Heading>
-        <CreateReview
-          createReview={this.props.createReview}
-          id={this.props.clicked}
-        />
+      <Box>
+        <Box
+          direction="row"
+          align="center"
+          as="header"
+          elevation="small"
+          justify="between"
+        >
+          <Text margin={{ left: "small" }}>{name}</Text>
+          <Button icon={<FormClose />} onClick={this.props.togglePanel} />
+        </Box>
+        <Box flex overfow="auto" pad="xsmall">
+          <Text>Map over reviews...</Text>
+          <CreateReview
+            createReview={this.props.createReview}
+            id={this.props.clicked}
+          />
+        </Box>
       </Box>
     );
   }

@@ -26,6 +26,7 @@ class Panel extends Component {
             cafe={this.props.cafe}
             clicked={this.props.clicked}
             createReview={this.props.createReview}
+            togglePanel={this.props.togglePanel}
           />
         </Layer>
       </ThemeContext.Extend>
