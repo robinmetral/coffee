@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Form, TextInput, Button } from "grommet";
+import { Box, Form, TextInput, Button } from "grommet";
 import firebase from "firebase/app";
 import "firebase/auth";
 
@@ -26,15 +26,17 @@ class SignUp extends Component {
 
   render() {
     return (
-      <Form onSubmit={this.handleSubmit}>
-        <TextInput type="email" placeholder="email" ref={this.emailRef} />
-        <TextInput
-          type="password"
-          placeholder="password"
-          ref={this.passwordRef}
-        />
-        <Button type="submit" primary label="Sign up" />
-      </Form>
+      <Box pad="small">
+        <Form onSubmit={this.handleSubmit}>
+          <TextInput type="email" placeholder="email" ref={this.emailRef} />
+          <TextInput
+            type="password"
+            placeholder="password"
+            ref={this.passwordRef}
+          />
+          <Button type="submit" primary label="Sign up" />
+        </Form>
+      </Box>
     );
   }
 }

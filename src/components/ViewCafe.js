@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Heading } from "grommet";
+import { Box, Heading } from "grommet";
 import CreateReview from "./CreateReview";
 
 class ViewCafe extends Component {
@@ -11,10 +11,10 @@ class ViewCafe extends Component {
 
     const { name } = this.props.cafe.properties;
     return (
-      <div>
+      <Box pad="small">
         <Heading>{name}</Heading>
         <CreateReview id={this.props.clicked} />
-      </div>
+      </Box>
     );
   }
 }

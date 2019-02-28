@@ -15,7 +15,7 @@ class Layer extends Component {
         onClickOutside={this.props.toggleLayer}
         onEsc={this.props.toggleLayer}
       >
-        <Box pad="medium">
+        <Box>
           <SignUp />
           <ViewCafe cafe={this.props.cafe} clicked={this.props.clicked} />
           <CreateCafe createCafe={this.props.createCafe} />
