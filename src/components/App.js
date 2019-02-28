@@ -92,8 +92,6 @@ class App extends Component {
   createReview = (id, review) => {
     // take a copy of state
     const { devcafes } = this.state;
-    // create unique id
-    review.createdAt = Date.now();
     // add review to copy of state
     devcafes[id].properties.reviews[review.createdAt] = review;
     // update state
