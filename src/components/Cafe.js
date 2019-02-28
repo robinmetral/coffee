@@ -26,6 +26,7 @@ class Cafe extends Component {
         <Box flex overfow="auto" pad="xsmall">
           <Text>Map over reviews...</Text>
           <CreateReview
+            name={name}
             createReview={this.props.createReview}
             id={this.props.clicked}
           />

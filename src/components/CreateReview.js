@@ -1,10 +1,17 @@
 import React, { Component } from "react";
-import { Form, RangeInput, TextArea, Button } from "grommet";
+import { Form, TextInput, TextArea, Button } from "grommet";
 import { Chat } from "grommet-icons";
 
 class CreateReview extends Component {
-  ratingRef = React.createRef();
-  textRef = React.createRef();
+  state = {
+    rating: "",
+    review: ""
+  };
+
+  handleChange = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
 
   handleSubmit = e => {
     // prevent form from submitting
@@ -22,10 +29,23 @@ class CreateReview extends Component {
   };
 
   render() {
+    const { rating, review } = this.state;
     return (
       <Form onSubmit={this.handleSubmit}>
-        <RangeInput name="rating" min={1} max={5} ref={this.ratingRef} />
-        <TextArea placeholder="Your review..." ref={this.textRef} />
+        <TextInput
+          type="number"
+          name="rating"
+          value={rating}
+          placeholder={`Rate ${this.props.name}`}
+          onChange={this.handleChange}
+        />
+        <TextArea
+          resize="vertical"
+          name="review"
+          value={review}
+          placeholder={`Review ${this.props.name}...`}
+          onChange={this.handleChange}
+        />
         <Button icon={<Chat />} type="submit" primary label="Submit" />
       </Form>
     );
