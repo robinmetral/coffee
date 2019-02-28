@@ -7,7 +7,7 @@ class CreateReview extends Component {
     return (
       <Form>
         <RangeInput name="rating" min={1} max={5} />
-        <TextArea value="Write a review" />
+        <TextArea placeholder="Your review..." />
         <Button icon={<Chat />} type="submit" primary label="Submit" />
       </Form>
     );
