@@ -5,15 +5,21 @@ import firebase from "firebase/app";
 import "firebase/auth";
 
 class SignUp extends Component {
-  emailRef = React.createRef();
-  passwordRef = React.createRef();
+  state = {
+    email: "",
+    password: ""
+  };
+
+  handleChange = e => {
+    const { name, value } = e.target;
+    this.setState({ [name]: value });
+  };
 
   handleSubmit = e => {
     // prevent form from submitting
     e.preventDefault();
     // get typed values
-    const email = this.emailRef.current.value;
-    const password = this.passwordRef.current.value;
+    const { email, password } = this.state;
     // create user on Firebase
     firebase
       .auth()
@@ -26,14 +32,21 @@ class SignUp extends Component {
   };
 
   render() {
+    const { email, password } = this.state;
     return (
       <Box pad="small">
         <Form onSubmit={this.handleSubmit}>
-          <TextInput type="email" placeholder="email" ref={this.emailRef} />
+          <TextInput
+            type="email"
+            name="email"
+            value={email}
+            placeholder="email"
+          />
           <TextInput
             type="password"
+            name="password"
+            value={password}
             placeholder="password"
-            ref={this.passwordRef}
           />
           <Button icon={<UserAdd />} type="submit" primary label="Sign up" />
         </Form>
