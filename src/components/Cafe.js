@@ -12,7 +12,7 @@ class Cafe extends Component {
 
     const { name } = this.props.cafe.properties;
     return (
-      <Box>
+      <Box elevation="large" fill="vertical">
         <Box
           direction="row"
           align="center"
