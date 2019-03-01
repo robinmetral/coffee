@@ -27,8 +27,6 @@ class SignUp extends Component {
       .catch(function(error) {
         console.log(`Error ${error.code}: ${error.message}`);
       });
-    // reset form
-    e.target.reset();
   };
 
   render() {
