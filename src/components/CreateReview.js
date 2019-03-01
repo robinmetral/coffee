@@ -18,15 +18,18 @@ class CreateReview extends Component {
     e.preventDefault();
     // build review object
     const review = {};
-    const { rating, text } = this.state
+    const { rating, text } = this.state;
     review.rating = parseFloat(rating);
     review.text = text;
     // create unique id
     review.createdAt = Date.now();
     // send to App
     this.props.createReview(this.props.id, review);
-    // reset form
-    e.target.reset();
+    // reset form state
+    this.setState({
+      rating: "",
+      text: ""
+    });
   };
 
   render() {
