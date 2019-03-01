@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import { Box, Text } from "grommet";
+import Review from "./Review";
 import CreateReview from "./CreateReview";
 
 const Reviews = props => {
