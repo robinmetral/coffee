@@ -59,7 +59,7 @@ export const numberToWord = number => {
   } else if (n < 10) {
     return `${ones[n]}`;
   } else if (n < 20) {
-    return `${teens[n + 10]}`;
+    return `${teens[n - 10]}`;
   } else if (n < 100) {
     return `${tens[Math.floor(n/10)]} ${ones[n%10]}`;
   } else {
