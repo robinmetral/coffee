@@ -77,8 +77,8 @@ class CreateCafe extends Component {
     }
     // create cafe
     this.props.createCafe(cafe);
-    // reset form
-    e.target.reset();
+    // reset form state
+    this.setState({ nodeId: "" });
   };
 
   render() {
