@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text } from "grommet";
+import { Box, Text, Paragraph } from "grommet";
 import { formatDate } from "../helpers";
 
 const Review = props => {
@@ -9,7 +9,7 @@ const Review = props => {
     <Box>
       <Text>Someone | {rating}</Text>
       <Text>{date}</Text>
-      <Text>{text}</Text>
+      <Paragraph>{text}</Paragraph>
     </Box>
   );
 };
