@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text } from "grommet";
-import formatDate from "../helpers";
+import { formatDate } from "../helpers";
 
 const Review = props => {
   const { createdAt, rating, text } = props;
