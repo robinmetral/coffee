@@ -23,7 +23,7 @@ class Cafe extends Component {
           <Text margin={{ left: "small" }}>{name}</Text>
           <Button icon={<FormClose />} onClick={this.props.togglePanel} />
         </Box>
-        <Box flex overfow="auto" pad="xsmall">
+        <Box flex overflow="auto" pad="xsmall">
           <Box>
             <Text>Cafe info</Text>
           </Box>

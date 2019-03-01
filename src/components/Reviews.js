@@ -20,7 +20,7 @@ class Reviews extends Component {
     const { reviews } = properties;
     const { open } = this.state;
     return (
-      <Box>
+      <Box flex="false">
         {reviews && (
           <Box>
             <Heading level="2" size="small">
