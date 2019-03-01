@@ -73,19 +73,12 @@ export const formatAddress = cafe => {
   const street = cafe.properties.addrStreet;
   const number = cafe.properties.addrHousenumber;
 
-  const partone = `${
-    street ? `${number ? `${number} ` : ``}${street}` : undefined
-  }`;
-  
-  const parttwo = `${postcode ? (city ? `${postcode} ` : postcode) : ``}${
-    city ? city : ``
-  }`;
-
+  // fun with template literals and ternary operators
   return `${
-    partone
-      ? parttwo
-        ? `${partone}, ${parttwo}`
-        : partone
-      : `Add the address to OpenStreetMap`
+    city | postcode | street
+      ? `${street ? `${number ? `${number} ` : ``}${street}, ` : ``}${
+          postcode ? (city ? `${postcode} ` : postcode) : ``
+        }${city ? city : ``}`
+      : `Add the address to OpenStreetMap!`
   }`;
 };
