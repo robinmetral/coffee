@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Box, Text, Button } from "grommet";
-import CreateReview from "./CreateReview";
 import { FormClose } from "grommet-icons";
+import Reviews from "./Reviews"
 
 class Cafe extends Component {
   render() {
@@ -24,11 +24,12 @@ class Cafe extends Component {
           <Button icon={<FormClose />} onClick={this.props.togglePanel} />
         </Box>
         <Box flex overfow="auto" pad="xsmall">
-          <Text>Map over reviews...</Text>
-          <CreateReview
-            name={name}
+          <Box>
+            <Text>Cafe info</Text>
+          </Box>
+          <Reviews
+            cafe={this.props.cafe}
             createReview={this.props.createReview}
-            id={this.props.clicked}
           />
         </Box>
       </Box>
