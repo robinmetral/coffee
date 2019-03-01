@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import { Box, Text, Button } from "grommet";
+import { Box, Text, Heading, Button } from "grommet";
 import { FormClose } from "grommet-icons";
-import Reviews from "./Reviews"
+import Reviews from "./Reviews";
 
 class Cafe extends Component {
   render() {
@@ -12,21 +12,17 @@ class Cafe extends Component {
 
     const { name } = this.props.cafe.properties;
     return (
-      <Box elevation="large" fill="vertical">
-        <Box
-          direction="row"
-          align="center"
-          as="header"
-          elevation="small"
-          justify="between"
-        >
-          <Text margin={{ left: "small" }}>{name}</Text>
+      <Box width="medium" elevation="large" fill="vertical" overflow="auto">
+        <Box direction="row" align="center" justify="between">
+          <Heading size="small" margin={{ left: "small" }}>
+            {name}
+          </Heading>
           <Button icon={<FormClose />} onClick={this.props.togglePanel} />
         </Box>
-        <Box flex overflow="auto" pad="xsmall">
-          <Box>
-            <Text>Cafe info</Text>
-          </Box>
+        <Box pad="small">
+          <Text>Cafe info</Text>
+        </Box>
+        <Box pad="small">
           <Reviews
             cafe={this.props.cafe}
             createReview={this.props.createReview}
