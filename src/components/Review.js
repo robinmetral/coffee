@@ -1,25 +1,14 @@
 import React from "react";
 import { Box, Text } from "grommet";
+import formatDate from "../helpers";
 
 const Review = props => {
   const { createdAt, rating, text } = props;
-  const timestamp = new Date(createdAt);
-  const date = timestamp.toLocaleDateString("en-GB", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric"
-  });
-  const time = timestamp.toLocaleTimeString("en-GB", {
-    hour: "numeric",
-    minute: "numeric"
-  });
+  const date = formatDate(createdAt);
   return (
     <Box>
       <Text>Someone | {rating}</Text>
-      <Text>
-        {date} at {time}
-      </Text>
+      <Text>{date}</Text>
       <Text>{text}</Text>
     </Box>
   );
