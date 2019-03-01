@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text } from "grommet";
+import { Box, Heading } from "grommet";
 import Review from "./Review";
 import CreateReview from "./CreateReview";
 
@@ -10,7 +10,9 @@ const Reviews = props => {
     <Box>
       {reviews && (
         <Box>
-          <Text>{Object.keys(reviews).length} reviews</Text>
+          <Heading level="2" size="small">
+            {Object.keys(reviews).length} reviews
+          </Heading>
           {Object.keys(reviews).map(id => (
             <Review
               createdAt={reviews[id].createdAt}
@@ -20,11 +22,16 @@ const Reviews = props => {
           ))}
         </Box>
       )}
-      <CreateReview
-        name={properties.name}
-        id={properties.createdAt}
-        createReview={props.createReview}
-      />
+      <Box>
+        <Heading level="3" size="small">
+          add a review
+        </Heading>
+        <CreateReview
+          name={properties.name}
+          id={properties.createdAt}
+          createReview={props.createReview}
+        />
+      </Box>
     </Box>
   );
 };
