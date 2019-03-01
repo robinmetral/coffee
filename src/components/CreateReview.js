@@ -5,7 +5,7 @@ import { Chat } from "grommet-icons";
 class CreateReview extends Component {
   state = {
     rating: "",
-    review: ""
+    text: ""
   };
 
   handleChange = e => {
@@ -18,8 +18,9 @@ class CreateReview extends Component {
     e.preventDefault();
     // build review object
     const review = {};
-    review.rating = parseFloat(this.ratingRef.current.value);
-    review.text = this.textRef.current.value;
+    const { rating, text } = this.state
+    review.rating = parseFloat(rating);
+    review.text = text;
     // create unique id
     review.createdAt = Date.now();
     // send to App
@@ -29,7 +30,7 @@ class CreateReview extends Component {
   };
 
   render() {
-    const { rating, review } = this.state;
+    const { rating, text } = this.state;
     return (
       <Form onSubmit={this.handleSubmit}>
         <TextInput
@@ -41,8 +42,8 @@ class CreateReview extends Component {
         />
         <TextArea
           resize="vertical"
-          name="review"
-          value={review}
+          name="text"
+          value={text}
           placeholder={`Review ${this.props.name}...`}
           onChange={this.handleChange}
         />
