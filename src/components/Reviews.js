@@ -1,41 +1,58 @@
-import React from "react";
-import { Box, Heading } from "grommet";
+import React, { Component } from "react";
+import { Box, Heading, Button, Collapsible } from "grommet";
+import { Close, Edit } from "grommet-icons";
 import Review from "./Review";
 import CreateReview from "./CreateReview";
 import { numberToWord } from "../helpers";
 
-const Reviews = props => {
-  const { properties } = props.cafe;
-  const { reviews } = properties;
-  return (
-    <Box>
-      {reviews && (
-        <Box>
-          <Heading level="2" size="small">
-            {numberToWord(Object.keys(reviews).length)} review
-            {Object.keys(reviews).length < 2 ? "" : "s"}
-          </Heading>
-          {Object.keys(reviews).map(id => (
-            <Review
-              createdAt={reviews[id].createdAt}
-              rating={reviews[id].rating}
-              text={reviews[id].text}
-            />
-          ))}
-        </Box>
-      )}
+class Reviews extends Component {
+  state = {
+    open: false
+  };
+
+  handleClick = () => {
+    const { open } = this.state;
+    this.setState({ open: !open });
+  };
+
+  render() {
+    const { properties } = this.props.cafe;
+    const { reviews } = properties;
+    const { open } = this.state;
+    return (
       <Box>
-        <Heading level="3" size="small">
-          add a review
-        </Heading>
-        <CreateReview
-          name={properties.name}
-          id={properties.createdAt}
-          createReview={props.createReview}
+        {reviews && (
+          <Box>
+            <Heading level="2" size="small">
+              {numberToWord(Object.keys(reviews).length)} review
+              {Object.keys(reviews).length < 2 ? "" : "s"}
+            </Heading>
+            {Object.keys(reviews).map(id => (
+              <Review
+                createdAt={reviews[id].createdAt}
+                rating={reviews[id].rating}
+                text={reviews[id].text}
+              />
+            ))}
+          </Box>
+        )}
+        <Button
+          icon={open ? <Close /> : <Edit />}
+          label={open ? "close" : "write a review"}
+          onClick={this.handleClick}
         />
+        <Collapsible open={open}>
+          <Box pad="xsmall">
+            <CreateReview
+              name={properties.name}
+              id={properties.createdAt}
+              createReview={this.props.createReview}
+            />
+          </Box>
+        </Collapsible>
       </Box>
-    </Box>
-  );
-};
+    );
+  }
+}
 
 export default Reviews;
