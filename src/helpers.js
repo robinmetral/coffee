@@ -15,7 +15,7 @@ export const formatDate = timestamp => {
 
 export const numberToWord = number => {
   // make sure it's a number
-  const n = Number(number)
+  const n = Number(number);
   // define words
   const ones = [
     "",
@@ -61,8 +61,31 @@ export const numberToWord = number => {
   } else if (n < 20) {
     return `${teens[n - 10]}`;
   } else if (n < 100) {
-    return `${tens[Math.floor(n/10)]} ${ones[n%10]}`;
+    return `${tens[Math.floor(n / 10)]} ${ones[n % 10]}`;
   } else {
     return `a lot of`;
   }
+};
+
+export const formatAddress = cafe => {
+  const city = cafe.properties.addrCity;
+  const postcode = cafe.properties.addrPostcode;
+  const street = cafe.properties.addrStreet;
+  const number = cafe.properties.addrHousenumber;
+
+  const partone = `${
+    street ? `${number ? `${number} ` : ``}${street}` : undefined
+  }`;
+  
+  const parttwo = `${postcode ? (city ? `${postcode} ` : postcode) : ``}${
+    city ? city : ``
+  }`;
+
+  return `${
+    partone
+      ? parttwo
+        ? `${partone}, ${parttwo}`
+        : partone
+      : `Add the address to OpenStreetMap`
+  }`;
 };
