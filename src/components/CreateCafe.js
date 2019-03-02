@@ -62,12 +62,12 @@ class CreateCafe extends Component {
     } else if (tags.facebook) {
       properties.url = tags.facebook;
     }
-    if (tags["drink:espresso"] === ("served" | "yes")) {
+    if (tags["drink:espresso"] === ("served" || "yes")) {
       properties.servesEspresso = true;
     } else if (tags["drink:espresso"] === "no") {
       properties.servesEspresso = false;
     }
-    if (tags["drink:filter_coffee"] === ("served" | "yes")) {
+    if (tags["drink:filter_coffee"] === ("served" || "yes")) {
       properties.servesFilter = true;
     } else if (tags["drink:filter_coffee"] === "no") {
       properties.servesFilter = false;
