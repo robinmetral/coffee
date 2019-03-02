@@ -48,7 +48,7 @@ class CreateCafe extends Component {
       properties.addrHousenumber = tags["addr:housenumber"];
     }
     if (tags.internet_access) {
-      if (tags.internet_access === ("wlan" | "yes")) {
+      if (tags.internet_access === ("wlan" || "yes")) {
         properties.internetAccess = true;
       } else if (tags.internet_access === "no") {
         properties.internetAccess = false;
