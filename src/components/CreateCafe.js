@@ -1,5 +1,13 @@
 import React, { Component } from "react";
-import { Box, Form, TextInput, Button } from "grommet";
+import {
+  ThemeContext,
+  Layer,
+  Heading,
+  Box,
+  Form,
+  TextInput,
+  Button
+} from "grommet";
 import { Send } from "grommet-icons";
 
 class CreateCafe extends Component {
@@ -82,18 +90,39 @@ class CreateCafe extends Component {
   };
 
   render() {
+    const { open } = this.props;
+    if (!open) return null;
     return (
-      <Box pad="small">
-        <Form onSubmit={this.handleSubmit}>
-          <TextInput
-            type="number"
-            value={this.state.nodeId}
-            placeholder="OpenStreetMap ID"
-            onChange={e => this.setState({ nodeId: e.target.value })}
-          />
-          <Button icon={<Send />} type="submit" primary label="Submit" />
-        </Form>
-      </Box>
+      <ThemeContext.Extend
+        value={{
+          layer: {
+            container: {
+              zIndex: "2000"
+            }
+          }
+        }}
+      >
+        <Layer
+          position="center"
+          onClickOutside="this.onClose"
+          onEsc={this.onClose}
+        >
+          <Box pad="medium" gap="small" width="medium">
+            <Heading level={3} margin="none">
+              Add a cafe
+            </Heading>
+            <Form onSubmit={this.handleSubmit}>
+              <TextInput
+                type="number"
+                value={this.state.nodeId}
+                placeholder="OpenStreetMap ID"
+                onChange={e => this.setState({ nodeId: e.target.value })}
+              />
+              <Button icon={<Send />} type="submit" primary label="Submit" />
+            </Form>
+          </Box>
+        </Layer>
+      </ThemeContext.Extend>
     );
   }
 }

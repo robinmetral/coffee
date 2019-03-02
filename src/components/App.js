@@ -5,6 +5,7 @@ import base, { firebaseApp } from "../base";
 import Layout from "./Layout";
 import Map from "./Map";
 import Panel from "./Panel";
+import CreateCafe from "./CreateCafe";
 
 class App extends Component {
   // initialize state
@@ -12,7 +13,8 @@ class App extends Component {
     devcafes: {},
     clicked: "",
     uid: null,
-    open: true
+    open: true,
+    add: false
   };
 
   componentDidMount() {
@@ -154,6 +156,7 @@ class App extends Component {
           togglePanel={this.togglePanel}
           clicked={this.state.clicked}
         />
+        <CreateCafe open={this.state.add} createCafe={this.createCafe} />
       </Layout>
     );
   }
