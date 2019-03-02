@@ -79,6 +79,6 @@ export const formatAddress = cafe => {
       ? `${street ? `${number ? `${number} ` : ``}${street}, ` : ``}${
           postcode ? (city ? `${postcode} ` : postcode) : ``
         }${city ? city : ``}`
-      : `Add the address to OpenStreetMap!`
+      : undefined
   }`;
 };
