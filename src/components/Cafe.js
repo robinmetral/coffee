@@ -10,17 +10,23 @@ const Cafe = props => {
     return null;
   }
   return (
-    <Box width="medium" elevation="large" fill="vertical" overflow="auto">
+    <Box
+      width="medium"
+      elevation="large"
+      fill="vertical"
+      overflow="auto"
+      pad={{ horizontal: "medium" }}
+    >
       <Box direction="row" align="center" justify="between" flex="false">
-        <Heading size="small" margin={{ left: "small" }}>
+        <Heading size="small" margin={{ bottom: "small" }}>
           {props.cafe.properties.name}
         </Heading>
         <Button icon={<FormClose />} onClick={props.togglePanel} />
       </Box>
-      <Box pad="small" flex="false">
+      <Box flex="false">
         <Info cafe={props.cafe} />
       </Box>
-      <Box pad="small" flex="false">
+      <Box flex="false">
         <Reviews cafe={props.cafe} createReview={props.createReview} />
       </Box>
     </Box>
