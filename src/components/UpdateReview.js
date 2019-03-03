@@ -32,6 +32,13 @@ class UpdateReview extends Component {
     this.props.toggleForm();
   };
 
+  handleDelete = () => {
+    // call delete method
+    this.props.deleteReview(this.props.id, this.props.review.createdAt);
+    // close form
+    this.props.toggleForm();
+  };
+
   render() {
     const { rating, text } = this.state;
     return (
@@ -57,12 +64,7 @@ class UpdateReview extends Component {
             icon={<Trash />}
             label="Delete"
             color="status-critical"
-            onClick={() =>
-              this.props.deleteReview(
-                this.props.id,
-                this.props.review.createdAt
-              )
-            }
+            onClick={() => this.handleDelete()}
           />
         </Box>
       </Form>
