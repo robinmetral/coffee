@@ -16,22 +16,16 @@ class UpdateReview extends Component {
   handleSubmit = e => {
     // prevent form from submitting
     e.preventDefault();
-    // build review object
-    const review = {};
+    // take a copy of current review
+    const review = { ...this.props.review };
+    // update review
     const { rating, text } = this.state;
     review.rating = parseFloat(rating);
     review.text = text;
-    // create unique id
-    review.createdAt = Date.now();
-    // add user data to review
-    review.user = this.props.user;
+    // add updated data
+    review.updatedAt = Date.now();
     // send to App
-    this.props.createReview(this.props.id, review);
-    // reset form state
-    this.setState({
-      rating: "",
-      text: ""
-    });
+    this.props.updateReview(this.props.id, review);
   };
 
   render() {

@@ -96,10 +96,20 @@ class App extends Component {
     devcafes[id].properties.reviews = devcafes[id].properties.reviews || {};
     // add review
     devcafes[id].properties.reviews[review.createdAt] = review;
-    // use a setState callback to fire before re-rendering
-    // https://reactjs.org/docs/react-component.html#setstate
+    // setstate with callback
     this.setState({ devcafes }, () => {
       console.log(`Added the review to State.`);
+    });
+  };
+
+  updateReview = (id, review) => {
+    // take a copy of state
+    const devcafes = { ...this.state.devcafes };
+    // overwrite review
+    devcafes[id].properties.reviews[review.createdAt] = review;
+    // setstate with callback
+    this.setState({ devcafes }, () => {
+      console.log(`Updated the review.`);
     });
   };
 
