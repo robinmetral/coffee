@@ -29,12 +29,6 @@ class App extends Component {
       .catch(error => {
         console.log("Error fetching cafes from Firebase");
       });
-
-    // sync cafes in state
-    this.ref = base.syncState(`devcafes`, {
-      context: this,
-      state: "devcafes"
-    });
   }
 
   // remove binding when unmounting to avoid memory leak
@@ -104,7 +98,6 @@ class App extends Component {
     });
   };
 
-  /*
   authHandler = async authData => {
     // fetch firebase data
     const data = await base.fetch(`/`, { context: this });
@@ -119,7 +112,6 @@ class App extends Component {
       state: "devcafes"
     });
   };
-  */
 
   login = () => {
     const authProvider = new firebase.auth.GithubAuthProvider();
