@@ -54,10 +54,15 @@ class Reviews extends Component {
             <Collapsible open={open}>
               <Box pad="xsmall">
                 <UpdateReview
-                  user={this.props.user}
-                  name={properties.name}
+                  review={
+                    reviews[
+                      Object.keys(reviews).find(
+                        id => reviews[id].user.uid === this.props.user.uid
+                      )
+                    ]
+                  }
                   id={properties.createdAt}
-                  createReview={this.props.createReview}
+                  updateReview={this.props.updateReview}
                 />
               </Box>
             </Collapsible>
