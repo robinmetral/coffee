@@ -109,7 +109,7 @@ class App extends Component {
     devcafes[id].properties.reviews[review.createdAt] = review;
     // setstate with callback
     this.setState({ devcafes }, () => {
-      console.log(`Updated the review.`);
+      console.log(`Review updated.`);
     });
   };
 
@@ -120,7 +120,7 @@ class App extends Component {
     devcafes[cafeId].properties.reviews[reviewId] = null;
     // setstate with callback
     this.setState({ devcafes }, () => {
-      console.log(`Deleted the review.`);
+      console.log(`Review deleted.`);
     });
   };
 
