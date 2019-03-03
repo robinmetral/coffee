@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button } from "grommet";
+import { Box, Button, Text } from "grommet";
 import { Github, Twitter, Facebook } from "grommet-icons";
 
 const Login = props => {
@@ -19,12 +19,13 @@ const Login = props => {
   ];
 
   return (
-    <Box>
+    <Box direction="row" align="center">
+      <Text>Log in:</Text>
       {providers.map(({ name, icon }) => (
         <Button
+          plain
           key={name}
           icon={icon}
-          label={`Login with ${name}`}
           onClick={() => props.login(name)}
         />
       ))}
