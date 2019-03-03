@@ -89,7 +89,7 @@ class CreateCafe extends Component {
 
   render() {
     return (
-      <Box flex="false">
+      <Box flex={false}>
         <Heading level={3} margin="none">
           Add a cafe
         </Heading>

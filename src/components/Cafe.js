@@ -10,7 +10,7 @@ const Cafe = props => {
     return null;
   }
   return (
-    <Box flex="false">
+    <Box flex={false}>
       <Box direction="row" align="center" justify="between">
         <Heading size="small" margin={{ bottom: "small" }}>
           {props.cafe.properties.name}
