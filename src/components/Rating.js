@@ -1,13 +1,13 @@
 import React from "react";
-
-import Emoji from "./Emoji";
+import { Box } from "grommet";
+import { Star } from "grommet-icons";
 
 const Rating = props => (
-  <>
+  <Box direction="row">
     {[...Array(props.rating)].map((star, key) => (
-      <Emoji unicode="2b50" alt="Star" key={key} />
+      <Star size={props.size || `medium`} key={key} />
     ))}
-  </>
+  </Box>
 );
 
 export default Rating;
