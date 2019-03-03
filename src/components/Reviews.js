@@ -3,6 +3,7 @@ import { Box, Heading, Button, Collapsible, Text } from "grommet";
 import { Close, Edit } from "grommet-icons";
 import Review from "./Review";
 import CreateReview from "./CreateReview";
+import UpdateReview from "./UpdateReview";
 import Rating from "./Rating";
 import { numberToWord, averageRating } from "../helpers";
 
@@ -22,21 +23,46 @@ class Reviews extends Component {
     const { open } = this.state;
     return (
       <Box flex="false">
-        <Button
-          icon={open ? <Close /> : <Edit />}
-          label={open ? "close" : "write a review"}
-          onClick={this.handleClick}
-        />
-        <Collapsible open={open}>
-          <Box pad="xsmall">
-            <CreateReview
-              user={this.props.user}
-              name={properties.name}
-              id={properties.createdAt}
-              createReview={this.props.createReview}
+        {!reviews ||
+        Object.keys(reviews).find(
+          id => reviews[id].user.uid === this.props.user.uid
+        ) === undefined ? (
+          <>
+            <Button
+              icon={open ? <Close /> : <Edit />}
+              label={open ? "close" : "write a review"}
+              onClick={this.handleClick}
             />
-          </Box>
-        </Collapsible>
+            <Collapsible open={open}>
+              <Box pad="xsmall">
+                <CreateReview
+                  user={this.props.user}
+                  name={properties.name}
+                  id={properties.createdAt}
+                  createReview={this.props.createReview}
+                />
+              </Box>
+            </Collapsible>
+          </>
+        ) : (
+          <>
+            <Button
+              icon={open ? <Close /> : <Edit />}
+              label={open ? "close" : "edit your review"}
+              onClick={this.handleClick}
+            />
+            <Collapsible open={open}>
+              <Box pad="xsmall">
+                <UpdateReview
+                  user={this.props.user}
+                  name={properties.name}
+                  id={properties.createdAt}
+                  createReview={this.props.createReview}
+                />
+              </Box>
+            </Collapsible>
+          </>
+        )}
         {reviews && (
           <Box>
             <Heading level="2" size="small">
