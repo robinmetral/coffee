@@ -22,7 +22,7 @@ class Reviews extends Component {
     const { reviews } = properties;
     const { open } = this.state;
     return (
-      <Box flex="false">
+      <Box flex={false}>
         {!reviews ||
         Object.keys(reviews).find(
           id => reviews[id].user.uid === this.props.user.uid
@@ -79,7 +79,7 @@ class Reviews extends Component {
               <Text>{averageRating(reviews)}</Text>
             </Box>
             {Object.keys(reviews).map(id => (
-              <Review review={reviews[id]} />
+              <Review review={reviews[id]} key={reviews[id]} />
             ))}
           </Box>
         )}
