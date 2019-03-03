@@ -9,13 +9,11 @@ const Rating = props => {
   return (
     <Box direction="row">
       {[...Array(lit)].map((star, key) => (
-        <Star size={size || "medium"} color="accent-4" key={key} />
+        <Star size={size || "medium"} color="plain" key={key} />
       ))}
-      {rating % 1 !== 0 && (
-        <StarHalf size={size || "medium"} color="accent-4" />
-      )}
+      {rating % 1 !== 0 && <StarHalf size={size || "medium"} color="plain" />}
       {[...Array(unlit)].map((star, key) => (
-        <Star size={size || "medium"} color="light-4" key={key} />
+        <Star size={size || "medium"} color="status-unknown" key={key} />
       ))}
     </Box>
   );
