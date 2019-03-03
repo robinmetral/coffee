@@ -112,11 +112,6 @@ class App extends Component {
     this.setState({
       uid: authData.user.uid
     });
-    // sync cafes in state
-    this.ref = base.syncState(`devcafes`, {
-      context: this,
-      state: "devcafes"
-    });
   };
 
   login = (provider) => {
@@ -130,8 +125,6 @@ class App extends Component {
   logout = async () => {
     // log out on firebase
     await firebase.auth().signOut();
-    // remove binding of cafes in state
-    await base.removeBinding(this.ref);
     // remove uid from state
     this.setState({
       uid: null
