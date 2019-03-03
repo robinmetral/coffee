@@ -36,7 +36,7 @@ class App extends Component {
       });
   }
 
-  // remove binding when unmounting to avoid memory leak
+  // remove syncState binding on unmount
   componentWillUnmount() {
     base.removeBinding(this.ref);
   }
@@ -106,6 +106,11 @@ class App extends Component {
   authHandler = async authData => {
     // destructure authData
     const { uid, displayName } = authData.user;
+    // sync state with Firebase
+    this.ref = base.syncState(`devcafes`, {
+      context: this,
+      state: "devcafes"
+    });
     // set logged in user to state
     this.setState({
       user: { uid, displayName }
