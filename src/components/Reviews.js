@@ -12,7 +12,7 @@ class Reviews extends Component {
     open: false
   };
 
-  handleClick = () => {
+  toggleForm = () => {
     const { open } = this.state;
     this.setState({ open: !open });
   };
@@ -31,7 +31,7 @@ class Reviews extends Component {
             <Button
               icon={open ? <Close /> : <Edit />}
               label={open ? "close" : "write a review"}
-              onClick={this.handleClick}
+              onClick={this.toggleForm}
             />
             <Collapsible open={open}>
               <Box pad="xsmall">
@@ -40,6 +40,7 @@ class Reviews extends Component {
                   name={properties.name}
                   id={properties.createdAt}
                   createReview={this.props.createReview}
+                  toggleForm={this.toggleForm}
                 />
               </Box>
             </Collapsible>
@@ -49,7 +50,7 @@ class Reviews extends Component {
             <Button
               icon={open ? <Close /> : <Edit />}
               label={open ? "close" : "edit your review"}
-              onClick={this.handleClick}
+              onClick={this.toggleForm}
             />
             <Collapsible open={open}>
               <Box pad="xsmall">
@@ -64,6 +65,7 @@ class Reviews extends Component {
                   id={properties.createdAt}
                   updateReview={this.props.updateReview}
                   deleteReview={this.props.deleteReview}
+                  toggleForm={this.toggleForm}
                 />
               </Box>
             </Collapsible>
