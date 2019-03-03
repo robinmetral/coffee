@@ -63,6 +63,7 @@ class Reviews extends Component {
                   }
                   id={properties.createdAt}
                   updateReview={this.props.updateReview}
+                  deleteReview={this.props.deleteReview}
                 />
               </Box>
             </Collapsible>

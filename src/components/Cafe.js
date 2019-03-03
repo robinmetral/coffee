@@ -26,6 +26,7 @@ const Cafe = props => {
           user={props.user}
           createReview={props.createReview}
           updateReview={props.updateReview}
+          deleteReview={props.deleteReview}
         />
       </Box>
     </Box>
