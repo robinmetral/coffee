@@ -19,18 +19,16 @@ const Login = props => {
   ];
 
   return (
-    <>
-      {providers.map(provider => (
-        <Box>
-          <Button
-            key={provider.name}
-            icon={provider.icon}
-            label={`Login with ${provider.name}`}
-            onClick={() => props.login(provider.name)}
-          />
-        </Box>
+    <Box>
+      {providers.map(({ name, icon }) => (
+        <Button
+          key={name}
+          icon={icon}
+          label={`Login with ${name}`}
+          onClick={() => props.login(name)}
+        />
       ))}
-    </>
+    </Box>
   );
 };
 export default Login;
