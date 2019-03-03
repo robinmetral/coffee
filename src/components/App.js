@@ -104,8 +104,6 @@ class App extends Component {
   };
 
   authHandler = async authData => {
-    // fetch firebase data
-    const data = await base.fetch(`/`, { context: this });
     // set logged in user to state
     this.setState({
       uid: authData.user.uid
