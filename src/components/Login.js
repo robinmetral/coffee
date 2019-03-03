@@ -19,7 +19,7 @@ const Login = props => {
   ];
 
   return (
-    <Box direction="row" align="center">
+    <Box flex="false" direction="row" align="center">
       <Text>Log in:</Text>
       {providers.map(({ name, icon }) => (
         <Button

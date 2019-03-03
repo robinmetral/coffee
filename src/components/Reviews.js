@@ -22,21 +22,6 @@ class Reviews extends Component {
     const { open } = this.state;
     return (
       <Box flex="false">
-        {reviews && (
-          <Box>
-            <Heading level="2" size="small">
-              {numberToWord(Object.keys(reviews).length)} review
-              {Object.keys(reviews).length < 2 ? "" : "s"}
-            </Heading>
-            <Box direction="row" gap="xsmall">
-              <Rating rating={averageRating(reviews)} />
-              <Text>{averageRating(reviews)}</Text>
-            </Box>
-            {Object.keys(reviews).map(id => (
-              <Review review={reviews[id]} />
-            ))}
-          </Box>
-        )}
         <Button
           icon={open ? <Close /> : <Edit />}
           label={open ? "close" : "write a review"}
@@ -52,6 +37,21 @@ class Reviews extends Component {
             />
           </Box>
         </Collapsible>
+        {reviews && (
+          <Box>
+            <Heading level="2" size="small">
+              {numberToWord(Object.keys(reviews).length)} review
+              {Object.keys(reviews).length < 2 ? "" : "s"}
+            </Heading>
+            <Box direction="row" gap="xsmall">
+              <Rating rating={averageRating(reviews)} />
+              <Text>{averageRating(reviews)}</Text>
+            </Box>
+            {Object.keys(reviews).map(id => (
+              <Review review={reviews[id]} />
+            ))}
+          </Box>
+        )}
       </Box>
     );
   }

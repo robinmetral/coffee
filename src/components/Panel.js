@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { ThemeContext, Layer } from "grommet";
+import { ThemeContext, Layer, Box } from "grommet";
 import Cafe from "./Cafe";
 import CreateCafe from "./CreateCafe";
 import Login from "./Login";
@@ -23,15 +23,24 @@ class Panel extends Component {
           modal={false}
           onEsc={this.props.togglePanel}
         >
-          <Cafe
-            cafe={this.props.cafe}
-            user={this.props.user}
-            clicked={this.props.clicked}
-            createReview={this.props.createReview}
-            togglePanel={this.props.togglePanel}
-          />
-          <CreateCafe createCafe={this.props.createCafe} />
-          <Login login={this.props.login} />
+          <Box
+            width="medium"
+            elevation="large"
+            fill="vertical"
+            overflow="auto"
+            flex="false"
+            pad={{ horizontal: "medium" }}
+          >
+            <Cafe
+              cafe={this.props.cafe}
+              user={this.props.user}
+              clicked={this.props.clicked}
+              createReview={this.props.createReview}
+              togglePanel={this.props.togglePanel}
+            />
+            <CreateCafe createCafe={this.props.createCafe} />
+            <Login login={this.props.login} />
+          </Box>
         </Layer>
       </ThemeContext.Extend>
     );
