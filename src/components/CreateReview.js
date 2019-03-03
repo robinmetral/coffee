@@ -23,6 +23,8 @@ class CreateReview extends Component {
     review.text = text;
     // create unique id
     review.createdAt = Date.now();
+    // add user data to review
+    review.user = this.props.user;
     // send to App
     this.props.createReview(this.props.id, review);
     // reset form state
