@@ -13,7 +13,7 @@ const Tooltip = props => (
   <LeafletTooltip direction="top">
     <Name>{props.name}</Name>
     <br />
-    <Rating rating={props.rating} />
+    <Rating reviews={props.reviews} />
   </LeafletTooltip>
 );
 

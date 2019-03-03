@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Marker } from "react-leaflet";
 import L from "leaflet";
-import { averageRating } from "../helpers";
 import Tooltip from "./Tooltip";
 
 const CoffeeBean = new L.Icon({
@@ -30,7 +29,7 @@ class Markers extends Component {
             >
               <Tooltip
                 name={cafes[id].properties.name}
-                rating={averageRating(cafes[id].properties.reviews)}
+                reviews={cafes[id].properties.reviews}
               />
             </Marker>
           ))}
