@@ -88,7 +88,7 @@ export const averageRating = reviews => {
   // build ratings array
   const ratings = [];
   Object.keys(reviews).map(id => {
-    ratings.push(reviews[id].rating);
+    return ratings.push(reviews[id].rating);
   });
   // reduce to average
   let average = ratings.reduce((a, b) => a + b) / ratings.length;
