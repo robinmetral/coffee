@@ -11,7 +11,7 @@ class App extends Component {
   state = {
     devcafes: {},
     clicked: "",
-    uid: null,
+    user: null,
     open: true
   };
 
@@ -104,9 +104,11 @@ class App extends Component {
   };
 
   authHandler = async authData => {
+    // destructure authData
+    const { uid, displayName } = authData.user;
     // set logged in user to state
     this.setState({
-      uid: authData.user.uid
+      user: { uid, displayName }
     });
   };
 
@@ -121,9 +123,9 @@ class App extends Component {
   logout = async () => {
     // log out on firebase
     await firebase.auth().signOut();
-    // remove uid from state
+    // remove user from state
     this.setState({
-      uid: null
+      user: null
     });
   };
 
@@ -132,7 +134,7 @@ class App extends Component {
       <Layout>
         <Map cafes={this.state.devcafes} handleClick={this.handleClick} />
         <Panel
-          uid={this.state.uid}
+          user={this.state.user}
           cafe={this.state.devcafes[this.state.clicked]}
           createCafe={this.createCafe}
           deleteCafe={this.deleteCafe}
