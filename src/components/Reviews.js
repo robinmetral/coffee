@@ -3,7 +3,7 @@ import { Box, Heading, Button, Collapsible } from "grommet";
 import { Close, Edit } from "grommet-icons";
 import Review from "./Review";
 import CreateReview from "./CreateReview";
-import { numberToWord } from "../helpers";
+import { numberToWord, averageRating } from "../helpers";
 
 class Reviews extends Component {
   state = {
@@ -26,6 +26,7 @@ class Reviews extends Component {
             <Heading level="2" size="small">
               {numberToWord(Object.keys(reviews).length)} review
               {Object.keys(reviews).length < 2 ? "" : "s"}
+              {averageRating(reviews)}
             </Heading>
             {Object.keys(reviews).map(id => (
               <Review review={reviews[id]} />
