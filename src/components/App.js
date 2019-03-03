@@ -98,7 +98,7 @@ class App extends Component {
     devcafes[id].properties.reviews[review.createdAt] = review;
     // setstate with callback
     this.setState({ devcafes }, () => {
-      console.log(`Review added.`);
+      console.log(`Added the review to State.`);
     });
   };
 
@@ -116,7 +116,7 @@ class App extends Component {
   deleteReview = (cafeId, reviewId) => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
-    // delete from firebase
+    // overwrite review
     devcafes[cafeId].properties.reviews[reviewId] = null;
     // setstate with callback
     this.setState({ devcafes }, () => {

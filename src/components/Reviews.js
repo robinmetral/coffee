@@ -5,7 +5,7 @@ import Review from "./Review";
 import CreateReview from "./CreateReview";
 import UpdateReview from "./UpdateReview";
 import Rating from "./Rating";
-import { numberToWord } from "../helpers";
+import { numberToWord, averageRating } from "../helpers";
 
 class Reviews extends Component {
   state = {
@@ -78,8 +78,8 @@ class Reviews extends Component {
               {Object.keys(reviews).length < 2 ? "" : "s"}
             </Heading>
             <Box direction="row" gap="xsmall">
-              <Rating reviews={reviews} />
-              <Text>0{/* TODO render number rating */}</Text>
+              <Rating rating={averageRating(reviews)} />
+              <Text>{averageRating(reviews)}</Text>
             </Box>
             {Object.keys(reviews).map((id, key) => (
               <Review review={reviews[id]} key={key} />

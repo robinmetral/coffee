@@ -82,3 +82,17 @@ export const formatAddress = cafe => {
       : undefined
   }`;
 };
+
+export const averageRating = reviews => {
+  if (!reviews) return null;
+  // build ratings array
+  const ratings = [];
+  Object.keys(reviews).map(id => {
+    return ratings.push(reviews[id].rating);
+  });
+  // reduce to average
+  let average = ratings.reduce((a, b) => a + b) / ratings.length;
+  // round to .5
+  const rounded = Math.round(average * 2) / 2;
+  return rounded;
+};
