@@ -28,11 +28,7 @@ class Reviews extends Component {
               {Object.keys(reviews).length < 2 ? "" : "s"}
             </Heading>
             {Object.keys(reviews).map(id => (
-              <Review
-                createdAt={reviews[id].createdAt}
-                rating={reviews[id].rating}
-                text={reviews[id].text}
-              />
+              <Review review={reviews[id]} />
             ))}
           </Box>
         )}

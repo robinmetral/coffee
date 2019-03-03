@@ -3,11 +3,11 @@ import { Box, Text, Paragraph } from "grommet";
 import { formatDate } from "../helpers";
 
 const Review = props => {
-  const { createdAt, rating, text } = props;
+  const { createdAt, rating, text, user } = props.review;
   const date = formatDate(createdAt);
   return (
     <Box>
-      <Text>Someone | {rating}</Text>
+      <Text>{user.displayName} | {rating}</Text>
       <Text>{date}</Text>
       <Paragraph>{text}</Paragraph>
     </Box>
