@@ -142,8 +142,8 @@ class App extends Component {
           user={this.state.user}
           cafe={this.state.devcafes[this.state.clicked]}
           createCafe={this.createCafe}
-          deleteCafe={this.deleteCafe}
           createReview={this.createReview}
+          updateReview={this.updateReview}
           login={this.login}
           logout={this.logout}
           open={this.state.open}
