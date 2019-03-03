@@ -113,6 +113,17 @@ class App extends Component {
     });
   };
 
+  deleteReview = (cafeId, reviewId) => {
+    // take a copy of state
+    const devcafes = { ...this.state.devcafes };
+    // overwrite review
+    devcafes[cafeId].properties.reviews[reviewId] = null;
+    // setstate with callback
+    this.setState({ devcafes }, () => {
+      console.log(`Deleted the review.`);
+    });
+  };
+
   authHandler = async authData => {
     // destructure authData
     const { uid, displayName } = authData.user;
@@ -154,6 +165,7 @@ class App extends Component {
           createCafe={this.createCafe}
           createReview={this.createReview}
           updateReview={this.updateReview}
+          deleteReview={this.deleteReview}
           login={this.login}
           logout={this.logout}
           open={this.state.open}
