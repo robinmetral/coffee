@@ -27,7 +27,11 @@ const Cafe = props => {
         <Info cafe={props.cafe} />
       </Box>
       <Box flex="false">
-        <Reviews cafe={props.cafe} createReview={props.createReview} />
+        <Reviews
+          cafe={props.cafe}
+          user={props.user}
+          createReview={props.createReview}
+        />
       </Box>
     </Box>
   );

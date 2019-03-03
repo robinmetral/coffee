@@ -44,6 +44,7 @@ class Reviews extends Component {
         <Collapsible open={open}>
           <Box pad="xsmall">
             <CreateReview
+              user={this.props.user}
               name={properties.name}
               id={properties.createdAt}
               createReview={this.props.createReview}
