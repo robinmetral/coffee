@@ -32,6 +32,7 @@ class CreateReview extends Component {
       rating: "",
       text: ""
     });
+    // TODO close form on submit
   };
 
   render() {

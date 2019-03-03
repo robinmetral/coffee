@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Form, TextInput, TextArea, Button } from "grommet";
 import { Chat } from "grommet-icons";
 
+// TODO state doesn't reload when moving from one café to another
+
 class UpdateReview extends Component {
   state = {
     rating: this.props.review.rating,
@@ -26,6 +28,7 @@ class UpdateReview extends Component {
     review.updatedAt = Date.now();
     // send to App
     this.props.updateReview(this.props.id, review);
+    // TODO close form on submit
   };
 
   render() {
