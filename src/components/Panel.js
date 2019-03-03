@@ -28,7 +28,6 @@ class Panel extends Component {
             elevation="large"
             fill="vertical"
             overflow="auto"
-            flex="false"
             pad={{ horizontal: "medium" }}
           >
             <Cafe
