@@ -78,8 +78,8 @@ class Reviews extends Component {
               <Rating rating={averageRating(reviews)} />
               <Text>{averageRating(reviews)}</Text>
             </Box>
-            {Object.keys(reviews).map(id => (
-              <Review review={reviews[id]} key={reviews[id]} />
+            {Object.keys(reviews).map((id, key) => (
+              <Review review={reviews[id]} key={key} />
             ))}
           </Box>
         )}
