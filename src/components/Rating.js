@@ -1,16 +1,23 @@
 import React from "react";
 import { Box } from "grommet";
-import { Star } from "grommet-icons";
+import { Star, StarHalf } from "grommet-icons";
 
-const Rating = props => (
-  <Box direction="row">
-    {[...Array(props.rating)].map((star, key) => (
-      <Star size={props.size || "medium"} color="accent-4" key={key} />
-    ))}
-    {[...Array(5 - props.rating)].map((star, key) => (
-      <Star size={props.size || "medium"} color="light-4" key={key} />
-    ))}
-  </Box>
-);
-
+const Rating = props => {
+  const { rating, size } = props;
+  const lit = Math.floor(rating);
+  const unlit = Math.floor(5 - rating);
+  return (
+    <Box direction="row">
+      {[...Array(lit)].map((star, key) => (
+        <Star size={size || "medium"} color="accent-4" key={key} />
+      ))}
+      {rating % 1 !== 0 && (
+        <StarHalf size={size || "medium"} color="accent-4" />
+      )}
+      {[...Array(unlit)].map((star, key) => (
+        <Star size={size || "medium"} color="light-4" key={key} />
+      ))}
+    </Box>
+  );
+};
 export default Rating;

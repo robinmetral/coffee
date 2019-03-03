@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Box, Heading, Button, Collapsible } from "grommet";
+import { Box, Heading, Button, Collapsible, Text } from "grommet";
 import { Close, Edit } from "grommet-icons";
 import Review from "./Review";
 import CreateReview from "./CreateReview";
+import Rating from "./Rating";
 import { numberToWord, averageRating } from "../helpers";
 
 class Reviews extends Component {
@@ -26,8 +27,11 @@ class Reviews extends Component {
             <Heading level="2" size="small">
               {numberToWord(Object.keys(reviews).length)} review
               {Object.keys(reviews).length < 2 ? "" : "s"}
-              {averageRating(reviews)}
             </Heading>
+            <Box direction="row" gap="xsmall">
+              <Rating rating={averageRating(reviews)} />
+              <Text>{averageRating(reviews)}</Text>
+            </Box>
             {Object.keys(reviews).map(id => (
               <Review review={reviews[id]} />
             ))}
