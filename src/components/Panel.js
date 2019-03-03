@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { ThemeContext, Layer } from "grommet";
 import Cafe from "./Cafe";
+import CreateCafe from "./CreateCafe";
 
 class Panel extends Component {
   render() {
@@ -27,6 +28,7 @@ class Panel extends Component {
             createReview={this.props.createReview}
             togglePanel={this.props.togglePanel}
           />
+          <CreateCafe createCafe={this.props.createCafe} />
         </Layer>
       </ThemeContext.Extend>
     );
