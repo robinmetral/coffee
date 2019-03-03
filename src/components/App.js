@@ -12,7 +12,7 @@ class App extends Component {
     devcafes: {},
     clicked: "",
     uid: null,
-    open: true,
+    open: true
   };
 
   componentDidMount() {
