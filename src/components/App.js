@@ -18,6 +18,13 @@ class App extends Component {
   };
 
   componentDidMount() {
+    // keep user logged in on reload
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.authHandler({ user });
+      }
+    });
+
     // fetch cafes from firebase
     base
       .fetch(`devcafes`, {
