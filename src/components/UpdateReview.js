@@ -51,6 +51,7 @@ class UpdateReview extends Component {
         />
         <Box direction="row">
           <Button icon={<Chat />} type="submit" primary label="Submit" />
+          {/* TODO deleteReview breaks averageRating */}
           <Button
             label="Delete"
             onClick={() =>
