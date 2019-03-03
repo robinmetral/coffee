@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Form, TextInput, TextArea, Button, Box } from "grommet";
-import { Chat } from "grommet-icons";
+import { Edit, Trash } from "grommet-icons";
 
 // TODO state doesn't reload when moving from one café to another
 
@@ -50,10 +50,12 @@ class UpdateReview extends Component {
           onChange={this.handleChange}
         />
         <Box direction="row">
-          <Button icon={<Chat />} type="submit" primary label="Submit" />
+          <Button icon={<Edit />} type="submit" primary label="Update" />
           {/* TODO deleteReview breaks averageRating */}
           <Button
+            icon={<Trash />}
             label="Delete"
+            color="status-critical"
             onClick={() =>
               this.props.deleteReview(
                 this.props.id,
