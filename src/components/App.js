@@ -110,8 +110,7 @@ class App extends Component {
     const data = await base.fetch(`/`, { context: this });
     // set logged in user to state
     this.setState({
-      uid: authData.user.uid,
-      owner: data.owner
+      uid: authData.user.uid
     });
     // sync cafes in state
     this.ref = base.syncState(`devcafes`, {
@@ -120,8 +119,8 @@ class App extends Component {
     });
   };
 
-  login = () => {
-    const authProvider = new firebase.auth.GithubAuthProvider();
+  login = (provider) => {
+    const authProvider = new firebase.auth[`${provider}AuthProvider`]();
     firebaseApp
       .auth()
       .signInWithPopup(authProvider)
