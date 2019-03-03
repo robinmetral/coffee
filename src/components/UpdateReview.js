@@ -59,7 +59,6 @@ class UpdateReview extends Component {
         />
         <Box direction="row">
           <Button icon={<Edit />} type="submit" primary label="Update" />
-          {/* TODO deleteReview breaks averageRating */}
           <Button
             icon={<Trash />}
             label="Delete"
