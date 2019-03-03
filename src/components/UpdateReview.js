@@ -28,7 +28,8 @@ class UpdateReview extends Component {
     review.updatedAt = Date.now();
     // send to App
     this.props.updateReview(this.props.id, review);
-    // TODO close form on submit
+    // close form
+    this.props.toggleForm();
   };
 
   render() {
