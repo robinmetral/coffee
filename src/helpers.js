@@ -84,6 +84,7 @@ export const formatAddress = cafe => {
 };
 
 export const averageRating = reviews => {
+  if (!reviews) return null;
   // build ratings array
   const ratings = [];
   Object.keys(reviews).map(id => {
