@@ -107,10 +107,8 @@ class App extends Component {
     const devcafes = { ...this.state.devcafes };
     // overwrite review
     devcafes[id].properties.reviews[review.createdAt] = review;
-    // setstate with callback
-    this.setState({ devcafes }, () => {
-      console.log(`Review updated.`);
-    });
+    // setstate
+    this.setState({ devcafes });
   };
 
   deleteReview = (cafeId, reviewId) => {
@@ -118,10 +116,8 @@ class App extends Component {
     const devcafes = { ...this.state.devcafes };
     // overwrite review
     devcafes[cafeId].properties.reviews[reviewId] = null;
-    // setstate with callback
-    this.setState({ devcafes }, () => {
-      console.log(`Review deleted.`);
-    });
+    // setstate
+    this.setState({ devcafes });
   };
 
   authHandler = async authData => {
