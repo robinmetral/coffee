@@ -179,6 +179,7 @@ class App extends Component {
           logout={this.logout}
           open={this.state.panelOpen}
           togglePanel={this.togglePanel}
+          toggleCreateCafe={this.toggleCreateCafe}
         />
         <CreateCafe
           createCafe={this.createCafe}
