@@ -10,7 +10,7 @@ class App extends Component {
   // initialize state
   state = {
     devcafes: {},
-    clicked: "",
+    active: undefined,
     user: null,
     open: true
   };
@@ -52,12 +52,12 @@ class App extends Component {
     if (id) {
       // put cafe id in state and open panel
       this.setState({
-        clicked: id,
+        active: id,
         open: true
       });
     } else {
       // toggle panel
-      this.setState({ clicked: undefined });
+      this.setState({ active: undefined });
       this.togglePanel();
     }
   };
@@ -157,7 +157,7 @@ class App extends Component {
         <Map cafes={this.state.devcafes} handleClick={this.handleClick} />
         <Panel
           user={this.state.user}
-          cafe={this.state.devcafes[this.state.clicked]}
+          cafe={this.state.devcafes[this.state.active]}
           createCafe={this.createCafe}
           createReview={this.createReview}
           updateReview={this.updateReview}
