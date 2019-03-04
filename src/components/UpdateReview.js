@@ -2,13 +2,20 @@ import React, { Component } from "react";
 import { Form, TextInput, TextArea, Button, Box } from "grommet";
 import { Edit, Trash } from "grommet-icons";
 
-// TODO reset state and close form when clicking between cafes
-
 class UpdateReview extends Component {
   state = {
     rating: this.props.review.rating,
     text: this.props.review.text
   };
+
+  componentDidUpdate(prevProps) {
+    if (this.props.id !== prevProps.id) {
+      this.setState({
+        rating: this.props.review.rating,
+        text: this.props.review.text
+      });
+    }
+  }
 
   handleChange = e => {
     const { name, value } = e.target;
