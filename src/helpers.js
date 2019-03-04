@@ -89,7 +89,7 @@ export const averageRating = reviews => {
   const ratings = Object.values(reviews).map(review => review.rating);
   // reduce to average
   let average = ratings.reduce((a, b) => a + b) / ratings.length;
-  // round to .5
-  const rounded = Math.round(average * 2) / 2;
+  // round to .1
+  const rounded = Math.round(average * 10) / 10;
   return rounded;
 };
