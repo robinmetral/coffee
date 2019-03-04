@@ -12,7 +12,7 @@ import { Send } from "grommet-icons";
 
 class CreateCafe extends Component {
   state = {
-    nodeId: undefined,
+    nodeId: undefined
   };
 
   handleSubmit = async e => {
@@ -96,9 +96,9 @@ class CreateCafe extends Component {
       <ThemeContext.Extend
         value={{
           layer: {
-            zIndex: "1000",
+            zIndex: "1100",
             container: {
-              zIndex: "1000"
+              zIndex: "1100"
             }
           }
         }}
