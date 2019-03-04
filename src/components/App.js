@@ -5,6 +5,7 @@ import base, { firebaseApp } from "../base";
 import Layout from "./Layout";
 import Map from "./Map";
 import Panel from "./Panel";
+import CreateCafe from "./CreateCafe";
 
 class App extends Component {
   // initialize state
@@ -12,7 +13,8 @@ class App extends Component {
     devcafes: {},
     active: undefined,
     user: null,
-    open: true
+    panelOpen: true,
+    createCafeOpen: false
   };
 
   componentDidMount() {
@@ -53,7 +55,7 @@ class App extends Component {
       // put cafe id in state and open panel
       this.setState({
         active: id,
-        open: true
+        panelOpen: true
       });
     } else {
       // toggle panel
@@ -63,9 +65,13 @@ class App extends Component {
   };
 
   togglePanel = () => {
-    // take the opposite of current value
-    const open = this.state.open ? false : true;
-    this.setState({ open });
+    const { panelOpen } = this.state ? false : true;
+    this.setState({ panelOpen });
+  };
+
+  toggleCreateCafe = () => {
+    const { createCafeOpen } = this.state ? false : true;
+    this.setState({ createCafeOpen });
   };
 
   // TODO check that cafe doesn't already exist
@@ -166,14 +172,17 @@ class App extends Component {
         <Panel
           user={this.state.user}
           cafe={this.state.devcafes[this.state.active]}
-          createCafe={this.createCafe}
           createReview={this.createReview}
           updateReview={this.updateReview}
           deleteReview={this.deleteReview}
           login={this.login}
           logout={this.logout}
-          open={this.state.open}
+          open={this.state.panelOpen}
           togglePanel={this.togglePanel}
+        />
+        <CreateCafe
+          createCafe={this.createCafe}
+          open={this.state.createCafeOpen}
         />
       </Layout>
     );
