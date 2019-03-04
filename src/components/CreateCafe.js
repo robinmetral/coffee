@@ -90,8 +90,6 @@ class CreateCafe extends Component {
   };
 
   render() {
-    if (!this.props.open) return null;
-
     return (
       <>
         <Button

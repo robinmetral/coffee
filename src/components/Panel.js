@@ -47,7 +47,6 @@ class Panel extends Component {
               deleteReview={this.props.deleteReview}
               togglePanel={this.props.togglePanel}
             />
-            <CreateCafe createCafe={this.props.createCafe} />
             <Login login={this.props.login} />
             <CreateCafe
               createCafe={this.createCafe}
