@@ -4,13 +4,15 @@ import {
   Box,
   Form,
   TextInput,
-  Button
+  Button,
+  Layer,
+  ThemeContext
 } from "grommet";
 import { Send } from "grommet-icons";
 
 class CreateCafe extends Component {
   state = {
-    nodeId: ""
+    nodeId: undefined,
   };
 
   handleSubmit = async e => {
@@ -88,21 +90,36 @@ class CreateCafe extends Component {
   };
 
   render() {
+    if (!this.props.open) return null;
+
     return (
-      <Box flex={false}>
-        <Heading level={3} margin="none">
-          Add a cafe
-        </Heading>
-        <Form onSubmit={this.handleSubmit}>
-          <TextInput
-            type="number"
-            value={this.state.nodeId}
-            placeholder="OpenStreetMap ID"
-            onChange={e => this.setState({ nodeId: e.target.value })}
-          />
-          <Button icon={<Send />} type="submit" primary label="Submit" />
-        </Form>
-      </Box>
+      <ThemeContext.Extend
+        value={{
+          layer: {
+            zIndex: "1000",
+            container: {
+              zIndex: "1000"
+            }
+          }
+        }}
+      >
+        <Layer>
+          <Box>
+            <Heading level={3} margin="none">
+              Add a cafe
+            </Heading>
+            <Form onSubmit={this.handleSubmit}>
+              <TextInput
+                type="number"
+                value={this.state.nodeId}
+                placeholder="OpenStreetMap ID"
+                onChange={e => this.setState({ nodeId: e.target.value })}
+              />
+              <Button icon={<Send />} type="submit" primary label="Submit" />
+            </Form>
+          </Box>
+        </Layer>
+      </ThemeContext.Extend>
     );
   }
 }
