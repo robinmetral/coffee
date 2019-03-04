@@ -166,7 +166,6 @@ class App extends Component {
           logout={this.logout}
           open={this.state.open}
           togglePanel={this.togglePanel}
-          clicked={this.state.clicked}
         />
       </Layout>
     );
