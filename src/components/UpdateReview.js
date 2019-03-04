@@ -8,6 +8,7 @@ class UpdateReview extends Component {
     text: this.props.review.text
   };
 
+  // reset form data and close box when the active cafe updates
   componentDidUpdate(prevProps) {
     if (this.props.id !== prevProps.id) {
       this.setState({
