@@ -68,6 +68,7 @@ class App extends Component {
     this.setState({ open });
   };
 
+  // TODO check that cafe doesn't already exist
   createCafe = async cafe => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
@@ -80,6 +81,8 @@ class App extends Component {
     });
   };
 
+  // TODO only for moderators
+  /*
   deleteCafe = id => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
@@ -88,7 +91,9 @@ class App extends Component {
     // set state
     this.setState({ devcafes });
   };
+  */
 
+  // TODO check that user hasn't already reviewed
   createReview = (id, review) => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
@@ -102,6 +107,7 @@ class App extends Component {
     });
   };
 
+  // TODO check that this is the user's own review
   updateReview = (id, review) => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
@@ -111,6 +117,7 @@ class App extends Component {
     this.setState({ devcafes });
   };
 
+  // TODO check that this is the user's own review
   deleteReview = (cafeId, reviewId) => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
@@ -142,6 +149,7 @@ class App extends Component {
       .then(this.authHandler);
   };
 
+  // TODO render logout somewhere
   logout = async () => {
     // log out on firebase
     await firebase.auth().signOut();
