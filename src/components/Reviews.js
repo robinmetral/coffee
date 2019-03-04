@@ -12,9 +12,8 @@ class Reviews extends Component {
     open: false
   };
 
-  toggleForm = () => {
-    const { open } = this.state;
-    this.setState({ open: !open });
+  toggleForm = bool => {
+    this.setState({ open: bool });
   };
 
   render() {
@@ -31,7 +30,7 @@ class Reviews extends Component {
             <Button
               icon={open ? <Close /> : <Edit />}
               label={open ? "close" : "write a review"}
-              onClick={this.toggleForm}
+              onClick={() => this.toggleForm(false)}
             />
             <Collapsible open={open}>
               <Box pad="xsmall">
@@ -50,7 +49,7 @@ class Reviews extends Component {
             <Button
               icon={open ? <Close /> : <Edit />}
               label={open ? "close" : "edit your review"}
-              onClick={this.toggleForm}
+              onClick={() => this.toggleForm(false)}
             />
             <Collapsible open={open}>
               <Box pad="xsmall">
