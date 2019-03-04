@@ -1,11 +1,19 @@
 import React, { Component } from "react";
-import { ThemeContext, Layer, Box, Button } from "grommet";
-import { Add } from "grommet-icons";
+import { ThemeContext, Layer, Box } from "grommet";
 import Cafe from "./Cafe";
 import CreateCafe from "./CreateCafe";
 import Login from "./Login";
 
 class Panel extends Component {
+  state = {
+    createCafeOpen: false
+  };
+
+  toggleCreateCafe = () => {
+    const createCafeOpen = this.state.createCafeOpen ? false : true;
+    this.setState({ createCafeOpen });
+  };
+
   render() {
     if (!this.props.open) return null;
     return (
@@ -41,10 +49,10 @@ class Panel extends Component {
             />
             <CreateCafe createCafe={this.props.createCafe} />
             <Login login={this.props.login} />
-            <Button
-              icon={<Add />}
-              onClick={() => this.props.toggleCreateCafe()}
-              label="Add a cafe"
+            <CreateCafe
+              createCafe={this.createCafe}
+              toggleCreateCafe={this.toggleCreateCafe}
+              open={this.state.createCafeOpen}
             />
           </Box>
         </Layer>

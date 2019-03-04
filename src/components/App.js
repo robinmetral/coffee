@@ -5,7 +5,6 @@ import base, { firebaseApp } from "../base";
 import Layout from "./Layout";
 import Map from "./Map";
 import Panel from "./Panel";
-import CreateCafe from "./CreateCafe";
 
 class App extends Component {
   // initialize state
@@ -13,8 +12,7 @@ class App extends Component {
     devcafes: {},
     active: undefined,
     user: null,
-    panelOpen: true,
-    createCafeOpen: false
+    panelOpen: true
   };
 
   componentDidMount() {
@@ -67,11 +65,6 @@ class App extends Component {
   togglePanel = () => {
     const panelOpen = this.state.panelOpen ? false : true;
     this.setState({ panelOpen });
-  };
-
-  toggleCreateCafe = () => {
-    const createCafeOpen = this.state.createCafeOpen ? false : true;
-    this.setState({ createCafeOpen });
   };
 
   // TODO check that cafe doesn't already exist
@@ -179,11 +172,6 @@ class App extends Component {
           logout={this.logout}
           open={this.state.panelOpen}
           togglePanel={this.togglePanel}
-          toggleCreateCafe={this.toggleCreateCafe}
-        />
-        <CreateCafe
-          createCafe={this.createCafe}
-          open={this.state.createCafeOpen}
         />
       </Layout>
     );
