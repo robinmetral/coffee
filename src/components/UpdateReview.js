@@ -14,6 +14,7 @@ class UpdateReview extends Component {
         rating: this.props.review.rating,
         text: this.props.review.text
       });
+      this.props.closeForm();
     }
   }
 
@@ -36,14 +37,14 @@ class UpdateReview extends Component {
     // send to App
     this.props.updateReview(this.props.id, review);
     // close form
-    this.props.toggleForm();
+    this.props.closeForm();
   };
 
   handleDelete = () => {
     // call delete method
     this.props.deleteReview(this.props.id, this.props.review.createdAt);
     // close form
-    this.props.toggleForm();
+    this.props.closeForm();
   };
 
   render() {

@@ -33,7 +33,7 @@ class CreateReview extends Component {
       text: ""
     });
     // close form
-    this.props.toggleForm();
+    this.props.closeForm();
   };
 
   render() {
