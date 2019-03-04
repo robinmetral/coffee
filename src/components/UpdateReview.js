@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Form, TextInput, TextArea, Button, Box } from "grommet";
 import { Edit, Trash } from "grommet-icons";
 
-// TODO state doesn't reload when moving from one café to another
+// TODO reset state and close form when clicking between cafes
 
 class UpdateReview extends Component {
   state = {
