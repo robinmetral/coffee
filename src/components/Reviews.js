@@ -24,8 +24,8 @@ class Reviews extends Component {
     return (
       <Box flex={false}>
         {!reviews ||
-        Object.keys(reviews).find(
-          id => reviews[id].user.uid === this.props.user.uid
+        Object.values(reviews).find(
+          review => review.user.uid === this.props.user.uid
         ) === undefined ? (
           <>
             <Button
@@ -55,13 +55,9 @@ class Reviews extends Component {
             <Collapsible open={open}>
               <Box pad="xsmall">
                 <UpdateReview
-                  review={
-                    reviews[
-                      Object.keys(reviews).find(
-                        id => reviews[id].user.uid === this.props.user.uid
-                      )
-                    ]
-                  }
+                  review={Object.values(reviews).find(
+                    review => review.user.uid === this.props.user.uid
+                  )}
                   id={properties.createdAt}
                   updateReview={this.props.updateReview}
                   deleteReview={this.props.deleteReview}
