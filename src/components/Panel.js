@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { ThemeContext, Layer, Box } from "grommet";
+import { ThemeContext, Layer, Box, Button } from "grommet";
+import { Add } from "grommet-icons";
 import Cafe from "./Cafe";
 import CreateCafe from "./CreateCafe";
 import Login from "./Login";
@@ -40,6 +41,11 @@ class Panel extends Component {
             />
             <CreateCafe createCafe={this.props.createCafe} />
             <Login login={this.props.login} />
+            <Button
+              icon={<Add />}
+              onClick={() => this.props.toggleCreateCafe()}
+              label="Add a cafe"
+            />
           </Box>
         </Layer>
       </ThemeContext.Extend>
