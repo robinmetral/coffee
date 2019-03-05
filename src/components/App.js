@@ -87,6 +87,8 @@ class App extends Component {
       this.setState({ devcafes }, () => {
         console.log(`Added ${cafe.properties.name} to State.`);
       });
+      // open new cafe in panel
+      this.changeActive(cafe.properties.createdAt);
     } else console.log(`${cafe.properties.name} already exists!`);
   };
 
@@ -183,7 +185,6 @@ class App extends Component {
           logout={this.logout}
           open={this.state.panelOpen}
           togglePanel={this.togglePanel}
-          changeActive={this.changeActive}
         />
       </Layout>
     );
