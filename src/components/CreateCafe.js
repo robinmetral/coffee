@@ -15,6 +15,7 @@ class CreateCafe extends Component {
     nodeId: ""
   };
 
+  // TODO add user who created the cafe
   handleSubmit = async e => {
     e.preventDefault();
     const { nodeId } = this.state;

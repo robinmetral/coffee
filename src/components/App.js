@@ -71,6 +71,7 @@ class App extends Component {
     this.setState({ panelOpen });
   };
 
+  // TODO check that user is logged in
   createCafe = async cafe => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
@@ -196,7 +197,6 @@ class App extends Component {
       .then(this.authHandler);
   };
 
-  // TODO render logout somewhere
   logout = async () => {
     // log out on firebase
     await firebase.auth().signOut();
