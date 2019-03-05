@@ -18,4 +18,5 @@ const Rating = props => {
     </Box>
   );
 };
+
 export default Rating;

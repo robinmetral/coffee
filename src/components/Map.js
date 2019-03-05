@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Map as LeafletMap, TileLayer } from "react-leaflet";
-
 import Markers from "./Markers";
 
 class Map extends Component {
