@@ -71,12 +71,16 @@ class App extends Component {
     this.setState({ panelOpen });
   };
 
-  // TODO check that user is logged in
   createCafe = async cafe => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
-    // if cafe already exists
-    if (
+    // check if user is logged in
+    if (!this.state.user) {
+      // no user logged in, throw error
+      console.log(`Log in to add a new cafe.`);
+    }
+    // check if cafe already exists
+    else if (
       Object.values(devcafes).find(
         node => node.properties.nodeId === cafe.properties.nodeId
       )
@@ -84,7 +88,7 @@ class App extends Component {
       // throw error
       console.log(`${cafe.properties.name} already exists!`);
     }
-    // else cafe doesn't exist
+    // user logged in and cafe doesn't exist yet
     else {
       // add current user to cafe object
       cafe.properties.user = this.state.user;
