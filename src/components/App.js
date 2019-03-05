@@ -112,10 +112,13 @@ class App extends Component {
     // if user has already commented
     else if (
       Object.values(devcafes[id].properties.reviews).find(
-        rev => rev.user.uid === review.user.uid
+        rev => rev.user.uid === this.state.user.uid
       )
     ) {
-      console.log(`There's already a review by ${review.user.displayName}`);
+      // throw error
+      console.log(
+        `You've already reviewed this café, ${review.user.displayName}`
+      );
     }
     // else user hasn't commented yet
     else {
