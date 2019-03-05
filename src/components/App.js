@@ -67,17 +67,23 @@ class App extends Component {
     this.setState({ panelOpen });
   };
 
-  // TODO check that cafe doesn't already exist
   createCafe = async cafe => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
-    // add new cafe
-    devcafes[cafe.properties.createdAt] = cafe;
-    // use a setState callback to fire before re-rendering
-    // https://reactjs.org/docs/react-component.html#setstate
-    this.setState({ devcafes }, () => {
-      console.log(`Added ${cafe.properties.name} to State.`);
-    });
+    // check that cafe doesn't already exist
+    if (
+      Object.values(devcafes).find(
+        node => node.properties.nodeId === cafe.properties.nodeId
+      ) === undefined
+    ) {
+      // add cafe
+      devcafes[cafe.properties.createdAt] = cafe;
+      // use a setState callback to fire before re-rendering
+      // https://reactjs.org/docs/react-component.html#setstate
+      this.setState({ devcafes }, () => {
+        console.log(`Added ${cafe.properties.name} to State.`);
+      });
+    } else console.log(`${cafe.properties.name} already exists!`);
   };
 
   // TODO only for moderators
@@ -165,6 +171,7 @@ class App extends Component {
         <Panel
           user={this.state.user}
           cafe={this.state.devcafes[this.state.active]}
+          createCafe={this.createCafe}
           createReview={this.createReview}
           updateReview={this.updateReview}
           deleteReview={this.deleteReview}
