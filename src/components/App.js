@@ -153,14 +153,24 @@ class App extends Component {
     }
   };
 
-  // TODO check that this is the user's own review
   deleteReview = (cafeId, reviewId) => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
-    // overwrite review
-    devcafes[cafeId].properties.reviews[reviewId] = null;
-    // setstate
-    this.setState({ devcafes });
+    // check that this is the current user's own review
+    if (
+      devcafes[cafeId].properties.reviews[reviewId].user.uid ===
+      this.state.user.uid
+    ) {
+      // overwrite review
+      devcafes[cafeId].properties.reviews[reviewId] = null;
+      // setstate
+      this.setState({ devcafes });
+    }
+    // else it's not the current user's own review
+    else {
+      // throw error
+      console.log(`This isn't your review, ${this.state.user.displayName}`);
+    }
   };
 
   authHandler = async authData => {
