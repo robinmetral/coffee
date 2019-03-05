@@ -104,16 +104,33 @@ class App extends Component {
   };
   */
 
-  // TODO check that user hasn't already reviewed
   createReview = (id, review) => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
-    // create reviews object if undefined
-    devcafes[id].properties.reviews = devcafes[id].properties.reviews || {};
-    // add review
-    devcafes[id].properties.reviews[review.createdAt] = review;
-    // setstate
-    this.setState({ devcafes });
+    // if no reviews
+    if (!devcafes[id].properties.reviews) {
+      // create review object
+      devcafes[id].properties.reviews = {};
+      // add review
+      devcafes[id].properties.reviews[review.createdAt] = review;
+      // setstate
+      this.setState({ devcafes });
+    }
+    // if user has already commented
+    else if (
+      Object.values(devcafes[id].properties.reviews).find(
+        rev => rev.user.uid === review.user.uid
+      )
+    ) {
+      console.log(`There's already a review by ${review.user.displayName}`);
+    }
+    // else
+    else {
+      // add review
+      devcafes[id].properties.reviews[review.createdAt] = review;
+      // setstate
+      this.setState({ devcafes });
+    }
   };
 
   // TODO check that this is the user's own review
