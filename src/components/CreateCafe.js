@@ -87,6 +87,8 @@ class CreateCafe extends Component {
     this.props.createCafe(cafe);
     // reset form state
     this.setState({ nodeId: "" });
+    // close layer
+    this.props.toggleCreateCafe();
   };
 
   // TODO add layer close button
