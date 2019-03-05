@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Text } from "grommet";
+import { Button, Text } from "grommet";
 import { Github, Twitter, Facebook } from "grommet-icons";
 
 const Login = props => {
