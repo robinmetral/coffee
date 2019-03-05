@@ -18,7 +18,7 @@ class CreateCafe extends Component {
   handleSubmit = async e => {
     e.preventDefault();
     const { nodeId } = this.state;
-    // fetch OSM data vie an Overpass API query
+    // fetch OSM data via an Overpass API query
     let response = await fetch(
       `https://www.overpass-api.de/api/interpreter?data=[out:json];node(${nodeId});out;`
     );
