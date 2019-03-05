@@ -89,6 +89,7 @@ class CreateCafe extends Component {
     this.setState({ nodeId: "" });
   };
 
+  // TODO add layer close button
   render() {
     return (
       <>
