@@ -91,7 +91,6 @@ class CreateCafe extends Component {
     this.props.toggleCreateCafe();
   };
 
-  // TODO add layer close button
   render() {
     return (
       <>
@@ -111,7 +110,10 @@ class CreateCafe extends Component {
               }
             }}
           >
-            <Layer>
+            <Layer
+              onEsc={() => this.props.toggleCreateCafe()}
+              onClickOutside={() => this.props.toggleCreateCafe()}
+            >
               <Box pad="medium" gap="small" width="medium">
                 <Heading level={3} margin="none">
                   Add a cafe
