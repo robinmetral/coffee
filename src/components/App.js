@@ -50,16 +50,20 @@ class App extends Component {
         devcafes[id].geometry.coordinates[1] === event.latlng.lng
     );
     if (id) {
-      // put cafe id in state and open panel
-      this.setState({
-        active: id,
-        panelOpen: true
-      });
+      this.changeActive(id);
     } else {
       // toggle panel
       this.setState({ active: undefined });
       this.togglePanel();
     }
+  };
+
+  changeActive = id => {
+    // put active cafe id in state and open panel
+    this.setState({
+      active: id,
+      panelOpen: true
+    });
   };
 
   togglePanel = () => {
@@ -179,6 +183,7 @@ class App extends Component {
           logout={this.logout}
           open={this.state.panelOpen}
           togglePanel={this.togglePanel}
+          changeActive={this.changeActive}
         />
       </Layout>
     );
