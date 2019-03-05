@@ -52,11 +52,13 @@ class Panel extends Component {
               login={this.props.login}
               logout={this.props.logout}
             />
-            <CreateCafe
-              createCafe={this.props.createCafe}
-              toggleCreateCafe={this.toggleCreateCafe}
-              open={this.state.createCafeOpen}
-            />
+            {this.props.user && (
+              <CreateCafe
+                createCafe={this.props.createCafe}
+                toggleCreateCafe={this.toggleCreateCafe}
+                open={this.state.createCafeOpen}
+              />
+            )}
           </Box>
         </Layer>
       </ThemeContext.Extend>
