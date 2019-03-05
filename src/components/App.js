@@ -112,10 +112,8 @@ class App extends Component {
     devcafes[id].properties.reviews = devcafes[id].properties.reviews || {};
     // add review
     devcafes[id].properties.reviews[review.createdAt] = review;
-    // setstate with callback
-    this.setState({ devcafes }, () => {
-      console.log(`Added the review to State.`);
-    });
+    // setstate
+    this.setState({ devcafes });
   };
 
   // TODO check that this is the user's own review
