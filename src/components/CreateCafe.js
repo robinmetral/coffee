@@ -12,7 +12,7 @@ import { Send, Add } from "grommet-icons";
 
 class CreateCafe extends Component {
   state = {
-    nodeId: undefined
+    nodeId: ""
   };
 
   handleSubmit = async e => {
