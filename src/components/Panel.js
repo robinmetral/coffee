@@ -49,7 +49,7 @@ class Panel extends Component {
             />
             <Login login={this.props.login} />
             <CreateCafe
-              createCafe={this.createCafe}
+              createCafe={this.props.createCafe}
               toggleCreateCafe={this.toggleCreateCafe}
               open={this.state.createCafeOpen}
             />
