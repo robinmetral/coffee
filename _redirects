@@ -1,6 +1,0 @@
-# Redirect domain aliases to primary domain
-https://www.mappingcoff.ee/* https://www.lescafesderob.in/:splat 301!
-https://mappingcoff.ee/* https://www.lescafesderob.in/:splat 301!
-
-# Redirect default Netlify subdomain to primary domain
-https://lescafesderobin.netlify.com/* https://www.lescafesderob.in/:splat 301!
