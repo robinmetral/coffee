@@ -86,6 +86,8 @@ class App extends Component {
     }
     // else cafe doesn't exist
     else {
+      // add current user to cafe object
+      cafe.properties.user = this.state.user;
       // add cafe
       devcafes[cafe.properties.createdAt] = cafe;
       // use a setState callback to fire before re-rendering
