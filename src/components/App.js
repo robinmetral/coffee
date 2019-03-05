@@ -97,18 +97,6 @@ class App extends Component {
     }
   };
 
-  // TODO only for moderators
-  /*
-  deleteCafe = id => {
-    // take a copy of state
-    const devcafes = { ...this.state.devcafes };
-    // remove single cafe object
-    devcafes[id] = null; // need to set to null to work with Firebase
-    // set state
-    this.setState({ devcafes });
-  };
-  */
-
   createReview = (id, review) => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
