@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Text } from "grommet";
-import { Github, Twitter, Facebook } from "grommet-icons";
+import { Github, Twitter, Facebook, Google } from "grommet-icons";
 
 const Login = props => {
   const providers = [
@@ -15,6 +15,10 @@ const Login = props => {
     {
       name: "Facebook",
       icon: <Facebook />
+    },
+    {
+      name: "Google",
+      icon: <Google />
     }
   ];
 
