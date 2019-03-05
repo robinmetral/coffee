@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { ThemeContext, Layer, Box } from "grommet";
 import Cafe from "./Cafe";
 import CreateCafe from "./CreateCafe";
-import Login from "./Login";
+import Auth from "./Auth";
 
 class Panel extends Component {
   state = {
@@ -47,7 +47,11 @@ class Panel extends Component {
               deleteReview={this.props.deleteReview}
               togglePanel={this.props.togglePanel}
             />
-            <Login login={this.props.login} />
+            <Auth
+              user={this.state.user}
+              login={this.props.login}
+              logout={this.props.logout}
+            />
             <CreateCafe
               createCafe={this.props.createCafe}
               toggleCreateCafe={this.toggleCreateCafe}
