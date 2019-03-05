@@ -127,11 +127,11 @@ class App extends Component {
   };
 
   // TODO check that this is the user's own review
-  updateReview = (id, review) => {
+  updateReview = (cafeId, review) => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
     // overwrite review
-    devcafes[id].properties.reviews[review.createdAt] = review;
+    devcafes[cafeId].properties.reviews[review.createdAt] = review;
     // setstate
     this.setState({ devcafes });
   };
