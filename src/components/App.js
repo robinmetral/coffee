@@ -9,7 +9,7 @@ import Panel from "./Panel";
 class App extends Component {
   // initialize state
   state = {
-    devcafes: {},
+    cafes: {},
     active: undefined,
     user: null,
     panelOpen: true
@@ -25,11 +25,11 @@ class App extends Component {
 
     // fetch cafes from firebase
     base
-      .fetch(`devcafes`, {
+      .fetch(`cafes`, {
         context: this
       })
-      .then(devcafes => {
-        this.setState({ devcafes });
+      .then(cafes => {
+        this.setState({ cafes });
       })
       .catch(error => {
         console.log("Error fetching cafes from Firebase");
@@ -43,11 +43,11 @@ class App extends Component {
 
   handleClick = event => {
     // find cafe is state that was clicked based on coordinates
-    const { devcafes } = this.state;
-    const id = Object.keys(devcafes).find(
+    const { cafes } = this.state;
+    const id = Object.keys(cafes).find(
       id =>
-        devcafes[id].geometry.coordinates[0] === event.latlng.lat &&
-        devcafes[id].geometry.coordinates[1] === event.latlng.lng
+        cafes[id].geometry.coordinates[0] === event.latlng.lat &&
+        cafes[id].geometry.coordinates[1] === event.latlng.lng
     );
     if (id) {
       this.changeActive(id);
@@ -73,7 +73,7 @@ class App extends Component {
 
   createCafe = async cafe => {
     // take a copy of state
-    const devcafes = { ...this.state.devcafes };
+    const cafes = { ...this.state.cafes };
     // check if user is logged in
     if (!this.state.user) {
       // no user logged in, throw error
@@ -81,7 +81,7 @@ class App extends Component {
     }
     // check if cafe already exists
     else if (
-      Object.values(devcafes).find(
+      Object.values(cafes).find(
         node => node.properties.nodeId === cafe.properties.nodeId
       )
     ) {
@@ -93,10 +93,10 @@ class App extends Component {
       // add current user to cafe object
       cafe.properties.user = this.state.user;
       // add cafe
-      devcafes[cafe.properties.createdAt] = cafe;
+      cafes[cafe.properties.createdAt] = cafe;
       // use a setState callback to fire before re-rendering
       // https://reactjs.org/docs/react-component.html#setstate
-      this.setState({ devcafes }, () => {
+      this.setState({ cafes }, () => {
         console.log(`Added ${cafe.properties.name} to State.`);
       });
       // open new cafe in panel
@@ -106,19 +106,19 @@ class App extends Component {
 
   createReview = (id, review) => {
     // take a copy of state
-    const devcafes = { ...this.state.devcafes };
+    const cafes = { ...this.state.cafes };
     // if no reviews
-    if (!devcafes[id].properties.reviews) {
+    if (!cafes[id].properties.reviews) {
       // create review object
-      devcafes[id].properties.reviews = {};
+      cafes[id].properties.reviews = {};
       // add review
-      devcafes[id].properties.reviews[review.createdAt] = review;
+      cafes[id].properties.reviews[review.createdAt] = review;
       // setstate
-      this.setState({ devcafes });
+      this.setState({ cafes });
     }
     // if user has already commented
     else if (
-      Object.values(devcafes[id].properties.reviews).find(
+      Object.values(cafes[id].properties.reviews).find(
         rev => rev.user.uid === this.state.user.uid
       )
     ) {
@@ -130,31 +130,31 @@ class App extends Component {
     // else user hasn't commented yet
     else {
       // add review
-      devcafes[id].properties.reviews[review.createdAt] = review;
+      cafes[id].properties.reviews[review.createdAt] = review;
       // setstate
-      this.setState({ devcafes });
+      this.setState({ cafes });
     }
   };
 
   updateReview = (cafeId, review) => {
     // take a copy of state
-    const devcafes = { ...this.state.devcafes };
+    const cafes = { ...this.state.cafes };
     // check that this is the current user's own review
     if (
-      devcafes[cafeId].properties.reviews[review.createdAt].user.uid ===
+      cafes[cafeId].properties.reviews[review.createdAt].user.uid ===
       this.state.user.uid
     ) {
       // overwrite review
-      devcafes[cafeId].properties.reviews[review.createdAt] = review;
+      cafes[cafeId].properties.reviews[review.createdAt] = review;
       // setstate
-      this.setState({ devcafes });
+      this.setState({ cafes });
     }
     // else it's not the current user's review
     else {
       // throw error
       console.log(
         `${this.state.user.displayName} hasn't written this review, ${
-          devcafes[cafeId].properties.reviews[review.createdAt].user.displayName
+          cafes[cafeId].properties.reviews[review.createdAt].user.displayName
         } has.`
       );
     }
@@ -162,16 +162,16 @@ class App extends Component {
 
   deleteReview = (cafeId, reviewId) => {
     // take a copy of state
-    const devcafes = { ...this.state.devcafes };
+    const cafes = { ...this.state.cafes };
     // check that this is the current user's own review
     if (
-      devcafes[cafeId].properties.reviews[reviewId].user.uid ===
+      cafes[cafeId].properties.reviews[reviewId].user.uid ===
       this.state.user.uid
     ) {
       // overwrite review
-      devcafes[cafeId].properties.reviews[reviewId] = null;
+      cafes[cafeId].properties.reviews[reviewId] = null;
       // setstate
-      this.setState({ devcafes });
+      this.setState({ cafes });
     }
     // else it's not the current user's own review
     else {
@@ -184,9 +184,9 @@ class App extends Component {
     // destructure authData
     const { uid, displayName } = authData.user;
     // sync state with Firebase
-    this.ref = base.syncState(`devcafes`, {
+    this.ref = base.syncState(`cafes`, {
       context: this,
-      state: "devcafes"
+      state: "cafes"
     });
     // set logged in user to state
     this.setState({
@@ -215,10 +215,10 @@ class App extends Component {
   render() {
     return (
       <Layout>
-        <Map cafes={this.state.devcafes} handleClick={this.handleClick} />
+        <Map cafes={this.state.cafes} handleClick={this.handleClick} />
         <Panel
           user={this.state.user}
-          cafe={this.state.devcafes[this.state.active]}
+          cafe={this.state.cafes[this.state.active]}
           createCafe={this.createCafe}
           createReview={this.createReview}
           updateReview={this.updateReview}
