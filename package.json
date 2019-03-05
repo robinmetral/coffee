@@ -1,6 +1,6 @@
 {
-  "name": "coffee",
-  "version": "0.1.0",
+  "name": "mapping-coffee",
+  "version": "0.2.0",
   "private": true,
   "dependencies": {
     "firebase": "^5.8.2",
