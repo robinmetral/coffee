@@ -152,6 +152,7 @@ class App extends Component {
     });
   };
 
+  // TODO set up other login providers
   login = provider => {
     const authProvider = new firebase.auth[`${provider}AuthProvider`]();
     firebaseApp
