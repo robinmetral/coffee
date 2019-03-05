@@ -74,12 +74,17 @@ class App extends Component {
   createCafe = async cafe => {
     // take a copy of state
     const devcafes = { ...this.state.devcafes };
-    // check that cafe doesn't already exist
+    // if cafe already exists
     if (
       Object.values(devcafes).find(
         node => node.properties.nodeId === cafe.properties.nodeId
-      ) === undefined
+      )
     ) {
+      // throw error
+      console.log(`${cafe.properties.name} already exists!`);
+    }
+    // else cafe doesn't exist
+    else {
       // add cafe
       devcafes[cafe.properties.createdAt] = cafe;
       // use a setState callback to fire before re-rendering
@@ -89,7 +94,7 @@ class App extends Component {
       });
       // open new cafe in panel
       this.changeActive(cafe.properties.createdAt);
-    } else console.log(`${cafe.properties.name} already exists!`);
+    }
   };
 
   // TODO only for moderators
@@ -124,7 +129,7 @@ class App extends Component {
     ) {
       console.log(`There's already a review by ${review.user.displayName}`);
     }
-    // else
+    // else user hasn't commented yet
     else {
       // add review
       devcafes[id].properties.reviews[review.createdAt] = review;
