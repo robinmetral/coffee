@@ -1,12 +1,11 @@
-import React, { Component } from "react";
+import React from "react";
 import { Layer, Box } from "grommet";
 import Cafe from "./Cafe";
 import Welcome from "./Welcome";
 import { ThemeContext } from "../themecontext/ThemeContext";
 
-class Panel extends Component {
-  render() {
-    if (!this.props.open) return null;
+const Panel = (props) => {
+    if (!props.open) return null;
     return (
       <ThemeContext.Extend
         value={{
@@ -21,7 +20,7 @@ class Panel extends Component {
           position="right"
           full="vertical"
           modal={false}
-          onEsc={this.props.togglePanel}
+          onEsc={props.togglePanel}
         >
           <Box
             width="medium"
@@ -30,28 +29,25 @@ class Panel extends Component {
             overflow="auto"
             pad={{ horizontal: "medium" }}
           >
-            {this.props.cafe ? (
+            {props.cafe ? (
               <Cafe
-                cafe={this.props.cafe}
-                user={this.props.user}
-                createReview={this.props.createReview}
-                updateReview={this.props.updateReview}
-                deleteReview={this.props.deleteReview}
-                togglePanel={this.props.togglePanel}
-                login={this.props.login}
-                logout={this.props.logout}
-                createCafe={this.props.createCafe}
-                toggleCreateCafe={this.toggleCreateCafe}
-                open={this.state.createCafeOpen}
+                cafe={props.cafe}
+                user={props.user}
+                createReview={props.createReview}
+                updateReview={props.updateReview}
+                deleteReview={props.deleteReview}
+                togglePanel={props.togglePanel}
+                login={props.login}
+                logout={props.logout}
+                createCafe={props.createCafe}
               />
             ) : (
-              <Welcome togglePanel={this.props.togglePanel} />
+              <Welcome togglePanel={props.togglePanel} />
             )}
           </Box>
         </Layer>
       </ThemeContext.Extend>
     );
   }
-}
 
 export default Panel;
