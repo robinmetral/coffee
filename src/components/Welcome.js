@@ -1,16 +1,14 @@
 import React from "react";
-import { Box, Heading, Paragraph } from "grommet";
+import { Box, Paragraph } from "grommet";
+import Heading from "./Heading";
 
 const Welcome = props => {
   return (
     <Box flex={false}>
-      <Heading size="small" margin={{ bottom: "small" }}>
-        {props.title}
-      </Heading>
+      <Heading title="Mapping Coffee" togglePanel={props.togglePanel} />
       <Paragraph>
         Welcome to Mapping Coffee! We're on a mission to give specialty coffee
-        shops the map they deserve. Click a marker on the map to get started,
-        and log in to add your reviews and new coffee shops to the map!
+        shops the map they deserve.
       </Paragraph>
     </Box>
   );

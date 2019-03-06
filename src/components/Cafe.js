@@ -1,18 +1,16 @@
 import React from "react";
-import { Box, Heading, Button } from "grommet";
-import { FormClose } from "grommet-icons";
+import { Box } from "grommet";
 import Info from "./Info";
 import Reviews from "./Reviews";
+import Heading from "./Heading";
 
 const Cafe = props => {
   return (
     <Box flex={false}>
-      <Box direction="row" align="center" justify="between">
-        <Heading size="small" margin={{ bottom: "small" }}>
-          {props.cafe.properties.name}
-        </Heading>
-        <Button icon={<FormClose />} onClick={props.togglePanel} />
-      </Box>
+      <Heading
+        title={props.cafe.properties.name}
+        togglePanel={props.togglePanel}
+      />
       <Box>
         <Info cafe={props.cafe} />
       </Box>
