@@ -5,10 +5,6 @@ import Info from "./Info";
 import Reviews from "./Reviews";
 
 const Cafe = props => {
-  // is no cafe is passed, no cafe has been clicked
-  if (!props.cafe) {
-    return null;
-  }
   return (
     <Box flex={false}>
       <Box direction="row" align="center" justify="between">

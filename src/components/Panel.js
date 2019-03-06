@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Layer, Box } from "grommet";
 import Cafe from "./Cafe";
+import Welcome from "./Welcome";
 import CreateCafe from "./CreateCafe";
 import Auth from "./Auth";
 import { ThemeContext } from "../themecontext/ThemeContext";
@@ -40,14 +41,18 @@ class Panel extends Component {
             overflow="auto"
             pad={{ horizontal: "medium" }}
           >
-            <Cafe
-              cafe={this.props.cafe}
-              user={this.props.user}
-              createReview={this.props.createReview}
-              updateReview={this.props.updateReview}
-              deleteReview={this.props.deleteReview}
-              togglePanel={this.props.togglePanel}
-            />
+            {this.props.cafe ? (
+              <Cafe
+                cafe={this.props.cafe}
+                user={this.props.user}
+                createReview={this.props.createReview}
+                updateReview={this.props.updateReview}
+                deleteReview={this.props.deleteReview}
+                togglePanel={this.props.togglePanel}
+              />
+            ) : (
+              <Welcome />
+            )}
             <Auth
               user={this.props.user}
               login={this.props.login}
