@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Text, Paragraph } from "grommet";
+import { Box, Text, Paragraph, Heading } from "grommet";
 import { formatDate } from "../helpers";
 import Rating from "./Rating";
 
@@ -8,8 +8,10 @@ const Review = props => {
   const date = formatDate(createdAt);
   return (
     <Box>
-      <Box direction="row" gap="xsmall">
-        <Text>{user.displayName}</Text>
+      <Box direction="row" gap="xsmall" align="center">
+        <Heading margin="none" level={4}>
+          {user.displayName}
+        </Heading>
         <Rating rating={rating} size="medium" />
       </Box>
       <Text>{date}</Text>
