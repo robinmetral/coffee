@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { ThemeContext, Layer, Box } from "grommet";
+import { Layer, Box } from "grommet";
 import Cafe from "./Cafe";
 import CreateCafe from "./CreateCafe";
 import Auth from "./Auth";
+import { ThemeContext } from "../themecontext/ThemeContext";
 
 class Panel extends Component {
   state = {
