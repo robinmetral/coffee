@@ -5,15 +5,6 @@ import Welcome from "./Welcome";
 import { ThemeContext } from "../themecontext/ThemeContext";
 
 class Panel extends Component {
-  state = {
-    createCafeOpen: false
-  };
-
-  toggleCreateCafe = () => {
-    const createCafeOpen = this.state.createCafeOpen ? false : true;
-    this.setState({ createCafeOpen });
-  };
-
   render() {
     if (!this.props.open) return null;
     return (
