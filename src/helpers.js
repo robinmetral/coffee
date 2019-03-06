@@ -53,17 +53,19 @@ export const numberToWord = number => {
     "eighty",
     "ninety"
   ];
+  // build capitalize function
+  const capitalize = string => string.charAt(0).toUpperCase() + string.slice(1);
   // convert and return
   if (n < 1) {
-    return `no`;
+    return `No`;
   } else if (n < 10) {
-    return `${ones[n]}`;
+    return capitalize(ones[n]);
   } else if (n < 20) {
-    return `${teens[n - 10]}`;
+    return capitalize(teens[n - 10]);
   } else if (n < 100) {
-    return `${tens[Math.floor(n / 10)]} ${ones[n % 10]}`;
+    return `${capitalize(tens[Math.floor(n / 10)])} ${ones[n % 10]}`;
   } else {
-    return `a lot of`;
+    return `A lot of`;
   }
 };
 
