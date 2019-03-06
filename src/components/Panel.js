@@ -51,7 +51,7 @@ class Panel extends Component {
                 togglePanel={this.props.togglePanel}
               />
             ) : (
-              <Welcome />
+              <Welcome togglePanel={this.props.togglePanel} />
             )}
             <Auth
               user={this.props.user}
