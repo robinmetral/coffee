@@ -1,5 +1,3 @@
-"use strict";
-
 exports.__esModule = true;
 exports.getAvailableAtBadge = exports.findAllByType = exports.breakpointStyle = exports.fontSize = exports.parseMetricToNum = void 0;
 

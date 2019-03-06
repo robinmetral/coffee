@@ -1,5 +1,3 @@
-"use strict";
-
 exports.__esModule = true;
 exports.genericProps = exports.colorPropType = exports.backgroundPropType = exports.a11yTitlePropType = void 0;
 

@@ -1,5 +1,3 @@
-"use strict";
-
 exports.__esModule = true;
 exports.getDeviceBreakpoint = exports.getBreakpoint = void 0;
 

@@ -1,5 +1,3 @@
-"use strict";
-
 exports.__esModule = true;
 exports.debounceDelay = exports.debounce = void 0;
 

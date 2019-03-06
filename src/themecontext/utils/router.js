@@ -1,5 +1,3 @@
-"use strict";
-
 exports.__esModule = true;
 exports.ROUTER_PROPS = void 0;
 

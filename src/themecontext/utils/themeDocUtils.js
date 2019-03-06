@@ -1,5 +1,3 @@
-"use strict";
-
 exports.__esModule = true;
 exports.themeDocUtils = void 0;
 var themeDocUtils = {

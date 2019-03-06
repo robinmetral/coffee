@@ -1,5 +1,3 @@
-"use strict";
-
 exports.__esModule = true;
 exports.getRGBA = exports.colorIsDark = exports.normalizeColor = void 0;
 

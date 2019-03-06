@@ -1,5 +1,3 @@
-"use strict";
-
 exports.__esModule = true;
 exports.selectedStyle = exports.activeStyle = exports.backgroundStyle = exports.backgroundIsDark = exports.normalizeBackground = void 0;
 

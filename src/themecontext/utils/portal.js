@@ -1,5 +1,3 @@
-"use strict";
-
 exports.__esModule = true;
 exports.expectPortal = exports.createPortal = void 0;
 

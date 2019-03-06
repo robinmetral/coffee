@@ -1,5 +1,3 @@
-"use strict";
-
 exports.__esModule = true;
 exports.isNodeBeforeScroll = exports.isNodeAfterScroll = exports.findVisibleParent = exports.makeNodeUnfocusable = exports.makeNodeFocusable = exports.copyAttribute = exports.setTabIndex = exports.setFocusWithoutScroll = exports.getNewContainer = exports.getBodyChildElements = exports.getFirstFocusableDescendant = exports.findScrollParents = exports.filterByFocusable = void 0;
 

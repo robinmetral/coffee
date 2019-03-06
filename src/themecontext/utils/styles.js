@@ -1,5 +1,3 @@
-"use strict";
-
 exports.__esModule = true;
 exports.genericStyles = exports.evalStyle = exports.placeholderStyle = exports.overflowStyle = exports.inputStyle = exports.focusStyle = exports.edgeStyle = exports.controlBorderStyle = exports.baseStyle = void 0;
 

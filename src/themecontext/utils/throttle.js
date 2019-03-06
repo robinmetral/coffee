@@ -1,5 +1,3 @@
-"use strict";
-
 exports.__esModule = true;
 exports.throttle = void 0;
 
