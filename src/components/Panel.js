@@ -3,7 +3,6 @@ import { Layer, Box } from "grommet";
 import Cafe from "./Cafe";
 import Welcome from "./Welcome";
 import CreateCafe from "./CreateCafe";
-import Auth from "./Auth";
 import { ThemeContext } from "../themecontext/ThemeContext";
 
 class Panel extends Component {
@@ -49,15 +48,12 @@ class Panel extends Component {
                 updateReview={this.props.updateReview}
                 deleteReview={this.props.deleteReview}
                 togglePanel={this.props.togglePanel}
+                login={this.props.login}
+                logout={this.props.logout}
               />
             ) : (
               <Welcome togglePanel={this.props.togglePanel} />
             )}
-            <Auth
-              user={this.props.user}
-              login={this.props.login}
-              logout={this.props.logout}
-            />
             {this.props.user && (
               <CreateCafe
                 createCafe={this.props.createCafe}

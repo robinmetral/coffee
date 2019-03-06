@@ -3,6 +3,7 @@ import { Box } from "grommet";
 import Info from "./Info";
 import Reviews from "./Reviews";
 import Heading from "./Heading";
+import Auth from "./Auth";
 
 const Cafe = props => {
   return (
@@ -23,6 +24,11 @@ const Cafe = props => {
           deleteReview={props.deleteReview}
         />
       </Box>
+      <Auth
+        user={props.user}
+        login={props.login}
+        logout={props.logout}
+      />
     </Box>
   );
 };
