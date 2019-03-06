@@ -13,10 +13,7 @@ const Welcome = props => {
       </Paragraph>
       <Box direction="row" align="center" gap="small">
         <Info />
-        <Text>
-          Click a marker on the map to get started and log in to write your own
-          review!
-        </Text>
+        <Text>Click a marker on the map to get started!</Text>
       </Box>
     </Box>
   );
