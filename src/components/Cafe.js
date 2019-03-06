@@ -4,6 +4,7 @@ import Info from "./Info";
 import Reviews from "./Reviews";
 import Heading from "./Heading";
 import Auth from "./Auth";
+import CreateCafe from "./CreateCafe";
 
 const Cafe = props => {
   return (
@@ -24,11 +25,14 @@ const Cafe = props => {
           deleteReview={props.deleteReview}
         />
       </Box>
-      <Auth
-        user={props.user}
-        login={props.login}
-        logout={props.logout}
-      />
+      {props.user && (
+        <CreateCafe
+          createCafe={props.createCafe}
+          toggleCreateCafe={props.toggleCreateCafe}
+          open={props.createCafeOpen}
+        />
+      )}
+      <Auth user={props.user} login={props.login} logout={props.logout} />
     </Box>
   );
 };

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { Layer, Box } from "grommet";
 import Cafe from "./Cafe";
 import Welcome from "./Welcome";
-import CreateCafe from "./CreateCafe";
 import { ThemeContext } from "../themecontext/ThemeContext";
 
 class Panel extends Component {
@@ -50,16 +49,12 @@ class Panel extends Component {
                 togglePanel={this.props.togglePanel}
                 login={this.props.login}
                 logout={this.props.logout}
-              />
-            ) : (
-              <Welcome togglePanel={this.props.togglePanel} />
-            )}
-            {this.props.user && (
-              <CreateCafe
                 createCafe={this.props.createCafe}
                 toggleCreateCafe={this.toggleCreateCafe}
                 open={this.state.createCafeOpen}
               />
+            ) : (
+              <Welcome togglePanel={this.props.togglePanel} />
             )}
           </Box>
         </Layer>
