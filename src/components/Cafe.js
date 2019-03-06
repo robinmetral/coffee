@@ -35,6 +35,7 @@ class Cafe extends Component {
             deleteReview={this.props.deleteReview}
           />
         </Box>
+        {/* TODO make User.js component with both Auth and CreateCafe buttons */}
         {this.props.user && (
           <CreateCafe
             createCafe={this.props.createCafe}
