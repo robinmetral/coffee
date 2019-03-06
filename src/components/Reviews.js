@@ -36,7 +36,7 @@ class Reviews extends Component {
               <>
                 <Button
                   icon={open ? <Close /> : <Edit />}
-                  label={open ? "close" : "write a review"}
+                  label={open ? "Close" : "Write a review"}
                   onClick={this.toggleForm}
                 />
                 <Collapsible open={open}>
@@ -55,7 +55,7 @@ class Reviews extends Component {
               <>
                 <Button
                   icon={open ? <Close /> : <Edit />}
-                  label={open ? "close" : "edit your review"}
+                  label={open ? "Close" : "Edit review"}
                   onClick={this.toggleForm}
                 />
                 <Collapsible open={open}>
