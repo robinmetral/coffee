@@ -8,6 +8,8 @@ class CreateCafe extends Component {
     nodeId: ""
   };
 
+  // TODO pull branch info from OSM
+  // TODO method to update all cafes once a day
   handleSubmit = async e => {
     e.preventDefault();
     const { nodeId } = this.state;
