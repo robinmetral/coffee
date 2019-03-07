@@ -48,16 +48,9 @@ class Review extends Component {
                 <Rating rating={review.rating} size="medium" />
               </Box>
               <Box direction="row" margin={{ left: "auto" }}>
-                <Button
-                  margin="none"
-                  icon={<Edit />}
-                  onClick={this.toggleEdit}
-                />
-                <Button
-                  margin="none"
-                  icon={<Trash />}
-                  onClick={this.handleDelete}
-                />
+                {/* TODO why doesn't plain override global Button styles? */}
+                <Button plain icon={<Edit />} onClick={this.toggleEdit} />
+                <Button plain icon={<Trash />} onClick={this.handleDelete} />
               </Box>
             </Box>
             <Text size="small">{date}</Text>
