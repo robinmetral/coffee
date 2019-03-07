@@ -89,7 +89,7 @@ class Reviews extends Component {
             </Heading>
             <Box>
               {Object.keys(reviews).map((id, key) => (
-                <Review review={reviews[id]} key={key} />
+                <Review review={reviews[id]} user={this.props.user} key={key} />
               ))}
             </Box>
           </Box>
