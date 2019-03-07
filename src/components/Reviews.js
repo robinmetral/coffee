@@ -3,7 +3,6 @@ import { Box, Heading, Button, Collapsible, Text } from "grommet";
 import { Close, Edit } from "grommet-icons";
 import Review from "./Review";
 import CreateReview from "./CreateReview";
-import UpdateReview from "./UpdateReview";
 import Rating from "./Rating";
 import { numberToWord, averageRating } from "../helpers";
 
