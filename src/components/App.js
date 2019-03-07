@@ -155,23 +155,25 @@ class App extends Component {
   }
 
   render() {
+    // TODO breaks when no reviews
     // TODO improve with Object.entries and Object.fromEntries
-    const reviews =
-      this.state.reviews &&
-      this.state.active &&
+    const cafeReviews = {};
+    if (this.state.reviews && this.state.active) {
       Object.keys(this.state.reviews)
         .filter(uid => this.state.reviews[uid][this.state.active])
-        .reduce((obj, uid) => {
-          obj[uid] = this.state.reviews[uid];
-          return obj;
-        }, {});
+        .map(uid => {
+          const review = this.state.reviews[uid];
+          cafeReviews[uid] = review;
+        });
+    }
+    console.log(cafeReviews);
     return (
       <Layout>
         <Map cafes={this.state.cafes} handleClick={this.handleClick} />
         <Panel
           user={this.state.user}
           cafe={this.state.cafes[this.state.active]}
-          reviews={reviews}
+          reviews={cafeReviews}
           createCafe={this.createCafe}
           createReview={this.createReview}
           updateReview={this.updateReview}
