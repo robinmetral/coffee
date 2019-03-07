@@ -155,13 +155,16 @@ class App extends Component {
   }
 
   render() {
+    // TODO improve with Object.entries and Object.fromEntries
     const reviews =
       this.state.reviews &&
       this.state.active &&
-      Object.entries(this.state.reviews).filter(
-        (key, val) => val === this.state.active
-      );
-    console.log(reviews);
+      Object.keys(this.state.reviews)
+        .filter(uid => this.state.reviews[uid][this.state.active])
+        .reduce((obj, uid) => {
+          obj[uid] = this.state.reviews[uid];
+          return obj;
+        }, {});
     return (
       <Layout>
         <Map cafes={this.state.cafes} handleClick={this.handleClick} />
