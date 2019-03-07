@@ -51,7 +51,7 @@ class CreateCafe extends Component {
       properties.addrHousenumber = tags["addr:housenumber"];
     }
     if (tags.internet_access) {
-      if (tags.internet_access === ("wlan" || "yes")) {
+      if (tags.internet_access === "wlan" || tags.internet_access === "yes") {
         properties.internetAccess = true;
       } else if (tags.internet_access === "no") {
         properties.internetAccess = false;
@@ -65,12 +65,18 @@ class CreateCafe extends Component {
     } else if (tags.facebook) {
       properties.url = tags.facebook;
     }
-    if (tags["drink:espresso"] === ("served" || "yes")) {
+    if (
+      tags["drink:espresso"] === "served" ||
+      tags["drink:espresso"] === "yes"
+    ) {
       properties.servesEspresso = true;
     } else if (tags["drink:espresso"] === "no") {
       properties.servesEspresso = false;
     }
-    if (tags["drink:filter_coffee"] === ("served" || "yes")) {
+    if (
+      tags["drink:filter_coffee"] === "served" ||
+      tags["drink:filter_coffee"] === "yes"
+    ) {
       properties.servesFilter = true;
     } else if (tags["drink:filter_coffee"] === "no") {
       properties.servesFilter = false;
