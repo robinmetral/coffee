@@ -24,8 +24,6 @@ class Reviews extends Component {
     const { properties } = this.props.cafe;
     const { reviews } = properties;
     const { open } = this.state;
-    // TODO render create review below review count
-    // TODO render edit review below user's review
     return (
       <Box flex={false}>
         <Heading level="2" size="small">
