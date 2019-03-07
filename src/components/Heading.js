@@ -4,7 +4,7 @@ import { Close, User, Add } from "grommet-icons";
 
 const Heading = props => (
   <Box direction="row" align="center" justify="between">
-    <GrommetHeading size="small" margin={{ bottom: "small" }}>
+    <GrommetHeading size="small" margin={{ vertical: "small" }}>
       {props.title}
     </GrommetHeading>
     <Box direction="row">
