@@ -23,19 +23,17 @@ const Login = props => {
   ];
 
   return (
-    <>
-      <Text>Log in to review or add coffee shops!</Text>
-      <Box direction="row" justify="center">
-        {providers.map(({ name, icon }) => (
-          <Button
-            plain
-            key={name}
-            icon={icon}
-            onClick={() => props.login(name)}
-          />
-        ))}
-      </Box>
-    </>
+    <Box direction="row" align="center">
+      <Text>Log in with:</Text>
+      {providers.map(({ name, icon }) => (
+        <Button
+          plain
+          key={name}
+          icon={icon}
+          onClick={() => props.login(name)}
+        />
+      ))}
+    </Box>
   );
 };
 export default Login;
