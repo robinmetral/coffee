@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Heading as GrommetHeading, Button } from "grommet";
-import { Close, Login } from "grommet-icons";
+import { Close, User } from "grommet-icons";
 
 // TODO wire up login button with login methods
 const Heading = props => (
@@ -9,7 +9,7 @@ const Heading = props => (
       {props.title}
     </GrommetHeading>
     <Box direction="row">
-      <Button icon={<Login />} title="Log in" />
+      <Button icon={<User />} title="Log in" />
       <Button icon={<Close />} onClick={props.togglePanel} title="Close" />
     </Box>
   </Box>
