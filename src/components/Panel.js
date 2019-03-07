@@ -23,6 +23,8 @@ class Panel extends Component {
 
   render() {
     if (!this.props.open) return null;
+    // TODO reinstate fullscreen panel breakpoint
+    // TODO on small screens panel content is squished, use flex={false}
     return (
       <ThemeContext.Extend
         value={{
