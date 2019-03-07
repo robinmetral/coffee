@@ -37,7 +37,7 @@ const Review = props => {
         <>
           <Button
             icon={open ? <Close /> : <Edit />}
-            label={open ? "Close" : "Edit review"}
+            label={open ? "Cancel" : "Edit review"}
             onClick={toggleForm}
           />
           <Collapsible open={open}>
