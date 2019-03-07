@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Form, TextInput, TextArea } from "grommet";
+import RatingInput from "./RatingInput";
 
 class UpdateReview extends Component {
   handleChange = e => {
@@ -16,6 +17,7 @@ class UpdateReview extends Component {
     return (
       <Form onSubmit={this.handleSubmit}>
         {/* TODO make a star rating input */}
+        <RatingInput />
         <TextInput
           type="number"
           name="rating"
