@@ -86,37 +86,17 @@ class App extends Component {
     this.changeActive(cafe.properties.createdAt);
   };
 
-  // TODO remove security, done in Firebase
-  createReview = (id, review) => {
+  createReview = (cafeId, review) => {
     // take a copy of state
-    const cafes = { ...this.state.cafes };
-    // if no reviews
-    if (!cafes[id].properties.reviews) {
-      // create review object
-      cafes[id].properties.reviews = {};
-      // add review
-      cafes[id].properties.reviews[review.createdAt] = review;
-      // setstate
-      this.setState({ cafes });
-    }
-    // if user has already commented
-    else if (
-      Object.values(cafes[id].properties.reviews).find(
-        rev => rev.user.uid === this.state.user.uid
-      )
-    ) {
-      // throw error
-      console.log(
-        `You've already reviewed this café, ${review.user.displayName}`
-      );
-    }
-    // else user hasn't commented yet
-    else {
-      // add review
-      cafes[id].properties.reviews[review.createdAt] = review;
-      // setstate
-      this.setState({ cafes });
-    }
+    const reviews = { ...this.state.reviews };
+    // take a copy of reviews by current user or initialize
+    const userReviews = { ...reviews[this.state.user.uid] } || {};
+    // add review to userReviews
+    userReviews[cafeId] = review;
+    // add userReviews to reviews
+    reviews[this.state.user.uid] = userReviews;
+    // setstate
+    this.setState({ reviews });
   };
 
   // TODO remove security, done in Firebase
