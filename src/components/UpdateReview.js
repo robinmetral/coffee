@@ -4,11 +4,9 @@ import RatingInput from "./RatingInput";
 
 class UpdateReview extends Component {
   handleChange = target => {
-    const { name, type, value } = target;
-    // convert to number if necessary
-    const val = type === "number" ? parseFloat(value) : value;
+    const { name, value } = target;
     // update review
-    const review = { ...this.props.review, [name]: val, updatedAt: Date.now() };
+    const review = { ...this.props.review, [name]: value, updatedAt: Date.now() };
     this.props.updateReview(this.props.id, review);
   };
 
