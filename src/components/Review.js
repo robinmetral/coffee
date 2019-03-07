@@ -5,7 +5,20 @@ import { formatDate } from "../helpers";
 import Rating from "./Rating";
 import UpdateReview from "./UpdateReview";
 
+const ReviewHeading = props => {
+  const you = props.user && props.user.uid === props.review.user.uid;
+  return (
+    <Heading margin="none" color={you ? "brand" : ""} level={4}>
+      {you ? `You` : props.review.user.displayName}
+    </Heading>
+  );
+};
+
 class Review extends Component {
+  state = {
+    edit: false
+  };
+
   handleDelete = () => {
     // call delete method
     this.props.deleteReview(this.props.id, this.props.review.createdAt);
@@ -18,23 +31,7 @@ class Review extends Component {
     const date = formatDate(review.createdAt);
     return (
       <Box pad="small" border round="small">
-        <Box direction="row" gap="xsmall" align="center">
-          {user && user.uid === review.user.uid ? (
-            <Heading margin="none" color="brand" level={4}>
-              You
-            </Heading>
-          ) : (
-            <Heading margin="none" level={4}>
-              {review.user.displayName}
-            </Heading>
-          )}
-          <Rating rating={review.rating} size="medium" />
-        </Box>
-        <Text size="small">{date}</Text>
-        <Paragraph margin={{ top: "small", bottom: "none" }}>
-          {review.text}
-        </Paragraph>
-        {user && user.uid === review.user.uid && (
+        {this.state.edit ? (
           <>
             <Box direction="row" margin={{ top: "small" }}>
               <Button
@@ -58,6 +55,17 @@ class Review extends Component {
                 />
               </Box>
             </Collapsible>
+          </>
+        ) : (
+          <>
+            <Box direction="row" gap="xsmall" align="center">
+              <ReviewHeading user={user} review={review} />
+              <Rating rating={review.rating} size="medium" />
+            </Box>
+            <Text size="small">{date}</Text>
+            <Paragraph margin={{ top: "small", bottom: "none" }}>
+              {review.text}
+            </Paragraph>
           </>
         )}
       </Box>
