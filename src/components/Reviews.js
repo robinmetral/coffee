@@ -21,8 +21,7 @@ class Reviews extends Component {
   };
 
   render() {
-    const { properties } = this.props.cafe;
-    const { reviews } = properties;
+    const { cafe, reviews } = this.props;
     const { open } = this.state;
     return (
       <Box flex={false}>
@@ -46,15 +45,15 @@ class Reviews extends Component {
           <>
             <Button
               icon={open ? <Close /> : <Edit />}
-              label={open ? `Cancel` : `Review ${properties.name}`}
+              label={open ? `Cancel` : `Review ${cafe.properties.name}`}
               onClick={this.toggleForm}
             />
             <Collapsible open={open}>
               <Box pad="xsmall">
                 <CreateReview
                   user={this.props.user}
-                  name={properties.name}
-                  id={properties.createdAt}
+                  name={cafe.properties.name}
+                  id={cafe.properties.createdAt}
                   createReview={this.props.createReview}
                   closeForm={this.closeForm}
                 />
@@ -68,7 +67,7 @@ class Reviews extends Component {
             {Object.keys(reviews).map((id, key) => (
               <Review
                 review={reviews[id]}
-                id={properties.createdAt}
+                id={cafe.properties.createdAt}
                 user={this.props.user}
                 key={key}
                 open={this.state.open}
