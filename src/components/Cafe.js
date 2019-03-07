@@ -13,6 +13,7 @@ class Cafe extends Component {
         <Box>
           <Reviews
             cafe={this.props.cafe}
+            reviews={this.props.reviews}
             user={this.props.user}
             createReview={this.props.createReview}
             updateReview={this.props.updateReview}
