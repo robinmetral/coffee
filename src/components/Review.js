@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Text, Paragraph, Heading, Button, Collapsible } from "grommet";
-import { Edit, Close } from "grommet-icons";
+import { Edit, Close, Trash } from "grommet-icons";
 import { formatDate } from "../helpers";
 import Rating from "./Rating";
 import UpdateReview from "./UpdateReview";
@@ -33,14 +33,21 @@ const Review = props => {
       </Box>
       <Text size="small">{date}</Text>
       <Paragraph margin={{ vertical: "small" }}>{review.text}</Paragraph>
-      {/* TODO display edit and delete side-by-side */}
       {user && user.uid === review.user.uid && (
         <>
-          <Button
-            icon={open ? <Close /> : <Edit />}
-            label={open ? "Cancel" : "Edit review"}
-            onClick={toggleForm}
-          />
+          <Box direction="row">
+            <Button
+              icon={open ? <Close /> : <Edit />}
+              label={open ? "Close" : "Edit"}
+              onClick={toggleForm}
+            />
+            <Button
+              icon={<Trash />}
+              label="Delete"
+              color="status-critical"
+              onClick={() => this.handleDelete()}
+            />
+          </Box>
           <Collapsible open={open}>
             <Box pad="xsmall">
               <UpdateReview

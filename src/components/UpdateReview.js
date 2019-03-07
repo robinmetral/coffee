@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Form, TextInput, TextArea, Button, Box } from "grommet";
-import { Edit, Trash } from "grommet-icons";
+import { Form, TextInput, TextArea } from "grommet";
 
 class UpdateReview extends Component {
   handleChange = e => {
@@ -38,15 +37,6 @@ class UpdateReview extends Component {
           placeholder={`Review ${this.props.name}...`}
           onChange={this.handleChange}
         />
-        <Box direction="row">
-          <Button icon={<Edit />} type="submit" primary label="Update" />
-          <Button
-            icon={<Trash />}
-            label="Delete"
-            color="status-critical"
-            onClick={() => this.handleDelete()}
-          />
-        </Box>
       </Form>
     );
   }
