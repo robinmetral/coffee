@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Layer, Box } from "grommet";
+import { ThemeContext } from "grommet/contexts";
 import Cafe from "./Cafe";
 import Welcome from "./Welcome";
 import Heading from "./Heading";
 import CreateCafe from "./CreateCafe";
 import User from "./User";
-import { ThemeContext } from "../themecontext/ThemeContext";
 
 class Panel extends Component {
   state = {
