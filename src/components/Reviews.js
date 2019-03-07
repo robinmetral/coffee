@@ -39,9 +39,8 @@ class Reviews extends Component {
 
         {(!reviews ||
           (this.props.user &&
-            Object.keys(reviews).find(
-              uid => uid === this.props.user.uid
-            ) === undefined)) && (
+            Object.keys(reviews).find(uid => uid === this.props.user.uid) ===
+              undefined)) && (
           <>
             <Button
               icon={open ? <Close /> : <Edit />}
@@ -64,9 +63,9 @@ class Reviews extends Component {
 
         {reviews && (
           <Box>
-            {Object.keys(reviews).map((id, key) => (
+            {Object.keys(reviews).map((uid, key) => (
               <Review
-                review={reviews[id]}
+                review={reviews[uid]}
                 id={cafe.properties.createdAt}
                 user={this.props.user}
                 key={key}
