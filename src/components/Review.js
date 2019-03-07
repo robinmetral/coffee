@@ -11,7 +11,9 @@ const Review = props => {
     <Box pad="small" border round="small">
       <Box direction="row" gap="xsmall" align="center">
         <Heading margin="none" level={4}>
-          {user.uid === review.user.uid ? "You" : review.user.displayName}
+          {user && user.uid === review.user.uid
+            ? "You"
+            : review.user.displayName}
         </Heading>
         <Rating rating={review.rating} size="medium" />
       </Box>
