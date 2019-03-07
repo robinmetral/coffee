@@ -40,6 +40,7 @@ class CreateReview extends Component {
     const { rating, text } = this.state;
     return (
       <Form onSubmit={this.handleSubmit}>
+        {/* TODO check that cafe has been rated (is more than 0) */}
         <RatingInput rating={rating} handleChange={this.handleChange} />
         <TextArea
           resize="vertical"
