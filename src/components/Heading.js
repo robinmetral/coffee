@@ -2,7 +2,6 @@ import React from "react";
 import { Box, Heading as GrommetHeading, Button } from "grommet";
 import { Close, User, Add } from "grommet-icons";
 
-// TODO wire up login button with login methods
 const Heading = props => (
   <Box direction="row" align="center" justify="between">
     <GrommetHeading size="small" margin={{ bottom: "small" }}>
