@@ -36,7 +36,7 @@ class Review extends Component {
         </Paragraph>
         {user && user.uid === review.user.uid && (
           <>
-            <Box direction="row">
+            <Box direction="row" margin={{ top: "small" }}>
               <Button
                 icon={open ? <Close /> : <Edit />}
                 label={open ? "Close" : "Edit"}
