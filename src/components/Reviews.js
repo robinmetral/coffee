@@ -68,7 +68,17 @@ class Reviews extends Component {
         {reviews && (
           <Box>
             {Object.keys(reviews).map((id, key) => (
-              <Review review={reviews[id]} user={this.props.user} key={key} />
+              <Review
+                review={reviews[id]}
+                id={properties.createdAt}
+                user={this.props.user}
+                key={key}
+                open={this.state.open}
+                toggleForm={this.toggleForm}
+                closeForm={this.closeForm}
+                updateReview={this.props.updateReview}
+                deleteReview={this.props.deleteReview}
+              />
             ))}
           </Box>
         )}

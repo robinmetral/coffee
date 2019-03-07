@@ -1,10 +1,21 @@
 import React from "react";
-import { Box, Text, Paragraph, Heading } from "grommet";
+import { Box, Text, Paragraph, Heading, Button, Collapsible } from "grommet";
+import { Edit, Close } from "grommet-icons";
 import { formatDate } from "../helpers";
 import Rating from "./Rating";
+import UpdateReview from "./UpdateReview";
 
 const Review = props => {
-  const { review, user } = props;
+  const {
+    review,
+    id,
+    user,
+    open,
+    toggleForm,
+    closeForm,
+    updateReview,
+    deleteReview
+  } = props;
   const date = formatDate(review.createdAt);
   return (
     <Box pad="small" border round="small">
@@ -24,6 +35,26 @@ const Review = props => {
       <Paragraph margin={{ top: "small", bottom: "none" }}>
         {review.text}
       </Paragraph>
+      {user && user.uid == review.user.uid && (
+        <>
+          <Button
+            icon={open ? <Close /> : <Edit />}
+            label={open ? "Close" : "Edit review"}
+            onClick={toggleForm}
+          />
+          <Collapsible open={open}>
+            <Box pad="xsmall">
+              <UpdateReview
+                review={review}
+                id={id}
+                updateReview={updateReview}
+                deleteReview={deleteReview}
+                closeForm={closeForm}
+              />
+            </Box>
+          </Collapsible>
+        </>
+      )}
     </Box>
   );
 };
