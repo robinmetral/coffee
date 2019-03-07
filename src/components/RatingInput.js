@@ -6,7 +6,8 @@ class RatingInput extends Component {
   handleClick = key => {
     // increment to have the right rating
     key++;
-    this.props.handleChange(key);
+    // pass input name and value to handleChange
+    this.props.handleChange("rating", key);
   };
 
   render() {
