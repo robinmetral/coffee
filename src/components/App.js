@@ -108,7 +108,7 @@ class App extends Component {
     this.setState({ reviews });
   };
 
-  deleteReview = (cafeId) => {
+  deleteReview = cafeId => {
     // take a copy of state
     const reviews = { ...this.state.reviews };
     // set review as null to delete from Firebase
@@ -120,10 +120,15 @@ class App extends Component {
   authHandler = async authData => {
     // destructure authData
     const { uid, displayName } = authData.user;
-    // sync state with Firebase
-    this.ref = base.syncState(`cafes`, {
+    // sync cafes with Firebase
+    this.cafesRef = base.syncState(`cafes`, {
       context: this,
-      state: "cafes"
+      state: `cafes`
+    });
+    // sync reviews with Firebase
+    this.reviewsRef = base.syncState(`cafes`, {
+      context: this,
+      state: `reviews`
     });
     // set logged in user to state
     this.setState({
