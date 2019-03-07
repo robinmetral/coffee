@@ -13,7 +13,6 @@ class UpdateReview extends Component {
     const { rating, text } = this.props.review;
     return (
       <Form onSubmit={this.handleSubmit}>
-        {/* TODO make a star rating input */}
         <RatingInput rating={rating} handleChange={this.handleChange} />
         <TextArea
           resize="vertical"
