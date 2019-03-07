@@ -15,6 +15,7 @@ class Review extends Component {
     this.setState({ edit: !this.state.edit });
   };
 
+  // TODO confirm user wants to delete
   handleDelete = () => {
     // call delete method
     this.props.deleteReview(this.props.id, this.props.review.createdAt);
