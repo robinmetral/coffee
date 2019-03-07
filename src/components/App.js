@@ -117,16 +117,11 @@ class App extends Component {
     this.setState({ reviews });
   };
 
-  authHandler = async authData => {
+  authHandler = authData => {
     // destructure authData
     const { uid, displayName } = authData.user;
-    // sync cafes with Firebase
-    this.cafesRef = base.syncState(`cafes`, {
-      context: this,
-      state: `cafes`
-    });
     // sync reviews with Firebase
-    this.reviewsRef = base.syncState(`cafes`, {
+    this.ref = base.syncState(`reviews`, {
       context: this,
       state: `reviews`
     });
@@ -154,19 +149,19 @@ class App extends Component {
   };
 
   componentWillUnmount() {
-    // remove cafes binding
-    base.removeBinding(this.cafesRef);
-    // remove reviews binding
-    base.removeBinding(this.reviewsRef);
+    // remove reviews syncState binding
+    base.removeBinding(this.ref);
   }
 
   render() {
     return (
       <Layout>
         <Map cafes={this.state.cafes} handleClick={this.handleClick} />
+        {/* TODO only pass down reviews for the active cafe */}
         <Panel
           user={this.state.user}
           cafe={this.state.cafes[this.state.active]}
+          reviews={this.state.reviews}
           createCafe={this.createCafe}
           createReview={this.createReview}
           updateReview={this.updateReview}
