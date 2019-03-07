@@ -32,6 +32,7 @@ class User extends Component {
               </Heading>
               <Button icon={<Close />} onClick={this.props.toggleUser} />
             </Box>
+            {/* TODO display message here if user has opened the layer by attempting to write a review */}
             {this.props.user ? (
               <Logout logout={this.props.logout} />
             ) : (
