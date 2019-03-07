@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Heading, Box, Form, TextInput, Button, Layer } from "grommet";
-import { Send } from "grommet-icons";
+import { Send, Close } from "grommet-icons";
 import { ThemeContext } from "../themecontext/ThemeContext";
 
 class CreateCafe extends Component {
@@ -109,9 +109,12 @@ class CreateCafe extends Component {
           onClickOutside={() => this.props.toggleCreateCafe()}
         >
           <Box pad="medium" gap="small" width="medium">
-            <Heading level={3} margin="none">
-              Add a cafe
-            </Heading>
+            <Box direction="row" align="center" justify="between">
+              <Heading level={3} margin="none">
+                Add a cafe
+              </Heading>
+              <Button icon={<Close />} onClick={this.props.toggleCreateCafe} />
+            </Box>
             <Form onSubmit={this.handleSubmit}>
               <TextInput
                 type="number"
