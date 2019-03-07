@@ -40,11 +40,6 @@ class App extends Component {
       });
   }
 
-  // remove syncState binding on unmount
-  componentWillUnmount() {
-    base.removeBinding(this.ref);
-  }
-
   handleClick = event => {
     // find cafe is state that was clicked based on coordinates
     const { cafes } = this.state;
@@ -214,6 +209,11 @@ class App extends Component {
       user: null
     });
   };
+
+  // remove syncState binding on unmount
+  componentWillUnmount() {
+    base.removeBinding(this.ref);
+  }
 
   render() {
     return (
