@@ -32,9 +32,7 @@ const Review = props => {
         <Rating rating={review.rating} size="medium" />
       </Box>
       <Text size="small">{date}</Text>
-      <Paragraph margin={{ top: "small", bottom: "none" }}>
-        {review.text}
-      </Paragraph>
+      <Paragraph margin={{ vertical: "small" }}>{review.text}</Paragraph>
       {user && user.uid == review.user.uid && (
         <>
           <Button
