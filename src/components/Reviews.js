@@ -29,74 +29,49 @@ class Reviews extends Component {
     // TODO render edit review below user's review
     return (
       <Box flex={false}>
-        {this.props.user && (
+        <Heading level="2" size="small">
+          {reviews
+            ? `${numberToWord(Object.keys(reviews).length)} review${
+                Object.keys(reviews).length > 1 ? `s` : ``
+              }`
+            : `No reviews yet`}
+          <Box direction="row" gap="xsmall">
+            <Rating rating={averageRating(reviews)} />
+            <Text>{averageRating(reviews)}</Text>
+          </Box>
+        </Heading>
+
+        {(!reviews ||
+          Object.values(reviews).find(
+            review => review.user.uid === this.props.user.uid
+          ) === undefined) && (
           <>
-            {!reviews ||
-            Object.values(reviews).find(
-              review => review.user.uid === this.props.user.uid
-            ) === undefined ? (
-              <>
-                <Button
-                  icon={open ? <Close /> : <Edit />}
-                  label={open ? "Close" : "Write a review"}
-                  onClick={this.toggleForm}
+            <Button
+              icon={open ? <Close /> : <Edit />}
+              label={open ? `Cancel` : `Review ${properties.name}`}
+              onClick={this.toggleForm}
+            />
+            <Collapsible open={open}>
+              <Box pad="xsmall">
+                <CreateReview
+                  user={this.props.user}
+                  name={properties.name}
+                  id={properties.createdAt}
+                  createReview={this.props.createReview}
+                  closeForm={this.closeForm}
                 />
-                <Collapsible open={open}>
-                  <Box pad="xsmall">
-                    <CreateReview
-                      user={this.props.user}
-                      name={properties.name}
-                      id={properties.createdAt}
-                      createReview={this.props.createReview}
-                      closeForm={this.closeForm}
-                    />
-                  </Box>
-                </Collapsible>
-              </>
-            ) : (
-              <>
-                <Button
-                  icon={open ? <Close /> : <Edit />}
-                  label={open ? "Close" : "Edit review"}
-                  onClick={this.toggleForm}
-                />
-                <Collapsible open={open}>
-                  <Box pad="xsmall">
-                    <UpdateReview
-                      review={Object.values(reviews).find(
-                        review => review.user.uid === this.props.user.uid
-                      )}
-                      id={properties.createdAt}
-                      updateReview={this.props.updateReview}
-                      deleteReview={this.props.deleteReview}
-                      closeForm={this.closeForm}
-                    />
-                  </Box>
-                </Collapsible>
-              </>
-            )}
+              </Box>
+            </Collapsible>
           </>
         )}
-        <Box>
-          <Heading level="2" size="small">
-            {reviews
-              ? `${numberToWord(Object.keys(reviews).length)} review${
-                  Object.keys(reviews).length > 1 ? `s` : ``
-                }`
-              : `No reviews yet`}
-            <Box direction="row" gap="xsmall">
-              <Rating rating={averageRating(reviews)} />
-              <Text>{averageRating(reviews)}</Text>
-            </Box>
-          </Heading>
-          {reviews && (
-            <Box>
-              {Object.keys(reviews).map((id, key) => (
-                <Review review={reviews[id]} user={this.props.user} key={key} />
-              ))}
-            </Box>
-          )}
-        </Box>
+
+        {reviews && (
+          <Box>
+            {Object.keys(reviews).map((id, key) => (
+              <Review review={reviews[id]} user={this.props.user} key={key} />
+            ))}
+          </Box>
+        )}
       </Box>
     );
   }
