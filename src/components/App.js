@@ -108,25 +108,13 @@ class App extends Component {
     this.setState({ reviews });
   };
 
-  // TODO remove security, done in Firebase
-  deleteReview = (cafeId, reviewId) => {
+  deleteReview = (cafeId) => {
     // take a copy of state
-    const cafes = { ...this.state.cafes };
-    // check that this is the current user's own review
-    if (
-      cafes[cafeId].properties.reviews[reviewId].user.uid ===
-      this.state.user.uid
-    ) {
-      // overwrite review
-      cafes[cafeId].properties.reviews[reviewId] = null;
-      // setstate
-      this.setState({ cafes });
-    }
-    // else it's not the current user's own review
-    else {
-      // throw error
-      console.log(`This isn't your review, ${this.state.user.displayName}`);
-    }
+    const reviews = { ...this.state.reviews };
+    // set review as null to delete from Firebase
+    reviews[this.state.user.uid][cafeId] = null;
+    // setstate
+    this.setState({ reviews });
   };
 
   authHandler = async authData => {
