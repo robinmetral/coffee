@@ -34,7 +34,7 @@ const Review = props => {
       <Text size="small">{date}</Text>
       <Paragraph margin={{ vertical: "small" }}>{review.text}</Paragraph>
       {/* TODO display edit and delete side-by-side */}
-      {user && user.uid == review.user.uid && (
+      {user && user.uid === review.user.uid && (
         <>
           <Button
             icon={open ? <Close /> : <Edit />}
