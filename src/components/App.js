@@ -155,14 +155,20 @@ class App extends Component {
   }
 
   render() {
+    const reviews =
+      this.state.reviews &&
+      this.state.active &&
+      Object.entries(this.state.reviews).filter(
+        (key, val) => val === this.state.active
+      );
+    console.log(reviews);
     return (
       <Layout>
         <Map cafes={this.state.cafes} handleClick={this.handleClick} />
-        {/* TODO only pass down reviews for the active cafe */}
         <Panel
           user={this.state.user}
           cafe={this.state.cafes[this.state.active]}
-          reviews={this.state.reviews}
+          reviews={reviews}
           createCafe={this.createCafe}
           createReview={this.createReview}
           updateReview={this.updateReview}
