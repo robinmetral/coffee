@@ -3,43 +3,13 @@ import { Form, TextInput, TextArea, Button, Box } from "grommet";
 import { Edit, Trash } from "grommet-icons";
 
 class UpdateReview extends Component {
-  state = {
-    rating: this.props.review.rating,
-    text: this.props.review.text
-  };
-
-  // reset form data and close box when the active cafe updates
-  componentDidUpdate(prevProps) {
-    if (this.props.id !== prevProps.id) {
-      this.setState({
-        rating: this.props.review.rating,
-        text: this.props.review.text
-      });
-      this.props.closeForm();
-    }
-  }
-
-  // TODO update without a submit button
   handleChange = e => {
-    const { name, value } = e.target;
-    this.setState({ [name]: value });
-  };
-
-  handleSubmit = e => {
-    // prevent form from submitting
-    e.preventDefault();
-    // take a copy of current review
-    const review = { ...this.props.review };
+    const { name, type, value } = e.target;
+    // convert to number if necessary
+    const val = type === "number" ? parseFloat(value) : value;
     // update review
-    const { rating, text } = this.state;
-    review.rating = parseFloat(rating);
-    review.text = text;
-    // add updated data
-    review.updatedAt = Date.now();
-    // send to App
+    const review = { ...this.props.review, [name]: val, updatedAt: Date.now() };
     this.props.updateReview(this.props.id, review);
-    // close form
-    this.props.closeForm();
   };
 
   handleDelete = () => {
@@ -50,7 +20,7 @@ class UpdateReview extends Component {
   };
 
   render() {
-    const { rating, text } = this.state;
+    const { rating, text } = this.props.review;
     return (
       <Form onSubmit={this.handleSubmit}>
         <TextInput
