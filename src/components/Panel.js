@@ -64,6 +64,7 @@ class Panel extends Component {
             {this.props.cafe ? (
               <Cafe
                 cafe={this.props.cafe}
+                reviews={this.render.props.reviews}
                 user={this.props.user}
                 createReview={this.props.createReview}
                 updateReview={this.props.updateReview}
