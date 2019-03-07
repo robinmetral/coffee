@@ -10,6 +10,7 @@ class App extends Component {
   // initialize state
   state = {
     cafes: {},
+    reviews: {},
     active: undefined,
     user: null,
     panelOpen: true
@@ -23,16 +24,19 @@ class App extends Component {
       }
     });
 
-    // fetch cafes from firebase
+    // fetch data from firebase
     base
-      .fetch(`cafes`, {
+      .fetch(`/`, {
         context: this
       })
-      .then(cafes => {
-        this.setState({ cafes });
+      .then(data => {
+        this.setState({
+          cafes: data.cafes,
+          reviews: data.reviews
+        });
       })
       .catch(error => {
-        console.log("Error fetching cafes from Firebase");
+        console.log(error);
       });
   }
 
