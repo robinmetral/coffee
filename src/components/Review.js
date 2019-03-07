@@ -8,15 +8,15 @@ const Review = props => {
   const date = formatDate(createdAt);
   // TODO display current user as "You" and highlight color
   return (
-    <Box>
+    <Box pad="small" border round="small">
       <Box direction="row" gap="xsmall" align="center">
         <Heading margin="none" level={4}>
           {user.displayName}
         </Heading>
         <Rating rating={rating} size="medium" />
       </Box>
-      <Text>{date}</Text>
-      <Paragraph>{text}</Paragraph>
+      <Text size="small">{date}</Text>
+      <Paragraph margin={{ top: "small", bottom: "none" }}>{text}</Paragraph>
     </Box>
   );
 };
