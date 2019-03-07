@@ -19,6 +19,7 @@ class UpdateReview extends Component {
     }
   }
 
+  // TODO update without a submit button
   handleChange = e => {
     const { name, value } = e.target;
     this.setState({ [name]: value });
