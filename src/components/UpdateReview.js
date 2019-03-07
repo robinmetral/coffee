@@ -33,7 +33,7 @@ class UpdateReview extends Component {
           <Button
             icon={<Close />}
             label="Cancel"
-            onClick={() => this.setState({ edit: false })}
+            onClick={this.props.toggleEdit}
           />
         </Box>
       </Form>

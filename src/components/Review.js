@@ -10,6 +10,11 @@ class Review extends Component {
     edit: false
   };
 
+  toggleEdit = () => {
+    // toggle edit status
+    this.setState({ edit: !this.state.edit });
+  };
+
   handleDelete = () => {
     // call delete method
     this.props.deleteReview(this.props.id, this.props.review.createdAt);
@@ -25,7 +30,12 @@ class Review extends Component {
       <Box pad="small" border round="small">
         {this.state.edit ? (
           <Box pad="xsmall">
-            <UpdateReview review={review} id={id} updateReview={updateReview} />
+            <UpdateReview
+              review={review}
+              id={id}
+              updateReview={updateReview}
+              toggleEdit={this.toggleEdit}
+            />
           </Box>
         ) : (
           <>
@@ -40,7 +50,7 @@ class Review extends Component {
                 <Button
                   margin="none"
                   icon={<Edit />}
-                  onClick={() => this.setState({ edit: true })}
+                  onClick={this.toggleEdit}
                 />
                 <Button
                   margin="none"
