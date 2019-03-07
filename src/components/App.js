@@ -117,6 +117,7 @@ class App extends Component {
     this.setState({ reviews });
   };
 
+  // TODO deal with syncing cafes with Firebase
   authHandler = authData => {
     // destructure authData
     const { uid, displayName } = authData.user;
