@@ -39,9 +39,10 @@ class Reviews extends Component {
         </Heading>
 
         {(!reviews ||
-          Object.values(reviews).find(
-            review => review.user.uid === this.props.user.uid
-          ) === undefined) && (
+          (this.props.user &&
+            Object.values(reviews).find(
+              review => review.user.uid === this.props.user.uid
+            ) === undefined)) && (
           <>
             <Button
               icon={open ? <Close /> : <Edit />}
