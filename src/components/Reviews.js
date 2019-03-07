@@ -37,6 +37,7 @@ class Reviews extends Component {
           </Box>
         </Heading>
 
+        {/* TODO get user uid from review key */}
         {(!reviews ||
           (this.props.user &&
             Object.values(reviews).find(
