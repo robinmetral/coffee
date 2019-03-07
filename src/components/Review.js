@@ -6,15 +6,18 @@ import Rating from "./Rating";
 const Review = props => {
   const { review, user } = props;
   const date = formatDate(review.createdAt);
-  // TODO display current user as "You" and highlight color
   return (
     <Box pad="small" border round="small">
       <Box direction="row" gap="xsmall" align="center">
-        <Heading margin="none" level={4}>
-          {user && user.uid === review.user.uid
-            ? "You"
-            : review.user.displayName}
-        </Heading>
+        {user && user.uid === review.user.uid ? (
+          <Heading margin="none" color="brand" level={4}>
+            You
+          </Heading>
+        ) : (
+          <Heading margin="none" level={4}>
+            {review.user.displayName}
+          </Heading>
+        )}
         <Rating rating={review.rating} size="medium" />
       </Box>
       <Text size="small">{date}</Text>
