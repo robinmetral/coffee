@@ -41,11 +41,7 @@ class UpdateReview extends Component {
           onChange={e => this.handleChange(e.target.name, e.target.value)}
         />
         <Box direction="row">
-          <Button
-            type="submit"
-            icon={<Send />}
-            label="Submit"
-          />
+          <Button type="submit" icon={<Send />} label="Submit" />
           <Button
             icon={<Close />}
             label="Cancel"
