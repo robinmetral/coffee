@@ -25,6 +25,7 @@ class Panel extends Component {
     if (!this.props.open) return null;
     // TODO reinstate fullscreen panel breakpoint
     // TODO on small screens panel content is squished, use flex={false}
+    // TODO fix x-overflow when heading is too long (see The Visit)
     return (
       <ThemeContext.Extend
         value={{
