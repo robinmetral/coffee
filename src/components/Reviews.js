@@ -77,23 +77,26 @@ class Reviews extends Component {
             )}
           </>
         )}
-        {reviews && (
-          <Box>
-            <Heading level="2" size="small">
-              {numberToWord(Object.keys(reviews).length)} review
-              {Object.keys(reviews).length < 2 ? "" : "s"}
-              <Box direction="row" gap="xsmall">
-                <Rating rating={averageRating(reviews)} />
-                <Text>{averageRating(reviews)}</Text>
-              </Box>
-            </Heading>
+        <Box>
+          <Heading level="2" size="small">
+            {reviews
+              ? `${numberToWord(Object.keys(reviews).length)} review${
+                  Object.keys(reviews).length > 1 ? `s` : ``
+                }`
+              : `No reviews yet`}
+            <Box direction="row" gap="xsmall">
+              <Rating rating={averageRating(reviews)} />
+              <Text>{averageRating(reviews)}</Text>
+            </Box>
+          </Heading>
+          {reviews && (
             <Box>
               {Object.keys(reviews).map((id, key) => (
                 <Review review={reviews[id]} user={this.props.user} key={key} />
               ))}
             </Box>
-          </Box>
-        )}
+          )}
+        </Box>
       </Box>
     );
   }
