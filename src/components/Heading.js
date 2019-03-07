@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Heading as GrommetHeading, Button } from "grommet";
-import { Close, User, Add } from "grommet-icons";
+import { Close, User, Add, Login } from "grommet-icons";
 
 const Heading = props => (
   <Box direction="row" align="center" justify="between">
@@ -8,7 +8,15 @@ const Heading = props => (
       {props.title}
     </GrommetHeading>
     <Box direction="row">
-      <Button icon={<User />} onClick={props.toggleUser} title="Log in" />
+      {props.user ? (
+        <Button
+          icon={<User />}
+          onClick={props.toggleUser}
+          title={props.user.displayName}
+        />
+      ) : (
+        <Button icon={<Login />} onClick={props.toggleUser} title="Log in" />
+      )}
       {props.user && (
         <Button
           icon={<Add />}
