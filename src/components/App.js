@@ -70,6 +70,7 @@ class App extends Component {
     this.setState({ panelOpen });
   };
 
+  // TODO remove security, done in Firebase
   createCafe = async cafe => {
     // take a copy of state
     const cafes = { ...this.state.cafes };
@@ -103,6 +104,7 @@ class App extends Component {
     }
   };
 
+  // TODO remove security, done in Firebase
   createReview = (id, review) => {
     // take a copy of state
     const cafes = { ...this.state.cafes };
@@ -135,6 +137,7 @@ class App extends Component {
     }
   };
 
+  // TODO remove security, done in Firebase
   updateReview = (cafeId, review) => {
     // take a copy of state
     const cafes = { ...this.state.cafes };
@@ -159,6 +162,7 @@ class App extends Component {
     }
   };
 
+  // TODO remove security, done in Firebase
   deleteReview = (cafeId, reviewId) => {
     // take a copy of state
     const cafes = { ...this.state.cafes };
