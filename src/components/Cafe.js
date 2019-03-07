@@ -2,8 +2,6 @@ import React, { Component } from "react";
 import { Box } from "grommet";
 import Info from "./Info";
 import Reviews from "./Reviews";
-import Auth from "./Auth";
-import CreateCafe from "./CreateCafe";
 
 class Cafe extends Component {
   render() {
@@ -21,18 +19,6 @@ class Cafe extends Component {
             deleteReview={this.props.deleteReview}
           />
         </Box>
-        {/* TODO make User.js component with both Auth and CreateCafe buttons */}
-        {this.props.createCafeOpen && (
-          <CreateCafe
-            createCafe={this.props.createCafe}
-            toggleCreateCafe={this.toggleCreateCafe}
-          />
-        )}
-        <Auth
-          user={this.props.user}
-          login={this.props.login}
-          logout={this.props.logout}
-        />
       </Box>
     );
   }
