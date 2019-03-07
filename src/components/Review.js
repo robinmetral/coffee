@@ -31,7 +31,9 @@ class Review extends Component {
           <Rating rating={review.rating} size="medium" />
         </Box>
         <Text size="small">{date}</Text>
-        <Paragraph margin={{ vertical: "small" }}>{review.text}</Paragraph>
+        <Paragraph margin={{ top: "small", bottom: "none" }}>
+          {review.text}
+        </Paragraph>
         {user && user.uid === review.user.uid && (
           <>
             <Box direction="row">
