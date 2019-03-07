@@ -94,50 +94,36 @@ class CreateCafe extends Component {
 
   render() {
     return (
-      <>
-        <Button
-          icon={<Add />}
-          onClick={() => this.props.toggleCreateCafe()}
-          label="Add a cafe"
-        />
-        {this.props.open && (
-          <ThemeContext.Extend
-            value={{
-              layer: {
-                zIndex: "1100",
-                container: {
-                  zIndex: "1100"
-                }
-              }
-            }}
-          >
-            <Layer
-              onEsc={() => this.props.toggleCreateCafe()}
-              onClickOutside={() => this.props.toggleCreateCafe()}
-            >
-              <Box pad="medium" gap="small" width="medium">
-                <Heading level={3} margin="none">
-                  Add a cafe
-                </Heading>
-                <Form onSubmit={this.handleSubmit}>
-                  <TextInput
-                    type="number"
-                    value={this.state.nodeId}
-                    placeholder="OpenStreetMap ID"
-                    onChange={e => this.setState({ nodeId: e.target.value })}
-                  />
-                  <Button
-                    icon={<Send />}
-                    type="submit"
-                    primary
-                    label="Submit"
-                  />
-                </Form>
-              </Box>
-            </Layer>
-          </ThemeContext.Extend>
-        )}
-      </>
+      <ThemeContext.Extend
+        value={{
+          layer: {
+            zIndex: "1100",
+            container: {
+              zIndex: "1100"
+            }
+          }
+        }}
+      >
+        <Layer
+          onEsc={() => this.props.toggleCreateCafe()}
+          onClickOutside={() => this.props.toggleCreateCafe()}
+        >
+          <Box pad="medium" gap="small" width="medium">
+            <Heading level={3} margin="none">
+              Add a cafe
+            </Heading>
+            <Form onSubmit={this.handleSubmit}>
+              <TextInput
+                type="number"
+                value={this.state.nodeId}
+                placeholder="OpenStreetMap ID"
+                onChange={e => this.setState({ nodeId: e.target.value })}
+              />
+              <Button icon={<Send />} type="submit" primary label="Submit" />
+            </Form>
+          </Box>
+        </Layer>
+      </ThemeContext.Extend>
     );
   }
 }

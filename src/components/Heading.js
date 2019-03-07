@@ -9,8 +9,12 @@ const Heading = props => (
       {props.title}
     </GrommetHeading>
     <Box direction="row">
-      <Button icon={<User />} title="Log in" />
-      <Button icon={<Add />} title="Add a new cafe" />
+      <Button icon={<User />} onClick={props.toggleUser} title="Log in" />
+      <Button
+        icon={<Add />}
+        onClick={props.toggleCreateCafe}
+        title="Add a new cafe"
+      />
       <Button icon={<Close />} onClick={props.togglePanel} title="Close" />
     </Box>
   </Box>
