@@ -5,7 +5,7 @@ import { Close } from "grommet-icons";
 import Login from "./Login";
 import Logout from "./Logout";
 
-const User = () => (
+const User = props => (
   <ThemeContext.Extend
     value={{
       layer: {
@@ -17,23 +17,23 @@ const User = () => (
     }}
   >
     <Layer
-      onEsc={() => this.props.toggleUser()}
-      onClickOutside={() => this.props.toggleUser()}
+      onEsc={() => props.toggleUser()}
+      onClickOutside={() => props.toggleUser()}
     >
       <Box pad="medium" gap="small" width="medium">
         <Box direction="row" align="center" justify="between">
           <Heading level={3} margin="none">
-            {this.props.user
-              ? `Hey ${this.props.user.displayName}!`
+            {props.user
+              ? `Hey ${props.user.displayName}!`
               : `Join the movement`}
           </Heading>
-          <Button icon={<Close />} onClick={this.props.toggleUser} />
+          <Button icon={<Close />} onClick={props.toggleUser} />
         </Box>
         {/* TODO display message here if user has opened the layer by attempting to write a review */}
-        {this.props.user ? (
-          <Logout logout={this.props.logout} />
+        {props.user ? (
+          <Logout logout={props.logout} />
         ) : (
-          <Login login={this.props.login} />
+          <Login login={props.login} />
         )}
       </Box>
     </Layer>
