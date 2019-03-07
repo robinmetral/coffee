@@ -153,9 +153,11 @@ class App extends Component {
     });
   };
 
-  // remove syncState binding on unmount
   componentWillUnmount() {
-    base.removeBinding(this.ref);
+    // remove cafes binding
+    base.removeBinding(this.cafesRef);
+    // remove reviews binding
+    base.removeBinding(this.reviewsRef);
   }
 
   render() {
