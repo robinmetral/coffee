@@ -29,7 +29,8 @@ class Panel extends Component {
           layer: {
             container: {
               zIndex: "1000"
-            }
+            },
+            responsiveBreakpoint: undefined
           }
         }}
       >
