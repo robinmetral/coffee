@@ -49,6 +49,7 @@ class CreateReview extends Component {
           placeholder={`Review ${this.props.name}...`}
           onChange={e => this.handleChange(e.target.name, e.target.value)}
         />
+        {/* TODO ask for sign in before review gets sent */}
         <Button icon={<Chat />} type="submit" primary label="Submit" />
       </Form>
     );
