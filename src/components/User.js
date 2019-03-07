@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { Layer, Box, Heading } from "grommet";
 import { ThemeContext } from "../themecontext/ThemeContext";
-import Auth from "./Auth";
+import Login from "./Login";
+import Logout from "./Logout";
 
 class User extends Component {
   render() {
@@ -26,11 +27,14 @@ class User extends Component {
                 ? `Hey ${this.props.user.displayName}!`
                 : `Join the movement`}
             </Heading>
-            <Auth
-              user={this.props.user}
-              login={this.props.login}
-              logout={this.props.logout}
-            />
+            {props.user ? (
+              <Logout
+                displayName={props.user.displayName}
+                logout={props.logout}
+              />
+            ) : (
+              <Login login={props.login} />
+            )}
           </Box>
         </Layer>
       </ThemeContext.Extend>
