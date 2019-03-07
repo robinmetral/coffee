@@ -70,7 +70,7 @@ class App extends Component {
     this.setState({ panelOpen });
   };
 
-  createCafe = async cafe => {
+  createCafe = cafe => {
     // take a copy of state
     const cafes = { ...this.state.cafes };
     // add current user to cafe object
