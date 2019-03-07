@@ -3,8 +3,7 @@ import { Form, TextArea } from "grommet";
 import RatingInput from "./RatingInput";
 
 class UpdateReview extends Component {
-  handleChange = target => {
-    const { name, value } = target;
+  handleChange = (name, value) => {
     // update review
     const review = { ...this.props.review, [name]: value, updatedAt: Date.now() };
     this.props.updateReview(this.props.id, review);
@@ -21,7 +20,7 @@ class UpdateReview extends Component {
           name="text"
           value={text}
           placeholder={`Review ${this.props.name}...`}
-          onChange={e => this.handleChange(e.target)}
+          onChange={e => this.handleChange(e.target.name, e.target.value)}
         />
       </Form>
     );
