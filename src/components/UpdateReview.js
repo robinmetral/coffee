@@ -1,10 +1,10 @@
 import React, { Component } from "react";
-import { Form, TextInput, TextArea } from "grommet";
+import { Form, TextArea } from "grommet";
 import RatingInput from "./RatingInput";
 
 class UpdateReview extends Component {
-  handleChange = e => {
-    const { name, type, value } = e.target;
+  handleChange = target => {
+    const { name, type, value } = target;
     // convert to number if necessary
     const val = type === "number" ? parseFloat(value) : value;
     // update review
@@ -17,20 +17,13 @@ class UpdateReview extends Component {
     return (
       <Form onSubmit={this.handleSubmit}>
         {/* TODO make a star rating input */}
-        <RatingInput rating={rating} />
-        <TextInput
-          type="number"
-          name="rating"
-          value={rating}
-          placeholder={`Rate ${this.props.name}`}
-          onChange={this.handleChange}
-        />
+        <RatingInput rating={rating} handleChange={this.handleChange} />
         <TextArea
           resize="vertical"
           name="text"
           value={text}
           placeholder={`Review ${this.props.name}...`}
-          onChange={this.handleChange}
+          onChange={e => this.handleChange(e.target)}
         />
       </Form>
     );
