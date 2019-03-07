@@ -99,29 +99,13 @@ class App extends Component {
     this.setState({ reviews });
   };
 
-  // TODO remove security, done in Firebase
   updateReview = (cafeId, review) => {
     // take a copy of state
-    const cafes = { ...this.state.cafes };
-    // check that this is the current user's own review
-    if (
-      cafes[cafeId].properties.reviews[review.createdAt].user.uid ===
-      this.state.user.uid
-    ) {
-      // overwrite review
-      cafes[cafeId].properties.reviews[review.createdAt] = review;
-      // setstate
-      this.setState({ cafes });
-    }
-    // else it's not the current user's review
-    else {
-      // throw error
-      console.log(
-        `${this.state.user.displayName} hasn't written this review, ${
-          cafes[cafeId].properties.reviews[review.createdAt].user.displayName
-        } has.`
-      );
-    }
+    const reviews = { ...this.state.reviews };
+    // overwrite review
+    reviews[this.state.user.uid][cafeId] = review;
+    // setstate
+    this.setState({ reviews });
   };
 
   // TODO remove security, done in Firebase
