@@ -37,6 +37,7 @@ class Reviews extends Component {
           </Box>
         </Heading>
 
+        {/* TODO doesn't work if there are no reviews */}
         {(!reviews ||
           (this.props.user &&
             Object.keys(reviews).find(uid => uid === this.props.user.uid) ===
