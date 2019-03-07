@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Layer, Box, Heading } from "grommet";
+import { Layer, Box, Heading, Button } from "grommet";
+import { Close } from "grommet-icons";
 import { ThemeContext } from "../themecontext/ThemeContext";
 import Login from "./Login";
 import Logout from "./Logout";
@@ -23,18 +24,18 @@ class User extends Component {
           onClickOutside={() => this.props.toggleUser()}
         >
           <Box pad="medium" gap="small" width="medium">
-            <Heading level={3} margin="none">
-              {this.props.user
-                ? `Hey ${this.props.user.displayName}!`
-                : `Join the movement`}
-            </Heading>
-            {props.user ? (
-              <Logout
-                displayName={props.user.displayName}
-                logout={props.logout}
-              />
+            <Box direction="row" align="center" justify="between">
+              <Heading level={3} margin="none">
+                {this.props.user
+                  ? `Hey ${this.props.user.displayName}!`
+                  : `Join the movement`}
+              </Heading>
+              <Button icon={<Close />} onClick={this.props.toggleUser} />
+            </Box>
+            {this.props.user ? (
+              <Logout logout={this.props.logout} />
             ) : (
-              <Login login={props.login} />
+              <Login login={this.props.login} />
             )}
           </Box>
         </Layer>
