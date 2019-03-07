@@ -22,7 +22,9 @@ class User extends Component {
         >
           <Box pad="medium" gap="small" width="medium">
             <Heading level={3} margin="none">
-              Add a cafe
+              {this.props.user
+                ? `Hey ${this.props.user.displayName}!`
+                : `Join the movement`}
             </Heading>
             <Auth
               user={this.props.user}
