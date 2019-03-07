@@ -70,38 +70,20 @@ class App extends Component {
     this.setState({ panelOpen });
   };
 
-  // TODO remove security, done in Firebase
   createCafe = async cafe => {
     // take a copy of state
     const cafes = { ...this.state.cafes };
-    // check if user is logged in
-    if (!this.state.user) {
-      // no user logged in, throw error
-      console.log(`Log in to add a new cafe.`);
-    }
-    // check if cafe already exists
-    else if (
-      Object.values(cafes).find(
-        node => node.properties.nodeId === cafe.properties.nodeId
-      )
-    ) {
-      // throw error
-      console.log(`${cafe.properties.name} already exists!`);
-    }
-    // user logged in and cafe doesn't exist yet
-    else {
-      // add current user to cafe object
-      cafe.properties.user = this.state.user;
-      // add cafe
-      cafes[cafe.properties.createdAt] = cafe;
-      // use a setState callback to fire before re-rendering
-      // https://reactjs.org/docs/react-component.html#setstate
-      this.setState({ cafes }, () => {
-        console.log(`Added ${cafe.properties.name} to State.`);
-      });
-      // open new cafe in panel
-      this.changeActive(cafe.properties.createdAt);
-    }
+    // add current user to cafe object
+    cafe.properties.user = this.state.user;
+    // add cafe
+    cafes[cafe.properties.createdAt] = cafe;
+    // use a setState callback to fire before re-rendering
+    // https://reactjs.org/docs/react-component.html#setstate
+    this.setState({ cafes }, () => {
+      console.log(`Added ${cafe.properties.name} to State.`);
+    });
+    // open new cafe in panel
+    this.changeActive(cafe.properties.createdAt);
   };
 
   // TODO remove security, done in Firebase
