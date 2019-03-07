@@ -7,9 +7,18 @@ class RatingInput extends Component {
     rating: this.props.rating
   };
   render() {
+    const { rating, size } = this.props;
     return (
       <Box direction="row">
-        <Star />
+        {[...Array(5)].map((star, key) => {
+          return (
+            <Star
+              size={size || "medium"}
+              color={key < rating ? "plain" : "status-unknown"}
+              key={key}
+            />
+          );
+        })}
       </Box>
     );
   }

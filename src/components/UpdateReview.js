@@ -17,7 +17,7 @@ class UpdateReview extends Component {
     return (
       <Form onSubmit={this.handleSubmit}>
         {/* TODO make a star rating input */}
-        <RatingInput />
+        <RatingInput rating={rating} />
         <TextInput
           type="number"
           name="rating"
