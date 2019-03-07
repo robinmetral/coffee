@@ -6,6 +6,7 @@ import Rating from "./Rating";
 const Review = props => {
   const { createdAt, rating, text, user } = props.review;
   const date = formatDate(createdAt);
+  // TODO display current user as "You" and highlight color
   return (
     <Box>
       <Box direction="row" gap="xsmall" align="center">
