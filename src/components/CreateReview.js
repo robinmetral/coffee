@@ -1,15 +1,15 @@
 import React, { Component } from "react";
-import { Form, TextInput, TextArea, Button } from "grommet";
+import { Form, TextArea, Button } from "grommet";
 import { Chat } from "grommet-icons";
+import RatingInput from "./RatingInput";
 
 class CreateReview extends Component {
   state = {
-    rating: "",
+    rating: 0,
     text: ""
   };
 
-  handleChange = e => {
-    const { name, value } = e.target;
+  handleChange = (name, value) => {
     this.setState({ [name]: value });
   };
 
@@ -40,19 +40,13 @@ class CreateReview extends Component {
     const { rating, text } = this.state;
     return (
       <Form onSubmit={this.handleSubmit}>
-        <TextInput
-          type="number"
-          name="rating"
-          value={rating}
-          placeholder={`Rate ${this.props.name}`}
-          onChange={this.handleChange}
-        />
+        <RatingInput rating={rating} handleChange={this.handleChange} />
         <TextArea
           resize="vertical"
           name="text"
           value={text}
           placeholder={`Review ${this.props.name}...`}
-          onChange={this.handleChange}
+          onChange={e => this.handleChange(e.target.name, e.target.value)}
         />
         <Button icon={<Chat />} type="submit" primary label="Submit" />
       </Form>
