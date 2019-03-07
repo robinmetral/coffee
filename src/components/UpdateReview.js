@@ -11,13 +11,6 @@ class UpdateReview extends Component {
     this.props.updateReview(this.props.id, review);
   };
 
-  handleDelete = () => {
-    // call delete method
-    this.props.deleteReview(this.props.id, this.props.review.createdAt);
-    // close form
-    this.props.closeForm();
-  };
-
   render() {
     const { rating, text } = this.props.review;
     return (
