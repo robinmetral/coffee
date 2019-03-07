@@ -4,6 +4,7 @@ import { ThemeContext } from "../themecontext/ThemeContext";
 import Login from "./Login";
 import Logout from "./Logout";
 
+// TODO make a SFC
 class User extends Component {
   render() {
     return (
