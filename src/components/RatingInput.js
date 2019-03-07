@@ -3,18 +3,14 @@ import { Box, Button } from "grommet";
 import { Star } from "grommet-icons";
 
 class RatingInput extends Component {
-  state = {
-    rating: this.props.rating
-  };
-
   handleClick = key => {
     // increment to have the right rating
     key++;
-    this.setState({ rating: key });
+    this.props.handleChange(key);
   };
 
   render() {
-    const { rating } = this.state;
+    const { rating } = this.props;
     return (
       <Box direction="row">
         {[...Array(5)].map((star, key) => {
