@@ -1,18 +1,9 @@
 import React, { Component } from "react";
-import { Box, Text, Paragraph, Heading, Button, Collapsible } from "grommet";
-import { Edit, Close, Trash } from "grommet-icons";
+import { Box, Text, Paragraph, Heading, Button } from "grommet";
+import { Edit, Trash } from "grommet-icons";
 import { formatDate } from "../helpers";
 import Rating from "./Rating";
 import UpdateReview from "./UpdateReview";
-
-const ReviewHeading = props => {
-  const you = props.user && props.user.uid === props.review.user.uid;
-  return (
-    <Heading margin="none" color={you ? "brand" : ""} level={4}>
-      {you ? `You` : props.review.user.displayName}
-    </Heading>
-  );
-};
 
 class Review extends Component {
   state = {
@@ -27,40 +18,36 @@ class Review extends Component {
   };
 
   render() {
-    const { review, id, user, open, toggleForm, updateReview } = this.props;
+    const { review, id, user, updateReview } = this.props;
     const date = formatDate(review.createdAt);
+    const you = user && user.uid === review.user.uid;
     return (
       <Box pad="small" border round="small">
         {this.state.edit ? (
-          <>
-            <Box direction="row" margin={{ top: "small" }}>
-              <Button
-                icon={open ? <Close /> : <Edit />}
-                label={open ? "Close" : "Edit"}
-                onClick={toggleForm}
-              />
-              <Button
-                icon={<Trash />}
-                label="Delete"
-                color="status-critical"
-                onClick={() => this.handleDelete()}
-              />
-            </Box>
-            <Collapsible open={open}>
-              <Box pad="xsmall">
-                <UpdateReview
-                  review={review}
-                  id={id}
-                  updateReview={updateReview}
-                />
-              </Box>
-            </Collapsible>
-          </>
+          <Box pad="xsmall">
+            <UpdateReview review={review} id={id} updateReview={updateReview} />
+          </Box>
         ) : (
           <>
-            <Box direction="row" gap="xsmall" align="center">
-              <ReviewHeading user={user} review={review} />
-              <Rating rating={review.rating} size="medium" />
+            <Box direction="row">
+              <Box>
+                <Heading margin="none" color={you ? "brand" : ""} level={4}>
+                  {you ? `You` : review.user.displayName}
+                </Heading>
+                <Rating rating={review.rating} size="medium" />
+              </Box>
+              <Box direction="row" margin={{ left: "auto" }}>
+                <Button
+                  margin="none"
+                  icon={<Edit />}
+                  onClick={() => this.setState({ edit: true })}
+                />
+                <Button
+                  margin="none"
+                  icon={<Trash />}
+                  onClick={this.handleDelete}
+                />
+              </Box>
             </Box>
             <Text size="small">{date}</Text>
             <Paragraph margin={{ top: "small", bottom: "none" }}>
