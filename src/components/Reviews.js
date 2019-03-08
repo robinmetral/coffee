@@ -21,8 +21,18 @@ class Reviews extends Component {
   };
 
   render() {
+    // 1. reviews is an object {uid: {cafeId: {rating: 5}}}
     const { cafe, reviews } = this.props;
     const { open } = this.state;
+    return null;
+
+    return (
+      <>
+        {reviews.map(review => (
+          <>{console.log(review)}</>
+        ))}
+      </>
+    );
     return (
       <Box flex={false}>
         <Heading level="2" size="small">
