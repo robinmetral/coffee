@@ -66,6 +66,7 @@ class Reviews extends Component {
 
         {reviews && (
           <Box>
+            {/* TODO order by timestamp */}
             {Object.keys(reviews).map((id, key) => (
               <Review
                 review={reviews[id]}

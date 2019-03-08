@@ -128,6 +128,9 @@ class App extends Component {
     this.setState({
       user: { uid, displayName }
     });
+    // TODO deal with users without displayName (username?)
+    // TODO render loading indicator
+    // TODO close Layer when login successful
   };
 
   login = provider => {
