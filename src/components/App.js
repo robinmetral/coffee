@@ -121,11 +121,13 @@ class App extends Component {
   authHandler = authData => {
     // destructure authData
     const { uid, displayName } = authData.user;
+    /*
     // sync reviews with Firebase
     this.ref = base.syncState(`reviews`, {
       context: this,
       state: `reviews`
     });
+    */
     // set logged in user to state
     this.setState({
       user: { uid, displayName }
@@ -156,6 +158,8 @@ class App extends Component {
 
   render() {
     // TODO filter reviews here
+    const reviews = this.state.reviews;
+    console.log(reviews);
     return (
       <Layout>
         <Map cafes={this.state.cafes} handleClick={this.handleClick} />
