@@ -48,21 +48,23 @@ class Review extends Component {
                 </Heading>
                 <Rating rating={review.rating} size="medium" />
               </Box>
-              <Box direction="row" margin={{ left: "auto" }}>
-                {/* TODO why doesn't plain override global Button styles? */}
-                <Button
-                  plain
-                  icon={<Edit />}
-                  onClick={this.toggleEdit}
-                  title="Edit"
-                />
-                <Button
-                  plain
-                  icon={<Trash />}
-                  onClick={this.handleDelete}
-                  title="Delete"
-                />
-              </Box>
+              {you && (
+                <Box direction="row" margin={{ left: "auto" }}>
+                  {/* TODO why doesn't plain override global Button styles? */}
+                  <Button
+                    plain
+                    icon={<Edit />}
+                    onClick={this.toggleEdit}
+                    title="Edit"
+                  />
+                  <Button
+                    plain
+                    icon={<Trash />}
+                    onClick={this.handleDelete}
+                    title="Delete"
+                  />
+                </Box>
+              )}
             </Box>
             <Text size="small">{date}</Text>
             <Paragraph margin={{ top: "small", bottom: "none" }}>
