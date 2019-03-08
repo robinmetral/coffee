@@ -94,5 +94,5 @@ export const averageRating = reviews => {
   // round to .1
   const rounded = Math.round(average * 10) / 10;
   // TODO fix averageRating
-  return 5;
+  return rounded;
 };
