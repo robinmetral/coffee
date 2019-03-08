@@ -46,7 +46,7 @@ class Reviews extends Component {
           <>
             <Button
               icon={open ? <Close /> : <Edit />}
-              label={open ? `Cancel` : `Review ${cafe.properties.name}`}
+              label={open ? `Cancel` : `Write a review`}
               onClick={this.toggleForm}
             />
             <Collapsible open={open}>
