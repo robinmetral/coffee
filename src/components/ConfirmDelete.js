@@ -24,10 +24,7 @@ const ConfirmDelete = props => (
         <Heading level={3} margin="none">
           Whoops...
         </Heading>
-        <Text>
-          You're about to delete {props.toBeDeleted} - just making sure this was
-          the plan.
-        </Text>
+        <Text>{props.message}</Text>
         <Box direction="row" justify="center" gap="small">
           <Button
             icon={<Close />}

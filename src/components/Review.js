@@ -84,7 +84,7 @@ class Review extends Component {
           <ConfirmDelete
             closeConfirmDelete={this.closeConfirmDelete}
             handleDelete={this.handleDelete}
-            toBeDeleted="your review"
+            message="You're about to delete your review - we just want to make sure this was the plan."
           />
         )}
       </Box>
