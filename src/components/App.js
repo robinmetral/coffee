@@ -129,7 +129,7 @@ class App extends Component {
       user: { uid, displayName }
     });
     // TODO deal with users without displayName (username?)
-    // TODO render loading indicator
+    // TODO render loading indicator while authentifying
     // TODO close Layer when login successful
   };
 
