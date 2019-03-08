@@ -157,16 +157,13 @@ class App extends Component {
   }
 
   render() {
-    // TODO filter reviews here
-    const reviews = this.state.reviews;
-    console.log(reviews);
     return (
       <Layout>
         <Map cafes={this.state.cafes} handleClick={this.handleClick} />
         <Panel
           user={this.state.user}
           cafe={this.state.cafes[this.state.active]}
-          reviews={this.state.reviews}
+          reviews={this.state.reviews[this.state.active]}
           createCafe={this.createCafe}
           createReview={this.createReview}
           updateReview={this.updateReview}
