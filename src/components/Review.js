@@ -25,6 +25,7 @@ class Review extends Component {
 
   render() {
     const { review, id, user, updateReview } = this.props;
+    if (!review) return null;
     const date = formatDate(review.createdAt);
     const you = user && user.uid === review.user.uid;
     return (
