@@ -3,11 +3,11 @@ import { Box, Heading as GrommetHeading, Button } from "grommet";
 import { Close, User, Add, Login } from "grommet-icons";
 
 const Heading = props => (
-  <Box direction="row" align="center" justify="between">
+  <Box direction="row" align="center" justify="between" flex={false}>
     <GrommetHeading size="small" margin={{ vertical: "small" }}>
       {props.title}
     </GrommetHeading>
-    <Box direction="row">
+    <Box direction="row" flex={false}>
       {props.user ? (
         <Button
           icon={<User />}
