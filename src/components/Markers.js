@@ -16,21 +16,21 @@ const CoffeeBean = new L.Icon({
 
 class Markers extends Component {
   render() {
-    // if the request has loaded
+    // wait for the data to load
     if (Object.getOwnPropertyNames(this.props.cafes).length > 0) {
-      const { cafes } = this.props;
+      const { cafes, reviews } = this.props;
       return (
         <>
-          {Object.keys(cafes).map(id => (
+          {Object.keys(cafes).map(cafeId => (
             <Marker
-              key={id}
-              position={cafes[id].geometry.coordinates}
+              key={cafeId}
+              position={cafes[cafeId].geometry.coordinates}
               icon={CoffeeBean}
               onClick={this.props.handleClick}
             >
               <Tooltip
-                name={cafes[id].properties.name}
-                rating={averageRating(cafes[id].properties.reviews)}
+                name={cafes[cafeId].properties.name}
+                rating={averageRating(reviews[cafeId])}
               />
             </Marker>
           ))}

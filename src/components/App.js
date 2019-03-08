@@ -154,7 +154,11 @@ class App extends Component {
   render() {
     return (
       <Layout>
-        <Map cafes={this.state.cafes} handleClick={this.handleClick} />
+        <Map
+          cafes={this.state.cafes}
+          reviews={this.state.reviews}
+          handleClick={this.handleClick}
+        />
         <Panel
           user={this.state.user}
           cafe={this.state.cafes[this.state.active]}
