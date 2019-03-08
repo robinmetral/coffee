@@ -40,8 +40,9 @@ class Reviews extends Component {
 
         {(!reviews ||
           (this.props.user &&
-            Object.keys(reviews).find(uid => uid === this.props.user.uid) ===
-              undefined)) && (
+            Object.values(reviews).some(
+              val => val.user.uid === this.props.user.uid
+            ) === false)) && (
           <>
             <Button
               icon={open ? <Close /> : <Edit />}
