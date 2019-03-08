@@ -51,6 +51,7 @@ class Reviews extends Component {
             />
             <Collapsible open={open}>
               <Box pad="xsmall">
+                {/* TODO message when user not logged in */}
                 <CreateReview
                   user={this.props.user}
                   name={cafe.properties.name}
