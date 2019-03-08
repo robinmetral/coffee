@@ -73,8 +73,6 @@ class App extends Component {
   createCafe = cafe => {
     // take a copy of state
     const cafes = { ...this.state.cafes };
-    // add current user to cafe object
-    cafe.properties.user = this.state.user;
     // add cafe
     cafes[cafe.properties.createdAt] = cafe;
     // use a setState callback to fire before re-rendering
