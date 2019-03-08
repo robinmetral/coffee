@@ -75,6 +75,7 @@ class App extends Component {
     const cafes = { ...this.state.cafes };
     // add cafe
     cafes[cafe.properties.createdAt] = cafe;
+    // TODO post to Firebase since I'm already syncing reviews?
     // use a setState callback to fire before re-rendering
     // https://reactjs.org/docs/react-component.html#setstate
     this.setState({ cafes }, () => {
