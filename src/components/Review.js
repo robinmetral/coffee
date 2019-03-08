@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Layer, Box, Text, Paragraph, Heading, Button } from "grommet";
 import { ThemeContext } from "grommet/contexts";
-import { Edit, Trash } from "grommet-icons";
+import { Edit, Trash, Close } from "grommet-icons";
 import { formatDate } from "../helpers";
 import Rating from "./Rating";
 import UpdateReview from "./UpdateReview";
@@ -23,6 +23,8 @@ class Review extends Component {
     this.props.deleteReview(this.props.id, this.props.review.createdAt);
     // close form
     this.props.closeForm();
+    // close modal
+    this.setState({ confirmDelete: false });
   };
 
   render() {
@@ -94,19 +96,30 @@ class Review extends Component {
             >
               <Box pad="medium" gap="small" width="medium">
                 <Heading level={3} margin="none">
-                  Whoops
+                  Whoops...
                 </Heading>
-                <Text>Are you sure you want to delete?</Text>
-                <Button
-                  label={
-                    <Text color="white">
-                      <strong>Delete</strong>
-                    </Text>
-                  }
-                  onClick={this.handleDelete}
-                  primary
-                  color="status-critical"
-                />
+                <Text>
+                  You're about to delete your review - just making sure this was
+                  the plan.
+                </Text>
+                <Box direction="row" justify="center" gap="small">
+                  <Button
+                    icon={<Close />}
+                    label="Cancel"
+                    onClick={() => this.setState({ confirmDelete: false })}
+                  />
+                  <Button
+                    icon={<Trash />}
+                    label={
+                      <Text color="white">
+                        <strong>Delete</strong>
+                      </Text>
+                    }
+                    onClick={this.handleDelete}
+                    primary
+                    color="status-critical"
+                  />
+                </Box>
               </Box>
             </Layer>
           </ThemeContext.Extend>
