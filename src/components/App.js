@@ -104,11 +104,11 @@ class App extends Component {
     this.setState({ reviews });
   };
 
-  deleteReview = cafeId => {
+  deleteReview = (cafeId, reviewId) => {
     // take a copy of state
     const reviews = { ...this.state.reviews };
     // set review as null to delete from Firebase
-    reviews[this.state.user.uid][cafeId] = null;
+    reviews[cafeId][reviewId] = null;
     // setstate
     this.setState({ reviews });
   };
