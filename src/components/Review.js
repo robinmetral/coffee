@@ -56,20 +56,17 @@ class Review extends Component {
                 <Rating rating={review.rating} size="medium" />
               </Box>
               {you && (
-                <Box direction="row" margin={{ left: "auto" }}>
+                <Box direction="row" margin={{ left: "auto" }} gap="small">
                   {/* TODO why doesn't plain override global Button styles? */}
+                  <Button onClick={this.toggleEdit} title="Edit">
+                    <Edit />
+                  </Button>
                   <Button
-                    plain
-                    icon={<Edit />}
-                    onClick={this.toggleEdit}
-                    title="Edit"
-                  />
-                  <Button
-                    plain
-                    icon={<Trash />}
                     onClick={() => this.setState({ confirmDelete: true })}
                     title="Delete"
-                  />
+                  >
+                    <Trash />
+                  </Button>
                 </Box>
               )}
             </Box>
