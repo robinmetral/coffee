@@ -5,6 +5,7 @@ import { Edit, Trash, Close } from "grommet-icons";
 import { formatDate } from "../helpers";
 import Rating from "./Rating";
 import UpdateReview from "./UpdateReview";
+import ConfirmDelete from "./ConfirmDelete";
 
 class Review extends Component {
   state = {
@@ -15,6 +16,10 @@ class Review extends Component {
   toggleEdit = () => {
     // toggle edit status
     this.setState({ edit: !this.state.edit });
+  };
+
+  closeConfirmDelete = () => {
+    this.setState({ confirmDelete: false });
   };
 
   // TODO confirm user wants to delete
@@ -78,51 +83,11 @@ class Review extends Component {
         )}
 
         {this.state.confirmDelete && (
-          <ThemeContext.Extend
-            value={{
-              layer: {
-                container: {
-                  zIndex: "1100"
-                },
-                zIndex: "1100"
-              }
-            }}
-          >
-            <Layer
-              position="center"
-              modal
-              onEsc={() => this.setState({ confirmDelete: false })}
-              onClickOutside={() => this.setState({ confirmDelete: false })}
-            >
-              <Box pad="medium" gap="small" width="medium">
-                <Heading level={3} margin="none">
-                  Whoops...
-                </Heading>
-                <Text>
-                  You're about to delete your review - just making sure this was
-                  the plan.
-                </Text>
-                <Box direction="row" justify="center" gap="small">
-                  <Button
-                    icon={<Close />}
-                    label="Cancel"
-                    onClick={() => this.setState({ confirmDelete: false })}
-                  />
-                  <Button
-                    icon={<Trash />}
-                    label={
-                      <Text color="white">
-                        <strong>Delete</strong>
-                      </Text>
-                    }
-                    onClick={this.handleDelete}
-                    primary
-                    color="status-critical"
-                  />
-                </Box>
-              </Box>
-            </Layer>
-          </ThemeContext.Extend>
+          <ConfirmDelete
+            closeConfirmDelete={this.closeConfirmDelete}
+            handleDelete={this.handleDelete}
+            toBeDeleted="your review"
+          />
         )}
       </Box>
     );
