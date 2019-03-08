@@ -64,9 +64,9 @@ class Reviews extends Component {
 
         {reviews && (
           <Box>
-            {Object.keys(reviews).map((uid, key) => (
+            {Object.keys(reviews).map((id, key) => (
               <Review
-                review={reviews[uid][cafe.properties.createdAt]}
+                review={reviews[id]}
                 id={cafe.properties.createdAt}
                 user={this.props.user}
                 key={key}
