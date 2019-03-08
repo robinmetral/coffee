@@ -4,27 +4,25 @@ import { Close, User, Add, Login } from "grommet-icons";
 
 const Heading = props => (
   <Box direction="row" align="center" justify="between" flex={false}>
-    <GrommetHeading size="small" margin={{ vertical: "small" }}>
-      {props.title}
-    </GrommetHeading>
-    <Box direction="row" flex={false}>
+    <GrommetHeading size="small">{props.title}</GrommetHeading>
+    <Box direction="row" flex={false} gap="xsmall" margin={{ left: "xsmall" }}>
       {props.user ? (
-        <Button
-          icon={<User />}
-          onClick={props.toggleUser}
-          title={props.user.displayName}
-        />
+        <Button onClick={props.toggleUser} title={props.user.displayName}>
+          <User />
+        </Button>
       ) : (
-        <Button icon={<Login />} onClick={props.toggleUser} title="Log in" />
+        <Button onClick={props.toggleUser} title="Log in">
+          <Login />
+        </Button>
       )}
       {props.user && (
-        <Button
-          icon={<Add />}
-          onClick={props.toggleCreateCafe}
-          title="Add a new cafe"
-        />
+        <Button onClick={props.toggleCreateCafe} title="Add a new cafe">
+          <Add />
+        </Button>
       )}
-      <Button icon={<Close />} onClick={props.togglePanel} title="Close" />
+      <Button onClick={props.togglePanel} title="Close">
+        <Close />
+      </Button>
     </Box>
   </Box>
 );
