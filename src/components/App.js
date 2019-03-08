@@ -88,12 +88,10 @@ class App extends Component {
   createReview = (cafeId, review) => {
     // take a copy of state
     const reviews = { ...this.state.reviews };
-    // take a copy of reviews by current user or initialize
-    const userReviews = { ...reviews[this.state.user.uid] } || {};
+    // check that reviews exist or initialize
+    reviews[cafeId] = { ...reviews[cafeId] } || {};
     // add review to userReviews
-    userReviews[cafeId] = review;
-    // add userReviews to reviews
-    reviews[this.state.user.uid] = userReviews;
+    reviews[cafeId][review.createdAt] = review;
     // setstate
     this.setState({ reviews });
   };
