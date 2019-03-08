@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { Layer, Box, Text, Paragraph, Heading, Button } from "grommet";
-import { ThemeContext } from "grommet/contexts";
-import { Edit, Trash, Close } from "grommet-icons";
+import { Box, Text, Paragraph, Heading, Button } from "grommet";
+import { Edit, Trash } from "grommet-icons";
 import { formatDate } from "../helpers";
 import Rating from "./Rating";
 import UpdateReview from "./UpdateReview";
