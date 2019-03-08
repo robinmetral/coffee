@@ -99,7 +99,7 @@ class App extends Component {
     // take a copy of state
     const reviews = { ...this.state.reviews };
     // overwrite review
-    reviews[this.state.user.uid][cafeId] = review;
+    reviews[cafeId][review.createdAt] = review;
     // setstate
     this.setState({ reviews });
   };
