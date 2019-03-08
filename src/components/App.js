@@ -77,6 +77,7 @@ class App extends Component {
     cafes[cafe.properties.createdAt] = cafe;
     // use a setState callback to fire before re-rendering
     // https://reactjs.org/docs/react-component.html#setstate
+    // TODO how to sync with Firebase?
     this.setState({ cafes }, () => {
       console.log(`Added ${cafe.properties.name} to State.`);
     });
