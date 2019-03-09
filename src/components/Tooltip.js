@@ -1,7 +1,6 @@
 import React from "react";
 import { Tooltip as LeafletTooltip } from "react-leaflet";
 import styled from "styled-components";
-
 import Rating from "./Rating";
 
 const Name = styled.span`

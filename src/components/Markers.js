@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Marker } from "react-leaflet";
 import L from "leaflet";
-
+import { averageRating } from "../helpers";
 import Tooltip from "./Tooltip";
 
 const CoffeeBean = new L.Icon({
@@ -16,19 +16,22 @@ const CoffeeBean = new L.Icon({
 
 class Markers extends Component {
   render() {
-    // if the request has loaded
+    // wait for the data to load
     if (Object.getOwnPropertyNames(this.props.cafes).length > 0) {
-      const { cafes } = this.props;
+      const { cafes, reviews } = this.props;
       return (
         <>
-          {Object.keys(cafes).map(osm => (
+          {Object.keys(cafes).map(cafeId => (
             <Marker
-              key={osm}
-              position={cafes[osm].coordinates}
+              key={cafeId}
+              position={cafes[cafeId].geometry.coordinates}
               icon={CoffeeBean}
               onClick={this.props.handleClick}
             >
-              <Tooltip name={cafes[osm].name} rating={cafes[osm].rating} />
+              <Tooltip
+                name={cafes[cafeId].properties.name}
+                rating={averageRating(reviews[cafeId])}
+              />
             </Marker>
           ))}
         </>

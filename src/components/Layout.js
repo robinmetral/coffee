@@ -1,16 +1,10 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
-
-require("typeface-montserrat");
+import { Grommet } from "grommet";
+// TODO build theme
+import { grommet } from "grommet/themes";
 
 const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    font-family: "Montserrat", sans-serif;
-  }
-
   // Leaflet styles
   @import url("https://unpkg.com/leaflet@1.4.0/dist/leaflet.css");
   .leaflet-container {
@@ -20,10 +14,10 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const Layout = props => (
-  <>
+  <Grommet theme={grommet} full={true}>
     <GlobalStyle />
-    <src>{props.children}</src>
-  </>
+    {props.children}
+  </Grommet>
 );
 
 export default Layout;

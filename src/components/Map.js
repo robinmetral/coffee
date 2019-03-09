@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Map as LeafletMap, TileLayer } from "react-leaflet";
-
 import Markers from "./Markers";
 
 class Map extends Component {
@@ -17,6 +16,7 @@ class Map extends Component {
         />
         <Markers
           cafes={this.props.cafes}
+          reviews={this.props.reviews}
           handleClick={this.props.handleClick}
         />
       </LeafletMap>

@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import firebase from "firebase/app";
 import "firebase/auth";
-
 import base, { firebaseApp } from "../base";
 import Layout from "./Layout";
-import Helmet from "./Helmet";
 import Map from "./Map";
 import Panel from "./Panel";
 
@@ -12,139 +10,131 @@ class App extends Component {
   // initialize state
   state = {
     cafes: {},
-    clicked: "",
-    name: "",
-    panel: "closed",
-    uid: null,
-    owner: null
+    reviews: {},
+    active: undefined,
+    user: null,
+    panelOpen: true
   };
 
   componentDidMount() {
-    // fetch cafes from firebase
-    base
-      .fetch(`cafes`, {
-        context: this
-      })
-      .then(cafes => {
-        this.setState({ cafes });
-      })
-      .catch(error => {
-        console.log("Error fetching cafes from Firebase");
-      });
-
-    // check if logged in
+    // keep user logged in on reload
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.authHandler({ user });
       }
     });
-  }
 
-  // remove binding when unmounting to avoid memory leak
-  componentWillUnmount() {
-    base.removeBinding(this.ref);
+    // fetch data from firebase
+    base
+      .fetch(`/`, {
+        context: this
+      })
+      .then(data => {
+        this.setState({
+          cafes: data.cafes,
+          reviews: data.reviews
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 
   handleClick = event => {
     // find cafe is state that was clicked based on coordinates
     const { cafes } = this.state;
-    const osm = Object.keys(cafes).find(
-      osm =>
-        cafes[osm].coordinates[0] === event.latlng.lat &&
-        cafes[osm].coordinates[1] === event.latlng.lng
+    const id = Object.keys(cafes).find(
+      id =>
+        cafes[id].geometry.coordinates[0] === event.latlng.lat &&
+        cafes[id].geometry.coordinates[1] === event.latlng.lng
     );
-    // if no cafe was clicked close the panel
-    if (!osm) {
-      this.setState({
-        clicked: "",
-        name: "",
-        panel: "closed"
-      });
+    if (id) {
+      this.changeActive(id);
     } else {
-      // get clicked cafe's name
-      const name = cafes[osm].name;
-      // set clicked cafe id, its name, and panel status in state
-      this.setState({
-        clicked: osm,
-        name: name,
-        panel: "open"
-      });
+      // toggle panel
+      this.setState({ active: undefined });
+      this.togglePanel();
     }
   };
 
-  togglePanel = () => {
-    // take the opposite of current value
-    const status = this.state.panel === "closed" ? "open" : "closed";
+  changeActive = id => {
+    // put active cafe id in state and open panel
     this.setState({
-      panel: status
+      active: id,
+      panelOpen: true
     });
   };
 
-  addCafe = async cafe => {
-    // fetch OSM data vie an Overpass API query
-    let response = await fetch(
-      `https://www.overpass-api.de/api/interpreter?data=[out:json];node(${
-        cafe.osm
-      });out;`
-    );
-    let json = await response.json();
-    // destructure
-    let node = json.elements[0];
-    let { tags } = node;
-    // add fetched values to cafe object
-    cafe.coordinates = [node.lat, node.lon];
-    cafe.hours = tags.opening_hours ? tags.opening_hours : "";
-    cafe.url = tags.website ? tags.website : tags.facebook ? tags.facebook : "";
-    // add current date to cafe
-    cafe.date = Date.now();
-    // convert rating value to an integer
-    cafe.rating = Number(cafe.rating);
+  togglePanel = () => {
+    const panelOpen = this.state.panelOpen ? false : true;
+    this.setState({ panelOpen });
+  };
+
+  createCafe = cafe => {
     // take a copy of state
     const cafes = { ...this.state.cafes };
-    // add new cafe
-    cafes[cafe.osm] = cafe;
+    // add cafe
+    cafes[cafe.properties.createdAt] = cafe;
+    // TODO post to Firebase since I'm already syncing reviews?
     // use a setState callback to fire before re-rendering
     // https://reactjs.org/docs/react-component.html#setstate
     this.setState({ cafes }, () => {
-      console.log(`Successfully added ${cafe.name} to State.`);
+      console.log(`Added ${cafe.properties.name} to State.`);
     });
+    // open new cafe in panel
+    this.changeActive(cafe.properties.createdAt);
   };
 
-  updateCafe = updatedCafe => {
+  createReview = (cafeId, review) => {
     // take a copy of state
-    const cafes = { ...this.state.cafes };
-    // update single cafe object
-    cafes[updatedCafe.osm] = updatedCafe; // overriding
-    // set state
-    this.setState({ cafes });
+    const reviews = { ...this.state.reviews };
+    // check that reviews exist or initialize
+    reviews[cafeId] = { ...reviews[cafeId] } || {};
+    // add review to userReviews
+    reviews[cafeId][review.createdAt] = review;
+    // setstate
+    this.setState({ reviews });
   };
 
-  deleteCafe = osm => {
+  updateReview = (cafeId, review) => {
     // take a copy of state
-    const cafes = { ...this.state.cafes };
-    // remove single cafe object
-    cafes[osm] = null; // need to set to null to work with Firebase
-    // set state
-    this.setState({ cafes });
+    const reviews = { ...this.state.reviews };
+    // overwrite review
+    reviews[cafeId][review.createdAt] = review;
+    // setstate
+    this.setState({ reviews });
   };
 
-  authHandler = async authData => {
-    // fetch firebase data
-    const data = await base.fetch(`/`, { context: this });
+  deleteReview = (cafeId, reviewId) => {
+    // take a copy of state
+    const reviews = { ...this.state.reviews };
+    // set review as null to delete from Firebase
+    reviews[cafeId][reviewId] = null;
+    // setstate
+    this.setState({ reviews });
+  };
+
+  // TODO deal with syncing cafes with Firebase
+  authHandler = authData => {
+    // destructure authData
+    const { uid, displayName } = authData.user;
+    // sync reviews with Firebase
+    // TODO fix firebase warnings
+    this.ref = base.syncState(`reviews`, {
+      context: this,
+      state: `reviews`
+    });
     // set logged in user to state
     this.setState({
-      uid: authData.user.uid,
-      owner: data.owner
+      user: { uid, displayName }
     });
-    // sync cafes in state
-    this.ref = base.syncState(`cafes`, {
-      context: this,
-      state: "cafes"
-    });
+    // TODO deal with users without displayName (username?)
+    // TODO render loading indicator while authentifying
+    // TODO close Layer when login successful
   };
 
-  login = () => {
-    const authProvider = new firebase.auth.GithubAuthProvider();
+  login = provider => {
+    const authProvider = new firebase.auth[`${provider}AuthProvider`]();
     firebaseApp
       .auth()
       .signInWithPopup(authProvider)
@@ -154,29 +144,36 @@ class App extends Component {
   logout = async () => {
     // log out on firebase
     await firebase.auth().signOut();
-    // remove binding of cafes in state
-    await base.removeBinding(this.ref);
-    // remove uid from state
+    // remove user from state
     this.setState({
-      uid: null
+      user: null
     });
   };
+
+  componentWillUnmount() {
+    // remove reviews syncState binding
+    base.removeBinding(this.ref);
+  }
 
   render() {
     return (
       <Layout>
-        <Helmet name={this.state.name} />
-        <Map cafes={this.state.cafes} handleClick={this.handleClick} />
+        <Map
+          cafes={this.state.cafes}
+          reviews={this.state.reviews}
+          handleClick={this.handleClick}
+        />
         <Panel
-          uid={this.state.uid}
-          owner={this.state.owner}
-          cafe={this.state.cafes[this.state.clicked]}
-          addCafe={this.addCafe}
-          updateCafe={this.updateCafe}
-          deleteCafe={this.deleteCafe}
+          user={this.state.user}
+          cafe={this.state.cafes[this.state.active]}
+          reviews={this.state.reviews[this.state.active]}
+          createCafe={this.createCafe}
+          createReview={this.createReview}
+          updateReview={this.updateReview}
+          deleteReview={this.deleteReview}
           login={this.login}
           logout={this.logout}
-          panel={this.state.panel}
+          open={this.state.panelOpen}
           togglePanel={this.togglePanel}
         />
       </Layout>

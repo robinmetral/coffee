@@ -4,9 +4,9 @@ import "firebase/auth";
 import "firebase/database";
 
 const firebaseApp = firebase.initializeApp({
-  apiKey: "AIzaSyAVhgdq1DCAuRiIuonkv5xBp-ncGRZE3WA",
-  authDomain: "robinmetral-coffee.firebaseapp.com",
-  databaseURL: "https://robinmetral-coffee.firebaseio.com"
+  apiKey: "AIzaSyD6UsHTistUlMf6-XMYZ33uiwFmq_Xir-A",
+  authDomain: "mapping-coffee.firebaseapp.com",
+  databaseURL: "https://mapping-coffee.firebaseio.com",
 });
 
 const base = Rebase.createClass(firebaseApp.database());
