@@ -6,6 +6,9 @@ import Layout from "./Layout";
 import Map from "./Map";
 import Panel from "./Panel";
 
+// TODO testing Todo app
+// BODY Testing JasonEtco/todo
+
 class App extends Component {
   // initialize state
   state = {
