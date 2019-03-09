@@ -1,6 +1,7 @@
 import React from "react";
 import { createGlobalStyle } from "styled-components";
 import { Grommet } from "grommet";
+// TODO build theme
 import { grommet } from "grommet/themes";
 
 const GlobalStyle = createGlobalStyle`
