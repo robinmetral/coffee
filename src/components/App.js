@@ -32,12 +32,14 @@ class App extends Component {
         console.log(error);
       });
 
-    // keep user logged in on reload
+    // TODO reinstate onAuthStateChanged method
+    /* keep user logged in on reload
     firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.authHandler({ user });
       }
     });
+    */
   }
 
   handleClick = event => {
