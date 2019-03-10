@@ -86,7 +86,7 @@ class Panel extends Component {
         {this.state.userOpen && (
           <User
             user={this.props.user}
-            login={this.props.login}
+            authHandler={this.props.authHandler}
             logout={this.props.logout}
             toggleUser={this.toggleUser}
           />

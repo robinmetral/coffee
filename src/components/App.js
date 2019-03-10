@@ -160,7 +160,7 @@ class App extends Component {
           createReview={this.createReview}
           updateReview={this.updateReview}
           deleteReview={this.deleteReview}
-          login={this.login}
+          authHandler={this.authHandler}
           logout={this.logout}
           panelOpen={this.state.panelOpen}
           togglePanel={this.togglePanel}

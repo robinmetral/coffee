@@ -33,7 +33,7 @@ const User = props => (
         {props.user ? (
           <Logout logout={props.logout} />
         ) : (
-          <Login login={props.login} />
+          <Login authHandler={props.authHandler} />
         )}
       </Box>
     </Layer>
