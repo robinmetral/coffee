@@ -115,9 +115,7 @@ class App extends Component {
   };
 
   // TODO deal with syncing cafes with Firebase
-  authHandler = authData => {
-    // destructure authData
-    const { uid, displayName } = authData.user;
+  authHandler = (uid, name) => {
     // sync reviews with Firebase
     // TODO fix firebase warnings
     this.ref = base.syncState(`reviews`, {
@@ -126,9 +124,8 @@ class App extends Component {
     });
     // set logged in user to state
     this.setState({
-      user: { uid, displayName }
+      user: { uid, name }
     });
-    // TODO deal with users without displayName (username?)
     // TODO render loading indicator while authentifying
     // TODO close Layer when login successful
   };
