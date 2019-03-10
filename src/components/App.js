@@ -115,16 +115,25 @@ class App extends Component {
   };
 
   // TODO deal with syncing cafes with Firebase
-  authHandler = (uid, name) => {
+  authHandler = uid => {
+    // fetch name from Firebase and set user to state
+    base
+      .fetch(`users/${uid}/name`, {
+        context: this
+      })
+      .then(name => {
+        this.setState({
+          user: { uid, name }
+        });
+      })
+      .catch(error => {
+        console.log(error);
+      });
     // sync reviews with Firebase
     // TODO fix firebase warnings
     this.ref = base.syncState(`reviews`, {
       context: this,
       state: `reviews`
-    });
-    // set logged in user to state
-    this.setState({
-      user: { uid, name }
     });
     // TODO render loading indicator while authentifying
     // TODO close Layer when login successful
