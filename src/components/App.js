@@ -17,13 +17,6 @@ class App extends Component {
   };
 
   componentDidMount() {
-    // keep user logged in on reload
-    firebase.auth().onAuthStateChanged(user => {
-      if (user) {
-        this.authHandler({ user });
-      }
-    });
-
     // fetch data from firebase
     base
       .fetch(`/`, {
@@ -38,6 +31,13 @@ class App extends Component {
       .catch(error => {
         console.log(error);
       });
+
+    // keep user logged in on reload
+    firebase.auth().onAuthStateChanged(user => {
+      if (user) {
+        this.authHandler({ user });
+      }
+    });
   }
 
   handleClick = event => {
@@ -133,12 +133,14 @@ class App extends Component {
     // TODO close Layer when login successful
   };
 
+  signup = authData => {};
+
   login = provider => {
     const authProvider = new firebase.auth[`${provider}AuthProvider`]();
     firebaseApp
       .auth()
       .signInWithPopup(authProvider)
-      .then(this.authHandler);
+      .then(data => data.additionalUserInfo.isNewUser ? console.log("New user"): console.log("Returning user"));
   };
 
   logout = async () => {
