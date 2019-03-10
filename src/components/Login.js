@@ -3,12 +3,27 @@ import { Button, Text, Box, Form, TextInput } from "grommet";
 import { Github, Twitter, Facebook, Google } from "grommet-icons";
 import firebase from "firebase/app";
 import "firebase/auth";
-import { firebaseApp } from "../base"
+import base, { firebaseApp } from "../base";
 
 class Login extends Component {
   state = {
     signUp: false,
-    name: ""
+    name: "",
+    uid: ""
+  };
+
+  signup = () => {
+    // add user to Firebase
+    base
+      .post(`users/${this.state.uid}`, {
+        data: { name: this.state.name }
+      })
+      .then(() => {
+        this.props.authHandler(this.state.uid);
+      })
+      .catch(error => {
+        console.log(error);
+      });
   };
 
   login = provider => {
@@ -18,8 +33,11 @@ class Login extends Component {
       .signInWithPopup(authProvider)
       .then(data =>
         data.additionalUserInfo.isNewUser
-          ? console.log("New user")
-          : console.log("Returning user")
+          ? this.setState({
+              signUp: true,
+              uid: data.user.uid
+            })
+          : this.props.authHandler(data.user.uid)
       );
   };
 
@@ -48,9 +66,13 @@ class Login extends Component {
         {this.state.signUp ? (
           <>
             <Text>How should we call you around here?</Text>
-            <Form onSubmit={}>
-            <TextInput />
-            <Button type="submit" label={`Call me ${this.state.name}`} />
+            <Form onSubmit={this.signup}>
+              <TextInput
+                value={this.state.name}
+                onChange={e => this.setState({ name: e.target.value })}
+                required
+              />
+              <Button type="submit" label={`Call me ${this.state.name}`} />
             </Form>
           </>
         ) : (
