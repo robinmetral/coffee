@@ -3,6 +3,14 @@ import { Button, Text, Box } from "grommet";
 import { Github, Twitter, Facebook, Google } from "grommet-icons";
 
 class Login extends Component {
+  login = provider => {
+    const authProvider = new firebase.auth[`${provider}AuthProvider`]();
+    firebaseApp
+      .auth()
+      .signInWithPopup(authProvider)
+      .then(data => data.additionalUserInfo.isNewUser ? console.log("New user"): console.log("Returning user"));
+  };
+
   render() {
     const providers = [
       {

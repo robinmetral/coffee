@@ -130,14 +130,6 @@ class App extends Component {
     // TODO close Layer when login successful
   };
 
-  login = provider => {
-    const authProvider = new firebase.auth[`${provider}AuthProvider`]();
-    firebaseApp
-      .auth()
-      .signInWithPopup(authProvider)
-      .then(data => data.additionalUserInfo.isNewUser ? console.log("New user"): console.log("Returning user"));
-  };
-
   logout = async () => {
     // log out on firebase
     await firebase.auth().signOut();
