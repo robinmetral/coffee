@@ -64,7 +64,7 @@ class Login extends Component {
     return (
       <Box direction="row" align="center">
         {this.state.signUp ? (
-          <>
+          <Box direction="column">
             <Text>How should we call you around here?</Text>
             <Form onSubmit={this.signup}>
               <TextInput
@@ -72,9 +72,9 @@ class Login extends Component {
                 onChange={e => this.setState({ name: e.target.value })}
                 required
               />
-              <Button type="submit" label={`Call me ${this.state.name}`} />
+              <Button type="submit" label={`Call me ${this.state.name ? this.state.name : `...`}`} />
             </Form>
-          </>
+          </Box>
         ) : (
           <>
             <Text>Log in with:</Text>
