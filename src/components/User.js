@@ -23,9 +23,7 @@ const User = props => (
       <Box pad="medium" gap="small" width="medium">
         <Box direction="row" align="center" justify="between">
           <Heading level={3} margin="none">
-            {props.user
-              ? `Hey ${props.user.displayName}!`
-              : `Join the movement`}
+            {props.user ? `Hey ${props.user.name}!` : `Join the movement`}
           </Heading>
           <Button icon={<Close />} onClick={props.toggleUser} />
         </Box>
