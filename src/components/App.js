@@ -133,8 +133,6 @@ class App extends Component {
     // TODO close Layer when login successful
   };
 
-  signup = authData => {};
-
   login = provider => {
     const authProvider = new firebase.auth[`${provider}AuthProvider`]();
     firebaseApp
@@ -175,7 +173,7 @@ class App extends Component {
           deleteReview={this.deleteReview}
           login={this.login}
           logout={this.logout}
-          open={this.state.panelOpen}
+          panelOpen={this.state.panelOpen}
           togglePanel={this.togglePanel}
         />
       </Layout>

@@ -22,7 +22,7 @@ class Panel extends Component {
   };
 
   render() {
-    if (!this.props.open) return null;
+    if (!this.props.panelOpen) return null;
     // TODO reinstate fullscreen panel breakpoint
     return (
       <ThemeContext.Extend
