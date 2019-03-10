@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import firebase from "firebase/app";
 import "firebase/auth";
-import base, { firebaseApp } from "../base";
+import base from "../base";
 import Layout from "./Layout";
 import Map from "./Map";
 import Panel from "./Panel";
