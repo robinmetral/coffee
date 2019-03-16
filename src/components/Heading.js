@@ -7,18 +7,27 @@ const Heading = props => (
     <GrommetHeading size="small">{props.title}</GrommetHeading>
     <Box direction="row" flex={false} gap="xsmall" margin={{ left: "xsmall" }}>
       {props.user ? (
-        <Button onClick={props.toggleUser} title={props.user.displayName}>
-          <User />
-        </Button>
+        <Button
+          icon={<User />}
+          onClick={props.toggleUser}
+          title={props.user.displayName}
+          plain
+        />
       ) : (
-        <Button onClick={props.toggleUser} title="Log in">
-          <Login />
-        </Button>
+        <Button
+          icon={<Login />}
+          onClick={props.toggleUser}
+          title="Log in"
+          plain
+        />
       )}
       {props.user && (
-        <Button onClick={props.toggleCreateCafe} title="Add a new cafe">
-          <Add />
-        </Button>
+        <Button
+          icon={<Add />}
+          onClick={props.toggleCreateCafe}
+          title="Add a new cafe"
+          plain
+        />
       )}
       <Button onClick={props.togglePanel} title="Close">
         <Close />
