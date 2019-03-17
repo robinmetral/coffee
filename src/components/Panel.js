@@ -9,8 +9,7 @@ import User from "./User";
 
 class Panel extends Component {
   state = {
-    createCafeOpen: false,
-    userOpen: false
+    createCafeOpen: false
   };
 
   toggleCreateCafe = () => {
@@ -83,7 +82,7 @@ class Panel extends Component {
           />
         )}
 
-        {this.state.userOpen && (
+        {this.props.userOpen && (
           <User
             user={this.props.user}
             authHandler={this.props.authHandler}

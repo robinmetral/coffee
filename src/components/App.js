@@ -13,7 +13,8 @@ class App extends Component {
     reviews: {},
     active: undefined,
     user: null,
-    panelOpen: true
+    panelOpen: true,
+    userOpen: false
   };
 
   componentDidMount() {
@@ -165,6 +166,7 @@ class App extends Component {
         />
         <Panel
           user={this.state.user}
+          userOpen={this.state.userOpen}
           cafe={this.state.cafes[this.state.active]}
           reviews={this.state.reviews[this.state.active]}
           createCafe={this.createCafe}
