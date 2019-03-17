@@ -39,10 +39,10 @@ class Reviews extends Component {
         </Heading>
 
         {(!reviews ||
-          (this.props.user &&
-            Object.values(reviews).some(
-              val => val.user.uid === this.props.user.uid
-            ) === false)) && (
+          !this.props.user ||
+          Object.values(reviews).some(
+            val => val.user.uid === this.props.user.uid
+          ) === false) && (
           <>
             <Button
               icon={open ? <Close /> : <Edit />}
