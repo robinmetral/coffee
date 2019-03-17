@@ -61,33 +61,36 @@ class Login extends Component {
       }
     ];
 
+    if (this.state.signUp)
+      return (
+        <Box>
+          <Text>How should we call you around here?</Text>
+          <Form onSubmit={this.signup}>
+            <TextInput
+              value={this.state.name}
+              onChange={e => this.setState({ name: e.target.value })}
+              required
+            />
+            <Button
+              type="submit"
+              label={`Call me ${this.state.name ? this.state.name : `...`}`}
+            />
+          </Form>
+        </Box>
+      );
+
+    // user is not signing up
     return (
       <Box direction="row" align="center">
-        {this.state.signUp ? (
-          <Box direction="column">
-            <Text>How should we call you around here?</Text>
-            <Form onSubmit={this.signup}>
-              <TextInput
-                value={this.state.name}
-                onChange={e => this.setState({ name: e.target.value })}
-                required
-              />
-              <Button type="submit" label={`Call me ${this.state.name ? this.state.name : `...`}`} />
-            </Form>
-          </Box>
-        ) : (
-          <>
-            <Text>Log in with:</Text>
-            {providers.map(({ provider, icon }) => (
-              <Button
-                plain
-                key={provider}
-                icon={icon}
-                onClick={() => this.login(provider)}
-              />
-            ))}
-          </>
-        )}
+        <Text>Log in with:</Text>
+        {providers.map(({ provider, icon }) => (
+          <Button
+            plain
+            key={provider}
+            icon={icon}
+            onClick={() => this.login(provider)}
+          />
+        ))}
       </Box>
     );
   }
