@@ -32,8 +32,8 @@ class CreateReview extends Component {
       rating: "",
       text: ""
     });
-    // close form
-    this.props.closeForm();
+    // close CreateReview form
+    this.props.closeCreateReview();
   };
 
   render() {
