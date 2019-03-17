@@ -8,7 +8,7 @@ import { numberToWord, averageRating } from "../helpers";
 
 class Reviews extends Component {
   state = {
-    open: false
+    createReviewOpen: false
   };
 
   verifyUser = () => {
@@ -20,16 +20,16 @@ class Reviews extends Component {
   };
 
   toggleCreateReview = () => {
-    this.setState({ open: !this.state.open });
+    this.setState({ createReviewOpen: !this.state.createReviewOpen });
   };
 
   closeCreateReview = () => {
-    this.setState({ open: false });
+    this.setState({ createReviewOpen: false });
   };
 
   render() {
     const { cafe, reviews } = this.props;
-    const { open } = this.state;
+    const { createReviewOpen } = this.state;
 
     return (
       <Box flex={false}>
@@ -52,11 +52,11 @@ class Reviews extends Component {
           ) === false) && (
           <>
             <Button
-              icon={open ? <Close /> : <Edit />}
-              label={open ? `Cancel` : `Write a review`}
-              onClick={open ? this.toggleCreateReview : this.verifyUser}
+              icon={createReviewOpen ? <Close /> : <Edit />}
+              label={createReviewOpen ? `Cancel` : `Write a review`}
+              onClick={createReviewOpen ? this.toggleCreateReview : this.verifyUser}
             />
-            <Collapsible open={open}>
+            <Collapsible open={createReviewOpen}>
               <Box pad="xsmall">
                 <CreateReview
                   user={this.props.user}
@@ -79,7 +79,7 @@ class Reviews extends Component {
                 id={cafe.properties.createdAt}
                 user={this.props.user}
                 key={key}
-                open={this.state.open}
+                createReviewOpen={this.state.createReviewOpen}
                 toggleCreateReview={this.toggleCreateReview}
                 closeCreateReview={this.closeCreateReview}
                 updateReview={this.props.updateReview}
