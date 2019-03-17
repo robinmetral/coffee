@@ -51,7 +51,6 @@ class Review extends Component {
             <Box direction="row">
               <Box>
                 <Heading margin="none" color={you ? "brand" : ""} level={4}>
-                  {/* TODO use name from users object instead of reviews */}
                   {you ? `You` : review.user.name}
                 </Heading>
                 <Rating rating={review.rating} size="medium" />
