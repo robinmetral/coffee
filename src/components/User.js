@@ -22,7 +22,7 @@ const User = props => (
     >
       <Box pad="medium" gap="small" width="medium">
         <Heading level={3} margin="none">
-          {props.user ? `Hey ${props.user.name}!` : `Join the movement`}
+          {props.user ? `Logged in as ${props.user.name}` : `Join the movement`}
         </Heading>
         {/* TODO display message here if user has opened the layer by attempting to write a review */}
         {props.user ? (
