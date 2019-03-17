@@ -21,18 +21,16 @@ const User = props => (
       onClickOutside={() => props.toggleUser()}
     >
       <Box pad="medium" gap="small" width="medium">
-        <Box direction="row" align="center" justify="between">
-          <Heading level={3} margin="none">
-            {props.user ? `Hey ${props.user.name}!` : `Join the movement`}
-          </Heading>
-          <Button icon={<Close />} onClick={props.toggleUser} />
-        </Box>
+        <Heading level={3} margin="none">
+          {props.user ? `Hey ${props.user.name}!` : `Join the movement`}
+        </Heading>
         {/* TODO display message here if user has opened the layer by attempting to write a review */}
         {props.user ? (
           <Logout logout={props.logout} />
         ) : (
           <Login authHandler={props.authHandler} />
         )}
+        <Button primary icon={<Close />} label="Close" onClick={props.toggleUser} />
       </Box>
     </Layer>
   </ThemeContext.Extend>
