@@ -69,8 +69,7 @@ class App extends Component {
   };
 
   togglePanel = () => {
-    const panelOpen = this.state.panelOpen ? false : true;
-    this.setState({ panelOpen });
+    this.setState({ panelOpen: !this.state.panelOpen });
   };
 
   toggleUser = () => {
