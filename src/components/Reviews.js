@@ -12,8 +12,7 @@ class Reviews extends Component {
   };
 
   toggleForm = () => {
-    const open = this.state.open;
-    this.setState({ open: !open });
+    this.setState({ open: !this.state.open });
   };
 
   closeForm = () => {
@@ -51,7 +50,6 @@ class Reviews extends Component {
             />
             <Collapsible open={open}>
               <Box pad="xsmall">
-                {/* TODO message when user not logged in */}
                 <CreateReview
                   user={this.props.user}
                   name={cafe.properties.name}
