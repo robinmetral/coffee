@@ -142,7 +142,6 @@ class App extends Component {
       state: `reviews`
     });
     // TODO render loading indicator while authentifying
-    // TODO close Layer when login successful
   };
 
   logout = async () => {
