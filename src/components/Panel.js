@@ -51,7 +51,7 @@ class Panel extends Component {
               }
               togglePanel={this.props.togglePanel}
               toggleCreateCafe={this.toggleCreateCafe}
-              toggleUser={this.toggleUser}
+              toggleUser={this.props.toggleUser}
               user={this.props.user}
             />
             {this.props.cafe ? (
