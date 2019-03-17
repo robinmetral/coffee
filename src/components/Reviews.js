@@ -19,11 +19,11 @@ class Reviews extends Component {
     }
   };
 
-  toggleForm = () => {
+  toggleCreateReview = () => {
     this.setState({ open: !this.state.open });
   };
 
-  closeForm = () => {
+  closeCreateReview = () => {
     this.setState({ open: false });
   };
 
@@ -54,7 +54,7 @@ class Reviews extends Component {
             <Button
               icon={open ? <Close /> : <Edit />}
               label={open ? `Cancel` : `Write a review`}
-              onClick={open ? this.toggleForm : this.verifyUser}
+              onClick={open ? this.toggleCreateReview : this.verifyUser}
             />
             <Collapsible open={open}>
               <Box pad="xsmall">
@@ -63,7 +63,7 @@ class Reviews extends Component {
                   name={cafe.properties.name}
                   id={cafe.properties.createdAt}
                   createReview={this.props.createReview}
-                  closeForm={this.closeForm}
+                  closeCreateReview={this.closeCreateReview}
                 />
               </Box>
             </Collapsible>
@@ -80,8 +80,8 @@ class Reviews extends Component {
                 user={this.props.user}
                 key={key}
                 open={this.state.open}
-                toggleForm={this.toggleForm}
-                closeForm={this.closeForm}
+                toggleCreateReview={this.toggleCreateReview}
+                closeCreateReview={this.closeCreateReview}
                 updateReview={this.props.updateReview}
                 deleteReview={this.props.deleteReview}
               />
