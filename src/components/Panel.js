@@ -16,10 +16,6 @@ class Panel extends Component {
     this.setState({ createCafeOpen: !this.state.createCafeOpen });
   };
 
-  toggleUser = () => {
-    this.setState({ userOpen: !this.state.userOpen });
-  };
-
   render() {
     if (!this.props.panelOpen) return null;
     // TODO reinstate fullscreen panel breakpoint
@@ -87,7 +83,7 @@ class Panel extends Component {
             user={this.props.user}
             authHandler={this.props.authHandler}
             logout={this.props.logout}
-            toggleUser={this.toggleUser}
+            toggleUser={this.props.toggleUser}
           />
         )}
       </ThemeContext.Extend>

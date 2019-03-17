@@ -73,6 +73,10 @@ class App extends Component {
     this.setState({ panelOpen });
   };
 
+  toggleUser = () => {
+    this.setState({ userOpen: !this.state.userOpen });
+  };
+
   createCafe = cafe => {
     // take a copy of state
     const cafes = { ...this.state.cafes };
@@ -167,6 +171,7 @@ class App extends Component {
         <Panel
           user={this.state.user}
           userOpen={this.state.userOpen}
+          toggleUser={this.toggleUser}
           cafe={this.state.cafes[this.state.active]}
           reviews={this.state.reviews[this.state.active]}
           createCafe={this.createCafe}
