@@ -59,6 +59,7 @@ class Panel extends Component {
                 cafe={this.props.cafe}
                 reviews={this.props.reviews}
                 user={this.props.user}
+                toggleUser={this.props.toggleUser}
                 createReview={this.props.createReview}
                 updateReview={this.props.updateReview}
                 deleteReview={this.props.deleteReview}
