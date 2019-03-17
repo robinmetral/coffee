@@ -13,7 +13,7 @@ class Reviews extends Component {
 
   verifyUser = () => {
     if (this.props.user) {
-      this.toggleForm();
+      this.toggleCreateReview();
     } else {
       this.props.toggleUser("Log in to add a review");
     }
@@ -54,7 +54,9 @@ class Reviews extends Component {
             <Button
               icon={createReviewOpen ? <Close /> : <Edit />}
               label={createReviewOpen ? `Cancel` : `Write a review`}
-              onClick={createReviewOpen ? this.toggleCreateReview : this.verifyUser}
+              onClick={
+                createReviewOpen ? this.toggleCreateReview : this.verifyUser
+              }
             />
             <Collapsible open={createReviewOpen}>
               <Box pad="xsmall">
