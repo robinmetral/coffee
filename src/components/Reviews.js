@@ -11,6 +11,14 @@ class Reviews extends Component {
     open: false
   };
 
+  verifyUser = () => {
+    if (this.props.user) {
+      this.toggleForm();
+    } else {
+      this.props.toggleUser("Log in to add a review");
+    }
+  };
+
   toggleForm = () => {
     this.setState({ open: !this.state.open });
   };
@@ -46,7 +54,7 @@ class Reviews extends Component {
             <Button
               icon={open ? <Close /> : <Edit />}
               label={open ? `Cancel` : `Write a review`}
-              onClick={this.toggleForm}
+              onClick={open ? this.toggleForm : this.verifyUser}
             />
             <Collapsible open={open}>
               <Box pad="xsmall">
