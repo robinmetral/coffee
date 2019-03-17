@@ -45,19 +45,19 @@ class Login extends Component {
     const providers = [
       {
         provider: "Github",
-        icon: <Github />
+        icon: <Github color="plain" />
       },
       {
         provider: "Twitter",
-        icon: <Twitter />
+        icon: <Twitter color="plain" />
       },
       {
         provider: "Facebook",
-        icon: <Facebook />
+        icon: <Facebook color="plain" />
       },
       {
         provider: "Google",
-        icon: <Google />
+        icon: <Google color="plain" />
       }
     ];
 
@@ -81,17 +81,25 @@ class Login extends Component {
 
     // user is not signing up
     return (
-      <Box direction="row" align="center">
-        <Text>Log in with:</Text>
-        {providers.map(({ provider, icon }) => (
-          <Button
-            plain
-            key={provider}
-            icon={icon}
-            onClick={() => this.login(provider)}
-          />
-        ))}
-      </Box>
+      <>
+        <Text>
+          Log in with any of the following services to start contributing.
+        </Text>
+        <Box margin="small" gap="xsmall">
+          {providers.map(({ provider, icon }) => (
+            <Button
+              label={`Log in with ${provider}`}
+              key={provider}
+              icon={icon}
+              onClick={() => this.login(provider)}
+            />
+          ))}
+        </Box>
+        <Text size="small">
+          We need your email address to know it's you the next time you sign in.
+          That's it.
+        </Text>
+      </>
     );
   }
 }
