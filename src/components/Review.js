@@ -25,7 +25,7 @@ class Review extends Component {
     // call delete method
     this.props.deleteReview(this.props.id, this.props.review.createdAt);
     // close form
-    this.props.closeForm();
+    this.props.closeCreateReview();
     // close modal
     this.setState({ confirmDelete: false });
   };

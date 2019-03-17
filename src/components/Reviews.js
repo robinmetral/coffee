@@ -79,8 +79,6 @@ class Reviews extends Component {
                 id={cafe.properties.createdAt}
                 user={this.props.user}
                 key={key}
-                createReviewOpen={this.state.createReviewOpen}
-                toggleCreateReview={this.toggleCreateReview}
                 closeCreateReview={this.closeCreateReview}
                 updateReview={this.props.updateReview}
                 deleteReview={this.props.deleteReview}
