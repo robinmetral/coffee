@@ -1,6 +1,5 @@
 import React from "react";
-import { Layer, Box, Heading, Button } from "grommet";
-import { ThemeContext } from "grommet/contexts";
+import { Layer, Box, Heading, Button, ThemeContext } from "grommet";
 import { Close } from "grommet-icons";
 import Login from "./Login";
 import Logout from "./Logout";

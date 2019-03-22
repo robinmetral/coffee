@@ -1,6 +1,5 @@
 import React from "react";
-import { Layer, Box, Heading, Text, Button } from "grommet";
-import { ThemeContext } from "grommet/contexts";
+import { Layer, Box, Heading, Text, Button, ThemeContext } from "grommet";
 import { Close, Trash } from "grommet-icons";
 
 const ConfirmDelete = props => (

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Heading, Box, Form, TextInput, Button, Layer } from "grommet";
-import { ThemeContext } from "grommet/contexts";
+import { Heading, Box, Form, TextInput, Button, Layer, ThemeContext } from "grommet";
 import { Send, Close } from "grommet-icons";
 
 class CreateCafe extends Component {

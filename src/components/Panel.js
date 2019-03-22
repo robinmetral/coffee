@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Layer, Box } from "grommet";
-import { ThemeContext } from "grommet/contexts";
+import { Layer, Box, ThemeContext } from "grommet";
 import Cafe from "./Cafe";
 import Welcome from "./Welcome";
 import Heading from "./Heading";
